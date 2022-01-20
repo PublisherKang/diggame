@@ -96,23 +96,23 @@ gameContainer.addEventListener("click", function(){
 
 
 
-// const gaugeWrap = document.querySelector(".gauge_wrap");
-// const gauge = document.querySelector(".gauge");
+const gaugeWrap = document.querySelector(".gauge_wrap");
+const gauge = document.querySelector(".gauge");
 
-// let width = 230
-// let interval = setInterval(widthMinus, 100);
+let width = 230
+let interval = setInterval(widthMinus, 100);
 
-// function widthMinus(){
-//     if(width <= 0){
-//         clearInterval(interval);
-//         width = 230;
-//     }else{
-//         width--;
-//         gauge.style.width = 1;
-//     }
-// }
+function widthMinus(){
+    if(width <= 0){
+        clearInterval(interval);
+        width = 230;
+    }else{
+        width--;
+        gauge.style.width = 1;
+    }
+}
 
-// widthMinus();
+widthMinus();
 
 
 

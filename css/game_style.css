@@ -76,4 +76,4 @@
 
 .dragwrap{width: 100px; height: 100px; background-color: #ccc;}
 
-.dragimg{width: 80px; height: auto; user-select: none;}
+.dragimg{width: 80px; height: 80px; user-select: none; background-color: #f00;}

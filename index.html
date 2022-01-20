@@ -7,8 +7,10 @@
     <title>DIGTOC</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/game_style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
     <script src="js/common.js" defer></script>
+    <script src="js/dragevent.js" defer></script>
 </head>
 <body>
     <div class="game_wrap">
@@ -61,7 +63,7 @@
         </div>
         <div class="main_menu">
             <div id="a1" class="dragwrap" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
-            <img id="b1" src="images/item2.png" alt="" class="dragimg" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);">
+            <div id="b1" class="dragimg" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
         </div>
     </div>
 </body>
