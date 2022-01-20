@@ -138,3 +138,16 @@ function drop_handler(ev) {
     let data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
 }
+
+let dragItem = document.getElementById("b1");
+
+dragItem.addEventListener("touchmove", handleMove);
+dragItem.addEventListener("touchend", handleEnd);
+
+function handleMove(ev){
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+function handleEnd(ev){
+    let data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));   
+}
