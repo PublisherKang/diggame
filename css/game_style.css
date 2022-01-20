@@ -32,8 +32,8 @@
 
 .stone_item{width: 220px; height: auto; position: absolute;}
 
-.stone_item img{cursor: url(../images/item2.png) 18 18 ,auto; -webkit-user-drag: none;}
-.stone_item img.cur3{cursor: url(../images/item3.png) 18 18 ,auto; -webkit-user-drag: none;}
+.stone_item img{cursor: url(../images/item2.png) 18 18 ,auto;/*  -webkit-user-drag: none; */}
+.stone_item img.cur3{cursor: url(../images/item3.png) 18 18 ,auto;/*  -webkit-user-drag: none; */}
 
 
 .stone_item.item1{top: 378px; left: 56px;}
@@ -66,14 +66,3 @@
 
 
 
-
-
-
-
-
-
-/* 드래그 연습 */
-
-.dragwrap{width: 100px; height: 100px; background-color: #ccc;}
-
-.dragimg{width: 80px; height: 80px; user-select: none; background-color: #f00;}

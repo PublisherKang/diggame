@@ -116,38 +116,41 @@ widthMinus();
 
 
 
-function drag_handler(ev){
-    console.log("Drag");
-}
+// function drag_handler(ev){
+//     console.log("Drag");
+// }
 
-function dragstart_handler(ev) {
-    console.log("dragStart");
-    ev.dataTransfer.setData("text", ev.target.id);
-}
+// function dragstart_handler(ev) {
+//     console.log("dragStart");
+//     ev.dataTransfer.setData("text", ev.target.id);
+// }
 
-function dragover_handler(ev) {
-    console.log("dragOver");
-    ev.preventDefault();
-}
+// function dragover_handler(ev) {
+//     console.log("dragOver");
+//     ev.preventDefault();
+// }
    
-function drop_handler(ev) {
-    console.log("Drop");
-    ev.currentTarget.style.background = "lightyellow";
+// function drop_handler(ev) {
+//     console.log("Drop");
+//     ev.currentTarget.style.background = "lightyellow";
    
-    ev.preventDefault();
-    let data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
+//     ev.preventDefault();
+//     let data = ev.dataTransfer.getData("text");
+//     ev.target.appendChild(document.getElementById(data));
+// }
 
-let dragItem = document.getElementById("b1");
+// let dragItem = document.getElementById("b1");
 
-dragItem.addEventListener("touchmove", handleMove);
-dragItem.addEventListener("touchend", handleEnd);
+// dragItem.addEventListener("touchmove", handleMove);
+// dragItem.addEventListener("touchend", handleEnd);
 
-function handleMove(ev){
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-function handleEnd(ev){
-    let data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));   
-}
+// function handleMove(ev){
+//     ev.dataTransfer.setData("text", ev.target.id);
+// }
+// function handleEnd(ev){
+//     let data = ev.dataTransfer.getData("text");
+//     ev.target.appendChild(document.getElementById(data));   
+// }
+
+
+
