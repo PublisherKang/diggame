@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGTOC</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/game_style.css">
+
+    <script src="js/common.js" defer></script>
+</head>
+<body>
+    <div class="game_wrap">
+        <div class="game_header">
+            <div class="game_headerIn">
+                <p class="marker"></p>
+                <div class="play_time_wrap">
+                    <div class="play_time">
+                        Play Time: <span class="timer">00:00:00</span>
+                    </div>
+                    <div class="play_time_rank">
+                        Play Time Rainking: <span class="rank_num">0</span> <i class="up_icon"></i>
+                    </div>
+                </div>
+                <div class="click_speed_wrap">
+                    <p>
+                        <span id="clicks"></span> mined / s
+                    </p>
+                </div>
+                <div class="point_wrap">
+                    <span id="point_score"></span> G
+                </div>
+                <div class="menu_btn">
+                    메뉴
+                </div>
+            </div>
+        </div><!-- game_header -->
+        <div class="game_container">
+            <div class="stone_item item1">
+                <img class="cur3" src="images/rock.png" alt="">
+            </div>
+            <div class="stone_item item2">
+                <img class="cur3" src="images/rock.png" alt="">
+            </div>
+            <div class="stone_item item3">
+                <img class="cur3" src="images/rock.png" alt="">
+            </div>
+            <div class="boost_200">
+                <span class="boost_icon"></span>
+                <div class="gauge_wrap">
+                    <p class="gauge"></p>
+                    <span class="percent">200%</span>
+                    <span class="boost_timer">00:00:00</span>
+                </div>
+            </div>
+            <div class="boost_item">
+                boost<br>
+                item
+            </div>
+        </div>
+        <div class="main_menu">
+            <div id="a1" class="dragwrap" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+            <img id="b1" src="images/item2.png" alt="" class="dragimg" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);">
+        </div>
+    </div>
+</body>
+</html>
