@@ -1,6 +1,8 @@
 @charset "utf-8";
 
 ::selection{background: transparent;}
+body{-webkit-touch-callout:none;}
+
 
 .game_wrap{width: 700px; height: 700px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../images/back1.png) no-repeat 0 0 / contain; border-radius: 20px; overflow: hidden;}
 
