@@ -68,6 +68,7 @@ for(let i = 0; i < cursorTarget.length; i++){
     }
     function moveCur(event){
         cursorTarget[i].classList.remove("cur3");
+        event.preventDefault();
     }
     function showCur(event){
         cursorTarget[i].classList.remove("cur3");
