@@ -82,17 +82,10 @@ for(let i = 0; i < cursorTarget.length; i++){
 }
 
 
-// 메뉴 버튼 클릭시 메인 메뉴 팝업
-const menuBtn = document.querySelector(".menu_btn");
-const mainMenu = document.querySelector(".main_menu");
-menuBtn.addEventListener("click", function(e){
-    e.preventDefault();
-    mainMenu.style.display = "block";
-});
 
-gameContainer.addEventListener("click", function(){
-    mainMenu.style.display = "none";
-});
+// gameContainer.addEventListener("click", function(){
+//     mainMenu.style.display = "none";
+// });
 
 
 
