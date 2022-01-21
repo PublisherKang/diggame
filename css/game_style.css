@@ -18,10 +18,11 @@
 .play_time_rank{color: #fff;}
 .up_icon{padding: 0 4px; background: #aaa; margin-left: 6px;}
 
-.click_speed_wrap{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff;}
+.click_speed_wrap{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; font-weight: bold; font-size: 14px;}
+.click_speed_wrap #clicks{padding: 10px 0 10px 26px; background: url(../images/ui/click_speed_icon.svg) no-repeat 0 4px / 20px auto; font-size: 14px; font-weight: bold;}
 
 .point_wrap{color: #fff; position: absolute; top: 50%; right: 30px; transform: translateY(-50%); font-weight: bold; font-size: 14px;}
-.point_wrap #point_score{padding: 8px 0 8px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto;}
+.point_wrap #point_score, .point_wrap #inven_point_score{padding: 8px 0 8px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto;}
 
 
 
@@ -49,11 +50,11 @@
 
 
 .boost_200{width: 240px; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); display: none;}
-.boost_icon{display: block; width: 40px; height: 40px; background: #ff0; position: absolute; top: 0; left: -50px;}
+.boost_icon{display: block; width: 50px; height: 50px; background: url(../images/ui/booster_icon.png) no-repeat 0 0 / 50px auto; position: absolute; top: 50%; left: -56px; transform: translateY(-50%);}
 
-.gauge_wrap{width: 240px; height: 40px; border: 2px solid #fff; border-radius: 8px; background: rgba(0, 0, 0, .5); position: relative; display: block;}
+.gauge_wrap{width: 240px; height: 40px; border: 1px solid #fff; border-radius: 8px; background: rgba(0, 0, 0, .5); position: relative; display: block;}
 
-.gauge_wrap .gauge{width: 0; height: 30px; background: linear-gradient(#F4C921 30%, #F16E24); border-radius: 6px; margin: 3px 0 0 3px; animation: gauge_down 10s linear;}
+.gauge_wrap .gauge{width: 0; height: 32px; background: linear-gradient(#F4C921 30%, #F16E24); border-radius: 6px; margin: 3px 0 0 3px; animation: gauge_down 60s linear;}
 
 .gauge_wrap .percent{color: #fff; font-weight: bold; font-size: 16px; text-shadow: 2px 2px 3px #000; position: absolute; top: 50%; left: 20px; transform: translateY(-50%); z-index: 10;}
 
@@ -86,3 +87,13 @@
 .menu_list li .audio_off_btn{background-image: url(../images/ui/sound_off_icon.svg); display: none; position: absolute; top: 0; left: 0;}
 
 
+
+/* ====== 팝업 ====== */
+/* 인벤토리 팝업 */
+.inven_popup{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: url(../images/background/inventory_back.png) no-repeat 0 0 / contain; display: none; z-index: 301;}
+
+.inven_header{width: 100%; height: 68px; background: #333; position: relative;}
+
+.inven_header .back_btn{position: absolute; top: 50%; left: 20px; transform: translateY(-50%); color: #fff; font-size: 16px; font-weight: bold; background: url(../images/ui/back_icon2.png) no-repeat 0 center / 20px auto;cursor: pointer; padding: 12px 0 12px 28px;}
+
+.inven_header .inven_name{font-size: 30px; font-weight: bold; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff;}

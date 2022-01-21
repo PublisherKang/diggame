@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 *{margin:0; padding:0;}
-body{font-size:12px; line-height: 1; word-break: keep-all; color: #222; font-family: "SCDream4"; background: #fff;}
+body{font-size:12px; line-height: 1; word-break: keep-all; color: #222; background: #fff;}
 a{color:#222; text-decoration: none;}
 img{border:none; vertical-align:top; width: 100%; height: auto;}
 ul{list-style:none;}

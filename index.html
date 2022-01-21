@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
     <script src="js/common.js" defer></script>
-    <script src="js/dragevent.js" defer></script>
+    <script src="js/popup.js" defer></script>
 </head>
 <body>
     <div class="game_wrap">
@@ -34,7 +34,7 @@
                     </p>
                 </div>
                 <div class="point_wrap">
-                    <span id="point_score"></span> GEM
+                    <span id="point_score">0.00</span> GEM
                 </div>
             </div>
         </div><!-- game_header -->
@@ -85,6 +85,22 @@
                 item
             </div>
         </div><!-- 게임 컨테이너 -->
+
+        <!-- ====== 팝업 ====== -->
+        <div class="inven_popup">
+            <div class="inven_header">
+                <button class="back_btn">Back to Game</button>
+                <p class="inven_name">INVENTORY</p>
+                <div class="point_wrap">
+                    <span id="inven_point_score">0.00</span> GEM
+                </div>
+            </div>
+            <div class="inven_inner">
+                <div class="upgrade_wrap"></div>
+                <div class="item_list"></div>
+                <div class=""></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
