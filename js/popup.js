@@ -15,4 +15,21 @@ $(document).ready(function(){
         $(this).parent().parent().hide();
     });
 
+
+    //아이템 추가하기
+    const invenItemList = $(".item_list ul li");
+    const targetListSpan = $(".item_list ul li span");                  
+    const previewItem = $(".preview_itme");
+
+    invenItemList.click(function(){
+        targetListSpan.removeClass("target_img");
+        $(this).find(targetListSpan).addClass("target_img");
+        previewItem.append($(this).find("img"));
+        
+
+        previewItem.children().first().remove();
+    });
+    console.log(previewItem.children().first());
+
+
 });
