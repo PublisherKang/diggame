@@ -211,25 +211,27 @@
 /* content_wrap */
 .content_wrap{position: relative; width: 640px;}
 
+
 /* package_content */
-.package_content{display: none; width: 640px;}
+.content_wrap .package_content{width: 640px; visibility: hidden;}
+
 .package_content ul{display: flex; justify-content: space-between;}
 
-.package_content ul li{width: 306px; text-align: center; color: #fff; background-repeat: no-repeat; background-position: center 0; background-size: contain; cursor: pointer;}
+.package_content ul li{width: 306px; text-align: center; color: #fff; background-repeat: no-repeat; background-position: center 0; background-size: contain;}
 
 .package_content ul li > div{height: 350px; background-repeat: no-repeat; background-position: center center; background-color: #222; border-radius: 32px; background-size: 282px auto; padding: 40px 10px 0; font-size: 13px; line-height: 1.4; margin-bottom: 30px; box-shadow: 3px 3px 14px #222;}
 
 .package_content ul li > div img{width: 140px; display: block; margin: 0 auto 20px;}
 
-.package_content ul li .vip_silver{background-image: url(../images/ui/shop_vip_frame1.png);}
-.package_content ul li .vip_gold{background-image: url(../images/ui/shop_vip_frame2.png);}
+.package_content ul li .vip_silver{background-image: url(../images/ui/shop_vip_frame1.png); cursor: pointer;}
+.package_content ul li .vip_gold{background-image: url(../images/ui/shop_vip_frame2.png); cursor: pointer;}
 
 .package_content ul li p{width: 180px; background: #222; margin: 0 auto; padding: 20px; border-radius: 10px; box-shadow: 4px 4px 18px #222;}
 
 .package_content ul li .price{font-size: 24px; padding: 10px 0 10px 46px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 40px auto;}
 
 /* item_content */
-.item_content{position: absolute; top: 0; left: 0; width: 640px; display: none;}
+.item_content{position: absolute; top: 0; left: 0; width: 640px; visibility: hidden;}
 
 /* item_content 공통값 */
 .booster_list, .auto_list{width: 100%; background: #1a1a1a; display: flex; padding: 20px; justify-content: space-between; border-radius: 24px; box-shadow: 4px 4px 10px #000; margin-bottom: 20px;}
@@ -256,16 +258,27 @@
 .auto_list{margin-bottom: 0;}
 
 
-.tool_content{position: absolute; top: 0; left: 0; width: 640px;}
-.tool_content ul{display: flex; justify-content: space-between;}
+/*  tool content  */
+.tool_content{position: absolute; top: 0; left: 0; width: 640px; visibility: hidden;}
+.tool_content ul{display: flex; justify-content: space-between; margin-bottom: 46px;}
 
 .tool_content ul li{width: 300px; text-align: center;}
 
-.tool_content .box_wrap{background: #1a1a1a; border-radius: 30px; padding: 16px 0 24px 0; margin-bottom: 24px;}
+.tool_content .box_wrap{background: #1a1a1a; border-radius: 30px; padding: 16px 0 24px 0; margin-bottom: 24px; cursor: pointer; box-shadow: 4px 4px 18px #000;}
 .tool_content .box_wrap img{display: flex; width: 140px; margin: 0 auto 14px;}
-.tool_content .box_wrap .box_title{font-size: 26px; color: #fff; margin-bottom: 10px;}
+.tool_content .box_wrap .box_title{font-size: 22px; color: #fff; margin-bottom: 10px;}
 
 .tool_content .box_wrap .box_info{font-size: 16px; color: #858585;}
 
-.tool_content .price_wrap{width: 160px; text-align: center;}
-.tool_content .price{color: #fff; font-size: 18px;}
+.tool_content .price_wrap{width: 160px; text-align: center; margin: 0 auto; background: #1a1a1a; padding: 18px; border-radius: 10px; box-shadow: 4px 4px 18px #000;}
+.tool_content .price{color: #fff; font-size: 16px; padding: 10px 0 10px 26px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 22px auto;}
+
+
+/* opensea go */
+.go_opensea{width: 100%; background: #1a1a1a; border-radius: 20px; position: relative; box-shadow: 4px 4px 18px #000;}
+
+.go_opensea .speack_icon{display: block; width: 100px; height: 150px; background: url(../images/ui/notice_icon.png) no-repeat 0 0 / 100px auto; position: absolute; top: -18px; left: 16px;}
+
+.go_opensea .text{padding: 24px 0 24px 136px; font-size: 16px; color: #fff; line-height: 1.5;}
+
+.go_opensea .opensea_btn{width: 140px; height: 80px; text-align: center; line-height: 1.4; font-size: 16px; background: url(../images/ui/btn_img4.png) no-repeat 0 0 /contain; position: absolute; top: 50%; right: 10px; transform: translateY(-50%); font-family: "sebang-bold";}

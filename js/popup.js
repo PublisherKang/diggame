@@ -14,12 +14,14 @@ $(function(){
     shopPopBtn.click(function(ev){
         ev.preventDefault();
         $(".shop_popup").css("visibility", "visible");
+        $(".package_content").css("visibility", "visible");
     });
 
     // Back 버튼
     backBtn.click(function(ev){
         ev.preventDefault();
         $(this).parent().parent().css("visibility", "hidden");
+        $(".package_content").css("visibility", "hidden");
     });
 });
 
@@ -37,7 +39,7 @@ $(function(){
     
         previewItem.children().first().remove();
     });
-    console.log(previewItem.children().first());
+    // console.log(previewItem.children().first());
 });
 
 $(function(){
@@ -52,3 +54,30 @@ $(function(){
         repairPop.css("visibility", "hidden");
     });
 });
+
+
+$(function(){
+    // 인벤토리에서 상점 바로가기 버튼
+    const goToolBtn = $(".go_tools");
+
+    goToolBtn.click(function(ev){
+        ev.preventDefault();
+        $(".inven_popup").css("visibility", "hidden");
+        $(".shop_popup").css("visibility", "visible");
+    });
+});
+
+$(function(){
+    // 샵 텝 메뉴
+    const shopMenuBtn = $(".shop_menu_btn ul li");
+    // const shopTarget = $(evnet.target);
+    
+    shopMenuBtn.click(function(event){
+        event.preventDefault();
+        let idx = $(this).index();
+        
+        $(".content_wrap > div").css("visibility", "hidden");
+        $(".content_wrap > div").eq(idx).css("visibility", "visible");
+    });
+    
+}); 
