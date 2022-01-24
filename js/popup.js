@@ -21,7 +21,7 @@ $(function(){
     backBtn.click(function(ev){
         ev.preventDefault();
         $(this).parent().parent().css("visibility", "hidden");
-        $(".package_content").css("visibility", "hidden");
+        $(".content_wrap > div").css("visibility", "hidden");
     });
 });
 
