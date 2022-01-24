@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+@font-face {
+    src: url('../font/sebang.otf') format('truetype');
+    font-family: "sebang";
+}
+
+@font-face {
+    src: url('../font/sebang-bold.otf') format('truetype');
+    font-family: "sebang-bold";
+}

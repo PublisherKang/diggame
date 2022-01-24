@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>DIGTOC</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/game_style.css">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
@@ -201,9 +202,51 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="next_minting"></div>
+                    <div class="next_minting">
+                        <div class="next_inner">
+                            <span>Let's get<br>
+                                Mining Tools
+                            </span>
+                            <button type="button"></button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </div><!-- inven_inner -->
+            <div class="upgrade_complete">
+                <div class="complete_inner">
+                    <p class="complete_title">Upgrade Complete!</p>
+                    <p class="complete_item">
+                        <img src="images/item/pick_common.png" alt="">
+                    </p>
+                    <p class="item_name">
+                        Pick
+                        <span class="item_rank">Common</span>
+                    </p>
+                    <p class="item_level">
+                        <span>Level 1</span>
+                        ->
+                        <span>Level 2</span>
+                    </p>
+                </div>
+            </div><!-- upgrade_complete -->
+            <div class="repair_popup">
+                <div class="repair_wrap">
+                    <div class="repair_inner">
+                        <p class="repair_ques">
+                            Repair costs are consumed.<br>
+                            Are you sure you want to fix it?
+                        </p>
+                        <p class="price_wrap">
+                            <span class="price">25</span>
+                            GEM
+                        </p>
+                        <div class="button_wrap">
+                            <button type="button" class="confirm">Confirm</button>
+                            <button type="button" class="cancel">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- repair_popup -->
         </div>
     </div>
 </body>

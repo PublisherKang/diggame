@@ -32,4 +32,14 @@ $(document).ready(function(){
     console.log(previewItem.children().first());
 
 
+    // repair 팝업
+    const repairBtn = $(".btn_wrap .repair");
+    const repairPop = $(".repair_popup");
+    const repairCancelBtn = $(".repair_popup .cancel");
+    repairBtn.click(function(){
+        repairPop.show();
+    });
+    repairCancelBtn.click(function(){
+        repairPop.hide();
+    });
 });
