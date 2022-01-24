@@ -31,6 +31,7 @@ for(let i = 0; i < items.length; i++){
         score += num;
         document.getElementById("point_score").textContent = score.toFixed(2);
         document.getElementById("inven_point_score").textContent = score.toFixed(2);
+        document.getElementById("shop_point_score").textContent = score.toFixed(2);
         }
     });
 }

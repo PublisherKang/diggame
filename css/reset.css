@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 *{margin:0; padding:0;}
-body{font-size:12px; line-height: 1; word-break: keep-all; color: #222; background: #fff; font-family: "sebang";}
+body{font-size:12px; line-height: 1; word-break: keep-all; color: #222; background: #fff; font-family: "sebang"; letter-spacing: .05rem;}
 a{color:#222; text-decoration: none;}
 img{border:none; vertical-align:top; width: 100%; height: auto;}
 ul{list-style:none;}
@@ -10,7 +10,7 @@ li{list-style:none;}
 address{font-style:normal;}
 h1,h2,h3,h4,h5,h6,div,ul,li,ol,dl,dt,dd,section,a,nav{box-sizing: border-box;}
 i{font-style:normal;}
-button{border: none; background: none; font-family: "sebang"; cursor: pointer;}
+button{border: none; background: none; font-family: "sebang"; cursor: pointer; letter-spacing: .05rem;}
 
 input{-webkit-appearance: none;}
 

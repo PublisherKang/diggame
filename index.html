@@ -18,8 +18,8 @@
         <div class="game_header">
             <div class="game_headerIn">
                 <p class="marker">
-                    <img class="vip_gold" src="images/ui/vip(gold).svg" alt="">
-                    <img class="vip_silver" src="images/ui/vip(silver).svg" alt="">
+                    <img class="vip_gold" src="images/ui/vipgold.svg" alt="">
+                    <img class="vip_silver" src="images/ui/vipsilver.svg" alt="">
                 </p>
                 <div class="play_time_wrap">
                     <div class="play_time">
@@ -47,13 +47,13 @@
                 </p>
             </div><!-- 아이템 남은 양 -->
             <div class="stone_item item1">
-                <img class="cur3" src="images/rock.png" alt="">
+                <img class="cur3" src="images/background/digtoc_gui.png" alt="">
             </div><!-- 광맥 이미지1 -->
             <div class="stone_item item2">
-                <img class="cur3" src="images/rock.png" alt="">
+                <img class="cur3" src="images/background/digtoc_gui.png" alt="">
             </div><!-- 광맥 이미지2 -->
             <div class="stone_item item3">
-                <img class="cur3" src="images/rock.png" alt="">
+                <img class="cur3" src="images/background/digtoc_gui.png" alt="">
             </div><!-- 광맥 이미지3 -->
             <div class="boost_200">
                 <span class="boost_icon"></span>
@@ -96,7 +96,7 @@
                     <span id="inven_point_score">0.00</span> GEM
                 </div>
             </div>
-            <div class="inven_inner">
+            <div class="inven_container">
                 <div class="upgrade_wrap">
                     <p class="equip">
                         <i>•</i>
@@ -247,7 +247,142 @@
                     </div>
                 </div>
             </div><!-- repair_popup -->
-        </div>
+        </div><!-- inven popup -->
+        <div class="shop_popup">
+            <div class="shop_header">
+                <button class="back_btn">Back to Game</button>
+                <p class="shop_name">SHOP</p>
+                <div class="point_wrap">
+                    <span id="shop_point_score">0.00</span> GEM
+                </div>
+            </div>
+            <div class="shop_container">
+                <div class="shop_menu_btn">
+                    <ul>
+                        <li>
+                            <button type="button">PACKAGE</button>
+                        </li>
+                        <li>
+                            <button type="button">ITEM</button>
+                        </li>
+                        <li>
+                            <button type="button">MINING TOOL</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content_wrap">
+                    <div class="package_content">
+                        <ul>
+                            <li>
+                                <div class="vip_silver">
+                                    <img src="images/ui/vipsilver.svg" alt="">
+                                    7 days every day<br>
+                                    Permanent Booster 10%<br>
+                                    Auto click 1 hour 1 piece<br>
+                                    2ea 200% 1 hour boosters
+                                </div>
+                                <p>
+                                    <span class="price">5,000</span>
+                                </p>
+                            </li>
+                            <li>
+                                <div class="vip_gold">
+                                    <img src="images/ui/vipgold.svg" alt="">
+                                    7 days every day<br>
+                                    Always Boost 30%<br>
+                                    Auto click 1 hour 5 photos<br>
+                                    5ea 200% 1 hour boosters
+                                </div>
+                                <p>
+                                    <span class="price">8,000</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div><!-- package_content -->
+                    <div class="item_content">
+                        <div class="booster_list">
+                            <div class="list_title">
+                                Booster
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="item">
+                                        <img src="images/item/booster_10m.png" alt="">
+                                        Mining 100% UP / 10M
+                                    </div>
+                                    <p class="price_wrap">
+                                        <span class="price">200</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <img src="images/item/booster_1h.png" alt="">
+                                        Mining 100% UP / 1H
+                                    </div>
+                                    <p class="price_wrap">
+                                        <span class="price">200</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="auto_list">
+                            <div class="list_title">
+                                Auto Click
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="item">
+                                        <img src="images/item/auto_click_10m.png" alt="">
+                                        Auto Click / 10M
+                                    </div>
+                                    <p class="price_wrap">
+                                        <span class="price">200</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <img src="images/item/auto_click_1h.png" alt="">
+                                        Auto Click Click / 1H
+                                    </div>
+                                    <p class="price_wrap">
+                                        <span class="price">200</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- item_content -->
+                    <div class="tool_content">
+                        <ul>
+                            <li>
+                                <div class="box_wrap">
+                                    <img src="images/ui/premium_box.png" alt="">
+                                    <p class="box_title">Premium Box</p>
+                                    <span class="box_info">
+                                        (Rare 80%, Legend 20%)
+                                    </span>
+                                </div>
+                                <div class="price_wrap">
+                                    <span class="price">1,000</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box_wrap">
+                                    <img src="images/ui/vip_box.png" alt="">
+                                    <p class="box_title">VIP Box</p>
+                                    <span class="box_info">
+                                        (Normal 80%, Rare 20%)
+                                    </span>
+                                </div>
+                                <div class="price_wrap">
+                                    <span class="price">8,00</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- content_wrap -->
+            </div>
+        </div><!-- shop popup -->
+
     </div>
 </body>
 </html>

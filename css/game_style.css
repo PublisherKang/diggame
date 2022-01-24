@@ -4,7 +4,7 @@
 
 
 
-.game_wrap{width: 700px; height: 700px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../images/background/back1.png) no-repeat 0 0 / contain; border-radius: 20px; overflow: hidden;}
+.game_wrap{width: 700px; height: 700px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../images/background/back1.jpg) no-repeat 0 0 / contain; border-radius: 20px; overflow: hidden;}
 
 .game_header{width: 100%; height: 68px; background: rgba(0, 0, 0, .5); position: relative; z-index: 300;}
 .game_headerIn{width: 100%; padding: 0 20px; height: 68px; position: relative;}
@@ -22,7 +22,10 @@
 .click_speed_wrap #clicks{padding: 10px 0 10px 26px; background: url(../images/ui/click_speed_icon.svg) no-repeat 0 4px / 20px auto; font-size: 14px;}
 
 .point_wrap{color: #fff; position: absolute; top: 50%; right: 30px; transform: translateY(-50%); font-size: 14px;}
-.point_wrap #point_score, .point_wrap #inven_point_score{padding: 8px 0 8px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto;}
+
+.point_wrap #point_score,
+.point_wrap #inven_point_score,
+.point_wrap #shop_point_score{padding: 8px 0 8px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto;}
 
 
 
@@ -90,16 +93,16 @@
 
 /* ====== 팝업 ====== */
 /* 인벤토리 팝업 */
-.inven_popup{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: url(../images/background/inventory_back.png) no-repeat 0 0 / contain; display: none; z-index: 301;}
+.inven_popup{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: url(../images/background/inventory_back.jpg) no-repeat 0 0 / contain; visibility: hidden; z-index: 301;}
 
 .inven_header{width: 100%; height: 68px; background: #222; position: relative;}
 
 .inven_header .back_btn{position: absolute; top: 50%; left: 20px; transform: translateY(-50%); color: #fff; font-size: 16px; background: url(../images/ui/back_icon2.png) no-repeat 0 center / 20px auto;cursor: pointer; padding: 12px 0 12px 28px;}
 
-.inven_header .inven_name{font-size: 30px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff;}
+.inven_header .inven_name{font-size: 30px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; }
 
 /* inner */
-.inven_inner{width: 100%; padding: 30px 30px 40px; display: flex; justify-content: space-between; flex-wrap: wrap;}
+.inven_container{width: 100%; padding: 30px 30px 40px; display: flex; justify-content: space-between; flex-wrap: wrap;}
 /* 업그레이드 wrap */
 .upgrade_wrap{width: 200px; border-radius: 20px; background: #222; box-shadow: 4px 4px 10px #000; padding: 0 0 36px}
 
@@ -169,7 +172,7 @@
 .complete_inner .item_level{text-align: center; font-size: 24px; color: #fff;}
 
 /* repair 영역 */
-.repair_popup{width: 100%; height: 100%; background: rgba(0, 0, 0, .7); position: absolute; top: 0; left: 0; display: none;}
+.repair_popup{width: 100%; height: 100%; background: rgba(0, 0, 0, .7); position: absolute; top: 0; left: 0; visibility: hidden;}
 .repair_wrap{width: 400px; border-radius: 20px; border: 1px solid #fff; background: #222; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px;}
 
 .repair_inner{}
@@ -185,3 +188,84 @@
 
 .repair_inner .button_wrap .confirm{background-image: url(../images/ui/btn_img3.png);}
 .repair_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
+
+
+/* 샵 팝업 */
+.shop_popup{width: 100%; height: 100%; background: url(../images/background/shop_back.jpg) no-repeat 0 0 / cover; position: absolute; top: 0; left: 0; z-index: 301; padding: 0 10px; visibility: hidden;}
+
+.shop_header{width: 100%; height: 68px; border-bottom: 2px solid #333; position: relative;}
+
+.shop_header .back_btn{position: relative; top: 50%; left: 10px; transform: translateY(-50%); font-size: 16px; background: url(../images/ui/back_icon.png) no-repeat 0 center / 20px auto; cursor: pointer; padding: 12px 0 12px 28px; font-family: "sebang-bold";}
+
+.shop_header .point_wrap{color: #222; font-family: "sebang-bold";}
+
+.shop_header .shop_name{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 30px; font-family: "sebang-bold";}
+
+
+.shop_container{padding: 40px 20px;}
+.shop_container .shop_menu_btn{margin-bottom: 30px;}
+.shop_container .shop_menu_btn ul{display: flex; justify-content: space-between;}
+.shop_container .shop_menu_btn ul li{width: 202px;}
+.shop_container .shop_menu_btn ul li button{width: 100%; background-repeat: no-repeat; background-position: 0 0; background-size: contain; background-image: url(../images/ui/btn_img1.png); padding: 18px 0; font-size: 16px; filter: drop-shadow(3px 3px 6px #000); font-family: "sebang-bold";}
+
+/* content_wrap */
+.content_wrap{position: relative; width: 640px;}
+
+/* package_content */
+.package_content{display: none; width: 640px;}
+.package_content ul{display: flex; justify-content: space-between;}
+
+.package_content ul li{width: 306px; text-align: center; color: #fff; background-repeat: no-repeat; background-position: center 0; background-size: contain; cursor: pointer;}
+
+.package_content ul li > div{height: 350px; background-repeat: no-repeat; background-position: center center; background-color: #222; border-radius: 32px; background-size: 282px auto; padding: 40px 10px 0; font-size: 13px; line-height: 1.4; margin-bottom: 30px; box-shadow: 3px 3px 14px #222;}
+
+.package_content ul li > div img{width: 140px; display: block; margin: 0 auto 20px;}
+
+.package_content ul li .vip_silver{background-image: url(../images/ui/shop_vip_frame1.png);}
+.package_content ul li .vip_gold{background-image: url(../images/ui/shop_vip_frame2.png);}
+
+.package_content ul li p{width: 180px; background: #222; margin: 0 auto; padding: 20px; border-radius: 10px; box-shadow: 4px 4px 18px #222;}
+
+.package_content ul li .price{font-size: 24px; padding: 10px 0 10px 46px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 40px auto;}
+
+/* item_content */
+.item_content{position: absolute; top: 0; left: 0; width: 640px; display: none;}
+
+/* item_content 공통값 */
+.booster_list, .auto_list{width: 100%; background: #1a1a1a; display: flex; padding: 20px; justify-content: space-between; border-radius: 24px; box-shadow: 4px 4px 10px #000; margin-bottom: 20px;}
+
+.booster_list .list_title, .auto_list .list_title{font-size: 26px; color: #fff; width: 196px; text-align: center; padding-top: 130px; background-repeat: no-repeat; background-position: center 14px; background-size: 100px auto;}
+
+.booster_list ul, .auto_list ul{display: flex; width: 404px; justify-content: space-between;}
+.booster_list ul li, .auto_list ul li{width: 192px; border-radius: 20px; overflow: hidden; text-align: center; color: #fff; box-shadow: 4px 4px 10px #000; cursor: pointer;}
+
+.booster_list ul li .item, .auto_list ul li .item{background-color: #3b3b3b; padding: 10px 0 17px;}
+.booster_list ul li .item img, .auto_list ul li .item img{width: 100px; margin: 0 auto; display: block;}
+
+.booster_list ul li .price_wrap, .auto_list ul li .price_wrap{background-color: #1f1f1f; padding: 12px 0;}
+
+.booster_list ul li .price_wrap .price, .auto_list ul li .price_wrap .price{font-size: 16px; padding: 4px 0 4px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto;}
+
+/* booster list 개별 값 */
+.booster_list .list_title{background-image: url(../images/ui/booster_icon.png);}
+
+/* auto list 개별 값 */
+.auto_list .list_title{background-image: url(../images/ui/auto_click_icon.png); background-size: 84px auto;}
+
+/* auto list 개별값 */
+.auto_list{margin-bottom: 0;}
+
+
+.tool_content{position: absolute; top: 0; left: 0; width: 640px;}
+.tool_content ul{display: flex; justify-content: space-between;}
+
+.tool_content ul li{width: 300px; text-align: center;}
+
+.tool_content .box_wrap{background: #1a1a1a; border-radius: 30px; padding: 16px 0 24px 0; margin-bottom: 24px;}
+.tool_content .box_wrap img{display: flex; width: 140px; margin: 0 auto 14px;}
+.tool_content .box_wrap .box_title{font-size: 26px; color: #fff; margin-bottom: 10px;}
+
+.tool_content .box_wrap .box_info{font-size: 16px; color: #858585;}
+
+.tool_content .price_wrap{width: 160px; text-align: center;}
+.tool_content .price{color: #fff; font-size: 18px;}
