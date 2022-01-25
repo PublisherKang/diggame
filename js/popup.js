@@ -8,6 +8,7 @@ $(function(){
     invenPopBtn.click(function(ev){
         ev.preventDefault();
         $(".inven_popup").css("visibility", "visible");
+        $(".ranking_popup").hide();
     });
 
     // 샵 팝업
@@ -15,6 +16,7 @@ $(function(){
         ev.preventDefault();
         $(".shop_popup").css("visibility", "visible");
         $(".package_content").css("visibility", "visible");
+        $(".ranking_popup").hide();
     });
 
     // Back 버튼
@@ -97,7 +99,35 @@ $(function(){
 $(function(){
     //랭킹 팝업 닫기
     const rankCloseBtn = $(".ranking_pop_close");
-    rankCloseBtn.click(function(){
+    rankCloseBtn.click(function(ev){
+        ev.preventDefault();
         $(".ranking_popup").hide();
+    });
+});
+
+$(function(){
+    $(".ch_change_btn").click(function(ev){
+        ev.preventDefault();
+        $(".another_room_popup").show();
+    });
+
+    $(".another_room_popup .cancel").click(function(ev){
+        ev.preventDefault();
+        $(".another_room_popup").hide();
+    });
+});
+
+
+$(function(){
+    const rankTabBtn = $(".rank_tab_btn li");
+    rankTabBtn.click(function(ev){
+        ev.preventDefault();
+        let idx = $(this).index();
+        
+        $(this).siblings().removeClass("on");
+        $(this).addClass("on");
+
+        $(".list_wrap > div").siblings().removeClass("on");
+        $(".list_wrap > div").eq(idx).addClass("on");
     });
 });
