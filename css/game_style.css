@@ -129,7 +129,7 @@
 .upgrade_wrap .equip{color: #fff; padding-top: 16px; font-size: 16px; margin-left: 10px; margin-bottom: 50px;}
 .upgrade_wrap .equip i{color: rgb(37, 223, 207);}
 
-.upgrade_wrap .preview_itme{width: 140px; margin: 0 auto 20px; cursor: pointer; border: 1px dashed #ccc; border-radius: 22px;}
+.upgrade_wrap .preview_item{width: 140px; margin: 0 auto 20px; cursor: pointer; border: 1px dashed #ccc; border-radius: 22px;}
 
 .upgrade_wrap .item_level{font-size: 16px; text-align: center; color: #fff; margin-bottom: 8px;}
 

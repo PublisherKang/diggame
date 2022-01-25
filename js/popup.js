@@ -38,7 +38,7 @@ $(function(){
     //아이템 추가하기
     const invenItemList = $(".item_list ul li");
     const targetListSpan = $(".item_list ul li span");                  
-    const previewItem = $(".preview_itme");
+    const previewItem = $(".preview_item");
     
     invenItemList.click(function(){
         targetListSpan.removeClass("target_img");
@@ -76,6 +76,7 @@ $(function(){
         $(".inven_popup").css("visibility", "hidden");
         $(".shop_popup").css("visibility", "visible");
         $(".package_content").css("visibility", "visible");
+        $(".shop_menu_btn li").eq(0).addClass("on")
     });
 });
 
