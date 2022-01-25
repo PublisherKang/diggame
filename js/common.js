@@ -1,13 +1,13 @@
 let score = 0; 
 let outOfTime = false;
-let num = 0.01
+let num = 0.01;
 
 const items = document.querySelectorAll(".stone_item");
 
 var startTime
 
 const clicksTxt = document.getElementById("clicks");
-const gameContainer = document.querySelector(".game_container")
+const gameContainer = document.querySelector(".game_container");
 
 //클릭하면 초당 클릭 스피드 올라감
 startGame();
@@ -32,6 +32,7 @@ for(let i = 0; i < items.length; i++){
         document.getElementById("point_score").textContent = score.toFixed(2);
         document.getElementById("inven_point_score").textContent = score.toFixed(2);
         document.getElementById("shop_point_score").textContent = score.toFixed(2);
+        document.getElementById("rank_score").textContent = score.toFixed(2);
         }
     });
 }
@@ -51,15 +52,7 @@ function boostTimeOut(){
 
 }
 
-// 부스트 아이템 사용
-boost200Start();
-function boost200Start(){
-    const boostItem = document.querySelector(".boost_item");
-    boostItem.addEventListener("click", function(){
-        boost200.style.display = "block";
-        this.style.display = "none";
-    });
-}
+
 
 
 const cursorTarget = document.querySelectorAll(".stone_item img");
@@ -109,6 +102,28 @@ function widthMinus(){
 }
 
 widthMinus();
+
+
+//사운드 버튼
+
+soundOn();
+function soundOn(){
+    const audioBtn = document.querySelector(".audio_btn");
+    const audio = document.querySelector(".audio");
+    audioBtn.addEventListener("click", function(){
+        this.classList.toggle("off");
+        if (audio.paused) {
+            audio.play();
+        }
+        else {
+            audio.pause();
+        }
+    });
+}
+
+
+
+
 
 
 

@@ -75,16 +75,27 @@
                         <button class="shop_btn"></button>
                     </li><!-- 상점 -->
                     <li>
-                        <button class="audio_on_btn"></button>
-                        <button class="audio_off_btn"></button>
-                        <audio src="audio/sound.wav" autoplay></audio>
+                        <button class="audio_btn"></button>
+                        <audio class="audio" src="audio/sound.wav" autoplay></audio>
                     </li><!-- 오디오 -->
                 </ul>
             </div><!-- 메뉴 버튼 리스트-->
-            <div class="boost_item">
-                boost<br>
-                item
-            </div>
+            <div class="cont_ranking">
+                <div class="ranking_inner">
+                    <p class="ranking_title">Mining Ranking</p>
+                    <div class="ranking_list">
+                        <ul>
+                            <li>Mining King</li>
+                            <li>Mining Master</li>
+                            <li>Insane Clicker</li>
+                        </ul>
+                    </div>
+                    <p class="my_ranking">
+                        Your Ranking: 
+                        <span class="ranking_num">95</span>
+                    </p>
+                </div>
+            </div><!-- 컨테이너 랭킹 -->
         </div><!-- 게임 컨테이너 -->
 
         <!-- ====== 팝업 ====== -->
@@ -393,7 +404,75 @@
                 </div><!-- content_wrap -->
             </div>
         </div><!-- shop popup -->
+        <div class="ranking_popup">
+            <button type="button" class="ranking_pop_close"></button>
+            <div class="ranking_pop_inner">
+                <p class="rank_pop_title">
+                    <span>Mining Ranking</span>
+                </p>
+                <ul class="rank_tab_btn">
+                    <li>
+                        <button type="button">Total Mining</button>
+                    </li>
+                    <li>
+                        <button type="button">Total Play Time</button>    
+                    </li>
+                </ul>
+                <div class="ranking_pop_list">
+                    <div class="list_name">
+                        <p>ID</p>
+                        <p>Total Mining</p>
+                    </div>
+                    <div class="rank_list">
+                        <ul>
+                            <li>
+                                <span class="rank_num">1</span>
+                                <p class="user_id">Mining King</p>
+                                <p class="user_score">999,999,999,99</p>
+                            </li>
+                            <li>
+                                <span class="rank_num">2</span>
+                                <p class="user_id">Mining Master</p>
+                                <p class="user_score">888,888,888,88</p>
+                            </li>
+                            <li>
+                                <span class="rank_num">3</span>
+                                <p class="user_id">Insane Clicker</p>
+                                <p class="user_score">777,777,777,77</p>
+                            </li>
+                            <li>
+                                <span class="rank_num">4</span>
+                                <p class="user_id">Player 4</p>
+                                <p class="user_score">666,666,666,66</p>
+                            </li>
+                            <li>
+                                <span class="rank_num">5</span>
+                                <p class="user_id">Player 5</p>
+                                <p class="user_score">555,555,555,55</p>
+                            </li>
+                            <li>
+                                <span class="rank_num">6</span>
+                                <p class="user_id">Player 6</p>
+                                <p class="user_score">444,444,444,44</p>
+                            </li>
+                            <li>
+                                <span class="rank_num">7</span>
+                                <p class="user_id">Player 7</p>
+                                <p class="user_score">333,333,333,33</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="my_rank">
+                        <span class="rank_num">95</span>
+                        <p class="user_id">Player ID</p>
+                        <p class="point_wrap">
+                            <span id="rank_score">0.00</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- ranking_popup -->
 
-    </div>
+    </div><!-- game_wrap -->
 </body>
 </html>

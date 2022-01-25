@@ -64,8 +64,6 @@
 .gauge_wrap .boost_timer{color: #fff; font-size: 16px; text-shadow: 2px 2px 3px #000; position: absolute; top: 50%; left: 130px; transform: translateY(-50%);}
 
 
-/* boosticon */
-.boost_item{width: 50px; height: 50px; border-radius: 50%; background-color: #f00; position: absolute; top: 20px; right: 20px; text-align: center; color: #fff; cursor: pointer;}
 
 @keyframes gauge_down{
     100%{width: 0;}
@@ -86,12 +84,32 @@
 .menu_list li .ch_change_btn{background-image: url(../images/ui/change_channel_icon.svg);}
 .menu_list li .inventory_btn{background-image: url(../images/ui/inventory_icon.svg);}
 .menu_list li .shop_btn{background-image: url(../images/ui/shop_icon.svg);}
-.menu_list li .audio_on_btn{background-image: url(../images/ui/sound_on_icon.svg);}
-.menu_list li .audio_off_btn{background-image: url(../images/ui/sound_off_icon.svg); display: none; position: absolute; top: 0; left: 0;}
+.menu_list li .audio_btn{background-image: url(../images/ui/sound_off_icon.svg);}
+.menu_list li .audio_btn.off{background-image: url(../images/ui/sound_on_icon.svg);}
+
+
+/* 랭킹 wrap */
+.cont_ranking{width: 154px; height: 192px; border: 1px solid #fff; border-radius: 10px; position: absolute; top: 20px; right: 10px; background: rgba(0, 0, 0, .7); cursor: pointer;}
+
+.ranking_inner{padding: 0 10px;}
+
+.ranking_inner .ranking_title{text-align: center; color: #fff; background: url(../images/ui/ranking_icon.svg) no-repeat 6px center /10px auto; padding: 13px 0 13px 12px; border-bottom: 1px solid #ccc; box-sizing: content-box;}
+
+.ranking_inner .ranking_list ul{border-bottom: 1px solid #fff; padding: 10px 0;}
+.ranking_inner .ranking_list ul li{color: #fff; padding: 10px 0 10px 32px; background-repeat: no-repeat; background-size: auto 25px; background-position: 0 center;}
+
+.ranking_inner .ranking_list ul li:nth-of-type(1){background-image: url(../images/ui/rank1.svg);}
+.ranking_inner .ranking_list ul li:nth-of-type(2){background-image: url(../images/ui/rank2.svg);}
+.ranking_inner .ranking_list ul li:nth-of-type(3){background-image: url(../images/ui/rank3.svg);}
+
+.ranking_inner .my_ranking{text-align: right; color: #fff; padding: 10px 0;}
 
 
 
-/* ====== 팝업 ====== */
+
+/* =========== 컨테이너 끝 ============ */
+
+/* ================ 팝업 ================ */
 /* 인벤토리 팝업 */
 .inven_popup{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: url(../images/background/inventory_back.jpg) no-repeat 0 0 / contain; visibility: hidden; z-index: 301;}
 
@@ -279,6 +297,51 @@
 
 .go_opensea .speack_icon{display: block; width: 100px; height: 150px; background: url(../images/ui/notice_icon.png) no-repeat 0 0 / 100px auto; position: absolute; top: -18px; left: 16px;}
 
-.go_opensea .text{padding: 24px 0 24px 136px; font-size: 16px; color: #fff; line-height: 1.5;}
+.go_opensea .text{padding: 28px 0 24px 140px; font-size: 14px; color: #fff; line-height: 1.5;}
 
 .go_opensea .opensea_btn{width: 140px; height: 80px; text-align: center; line-height: 1.4; font-size: 16px; background: url(../images/ui/btn_img4.png) no-repeat 0 0 /contain; position: absolute; top: 50%; right: 10px; transform: translateY(-50%); font-family: "sebang-bold";}
+
+
+/* 랭킹 팝업 */
+.ranking_popup{width: 360px; background: #363d48; border-radius: 20px; box-shadow: 4px 4px 18px #000; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 22px 18px 20px; display: none;}
+
+.ranking_popup .ranking_pop_close{position: absolute; top: 12px; right: 12px; width: 40px; height: 40px; background: #1a1a1a; border-radius: 50%; position: absolute;}
+.ranking_popup .ranking_pop_close::after,
+.ranking_popup .ranking_pop_close::before{content: ""; display: block; width: 24px; height: 2px; background: #fff; position: absolute; top: 50%; left: 50%;}
+.ranking_popup .ranking_pop_close::after{transform: translate(-50%, -50%) rotate(-45deg);}
+.ranking_popup .ranking_pop_close::before{transform: translate(-50%, -50%) rotate(45deg);}
+
+.ranking_pop_inner{}
+
+.ranking_pop_inner .rank_pop_title{text-align: center; padding: 0 0 22px 0;}
+
+.ranking_pop_inner .rank_pop_title span{color: #fff; font-size: 18px; padding-left: 26px; background: url(../images/ui/ranking_icon.svg) no-repeat 0 center / 18px auto;}
+
+.ranking_pop_inner .rank_tab_btn{width: 100%; display: flex; justify-content: space-between; margin-bottom: 10px;}
+.ranking_pop_inner .rank_tab_btn li{}
+.ranking_pop_inner .rank_tab_btn li button{width: 158px; background: #1a1a1a; padding: 12px 0; border-radius: 10px; color: #fff; text-align: center; display: block;}
+
+.ranking_pop_list{width: 100%; background: #1a1a1a; border-radius: 20px; padding: 14px 12px;}
+
+.ranking_pop_list .list_name{width: 100%; display: flex; justify-content: space-between; border-bottom: 2px solid #fff;}
+.ranking_pop_list .list_name p{width: 50%; padding: 0 0 14px 0; color: #fff; text-align: center;}
+
+.ranking_pop_list .rank_list ul{border-bottom: 2px solid #fff;}
+.ranking_pop_list .rank_list ul li{display: flex; justify-content: space-between; color: #fff; border-bottom: 1px solid #aaa;}
+
+.ranking_pop_list .rank_list ul li:last-child{border-bottom: none;}
+
+.ranking_pop_list .rank_num{display: block; width: 50px; text-align: center; padding: 12px 0;}
+
+.ranking_pop_list .rank_list ul li:nth-of-type(1) .rank_num{text-indent: -9999px; background: url(../images/ui/rank1.svg) no-repeat center center / 30px auto;}
+.ranking_pop_list .rank_list ul li:nth-of-type(2) .rank_num{text-indent: -9999px; background: url(../images/ui/rank2.svg) no-repeat center center / 30px auto;}
+.ranking_pop_list .rank_list ul li:nth-of-type(3) .rank_num{text-indent: -9999px; background: url(../images/ui/rank3.svg) no-repeat center center / 30px auto;}
+
+.ranking_pop_list .user_id{width: 120px; padding: 12px 0;}
+.ranking_pop_list .user_score{width: 110px; padding: 12px 0 12px 20px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 14px auto;}
+
+.ranking_pop_list .my_rank{color: #fff; display: flex; justify-content: space-between;}
+
+.ranking_pop_list .my_rank .point_wrap{position: static; top: 0; right: 0; transform: none;}
+
+.point_wrap #rank_score{display: block; width: 110px; padding: 12px 0 12px 20px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 14px auto;}

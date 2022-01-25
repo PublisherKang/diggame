@@ -47,10 +47,12 @@ $(function(){
     const repairBtn = $(".btn_wrap .repair");
     const repairPop = $(".repair_popup");
     const repairCancelBtn = $(".repair_popup .cancel");
-    repairBtn.click(function(){
+    repairBtn.click(function(ev){
+        ev.preventDefault();
         repairPop.css("visibility", "visible");
     });
-    repairCancelBtn.click(function(){
+    repairCancelBtn.click(function(ev){
+        ev.preventDefault();
         repairPop.css("visibility", "hidden");
     });
 });
@@ -64,6 +66,7 @@ $(function(){
         ev.preventDefault();
         $(".inven_popup").css("visibility", "hidden");
         $(".shop_popup").css("visibility", "visible");
+        $(".package_content").css("visibility", "visible");
     });
 });
 
@@ -80,4 +83,21 @@ $(function(){
         $(".content_wrap > div").eq(idx).css("visibility", "visible");
     });
     
-}); 
+});
+$(function(){
+    //컨테이너 랭킹 클릭 랭킹 팝업 나타남
+    const rankingBtn = $(".cont_ranking");
+    rankingBtn.click(function(ev){
+        ev.preventDefault();
+        $(".ranking_popup").show();
+    });
+});
+
+
+$(function(){
+    //랭킹 팝업 닫기
+    const rankCloseBtn = $(".ranking_pop_close");
+    rankCloseBtn.click(function(){
+        $(".ranking_popup").hide();
+    });
+});
