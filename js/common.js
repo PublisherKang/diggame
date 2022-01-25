@@ -54,27 +54,26 @@ function boostTimeOut(){
 
 
 
-
-const cursorTarget = document.querySelectorAll(".stone_item img");
-for(let i = 0; i < cursorTarget.length; i++){
-    function hideCur(event){
-        cursorTarget[i].classList.add("cur3");
-        event.preventDefault();
-    }
-    function moveCur(event){
-        cursorTarget[i].classList.remove("cur3");
-        event.preventDefault();
-    }
-    function showCur(event){
-        cursorTarget[i].classList.remove("cur3");
-        event.preventDefault();
-    }
+// 마우스 망치 애니메이션
+// const cursorTarget = document.querySelectorAll(".stone_item img");
+// for(let i = 0; i < cursorTarget.length; i++){
+//     function hideCur(event){
+//         cursorTarget[i].classList.add("cur3");
+//         event.preventDefault();
+//     }
+//     function moveCur(event){
+//         cursorTarget[i].classList.remove("cur3");
+//         event.preventDefault();
+//     }
+//     function showCur(event){
+//         cursorTarget[i].classList.remove("cur3");
+//         event.preventDefault();
+//     }
     
-    cursorTarget[i].onmousedown = hideCur;
-    cursorTarget[i].onmousemove = moveCur;
-    cursorTarget[i].onmouseup  = showCur;
-    
-}
+//     cursorTarget[i].onmousedown = hideCur;
+//     cursorTarget[i].onmousemove = moveCur;
+//     cursorTarget[i].onmouseup  = showCur;
+// }
 
 
 
@@ -121,6 +120,14 @@ function soundOn(){
     });
 }
 
+openseaOpen();
+function openseaOpen(){
+    const openseaBtn = document.querySelector(".opensea_btn");
+    openseaBtn.addEventListener("click", function(ev){
+        ev.preventDefault()
+        window.open("https://opensea.io/");
+    });
+}
 
 
 

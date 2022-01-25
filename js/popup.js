@@ -17,13 +17,20 @@ $(function(){
         $(".shop_popup").css("visibility", "visible");
         $(".package_content").css("visibility", "visible");
         $(".ranking_popup").hide();
+        $(".shop_menu_btn li").eq(0).addClass("on")
     });
 
     // Back 버튼
     backBtn.click(function(ev){
         ev.preventDefault();
+        // 백 버튼 해당 부모 팝업 화면에서 사라짐
         $(this).parent().parent().css("visibility", "hidden");
+
+        //샵 컨텐츠 내용 숨김
         $(".content_wrap > div").css("visibility", "hidden");
+
+        //샵 버튼 클래스 원 위치
+        $(".shop_menu_btn li").removeClass("on");
     });
 });
 
@@ -80,7 +87,9 @@ $(function(){
     shopMenuBtn.click(function(event){
         event.preventDefault();
         let idx = $(this).index();
-        
+        $(this).siblings().removeClass("on");
+        $(this).addClass("on");
+
         $(".content_wrap > div").css("visibility", "hidden");
         $(".content_wrap > div").eq(idx).css("visibility", "visible");
     });

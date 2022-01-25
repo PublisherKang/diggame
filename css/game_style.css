@@ -2,6 +2,8 @@
 
 ::selection{background: transparent;}
 
+*{-webkit-user-drag: none; -webkit-touch-callout: none; -webkit-user-select: none;-khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+
 
 
 .game_wrap{width: 700px; height: 700px; /* position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); */ background: url(../images/background/back1.jpg) no-repeat 0 0 / contain; border-radius: 20px; overflow: hidden; position: relative;}
@@ -43,8 +45,8 @@
 /* 돌 이미지 위치 */
 .stone_item{width: 220px; height: auto; position: absolute;}
 
-.stone_item img{cursor: url(../images/item2.png) 18 18 ,auto;/*  -webkit-user-drag: none; */}
-.stone_item img.cur3{cursor: url(../images/item3.png) 18 18 ,auto;/*  -webkit-user-drag: none; */}
+.stone_item img{cursor: pointer; /* cursor: url(../images/item2.png) 18 18 ,auto;  */-webkit-user-drag: none;}
+/* .stone_item img.cur3{cursor: url(../images/item3.png) 18 18 ,auto; -webkit-user-drag: none;} */
 
 
 .stone_item.item1{top: 378px; left: 56px;}
@@ -148,6 +150,8 @@
 
 .upgrade_wrap .btn_wrap button{display: block; width: 140px; background: url(../images/ui/btn_img1.png) no-repeat 0 0 / contain; margin: 0 auto; margin-bottom: 10px; cursor: pointer; padding: 10px 0; font-size: 14px;}
 
+.upgrade_wrap .btn_wrap .mint_item{background-image: url(../images/ui/btn_img6.png);}
+
 /* 아이템 리스트 */
 .flex_right{display: flex; flex-direction: column; justify-content: space-between;}
 .item_list_wrap{width: 420px; border-radius: 20px; background: #aaa; box-shadow: 4px 4px 10px #000; position: relative; padding: 50px 10px 10px;}
@@ -224,7 +228,9 @@
 .shop_container .shop_menu_btn{margin-bottom: 30px;}
 .shop_container .shop_menu_btn ul{display: flex; justify-content: space-between;}
 .shop_container .shop_menu_btn ul li{width: 202px;}
-.shop_container .shop_menu_btn ul li button{width: 100%; background-repeat: no-repeat; background-position: 0 0; background-size: contain; background-image: url(../images/ui/btn_img1.png); padding: 18px 0; font-size: 16px; filter: drop-shadow(3px 3px 6px #000); font-family: "sebang-bold";}
+.shop_container .shop_menu_btn ul li button{width: 100%; background-repeat: no-repeat; background-position: 0 0; background-size: contain; background-image: url(../images/ui/btn_img7.png); padding: 18px 0; font-size: 16px; filter: drop-shadow(3px 3px 6px #000); font-family: "sebang-bold";}
+
+.shop_container .shop_menu_btn ul li.on button{background-image: url(../images/ui/btn_img1.png);}
 
 /* content_wrap */
 .content_wrap{position: relative; width: 640px;}
@@ -299,7 +305,7 @@
 
 .go_opensea .text{padding: 28px 0 24px 140px; font-size: 14px; color: #fff; line-height: 1.5;}
 
-.go_opensea .opensea_btn{width: 140px; height: 80px; text-align: center; line-height: 1.4; font-size: 16px; background: url(../images/ui/btn_img4.png) no-repeat 0 0 /contain; position: absolute; top: 50%; right: 10px; transform: translateY(-50%); font-family: "sebang-bold";}
+.go_opensea .opensea_btn{width: 140px; height: 80px; text-align: center; line-height: 1.4; font-size: 16px; background: url(../images/ui/btn_img4.png) no-repeat 0 0 /contain; position: absolute; top: 50%; right: 7px; transform: translateY(-50%); font-family: "sebang-bold";}
 
 
 /* 랭킹 팝업 */
@@ -346,7 +352,7 @@
 .playtime_pop_list .time_list ul{border-bottom: 2px solid #fff;}
 
 .ranking_pop_list .rank_list ul li,
-.playtime_pop_list .time_list ul li{display: flex; justify-content: space-between; color: #fff; border-bottom: 1px solid #aaa;}
+.playtime_pop_list .time_list ul li{display: flex; justify-content: flex-start; color: #fff; border-bottom: 1px solid #aaa;}
 
 .ranking_pop_list .rank_list ul li:last-child,
 .playtime_pop_list .time_list ul li:last-child{border-bottom: none;}
@@ -363,8 +369,8 @@
 .ranking_pop_list .rank_list ul li:nth-of-type(3) .rank_num,
 .playtime_pop_list .time_list ul li:nth-of-type(3) .rank_num{text-indent: -9999px; background: url(../images/ui/rank3.svg) no-repeat center center / 30px auto;}
 
-.ranking_pop_list .user_id,
-.playtime_pop_list .user_id{width: 120px; padding: 12px 0;}
+.ranking_pop_list .user_id{width: 120px; padding: 12px 0;}
+.playtime_pop_list .user_id{width: 136px; padding: 12px 0;}
 
 .ranking_pop_list .user_score{width: 110px; padding: 12px 0 12px 20px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 14px auto;}
 
@@ -372,7 +378,7 @@
 
 /* myrank */
 .ranking_pop_list .my_rank,
-.playtime_pop_list .my_rank{color: #fff; display: flex; justify-content: space-between;}
+.playtime_pop_list .my_rank{color: #fff; display: flex; justify-content: start;}
 
 .ranking_pop_list .my_rank .point_wrap,
 .playtime_pop_list .my_rank .point_wrap{position: static; top: 0; right: 0; transform: none;}
