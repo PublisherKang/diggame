@@ -47,13 +47,13 @@
                 </p>
             </div><!-- 아이템 남은 양 -->
             <div class="stone_item item1">
-                <img class="cur3" src="images/background/digtoc_gui.png" alt="">
+                <img src="images/background/digtoc_gui.png" alt="">
             </div><!-- 광맥 이미지1 -->
             <div class="stone_item item2">
-                <img class="cur3" src="images/background/digtoc_gui.png" alt="">
+                <img src="images/background/digtoc_gui.png" alt="">
             </div><!-- 광맥 이미지2 -->
             <div class="stone_item item3">
-                <img class="cur3" src="images/background/digtoc_gui.png" alt="">
+                <img src="images/background/digtoc_gui.png" alt="">
             </div><!-- 광맥 이미지3 -->
             <div class="boost_200">
                 <span class="boost_icon"></span>
@@ -405,124 +405,126 @@
             </div>
         </div><!-- shop popup -->
         <div class="ranking_popup">
-            <button type="button" class="ranking_pop_close"></button>
-            <div class="ranking_pop_inner">
-                <p class="rank_pop_title">
-                    <span>Mining Ranking</span>
-                </p>
-                <ul class="rank_tab_btn">
-                    <li class="on">
-                        <button type="button">Total Mining</button>
-                    </li>
-                    <li>
-                        <button type="button">Total Play Time</button>    
-                    </li>
-                </ul>
-                <div class="list_wrap">
-                    <div class="ranking_pop_list on">
-                        <div class="list_name">
-                            <p>ID</p>
-                            <p>Total Mining</p>
-                        </div>
-                        <div class="rank_list">
-                            <ul>
-                                <li>
-                                    <span class="rank_num">1</span>
-                                    <p class="user_id">Mining King</p>
-                                    <p class="user_score">999,999,999,99</p>
-                                </li>
-                                <li>
-                                    <span class="rank_num">2</span>
-                                    <p class="user_id">Mining Master</p>
-                                    <p class="user_score">888,888,888,88</p>
-                                </li>
-                                <li>
-                                    <span class="rank_num">3</span>
-                                    <p class="user_id">Insane Clicker</p>
-                                    <p class="user_score">777,777,777,77</p>
-                                </li>
-                                <li>
-                                    <span class="rank_num">4</span>
-                                    <p class="user_id">Player 4</p>
-                                    <p class="user_score">666,666,666,66</p>
-                                </li>
-                                <li>
-                                    <span class="rank_num">5</span>
-                                    <p class="user_id">Player 5</p>
-                                    <p class="user_score">555,555,555,55</p>
-                                </li>
-                                <li>
-                                    <span class="rank_num">6</span>
-                                    <p class="user_id">Player 6</p>
-                                    <p class="user_score">444,444,444,44</p>
-                                </li>
-                                <li>
-                                    <span class="rank_num">7</span>
-                                    <p class="user_id">Player 7</p>
-                                    <p class="user_score">333,333,333,33</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="my_rank">
-                            <span class="rank_num">95</span>
-                            <p class="user_id">Player ID</p>
-                            <p class="point_wrap">
-                                <span id="rank_score">0.00</span>
-                            </p>
-                        </div>
-                    </div><!-- ranking_pop -->
-                    <div class="playtime_pop_list">
-                        <div class="list_name">
-                            <p>ID</p>
-                            <p>Play Time</p>
-                        </div>
-                        <div class="time_list">
-                            <ul>
-                                <li>
-                                    <span class="rank_num">1</span>
-                                    <p class="user_id">Mining King</p>
-                                    <p class="time_score">10:20:59</p>
-                                </li>
-                                <li>
-                                    <span class="rank_num">2</span>
-                                    <p class="user_id">Mining Master</p>
-                                    <p class="time_score">09:14:44</p>
-                                </li>
-                                <li>
-                                    <span class="rank_num">3</span>
-                                    <p class="user_id">Insane Clicker</p>
-                                    <p class="time_score">09:11:32</p>
-                                </li>
-                                <li>
-                                    <span class="rank_num">4</span>
-                                    <p class="user_id">Player 4</p>
-                                    <p class="time_score">08:21:22</p>
-                                </li>
-                                <li>
-                                    <span class="rank_num">5</span>
-                                    <p class="user_id">Player 5</p>
-                                    <p class="time_score">08:10:43</p>
-                                </li>
-                                <li>
-                                    <span class="rank_num">6</span>
-                                    <p class="user_id">Player 6</p>
-                                    <p class="time_score">07:32:12</p>
-                                </li>
-                                <li>
-                                    <span class="rank_num">7</span>
-                                    <p class="user_id">Player 7</p>
-                                    <p class="time_score">06:21:54</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="my_rank">
-                            <span class="rank_num">95</span>
-                            <p class="user_id">Player ID</p>
-                            <p class="point_wrap">
-                                <span id="time_score">04.32:13</span>
-                            </p>
-                        </div>
-                    </div><!-- playtime_pop -->
+            <div class="ranking_wrap">
+                <button type="button" class="ranking_pop_close"></button>
+                <div class="ranking_pop_inner">
+                    <p class="rank_pop_title">
+                        <span>Mining Ranking</span>
+                    </p>
+                    <ul class="rank_tab_btn">
+                        <li class="on">
+                            <button type="button">Total Mining</button>
+                        </li>
+                        <li>
+                            <button type="button">Total Play Time</button>    
+                        </li>
+                    </ul>
+                    <div class="list_wrap">
+                        <div class="ranking_pop_list on">
+                            <div class="list_name">
+                                <p>ID</p>
+                                <p>Total Mining</p>
+                            </div>
+                            <div class="rank_list">
+                                <ul>
+                                    <li>
+                                        <span class="rank_num">1</span>
+                                        <p class="user_id">Mining King</p>
+                                        <p class="user_score">999,999,999,99</p>
+                                    </li>
+                                    <li>
+                                        <span class="rank_num">2</span>
+                                        <p class="user_id">Mining Master</p>
+                                        <p class="user_score">888,888,888,88</p>
+                                    </li>
+                                    <li>
+                                        <span class="rank_num">3</span>
+                                        <p class="user_id">Insane Clicker</p>
+                                        <p class="user_score">777,777,777,77</p>
+                                    </li>
+                                    <li>
+                                        <span class="rank_num">4</span>
+                                        <p class="user_id">Player 4</p>
+                                        <p class="user_score">666,666,666,66</p>
+                                    </li>
+                                    <li>
+                                        <span class="rank_num">5</span>
+                                        <p class="user_id">Player 5</p>
+                                        <p class="user_score">555,555,555,55</p>
+                                    </li>
+                                    <li>
+                                        <span class="rank_num">6</span>
+                                        <p class="user_id">Player 6</p>
+                                        <p class="user_score">444,444,444,44</p>
+                                    </li>
+                                    <li>
+                                        <span class="rank_num">7</span>
+                                        <p class="user_id">Player 7</p>
+                                        <p class="user_score">333,333,333,33</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="my_rank">
+                                <span class="rank_num">95</span>
+                                <p class="user_id">Player ID</p>
+                                <p class="point_wrap">
+                                    <span id="rank_score">0.00</span>
+                                </p>
+                            </div>
+                        </div><!-- ranking_pop -->
+                        <div class="playtime_pop_list">
+                            <div class="list_name">
+                                <p>ID</p>
+                                <p>Play Time</p>
+                            </div>
+                            <div class="time_list">
+                                <ul>
+                                    <li>
+                                        <span class="rank_num">1</span>
+                                        <p class="user_id">Mining King</p>
+                                        <p class="time_score">10:20:59</p>
+                                    </li>
+                                    <li>
+                                        <span class="rank_num">2</span>
+                                        <p class="user_id">Mining Master</p>
+                                        <p class="time_score">09:14:44</p>
+                                    </li>
+                                    <li>
+                                        <span class="rank_num">3</span>
+                                        <p class="user_id">Insane Clicker</p>
+                                        <p class="time_score">09:11:32</p>
+                                    </li>
+                                    <li>
+                                        <span class="rank_num">4</span>
+                                        <p class="user_id">Player 4</p>
+                                        <p class="time_score">08:21:22</p>
+                                    </li>
+                                    <li>
+                                        <span class="rank_num">5</span>
+                                        <p class="user_id">Player 5</p>
+                                        <p class="time_score">08:10:43</p>
+                                    </li>
+                                    <li>
+                                        <span class="rank_num">6</span>
+                                        <p class="user_id">Player 6</p>
+                                        <p class="time_score">07:32:12</p>
+                                    </li>
+                                    <li>
+                                        <span class="rank_num">7</span>
+                                        <p class="user_id">Player 7</p>
+                                        <p class="time_score">06:21:54</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="my_rank">
+                                <span class="rank_num">95</span>
+                                <p class="user_id">Player ID</p>
+                                <p class="point_wrap">
+                                    <span id="time_score">04.32:13</span>
+                                </p>
+                            </div>
+                        </div><!-- playtime_pop -->
+                    </div>
                 </div>
             </div>
         </div><!-- ranking_popup -->

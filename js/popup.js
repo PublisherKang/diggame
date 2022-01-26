@@ -41,12 +41,15 @@ $(function(){
     const previewItem = $(".preview_item");
     
     invenItemList.click(function(){
+        let cloneThis = $(this).clone();
         targetListSpan.removeClass("target_img");
         $(this).find(targetListSpan).addClass("target_img");
-        previewItem.append($(this).find("img"));
+        previewItem.append(cloneThis);
         
     
+        //this 아이템 클릭시 해당 span 삭제 자식 요소 삭제
         previewItem.children().first().remove();
+        previewItem.children().first().find("span").remove();
     });
     // console.log(previewItem.children().first());
 });
@@ -103,22 +106,36 @@ $(function(){
         ev.preventDefault();
         $(".ranking_popup").show();
     });
-});
 
+    $(".ranking_popup").click(function(ev){
+        if($(".ranking_popup").is(ev.target)){
+            $(".rank_tab_btn li").removeClass("on")
+            $(".rank_tab_btn li").eq(0).addClass("on");
+            
+            $(".ranking_popup").hide();
+        }
 
-$(function(){
+    });
+    
     //랭킹 팝업 닫기
     const rankCloseBtn = $(".ranking_pop_close");
     rankCloseBtn.click(function(ev){
         ev.preventDefault();
         $(".ranking_popup").hide();
+    
+        $(".rank_tab_btn li").removeClass("on")
+        $(".rank_tab_btn li").eq(0).addClass("on");
+    
     });
+    
 });
+
 
 $(function(){
     $(".ch_change_btn").click(function(ev){
         ev.preventDefault();
         $(".another_room_popup").show();
+        $(".ranking_popup").hide();
     });
 
     $(".another_room_popup .cancel").click(function(ev){

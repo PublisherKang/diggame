@@ -27,6 +27,7 @@ function startGame() {
 //클릭하면 게임 스코어 올라감
 for(let i = 0; i < items.length; i++){
     items[i].addEventListener("click", function(e) {
+        e.preventDefault();
         if (!outOfTime) {
         score += num;
         document.getElementById("point_score").textContent = score.toFixed(2);
@@ -34,7 +35,23 @@ for(let i = 0; i < items.length; i++){
         document.getElementById("shop_point_score").textContent = score.toFixed(2);
         document.getElementById("rank_score").textContent = score.toFixed(2);
         }
+
+        //스코어 애니메이션
+        let newSpan = document.createElement("span");
+        const stornImgs = document.querySelectorAll(".stone_item img");
+
+        newSpan.textContent = num;
+        newSpan.classList.add("ani_num");
+        
+        this.appendChild(newSpan);
+        
+        newSpan.addEventListener("animationend",function(){
+            this.remove();
+        });
+
     });
+    
+    
 }
 
 
@@ -52,34 +69,6 @@ function boostTimeOut(){
 
 }
 
-
-
-// 마우스 망치 애니메이션
-// const cursorTarget = document.querySelectorAll(".stone_item img");
-// for(let i = 0; i < cursorTarget.length; i++){
-//     function hideCur(event){
-//         cursorTarget[i].classList.add("cur3");
-//         event.preventDefault();
-//     }
-//     function moveCur(event){
-//         cursorTarget[i].classList.remove("cur3");
-//         event.preventDefault();
-//     }
-//     function showCur(event){
-//         cursorTarget[i].classList.remove("cur3");
-//         event.preventDefault();
-//     }
-    
-//     cursorTarget[i].onmousedown = hideCur;
-//     cursorTarget[i].onmousemove = moveCur;
-//     cursorTarget[i].onmouseup  = showCur;
-// }
-
-
-
-// gameContainer.addEventListener("click", function(){
-//     mainMenu.style.display = "none";
-// });
 
 
 
@@ -131,9 +120,6 @@ function openseaOpen(){
 
 
 
-
-
-
 // function drag_handler(ev){
 //     console.log("Drag");
 // }
@@ -171,4 +157,29 @@ function openseaOpen(){
 // }
 
 
+// 마우스 망치 애니메이션
+// const cursorTarget = document.querySelectorAll(".stone_item img");
+// for(let i = 0; i < cursorTarget.length; i++){
+//     function hideCur(event){
+//         cursorTarget[i].classList.add("cur3");
+//         event.preventDefault();
+//     }
+//     function moveCur(event){
+//         cursorTarget[i].classList.remove("cur3");
+//         event.preventDefault();
+//     }
+//     function showCur(event){
+//         cursorTarget[i].classList.remove("cur3");
+//         event.preventDefault();
+//     }
+    
+//     cursorTarget[i].onmousedown = hideCur;
+//     cursorTarget[i].onmousemove = moveCur;
+//     cursorTarget[i].onmouseup  = showCur;
+// }
 
+
+
+// gameContainer.addEventListener("click", function(){
+//     mainMenu.style.display = "none";
+// });
