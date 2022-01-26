@@ -119,6 +119,45 @@ function openseaOpen(){
 }
 
 
+//방 체인지
+// let roomBackgroundImg = [
+//     "url('images/background/back1.jpg')",
+//     "url('images/background/back2.jpg')",
+//     "url('images/background/back3.jpg')",
+//     "url('images/background/back4.jpg')",
+//     "url('images/background/back5.jpg')",
+//     "url('images/background/back6.jpg')",
+//     "url('images/background/back7.jpg')",
+//     "url('images/background/back8.jpg')",
+// ]
+
+
+
+//방 이동시 랜덤 이미지 만들기
+changeRoom();
+function changeRoom(){
+    const changeRoomBtn = document.getElementById("change_room_btn");
+    const anotherRoomPop = document.querySelector(".another_room_popup");
+    const gameWrap = document.querySelector(".game_wrap");
+    const imgNumber = 7;
+    
+    changeRoomBtn.addEventListener("click", function(ev){
+        ev.preventDefault();
+        
+        let randomImg = Math.floor(Math.random() * imgNumber);
+
+        anotherRoomPop.style.display = "none";
+        
+        setTimeout(function(){
+            gameWrap.style.backgroundImage = `url('images/background/back${randomImg + 1}.jpg')`;
+        }, 1300);
+        
+        gameWrap.style.animation = "change_room_ani 3s";
+
+    });
+
+}
+
 
 // function drag_handler(ev){
 //     console.log("Drag");
