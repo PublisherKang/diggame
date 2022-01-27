@@ -23,7 +23,6 @@ function startGame() {
     }, 1);
 }
 
-
 //클릭하면 게임 스코어 올라감
 for(let i = 0; i < items.length; i++){
     items[i].addEventListener("click", function(e) {
@@ -48,12 +47,8 @@ for(let i = 0; i < items.length; i++){
         newSpan.addEventListener("animationend",function(){
             this.remove();
         });
-
     });
-    
-    
 }
-
 
 //200% 부스트 시간 다 되면 없어지게
 const boost200 = document.querySelector(".boost_200");
@@ -69,16 +64,14 @@ function boostTimeOut(){
 
 }
 
-
-
-
-
+//게이지 바
 const gaugeWrap = document.querySelector(".gauge_wrap");
 const gauge = document.querySelector(".gauge");
 
 let width = 230
 let interval = setInterval(widthMinus, 100);
 
+widthMinus();
 function widthMinus(){
     if(width <= 0){
         clearInterval(interval);
@@ -89,11 +82,7 @@ function widthMinus(){
     }
 }
 
-widthMinus();
-
-
 //사운드 버튼
-
 soundOn();
 function soundOn(){
     const audioBtn = document.querySelector(".audio_btn");
@@ -109,6 +98,7 @@ function soundOn(){
     });
 }
 
+//오픈씨 바로가기
 openseaOpen();
 function openseaOpen(){
     const openseaBtn = document.querySelector(".opensea_btn");
@@ -117,21 +107,6 @@ function openseaOpen(){
         window.open("https://opensea.io/");
     });
 }
-
-
-//방 체인지
-// let roomBackgroundImg = [
-//     "url('images/background/back1.jpg')",
-//     "url('images/background/back2.jpg')",
-//     "url('images/background/back3.jpg')",
-//     "url('images/background/back4.jpg')",
-//     "url('images/background/back5.jpg')",
-//     "url('images/background/back6.jpg')",
-//     "url('images/background/back7.jpg')",
-//     "url('images/background/back8.jpg')",
-// ]
-
-
 
 //방 이동시 랜덤 이미지 만들기
 changeRoom();
@@ -146,17 +121,31 @@ function changeRoom(){
         
         let randomImg = Math.floor(Math.random() * imgNumber);
 
+        //팝업 끄기
         anotherRoomPop.style.display = "none";
         
         setTimeout(function(){
             gameWrap.style.backgroundImage = `url('images/background/back${randomImg + 1}.jpg')`;
         }, 1300);
         
-        gameWrap.style.animation = "change_room_ani 3s";
-
+        gameWrap.classList.add("ani");
+        setTimeout(function(){
+            gameWrap.classList.remove("ani");
+        },3000);
+        
+        //만약에 현재 스타일과 같다면
+        
+        
     });
-
 }
+
+
+
+
+
+
+// 인벤토리 아이템 선택
+
 
 
 // function drag_handler(ev){

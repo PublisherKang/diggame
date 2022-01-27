@@ -14,7 +14,7 @@
     <script src="js/popup.js" defer></script>
 </head>
 <body>
-    <div class="game_wrap">
+    <div class="game_wrap" style="background-image: url('images/background/back1.jpg');">
         <div class="game_header">
             <div class="game_headerIn">
                 <p class="marker">
@@ -71,6 +71,9 @@
                     <li>
                         <button class="shop_btn"></button>
                     </li><!-- 상점 -->
+                    <li>
+                        <button class="rank_btn"></button>
+                    </li><!-- 랭킹 -->
                     <li>
                         <button class="audio_btn"></button>
                         <audio class="audio" src="audio/sound.wav" autoplay></audio>
@@ -237,24 +240,6 @@
                     </p>
                 </div>
             </div><!-- upgrade_complete -->
-            <div class="repair_popup">
-                <div class="repair_wrap">
-                    <div class="repair_inner">
-                        <p class="repair_ques">
-                            Repair costs are consumed.<br>
-                            Are you sure you want to fix it?
-                        </p>
-                        <p class="price_wrap">
-                            <span class="price">25</span>
-                            GEM
-                        </p>
-                        <div class="button_wrap">
-                            <button type="button" class="confirm">Confirm</button>
-                            <button type="button" class="cancel">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- repair_popup -->
         </div><!-- inven popup -->
         <div class="shop_popup">
             <div class="shop_header">
@@ -406,7 +391,7 @@
                 <button type="button" class="ranking_pop_close"></button>
                 <div class="ranking_pop_inner">
                     <p class="rank_pop_title">
-                        <span>Mining Ranking</span>
+                        <span>Global Ranking</span>
                     </p>
                     <ul class="rank_tab_btn">
                         <li class="on">
@@ -525,7 +510,25 @@
                 </div>
             </div>
         </div><!-- ranking_popup -->
-        <div class="another_room_popup">
+        <div class="repair_popup alert_popup">
+            <div class="repair_wrap">
+                <div class="repair_inner">
+                    <p class="repair_ques">
+                        Repair costs are consumed.<br>
+                        Are you sure you want to fix it?
+                    </p>
+                    <p class="price_wrap">
+                        <span class="price">25</span>
+                        GEM
+                    </p>
+                    <div class="button_wrap">
+                        <button type="button" class="confirm">Confirm</button>
+                        <button type="button" class="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- repair_popup -->
+        <div class="another_room_popup alert_popup">
             <div class="another_wrap">
                 <div class="another_inner">
                     <p class="another_ques">
@@ -539,6 +542,20 @@
                 </div>
             </div>
         </div><!-- another_room_popup -->
+        <div class="immediately_repair_popup alert_popup">
+            <div class="immediately_wrap">
+                <div class="immediately_inner">
+                    <p class="immediately_ques">
+                        <span>The mining toll is damaged!</span>
+                        <span>Mining is reduced by 10%</span>
+                    </p>
+                    <div class="button_wrap">
+                        <button type="button" class="repair_now">Repair Now</button>
+                        <button type="button" class="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- immediately_repair_popup -->
 
     </div><!-- game_wrap -->
 </body>

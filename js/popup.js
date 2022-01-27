@@ -9,6 +9,7 @@ $(function(){
         ev.preventDefault();
         $(".inven_popup").css("visibility", "visible");
         $(".ranking_popup").hide();
+        $(".another_room_popup").hide();
     });
 
     // 샵 팝업
@@ -18,6 +19,7 @@ $(function(){
         $(".package_content").css("visibility", "visible");
         $(".ranking_popup").hide();
         $(".shop_menu_btn li").eq(0).addClass("on")
+        $(".another_room_popup").hide();
     });
 
     // Back 버튼
@@ -50,6 +52,24 @@ $(function(){
         //this 아이템 클릭시 해당 span 삭제 자식 요소 삭제
         previewItem.children().first().remove();
         previewItem.children().first().find("span").remove();
+
+
+        // =====================
+        const itemAttr = $(this).children().attr("src");
+        console.log(itemAttr);
+
+        let itemArray = [
+            "images/item/booster_10m.png",
+            "images/item/booster_1h.png",
+            "images/item/auto_click_10m.png",
+            "images/item/auto_click_1h.png",
+        ]
+        
+        if(itemAttr === itemArray[1]){
+            $(this).addClass("aa");
+        }
+
+
     });
     // console.log(previewItem.children().first());
 });
@@ -61,11 +81,13 @@ $(function(){
     const repairCancelBtn = $(".repair_popup .cancel");
     repairBtn.click(function(ev){
         ev.preventDefault();
-        repairPop.css("visibility", "visible");
+        repairPop.show();
+        repairPop.css("background", "rgba(0, 0, 0, .7)");
+
     });
     repairCancelBtn.click(function(ev){
         ev.preventDefault();
-        repairPop.css("visibility", "hidden");
+        repairPop.hide();
     });
 });
 
@@ -101,7 +123,7 @@ $(function(){
 });
 $(function(){
     //컨테이너 랭킹 클릭 랭킹 팝업 나타남
-    const rankingBtn = $(".cont_ranking");
+    const rankingBtn = $(".menu_list li .rank_btn");
     rankingBtn.click(function(ev){
         ev.preventDefault();
         $(".ranking_popup").show();
@@ -132,6 +154,7 @@ $(function(){
 
 
 $(function(){
+    //채널 변경 버튼
     $(".ch_change_btn").click(function(ev){
         ev.preventDefault();
         $(".another_room_popup").show();
@@ -156,5 +179,32 @@ $(function(){
 
         $(".list_wrap > div").siblings().removeClass("on");
         $(".list_wrap > div").eq(idx).addClass("on");
+    });
+});
+
+
+//즉시 수리 팝업
+$(function(){
+    const nowItemBtn = $(".now_item");
+    const repairNow = $(".repair_now");
+    nowItemBtn.click(function(ev){
+        ev.preventDefault();
+        $(".immediately_repair_popup").show();
+    });
+
+    repairNow.click(function(ev){
+        ev.preventDefault();
+        $(".repair_popup").show();
+        $(".repair_popup").css("background", "transparent")
+        $(this).parents('.alert_popup').hide();
+    });
+});
+
+
+// 캔슬 버튼
+$(function(){
+    const cancelBtn = $(".cancel");
+    cancelBtn.click(function(){
+        $(this).parents(".alert_popup").hide();
     });
 });
