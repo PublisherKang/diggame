@@ -32,10 +32,12 @@ const gemScore = document.querySelectorAll(".gem_score")
 
 
 // gemScore 클래스 반복
-for(let k = 0; k < gemScore.length; k++){
-    gemScore[k].textContent = numInit;
+gemScoreLength();
+function gemScoreLength(){
+    for(let k = 0; k < gemScore.length; k++){
+        gemScore[k].textContent = numInit;
+    }
 }
-
 
 //클릭하면 게임 스코어 올라감
 for(let i = 0; i < items.length; i++){
@@ -67,44 +69,71 @@ for(let i = 0; i < items.length; i++){
     });
 }
 
-//실버 버튼 구매
-const silverBuyBtn = document.getElementById("sliver_buy_btn");
-silverBuyBtn.addEventListener("click", function(){
+sliverBuy();
+function sliverBuy(){
+    //실버 버튼 구매
+    const silverBuyBtn = document.getElementById("sliver_buy_btn");
+    const goldBuyBtn = document.getElementById("gold_buy_btn");
     const silverPop = document.getElementById("silver_pop");
+    const goldPop = document.getElementById("gold_pop");
     const failPop = document.querySelector(".fail_popup");
     const vipSilverIcon = document.querySelector(".vip_silver");
+    const vipGoldIcon = document.querySelector(".vip_gold");
     const marker = document.querySelector(".marker");
-    let silverPrice = 5000;    
-
-    //실버 버튼 구매 성공
-    if(score >= silverPrice){
-        silverPop.style.visibility = "hidden";
-        marker.style.display = "block";
-        vipSilverIcon.style.visibility = "visible";
-        
-        for(let i = 0; i < gemScore.length; i++){
-            gemScore[i].textContent = (score - silverPrice);
-        }
-        score -= silverPrice.toFixed(2);
-        
-        console.log(score);
-        
-    }
-    //가격부족 구매 실패
-    else{
-        silverPop.style.visibility = "hidden";
-        failPop.style.visibility = "visible";
-    }
+    let silverPrice = 5000;
+    let goldPrice = 8000;
     
-});
+    silverBuyBtn.addEventListener("click", silverBuy);
+    goldBuyBtn.addEventListener("click", goldBuy);
 
+
+    function silverBuy(){
+        //실버 버튼 구매 성공
+        if(score >= silverPrice){
+            silverPop.style.visibility = "hidden";
+            marker.style.display = "block";
+            vipSilverIcon.style.visibility = "visible";
+            
+            score = Math.round((score - silverPrice) * 10000) / 10000;
+            
+            for(let i = 0; i < gemScore.length; i++){
+                gemScore[i].textContent = score;
+            }
+        }
+        //가격부족 구매 실패
+        else{
+            silverPop.style.visibility = "hidden";
+            failPop.style.visibility = "visible";
+        }
+    }
+
+    function goldBuy(){
+        //골드 버튼 구매 성공
+        if(score >= goldPrice){
+            goldPop.style.visibility = "hidden";
+            marker.style.display = "block";
+            vipGoldIcon.style.visibility = "visible";
+            vipSilverIcon.style.visibility = "hidden";
+            
+            score = Math.round((score - goldPrice) * 10000) / 10000;
+            
+            for(let i = 0; i < gemScore.length; i++){
+                gemScore[i].textContent = score;
+            }
+        }
+        //가격부족 구매 실패
+        else{
+            goldPop.style.visibility = "hidden";
+            failPop.style.visibility = "visible";
+        }
+    }
+}
 
 
 //200% 부스트 시간 다 되면 없어지게
-const boost200 = document.querySelector(".boost_200");
-
 boostTimeOut();
 function boostTimeOut(){
+    const boost200 = document.querySelector(".boost_200");
     const gauge = document.querySelector(".gauge");
     // console.log(gauge);
 
@@ -114,23 +143,6 @@ function boostTimeOut(){
 
 }
 
-//게이지 바
-const gaugeWrap = document.querySelector(".gauge_wrap");
-const gauge = document.querySelector(".gauge");
-
-let width = 230
-let interval = setInterval(widthMinus, 100);
-
-widthMinus();
-function widthMinus(){
-    if(width <= 0){
-        clearInterval(interval);
-        width = 230;
-    }else{
-        width--;
-        gauge.style.width = 1;
-    }
-}
 
 //사운드 버튼
 soundOn();
@@ -187,10 +199,6 @@ function changeRoom(){
             gameWrap.classList.remove("ani");
             gameWrap.classList.remove("point_none");
         },3000);
-        
-        
-       
-        
     });
 }
 
@@ -220,7 +228,7 @@ function changeRoom(){
 // function drop_handler(ev) {
 //     console.log("Drop");
 //     ev.currentTarget.style.background = "lightyellow";
-   
+
 //     ev.preventDefault();
 //     let data = ev.dataTransfer.getData("text");
 //     ev.target.appendChild(document.getElementById(data));
@@ -235,7 +243,7 @@ function changeRoom(){
 //     ev.dataTransfer.setData("text", ev.target.id);
 // }
 // function handleEnd(ev){
-//     let data = ev.dataTransfer.getData("text");
+    //     let data = ev.dataTransfer.getData("text");
 //     ev.target.appendChild(document.getElementById(data));   
 // }
 
@@ -244,7 +252,7 @@ function changeRoom(){
 // const cursorTarget = document.querySelectorAll(".stone_item img");
 // for(let i = 0; i < cursorTarget.length; i++){
 //     function hideCur(event){
-//         cursorTarget[i].classList.add("cur3");
+    //         cursorTarget[i].classList.add("cur3");
 //         event.preventDefault();
 //     }
 //     function moveCur(event){
@@ -252,10 +260,10 @@ function changeRoom(){
 //         event.preventDefault();
 //     }
 //     function showCur(event){
-//         cursorTarget[i].classList.remove("cur3");
+    //         cursorTarget[i].classList.remove("cur3");
 //         event.preventDefault();
 //     }
-    
+
 //     cursorTarget[i].onmousedown = hideCur;
 //     cursorTarget[i].onmousemove = moveCur;
 //     cursorTarget[i].onmouseup  = showCur;
@@ -266,3 +274,22 @@ function changeRoom(){
 // gameContainer.addEventListener("click", function(){
 //     mainMenu.style.display = "none";
 // });
+    
+    
+//게이지 바
+// const gaugeWrap = document.querySelector(".gauge_wrap");
+// const gauge = document.querySelector(".gauge");
+
+// let width = 230
+// let interval = setInterval(widthMinus, 100);
+
+// widthMinus();
+// function widthMinus(){
+//     if(width <= 0){
+//         clearInterval(interval);
+//         width = 230;
+//     }else{
+//         width--;
+//         gauge.style.width = 1;
+//     }
+// }

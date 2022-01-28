@@ -206,7 +206,7 @@ $(function(){
     const silverPopBtn = $(".vip_silver_wrap");              
     const goldPopBtn = $(".vip_gold_wrap");
     const silverPop = $("#silver_pop");
-    const goldPop = $("#goldPop");
+    const goldPop = $("#gold_pop");
 
     // const silverBuyBtn = $("#silverPop .buy_btn");
     // const goldBuyBtn = $("#goldPop .buy_btn");
