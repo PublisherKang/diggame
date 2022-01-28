@@ -421,7 +421,7 @@
 
 
 /* another room popup */
-.another_room_popup{display: none;}
+.another_room_popup{display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
 .another_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
 
 .another_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 40px;}

@@ -126,7 +126,7 @@ function changeRoom(){
         
         setTimeout(function(){
             gameWrap.style.backgroundImage = `url('images/background/back${randomImg + 1}.jpg')`;
-        }, 1300);
+        }, 1200);
         
         gameWrap.classList.add("ani");
         setTimeout(function(){
