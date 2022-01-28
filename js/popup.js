@@ -121,6 +121,7 @@ $(function(){
     });
     
 });
+
 $(function(){
     //컨테이너 랭킹 클릭 랭킹 팝업 나타남
     const rankingBtn = $(".menu_list li .rank_btn");
@@ -202,7 +203,7 @@ $(function(){
 
 // 상점 실버, 골드 구매 버튼 팝업
 $(function(){
-    const silverPopBtn = $(".vip_silver_wrap");
+    const silverPopBtn = $(".vip_silver_wrap");              
     const goldPopBtn = $(".vip_gold_wrap");
     const silverPop = $("#silver_pop");
     const goldPop = $("#goldPop");

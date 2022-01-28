@@ -17,16 +17,18 @@
     <div class="game_wrap" style="background-image: url('images/background/back1.jpg');">
         <div class="game_header">
             <div class="game_headerIn">
-                <p class="marker">
-                    <img class="vip_gold" src="images/ui/vipgold.svg" alt="">
-                    <img class="vip_silver" src="images/ui/vipsilver.svg" alt="">
-                </p>
                 <div class="play_time_wrap">
-                    <div class="play_time">
-                        Play Time: <span class="timer">00:00:00</span>
-                    </div>
-                    <div class="play_time_rank">
-                        Play Time Rainking: <span class="rank_num">0</span> <i class="up_icon"></i>
+                    <p class="marker">
+                        <img class="vip_gold" src="images/ui/vipgold.svg" alt="">
+                        <img class="vip_silver" src="images/ui/vipsilver.svg" alt="">
+                    </p>
+                    <div class="play_wrap">
+                        <div class="play_time">
+                            Play Time: <span class="timer">00:00:00</span>
+                        </div>
+                        <div class="play_time_rank">
+                            Play Time Rainking: <span class="rank_num">0</span> <i class="up_icon"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="click_speed_wrap">
@@ -35,7 +37,7 @@
                     </p>
                 </div>
                 <div class="point_wrap">
-                    <span id="point_score"></span> GEM
+                    <span id="point_score" class="gem_score"></span> GEM
                 </div>
             </div>
         </div><!-- game_header -->
@@ -104,7 +106,7 @@
                 <button class="back_btn">Back to Game</button>
                 <p class="inven_name">INVENTORY</p>
                 <div class="point_wrap">
-                    <span id="inven_point_score">0.00</span> GEM
+                    <span id="inven_point_score" class="gem_score">0.00</span> GEM
                 </div>
             </div>
             <div class="inven_container">
@@ -246,7 +248,7 @@
                 <button class="back_btn">Back to Game</button>
                 <p class="shop_name">SHOP</p>
                 <div class="point_wrap">
-                    <span id="shop_point_score">0.00</span> GEM
+                    <span id="shop_point_score" class="gem_score">0.00</span> GEM
                 </div>
             </div>
             <div class="shop_container">
@@ -450,7 +452,7 @@
                                 <span class="rank_num">95</span>
                                 <p class="user_id">Player ID</p>
                                 <p class="point_wrap">
-                                    <span id="rank_score">0.00</span>
+                                    <span id="rank_score" class="gem_score">0.00</span>
                                 </p>
                             </div>
                         </div><!-- ranking_pop -->
@@ -584,7 +586,18 @@
                 </div>
             </div>
         </div><!-- silver_buy_popup -->
-
+        <div class="fail_popup alert_popup">
+            <div class="fail_wrap">
+                <div class="fail_inner">
+                    <p class="fail_ques">
+                        Out of Resources!
+                    </p>
+                    <div class="button_wrap">
+                        <button type="button" class="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div><!-- game_wrap -->
 </body>
 </html>

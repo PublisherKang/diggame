@@ -5,15 +5,15 @@ let num = 0.01;
 
 const items = document.querySelectorAll(".stone_item");
 
-var startTime
+var startTime;
 
 const clicksTxt = document.getElementById("clicks");
 const gameContainer = document.querySelector(".game_container");
 
-//클릭하면 초당 클릭 스피드 올라감
-startGame();
 
-function startGame() {
+//클릭하면 초당 클릭 스피드 올라감
+startGameSpeed();
+function startGameSpeed() {
     startTime = new Date().getTime();
     
     setInterval(function() {
@@ -28,11 +28,14 @@ const pointScore = document.getElementById("point_score");
 const invenPointScore = document.getElementById("inven_point_score");
 const shopPointScore = document.getElementById("shop_point_score");
 const rankScore = document.getElementById("rank_score");
+const gemScore = document.querySelectorAll(".gem_score")
 
-pointScore.textContent = numInit;
-invenPointScore.textContent = numInit;
-shopPointScore.textContent = numInit;
-rankScore.textContent = numInit;
+
+// gemScore 클래스 반복
+for(let k = 0; k < gemScore.length; k++){
+    gemScore[k].textContent = numInit;
+}
+
 
 //클릭하면 게임 스코어 올라감
 for(let i = 0; i < items.length; i++){
@@ -40,12 +43,11 @@ for(let i = 0; i < items.length; i++){
         e.preventDefault();
         
         if (!outOfTime) {
-        score += num;
-
-        pointScore.textContent = score.toFixed(2);
-        invenPointScore.textContent = score.toFixed(2);
-        shopPointScore.textContent = score.toFixed(2);
-        rankScore.textContent = score.toFixed(2);
+        score = Math.round((score + num) * 10000) / 10000;
+    
+            for(let j = 0; j < gemScore.length; j++){
+                gemScore[j].textContent = score
+            }
         }
 
         //스코어 애니메이션
@@ -61,26 +63,39 @@ for(let i = 0; i < items.length; i++){
             this.remove();
         });
 
+        console.log(score);
     });
-    
 }
 
 //실버 버튼 구매
 const silverBuyBtn = document.getElementById("sliver_buy_btn");
 silverBuyBtn.addEventListener("click", function(){
     const silverPop = document.getElementById("silver_pop");
+    const failPop = document.querySelector(".fail_popup");
+    const vipSilverIcon = document.querySelector(".vip_silver");
+    const marker = document.querySelector(".marker");
     let silverPrice = 5000;    
 
     //실버 버튼 구매 성공
     if(score >= silverPrice){
         silverPop.style.visibility = "hidden";
-        alert("구매에 성공했습니다.");
+        marker.style.display = "block";
+        vipSilverIcon.style.visibility = "visible";
+        
+        for(let i = 0; i < gemScore.length; i++){
+            gemScore[i].textContent = (score - silverPrice);
+        }
+        score -= silverPrice.toFixed(2);
+        
+        console.log(score);
+        
     }
     //가격부족 구매 실패
     else{
         silverPop.style.visibility = "hidden";
-        alert("구매에 실패했습니다.");
+        failPop.style.visibility = "visible";
     }
+    
 });
 
 
@@ -161,7 +176,7 @@ function changeRoom(){
         
         setTimeout(function(){
             gameWrap.style.backgroundImage = `url('images/background/back${randomImg + 1}.jpg')`;
-        }, 1200);
+        }, 1340);
         
         
         //애니메이션 추가
