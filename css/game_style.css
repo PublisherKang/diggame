@@ -10,6 +10,8 @@
 
 .game_wrap.ani{animation: change_room_ani 3s; -webkit-animation: change_room_ani 3s;}
 
+.game_wrap.point_none{pointer-events: none; touch-action: none;}
+
 @keyframes change_room_ani {
     0%{
         -webkit-transform: rotateY(0);
@@ -41,7 +43,7 @@
 
 .point_wrap #point_score,
 .point_wrap #inven_point_score,
-.point_wrap #shop_point_score{padding: 8px 0 8px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto; }
+.point_wrap #shop_point_score{padding: 8px 0 8px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto; line-height: 2;}
 
 
 
@@ -219,7 +221,7 @@
 .complete_inner .item_level{text-align: center; font-size: 24px; color: #fff;}
 
 /* repair 영역 */
-.repair_popup{width: 100%; height: 100%; background: rgba(0, 0, 0, .7); position: absolute; top: 0; left: 0; display: none; z-index: 310;}
+.repair_popup{width: 100%; height: 100%; background: rgba(0, 0, 0, .7); position: absolute; top: 0; left: 0; visibility: hidden; z-index: 310;}
 .repair_wrap{width: 400px; border-radius: 20px; border: 1px solid #fff; background: #222; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); padding: 20px;}
 
 .repair_inner{}
@@ -266,14 +268,14 @@
 
 .package_content ul{display: flex; justify-content: space-between;}
 
-.package_content ul li{width: 306px; text-align: center; color: #fff; background-repeat: no-repeat; background-position: center 0; background-size: contain;}
+.package_content ul li{width: 306px; height:450px; text-align: center; color: #fff; background-size: 274px auto; box-shadow: 3px 3px 14px #222; background-repeat: no-repeat; background-position: center center; background-color: #222; border-radius: 32px;}
 
-.package_content ul li > div{height: 350px; background-repeat: no-repeat; background-position: center center; background-color: #222; border-radius: 32px; background-size: 282px auto; padding: 40px 10px 0; font-size: 13px; line-height: 1.4; margin-bottom: 30px; box-shadow: 3px 3px 14px #222;}
+.package_content ul li > div{ padding: 50px 10px 0; font-size: 13px; line-height: 1.4; margin-bottom: 30px; }
 
-.package_content ul li > div img{width: 140px; display: block; margin: 0 auto 20px;}
+.package_content ul li > div img{width: 140px; display: block; margin: 0 auto 34px;}
 
-.package_content ul li .vip_silver{background-image: url(../images/ui/shop_vip_frame1.png); cursor: pointer;}
-.package_content ul li .vip_gold{background-image: url(../images/ui/shop_vip_frame2.png); cursor: pointer;}
+.package_content ul li:nth-of-type(1){background-image:  url(../images/ui/shop_vip_frame1.png); cursor: pointer;}
+.package_content ul li:nth-of-type(2){background-image: url(../images/ui/shop_vip_frame2.png); cursor: pointer;}
 
 .package_content ul li p{width: 180px; background: #222; margin: 0 auto; padding: 20px; border-radius: 10px; box-shadow: 4px 4px 18px #222;}
 
@@ -421,7 +423,7 @@
 
 
 /* another room popup */
-.another_room_popup{display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.another_room_popup{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
 .another_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
 
 .another_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 40px;}
@@ -433,7 +435,7 @@
 .another_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
 
 /* immediately_repair_popup*/
-.immediately_repair_popup{display: none; width: 100%; height: 100%; background: transparent; position: absolute; top: 0; left: 0;}
+.immediately_repair_popup{visibility: hidden; width: 100%; height: 100%; background: transparent; position: absolute; top: 0; left: 0;}
 .immediately_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
 
 .immediately_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
@@ -447,3 +449,16 @@
 
 .immediately_inner .button_wrap .repair_now{background-image: url(../images/ui/btn_img2.png);}
 .immediately_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
+
+
+/* another room popup */
+.silver_buy_popup, .gold_buy_popup{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
+.package_buy_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
+
+.package_buy_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
+
+.package_buy_inner .button_wrap{display: flex; justify-content: space-between;}
+.package_buy_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
+
+.package_buy_inner .button_wrap .buy_btn{background-image: url(../images/ui/btn_img3.png);}
+.package_buy_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}

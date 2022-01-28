@@ -9,7 +9,7 @@ $(function(){
         ev.preventDefault();
         $(".inven_popup").css("visibility", "visible");
         $(".ranking_popup").hide();
-        $(".another_room_popup").hide();
+        $(".another_room_popup").css("visibility", "hidden");
     });
 
     // 샵 팝업
@@ -19,7 +19,7 @@ $(function(){
         $(".package_content").css("visibility", "visible");
         $(".ranking_popup").hide();
         $(".shop_menu_btn li").eq(0).addClass("on")
-        $(".another_room_popup").hide();
+        $(".another_room_popup").css("visibility", "hidden");
     });
 
     // Back 버튼
@@ -81,13 +81,13 @@ $(function(){
     const repairCancelBtn = $(".repair_popup .cancel");
     repairBtn.click(function(ev){
         ev.preventDefault();
-        repairPop.show();
+        repairPop.css("visibility", "visible");
         repairPop.css("background", "rgba(0, 0, 0, .7)");
 
     });
     repairCancelBtn.click(function(ev){
         ev.preventDefault();
-        repairPop.hide();
+        repairPop.css("visibility", "hidden");
     });
 });
 
@@ -157,13 +157,13 @@ $(function(){
     //채널 변경 버튼
     $(".ch_change_btn").click(function(ev){
         ev.preventDefault();
-        $(".another_room_popup").show();
+        $(".another_room_popup").css("visibility", "visible");
         $(".ranking_popup").hide();
     });
 
     $(".another_room_popup .cancel").click(function(ev){
         ev.preventDefault();
-        $(".another_room_popup").hide();
+        $(".another_room_popup").css("visibility", "hidden");
     });
 });
 
@@ -189,15 +189,42 @@ $(function(){
     const repairNow = $(".repair_now");
     nowItemBtn.click(function(ev){
         ev.preventDefault();
-        $(".immediately_repair_popup").show();
+        $(".immediately_repair_popup").css("visibility", "visible");
     });
 
     repairNow.click(function(ev){
         ev.preventDefault();
-        $(".repair_popup").show();
+        $(".repair_popup").css("visibility", "visible");
         $(".repair_popup").css("background", "transparent")
-        $(this).parents('.alert_popup').hide();
+        $(this).parents('.alert_popup').css("visibility", "hidden");
     });
+});
+
+// 상점 실버, 골드 구매 버튼 팝업
+$(function(){
+    const silverPopBtn = $(".vip_silver_wrap");
+    const goldPopBtn = $(".vip_gold_wrap");
+    const silverPop = $("#silver_pop");
+    const goldPop = $("#goldPop");
+
+    // const silverBuyBtn = $("#silverPop .buy_btn");
+    // const goldBuyBtn = $("#goldPop .buy_btn");
+
+    const silverPrice = 5000;
+    const goldPrice = 8000;
+
+    silverPopBtn.click(function(){
+        silverPop.css("visibility", "visible");
+    });
+
+    goldPopBtn.click(function(){
+        goldPop.css("visibility", "visible");
+    });
+
+    
+
+    
+
 });
 
 
@@ -205,6 +232,7 @@ $(function(){
 $(function(){
     const cancelBtn = $(".cancel");
     cancelBtn.click(function(){
-        $(this).parents(".alert_popup").hide();
+        $(this).parents(".alert_popup").css("visibility", "hidden");
     });
 });
+

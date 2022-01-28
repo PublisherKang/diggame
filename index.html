@@ -35,7 +35,7 @@
                     </p>
                 </div>
                 <div class="point_wrap">
-                    <span id="point_score">0.00</span> GEM
+                    <span id="point_score"></span> GEM
                 </div>
             </div>
         </div><!-- game_header -->
@@ -266,7 +266,7 @@
                 <div class="content_wrap">
                     <div class="package_content">
                         <ul>
-                            <li>
+                            <li class="vip_silver_wrap">
                                 <div class="vip_silver">
                                     <img src="images/ui/vipsilver.svg" alt="">
                                     7 days every day<br>
@@ -278,7 +278,7 @@
                                     <span class="price">5,000</span>
                                 </p>
                             </li>
-                            <li>
+                            <li class="vip_gold_wrap">
                                 <div class="vip_gold">
                                     <img src="images/ui/vipgold.svg" alt="">
                                     7 days every day<br>
@@ -556,6 +556,34 @@
                 </div>
             </div>
         </div><!-- immediately_repair_popup -->
+        <div class="silver_buy_popup alert_popup" id="silver_pop">
+            <div class="package_buy_wrap">
+                <div class="package_buy_inner">
+                    <p class="package_buy_ques">
+                        Are you sure<br>
+                        you want to but it? Silver
+                    </p>
+                    <div class="button_wrap">
+                        <button type="button" class="buy_btn" id="sliver_buy_btn">Buy</button>
+                        <button type="button" class="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- silver_buy_popup -->
+        <div class="gold_buy_popup alert_popup" id="goldPop">
+            <div class="package_buy_wrap">
+                <div class="package_buy_inner">
+                    <p class="package_buy_ques">
+                        Are you sure<br>
+                        you want to but it? Gold
+                    </p>
+                    <div class="button_wrap">
+                        <button type="button" class="buy_btn">Buy</button>
+                        <button type="button" class="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- silver_buy_popup -->
 
     </div><!-- game_wrap -->
 </body>
