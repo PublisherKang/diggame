@@ -1,7 +1,7 @@
 let score = 0;
 let outOfTime = false;
 let numInit = 0.00;
-let num = 0.01;
+let num = 11.01;
 
 const items = document.querySelectorAll(".stone_item");
 
@@ -9,6 +9,7 @@ var startTime;
 
 const clicksTxt = document.getElementById("clicks");
 const gameContainer = document.querySelector(".game_container");
+const failPop = document.querySelector(".fail_popup");
 
 
 //클릭하면 초당 클릭 스피드 올라감
@@ -69,14 +70,13 @@ for(let i = 0; i < items.length; i++){
     });
 }
 
-sliverBuy();
-function sliverBuy(){
+packageBuy();
+function packageBuy(){
     //실버 버튼 구매
     const silverBuyBtn = document.getElementById("sliver_buy_btn");
     const goldBuyBtn = document.getElementById("gold_buy_btn");
     const silverPop = document.getElementById("silver_pop");
     const goldPop = document.getElementById("gold_pop");
-    const failPop = document.querySelector(".fail_popup");
     const vipSilverIcon = document.querySelector(".vip_silver");
     const vipGoldIcon = document.querySelector(".vip_gold");
     const marker = document.querySelector(".marker");
@@ -128,6 +128,41 @@ function sliverBuy(){
         }
     }
 }
+
+
+//수리 구매
+repairBuy();
+function repairBuy(){
+    const rapairConfirmBtn = document.getElementById("repair_buy_confirm");
+    const repairPop = document.querySelector(".repair_popup");
+    const repairPrice = 25;
+
+
+    rapairConfirmBtn.addEventListener("click", repairConfirm);
+
+    function repairConfirm(){
+        //구매 성공 했을 때
+        if(score >= repairPrice){
+            //여기에 수리 수치 정상화
+
+            repairPop.style.visibility = "hidden";
+
+            score = Math.round((score - repairPrice) * 10000) / 10000;
+
+            for(let i = 0; i < gemScore.length; i++){
+                gemScore[i].textContent = score;
+            }
+
+        }
+        //구매 실패 했을 때
+        else{
+            repairPop.style.visibility = "hidden";
+            failPop.style.visibility = "visible";
+        }
+    }
+}
+
+
 
 
 //200% 부스트 시간 다 되면 없어지게
