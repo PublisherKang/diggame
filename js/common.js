@@ -1,7 +1,7 @@
 let score = 0;
 let outOfTime = false;
 let numInit = 0.00;
-let num = 11.01;
+let num = 0.01;
 
 const items = document.querySelectorAll(".stone_item");
 
@@ -70,6 +70,20 @@ for(let i = 0; i < items.length; i++){
     });
 }
 
+const boost200 = document.querySelector(".boost_200");
+const gauge = document.querySelector(".gauge");
+//200% 부스트 시간 다 되면 없어지게
+boostTimeOut();
+function boostTimeOut(){
+    // console.log(gauge);
+
+    gauge.addEventListener("animationend", function(){
+        boost200.style.display = "none";
+    });
+
+}
+
+
 packageBuy();
 function packageBuy(){
     //실버 버튼 구매
@@ -80,6 +94,11 @@ function packageBuy(){
     const vipSilverIcon = document.querySelector(".vip_silver");
     const vipGoldIcon = document.querySelector(".vip_gold");
     const marker = document.querySelector(".marker");
+    const completePopup = document.querySelector(".complete_buy_popup");
+    const completeConfirmBtn = document.querySelector(".complete_buy_popup .confirm");
+    const shopPopup = document.querySelector(".shop_popup");
+    const packageContent = document.querySelector(".package_content");
+
     let silverPrice = 5000;
     let goldPrice = 8000;
     
@@ -93,12 +112,16 @@ function packageBuy(){
             silverPop.style.visibility = "hidden";
             marker.style.display = "block";
             vipSilverIcon.style.visibility = "visible";
+            completePopup.style.visibility = "visible";
             
             score = Math.round((score - silverPrice) * 10000) / 10000;
             
             for(let i = 0; i < gemScore.length; i++){
                 gemScore[i].textContent = score;
             }
+
+            completeConfirmBtn.addEventListener("click", popupHidden);
+
         }
         //가격부족 구매 실패
         else{
@@ -114,18 +137,27 @@ function packageBuy(){
             marker.style.display = "block";
             vipGoldIcon.style.visibility = "visible";
             vipSilverIcon.style.visibility = "hidden";
+            completePopup.style.visibility = "visible";
             
             score = Math.round((score - goldPrice) * 10000) / 10000;
             
             for(let i = 0; i < gemScore.length; i++){
                 gemScore[i].textContent = score;
             }
+
+            completeConfirmBtn.addEventListener("click", popupHidden);
         }
         //가격부족 구매 실패
         else{
             goldPop.style.visibility = "hidden";
             failPop.style.visibility = "visible";
         }
+    }
+
+    function popupHidden(){
+        completePopup.style.visibility = "hidden";
+        shopPopup.style.visibility = "hidden";
+        packageContent.style.visibility = "hidden";
     }
 }
 
@@ -165,18 +197,7 @@ function repairBuy(){
 
 
 
-//200% 부스트 시간 다 되면 없어지게
-boostTimeOut();
-function boostTimeOut(){
-    const boost200 = document.querySelector(".boost_200");
-    const gauge = document.querySelector(".gauge");
-    // console.log(gauge);
 
-    gauge.addEventListener("animationend", function(){
-        boost200.style.display = "none";
-    });
-
-}
 
 
 //사운드 버튼

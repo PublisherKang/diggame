@@ -236,4 +236,3 @@ $(function(){
         $(this).parents(".alert_popup").css("visibility", "hidden");
     });
 });
-
