@@ -222,11 +222,33 @@ $(function(){
         goldPop.css("visibility", "visible");
     });
 
-    
-
-    
-
 });
+
+
+
+
+//샵 아이템 구매 팝업
+$(function(){
+    function shopPopupList(number){
+        $(".shop_item_buy_popup").css("visibility", "visible")
+        $(".pop_title span").eq(number).siblings().removeClass("on");
+        $(".pop_title span").eq(number).addClass("on");
+        $(".img_wrap img").eq(number).siblings().removeClass("on");
+        $(".img_wrap img").eq(number).addClass("on");
+    }
+
+    const shopBuyBtn = $(".shop_item_buy");
+
+    for(let i = 0; i < shopBuyBtn.length; i++){
+        shopBuyBtn.eq(i).click(function(ev){
+            shopPopupList(i);
+        });    
+    }
+
+    
+});
+
+
 
 
 // 캔슬 버튼

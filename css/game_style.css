@@ -451,7 +451,8 @@
 .silver_buy_popup,
 .gold_buy_popup,
 .fail_popup,
-.complete_buy_popup{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
+.complete_buy_popup,
+.shop_item_buy_popup{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
 
 .package_buy_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
 
@@ -478,3 +479,29 @@
 
 .comp_ques span{display: block;}
 .comp_ques span:nth-of-type(2){font-size: 14px; margin-top: 8px;}
+
+/* shop_item_buy_popup */
+.shop_item_wrap{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 16px; background: #1a1a1a; padding: 30px 16px 20px;}
+.shop_item_wrap .pop_title{text-align: center; color: #fff; margin-bottom: 12px;}
+.shop_item_wrap .pop_title span{display: none; font-size: 18px;}
+.shop_item_wrap .pop_title span.on{display: block;}
+
+.shop_item_wrap .img_wrap{text-align: center; width: 90px; margin: 0 auto 10px;}
+.shop_item_wrap .img_wrap img{display: none;}
+.shop_item_wrap .img_wrap img.on{display: block;}
+.shop_item_wrap .ques{color: #fff; text-align: center; font-size: 14px; margin-bottom: 24px;}
+
+.shop_item_wrap .quantity_wrap{display: flex; width: 100px; margin: 0 auto 30px; justify-content: space-between; color: #fff; font-size: 20px;}
+
+.shop_item_wrap .quantity_wrap button{width: 20px; height: 20px; background-repeat: no-repeat; background-size: 20px 20px; background-position: center center; background-image: url(../images/ui/page_btn.svg);}
+.shop_item_wrap .quantity_wrap .left_btn{}
+.shop_item_wrap .quantity_wrap .right_btn{transform: rotate(180deg); -webkit-transform: rotate(180deg);}
+
+.shop_item_wrap .price_wrap{color: #fff; margin-bottom: 30px; font-size: 18px; text-align: center;}
+.shop_item_wrap .price_wrap .price{padding: 10px 0 10px 26px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 22px auto;}
+
+.shop_item_wrap .button_wrap{width: 350px; margin: 0 auto; display: flex; justify-content: space-between;}
+.shop_item_wrap .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
+
+.shop_item_wrap .button_wrap .buy_btn{background-image: url(../images/ui/btn_img3.png);}
+.shop_item_wrap .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}

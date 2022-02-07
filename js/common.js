@@ -195,6 +195,41 @@ function repairBuy(){
 }
 
 
+//샵 구매 팝업 수량 버튼
+shopBuyPopup();
+function shopBuyPopup(){
+    const shopPopLeftBtn = document.querySelector(".left_btn");
+    const shopPopRightBtn = document.querySelector(".right_btn");
+    const quantity = document.querySelector(".quantity");
+    const shopItemPriceClass = document.querySelector(".shop_item_wrap .price");
+    const shopItemPrice = 200;
+    let shopQuantity = 1;
+    let addShopItemPrice = 200;
+
+    shopPopRightBtn.addEventListener("click", increase);
+    shopPopLeftBtn.addEventListener("click", decrease);
+
+    function increase(){
+        shopQuantity++;
+        quantity.textContent = shopQuantity;
+        
+        addShopItemPrice = shopItemPrice + addShopItemPrice;
+        
+        console.log(addShopItemPrice);
+
+        shopItemPriceClass.textContent = addShopItemPrice;
+    }
+    function decrease(){
+        shopQuantity--;
+        console.log(shopQuantity);
+        quantity.textContent = shopQuantity;
+
+        shopItemPriceClass.textContent = shopItemPrice * shopQuantity;
+    }
+    
+
+}
+
 
 
 
