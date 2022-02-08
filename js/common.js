@@ -427,104 +427,18 @@ function changeRoom(){
 
 
 //모바일 더블클릭시 화면 확대 방지
-document.documentElement.addEventListener('touchstart', function (event){
-    if(event.touches.length > 1){
-        event.preventDefault(); 
-    } 
-}, false);
+// document.documentElement.addEventListener('touchstart', function (event){
+//     if(event.touches.length > 1){
+//         event.preventDefault(); 
+//     } 
+// }, false);
 
-var lastTouchEnd = 0; 
+// var lastTouchEnd = 0; 
 
-document.documentElement.addEventListener('touchend', function (event){
-    var now = (new Date()).getTime();
-    if (now - lastTouchEnd <= 300) {
-        event.preventDefault(); 
-    } lastTouchEnd = now; 
-}, false);
+// document.documentElement.addEventListener('touchend', function (event){
+//     var now = (new Date()).getTime();
+//     if (now - lastTouchEnd <= 300) {
+//         event.preventDefault(); 
+//     } lastTouchEnd = now; 
+// }, false);
 
-// 인벤토리 아이템 선택
-
-
-
-// function drag_handler(ev){
-//     console.log("Drag");
-// }
-
-// function dragstart_handler(ev) {
-//     console.log("dragStart");
-//     ev.dataTransfer.setData("text", ev.target.id);
-// }
-
-// function dragover_handler(ev) {
-//     console.log("dragOver");
-//     ev.preventDefault();
-// }
-   
-// function drop_handler(ev) {
-//     console.log("Drop");
-//     ev.currentTarget.style.background = "lightyellow";
-
-//     ev.preventDefault();
-//     let data = ev.dataTransfer.getData("text");
-//     ev.target.appendChild(document.getElementById(data));
-// }
-
-// let dragItem = document.getElementById("b1");
-
-// dragItem.addEventListener("touchmove", handleMove);
-// dragItem.addEventListener("touchend", handleEnd);
-
-// function handleMove(ev){
-//     ev.dataTransfer.setData("text", ev.target.id);
-// }
-// function handleEnd(ev){
-    //     let data = ev.dataTransfer.getData("text");
-//     ev.target.appendChild(document.getElementById(data));   
-// }
-
-
-// 마우스 망치 애니메이션
-// const cursorTarget = document.querySelectorAll(".stone_item img");
-// for(let i = 0; i < cursorTarget.length; i++){
-//     function hideCur(event){
-    //         cursorTarget[i].classList.add("cur3");
-//         event.preventDefault();
-//     }
-//     function moveCur(event){
-//         cursorTarget[i].classList.remove("cur3");
-//         event.preventDefault();
-//     }
-//     function showCur(event){
-    //         cursorTarget[i].classList.remove("cur3");
-//         event.preventDefault();
-//     }
-
-//     cursorTarget[i].onmousedown = hideCur;
-//     cursorTarget[i].onmousemove = moveCur;
-//     cursorTarget[i].onmouseup  = showCur;
-// }
-
-
-
-// gameContainer.addEventListener("click", function(){
-//     mainMenu.style.display = "none";
-// });
-    
-    
-//게이지 바
-// const gaugeWrap = document.querySelector(".gauge_wrap");
-// const gauge = document.querySelector(".gauge");
-
-// let width = 230
-// let interval = setInterval(widthMinus, 100);
-
-// widthMinus();
-// function widthMinus(){
-//     if(width <= 0){
-//         clearInterval(interval);
-//         width = 230;
-//     }else{
-//         width--;
-//         gauge.style.width = 1;
-//     }
-// }
