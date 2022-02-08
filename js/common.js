@@ -344,7 +344,7 @@ function openPreBox(){
     preOpenPopup.style.display = "block";
 
     preOpenPopup.addEventListener("click", function(){
-        this.style.visibility = "hidden";
+        this.style.display = "none";
     });
 
     for(let i = 0; i < preItems.length; i++){
