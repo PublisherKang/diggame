@@ -296,30 +296,37 @@ function shopToolBoxPopup(){
     vipBuyBtn.addEventListener("click", vipFunc);
 
     function preFunc(){
+        //구매 실패시
         if(score < premiumBoxPriceNum){
             failPop.style.visibility = "visible";
             prePopup.style.visibility = "hidden";
-        }else{
+        }
+        //구매 성공시
+        else{
             prePopup.style.visibility = "hidden";
             score = Math.round((score - premiumBoxPriceNum) * 10000) / 10000;
             for(let i = 0; i < gemScore.length; i++){
                 gemScore[i].textContent = score;
 
             }
+
+            openPreBox();
         }
         
     }
 
     function vipFunc(){
+        //구매 실패시
         if(score < vipBoxPriceeNum){
             failPop.style.visibility = "visible";
             vipPopup.style.visibility = "hidden";
-        }else{
+        }
+        //구매 성공시
+        else{
             vipPopup.style.visibility = "hidden";
             score = Math.round((score - vipBoxPriceeNum) * 10000) / 10000;
             for(let i = 0; i < gemScore.length; i++){
                 gemScore[i].textContent = score;
-
             }
         }
     }
@@ -328,7 +335,28 @@ function shopToolBoxPopup(){
     // console.log(premiumBox.className);
 }
 
+// 프리미엄 박스 구매 팝업
+function openPreBox(){
+    const preOpenPopup = document.querySelector(".pre_open_popup");
+    const preItems = document.querySelectorAll(".pre_open_wrap ul li");
+    const openBoxText = document.querySelector(".pre_open_wrap .open_text");
 
+    preOpenPopup.style.display = "block";
+
+    preOpenPopup.addEventListener("click", function(){
+        this.style.visibility = "hidden";
+    });
+
+    for(let i = 0; i < preItems.length; i++){
+        setTimeout(function(){
+            preItems[i].style.opacity = 1;
+        }, 500 * i);
+
+        setTimeout(function(){
+            openBoxText.style.opacity = 1;
+        }, 5200);
+    }
+}
 
 
 
@@ -389,6 +417,9 @@ function changeRoom(){
         },3000);
     });
 }
+
+
+
 
 
 

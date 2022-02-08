@@ -543,3 +543,13 @@
 
 .premiumitem_popup .button_wrap .pre_buy_btn,
 .vipitem_popup .button_wrap .vip_buy_btn{background-image: url(../images/ui/btn_img3.png);}
+
+
+/* 랜덤 아이템 박스 팝업 */
+.pre_open_popup{width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320; background: rgba(0, 0, 0, .8) url(../images/ui/premium_box.png) no-repeat center center / 160px auto; display: none;}
+
+
+.pre_open_wrap ul{width: 370px; height: 140px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, 4%); -webkit-transform: translate(-50%, 20%); display: flex; justify-content: space-between; flex-wrap: wrap; align-content: space-between;}
+.pre_open_wrap ul li{width: 62px; opacity: 0; transition: opacity .5s ease-in;}
+
+.pre_open_wrap .open_text{width: 500px; text-align: center; position: absolute; top: 76%; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); color: #fff; font-size: 16px; opacity: 0;}
