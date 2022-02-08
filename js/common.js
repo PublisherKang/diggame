@@ -202,31 +202,82 @@ function shopBuyPopup(){
     const shopPopRightBtn = document.querySelector(".right_btn");
     const quantity = document.querySelector(".quantity");
     const shopItemPriceClass = document.querySelector(".shop_item_wrap .price");
-    const shopItemPrice = 200;
-    let shopQuantity = 1;
-    let addShopItemPrice = 200;
+    const shopItemBtn = document.querySelector(".shop_item_wrap .cancel");
+    const shopBuyBtn = document.getElementById("shop_buy_btn");
+    const shopItemBuyPop = document.querySelector(".shop_item_buy_popup");
+    const itemCompletePop = document.querySelector(".shop_complete_popup");
+
+
+    let quantityNum = quantity.textContent;
+    let shopItemPriceClassNum = shopItemPriceClass.textContent;
+    
+
+    let num = parseInt(quantityNum);
+    let price = parseInt(shopItemPriceClassNum);
+ 
 
     shopPopRightBtn.addEventListener("click", increase);
     shopPopLeftBtn.addEventListener("click", decrease);
+    shopBuyBtn.addEventListener("click", shopBuy);
 
+    //구매 수량 증가
     function increase(){
-        shopQuantity++;
-        quantity.textContent = shopQuantity;
-        
-        addShopItemPrice = shopItemPrice + addShopItemPrice;
-        
-        console.log(addShopItemPrice);
-
-        shopItemPriceClass.textContent = addShopItemPrice;
-    }
-    function decrease(){
-        shopQuantity--;
-        console.log(shopQuantity);
-        quantity.textContent = shopQuantity;
-
-        shopItemPriceClass.textContent = shopItemPrice * shopQuantity;
+        num++;
+        price = price + 200;
+        quantity.textContent = num;
+        shopItemPriceClass.textContent = price;
+        console.log(num);
+        console.log(price);
     }
     
+    //구매 수량 감소
+    function decrease(){
+        if(num <= 1){
+            return;
+        }
+        num--;
+        price = price - 200;
+        quantity.textContent = num;
+        shopItemPriceClass.textContent = price;
+        console.log(num);
+        console.log(price);
+    }
+    
+    //구매 취소시 수량 초기화
+    shopItemBtn.addEventListener("click", priceInit);
+    function priceInit(){
+        num = 1;
+        price = 200;
+        quantity.textContent = 1;
+        shopItemPriceClass.textContent = 200;
+    }
+    
+    // 구매 버튼 누를때
+    function shopBuy(){
+        
+        //구매 실패시                           
+        if(score < price){
+            failPop.style.visibility = "visible";
+            shopItemBuyPop.style.visibility = "hidden";
+
+            priceInit();
+        }
+        //구매 성공시
+        else{
+            shopItemBuyPop.style.visibility = "hidden";
+            itemCompletePop.style.visibility = "visible";
+
+            score = Math.round((score - price) * 10000) / 10000;
+
+            for(let i = 0; i < gemScore.length; i++){
+                gemScore[i].textContent = score;
+
+            }
+            
+            priceInit();
+        }
+    }
+
 
 }
 

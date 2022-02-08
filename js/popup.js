@@ -243,6 +243,7 @@ $(function(){
         shopBuyBtn.eq(i).click(function(ev){
             shopPopupList(i);
         });    
+        
     }
 
     
