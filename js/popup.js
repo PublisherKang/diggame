@@ -154,6 +154,23 @@ $(function(){
 });
 
 
+//샵 마이닝 툴 팝업
+$(function(){
+    $(".tool_content li").eq(0).click(function(){
+        $(".premiumitem_popup").css("visibility", "visible");
+
+        
+        
+    });
+    $(".tool_content li").eq(1).click(function(){
+        $(".vipitem_popup").css("visibility", "visible");
+
+        
+        
+    });
+});
+
+
 $(function(){
     //채널 변경 버튼
     $(".ch_change_btn").click(function(ev){

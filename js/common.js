@@ -1,7 +1,7 @@
 let score = 0;
 let outOfTime = false;
 let numInit = 0.00;
-let num = 0.01;
+let num = 1111.01;
 
 const items = document.querySelectorAll(".stone_item");
 
@@ -254,7 +254,6 @@ function shopBuyPopup(){
     
     // 구매 버튼 누를때
     function shopBuy(){
-        
         //구매 실패시                           
         if(score < price){
             failPop.style.visibility = "visible";
@@ -273,14 +272,61 @@ function shopBuyPopup(){
                 gemScore[i].textContent = score;
 
             }
-            
             priceInit();
         }
     }
-
-
 }
 
+shopToolBoxPopup();
+function shopToolBoxPopup(){
+    const prePopup = document.querySelector(".premiumitem_popup");
+    const vipPopup = document.querySelector(".vipitem_popup");
+    const preBuyBtn = document.querySelector(".pre_buy_btn");
+    const vipBuyBtn = document.querySelector(".vip_buy_btn");
+    const premiumBox = document.querySelector(".premium_price");
+    const vipBox = document.querySelector(".vipbox_price");
+
+    const premiumBoxPrice = premiumBox.textContent;
+    const vipBoxPrice = vipBox.textContent;
+    
+    let premiumBoxPriceNum = parseInt(premiumBoxPrice);
+    let vipBoxPriceeNum = parseInt(vipBoxPrice);
+
+    preBuyBtn.addEventListener("click", preFunc);
+    vipBuyBtn.addEventListener("click", vipFunc);
+
+    function preFunc(){
+        if(score < premiumBoxPriceNum){
+            failPop.style.visibility = "visible";
+            prePopup.style.visibility = "hidden";
+        }else{
+            prePopup.style.visibility = "hidden";
+            score = Math.round((score - premiumBoxPriceNum) * 10000) / 10000;
+            for(let i = 0; i < gemScore.length; i++){
+                gemScore[i].textContent = score;
+
+            }
+        }
+        
+    }
+
+    function vipFunc(){
+        if(score < vipBoxPriceeNum){
+            failPop.style.visibility = "visible";
+            vipPopup.style.visibility = "hidden";
+        }else{
+            vipPopup.style.visibility = "hidden";
+            score = Math.round((score - vipBoxPriceeNum) * 10000) / 10000;
+            for(let i = 0; i < gemScore.length; i++){
+                gemScore[i].textContent = score;
+
+            }
+        }
+    }
+
+    console.log(vipBoxPriceeNum);
+    // console.log(premiumBox.className);
+}
 
 
 

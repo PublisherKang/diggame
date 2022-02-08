@@ -453,9 +453,11 @@
 .fail_popup,
 .complete_buy_popup,
 .shop_item_buy_popup,
-.shop_complete_popup{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
+.shop_complete_popup,
+.premiumitem_popup,
+.vipitem_popup{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
 
-.fail_popup{z-index: 321;}
+.fail_popup{z-index: 1321;}
 
 .package_buy_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
 
@@ -469,16 +471,23 @@
 
 /* fail popup, comp popup */
 .fail_wrap, 
-.comp_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
+.comp_wrap,
+.premiumitem_wrap,
+.vipitem_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
 
 .fail_wrap .fail_ques,
-.comp_wrap .comp_ques{font-size: 24px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
+.comp_wrap .comp_ques,
+.boxitem_ques{font-size: 24px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
 
 .fail_wrap .button_wrap, 
-.comp_wrap .button_wrap{display: flex; justify-content: center;}
+.comp_wrap .button_wrap,
+.premiumitem_wrap .button_wrap,
+.vipitem_wrap .button_wrap{display: flex; justify-content: center;}
 
 .fail_wrap .button_wrap button,
-.comp_wrap .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; background-image: url(../images/ui/btn_img1.png); display: block; padding: 13px 0; font-size: 16px;}
+.comp_wrap .button_wrap button,
+.premiumitem_wrap .button_wrap button,
+.vipitem_wrap .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; background-image: url(../images/ui/btn_img1.png); display: block; padding: 13px 0; font-size: 16px;}
 
 .comp_ques span{display: block;}
 .comp_ques span:nth-of-type(2){font-size: 14px; margin-top: 8px;}
@@ -513,3 +522,24 @@
 
 .shop_complete_popup .comp_wrap .button_wrap{justify-content: space-between;}
 .shop_complete_popup .comp_wrap .use_now{background-image: url(../images/ui/btn_img3.png);}
+
+
+
+/* .shop_boxitem_popup{visibility: visible;} */
+.premiumitem_popup .boxitem_ques,
+.vipitem_popup .boxitem_ques{margin-bottom: 10px;}
+
+.premiumitem_popup .img_wrap,
+.vipitem_popup .img_wrap{width: 140px; margin: 0 auto;}
+
+.premiumitem_popup .price_wrap,
+.vipitem_popup .price_wrap{text-align: center; margin-bottom: 10px;}
+
+.premiumitem_popup .price_wrap span,
+.vipitem_popup .price_wrap span{color: #fff; font-size: 16px; padding: 8px 0 8px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto; line-height: 2;}
+
+.premiumitem_popup .button_wrap,
+.vipitem_popup .button_wrap{justify-content: space-between;}
+
+.premiumitem_popup .button_wrap .pre_buy_btn,
+.vipitem_popup .button_wrap .vip_buy_btn{background-image: url(../images/ui/btn_img3.png);}
