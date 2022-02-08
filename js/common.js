@@ -395,6 +395,22 @@ function changeRoom(){
 
 
 
+//모바일 더블클릭시 화면 확대 방지
+document.documentElement.addEventListener('touchstart', function (event){
+    if(event.touches.length > 1){
+        event.preventDefault(); 
+    } 
+}, false);
+
+var lastTouchEnd = 0; 
+
+document.documentElement.addEventListener('touchend', function (event){
+    var now = (new Date()).getTime();
+    if (now - lastTouchEnd <= 300) {
+        event.preventDefault(); 
+    } lastTouchEnd = now; 
+}, false);
+
 // 인벤토리 아이템 선택
 
 
