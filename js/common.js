@@ -335,17 +335,14 @@ function shopToolBoxPopup(){
     // console.log(premiumBox.className);
 }
 
+
+const preOpenPopup = document.querySelector(".pre_open_popup");
+const preItems = document.querySelectorAll(".pre_open_wrap ul li");
+const openBoxText = document.querySelector(".pre_open_wrap .open_text");
 // 프리미엄 박스 구매 팝업
 function openPreBox(){
-    const preOpenPopup = document.querySelector(".pre_open_popup");
-    const preItems = document.querySelectorAll(".pre_open_wrap ul li");
-    const openBoxText = document.querySelector(".pre_open_wrap .open_text");
 
     preOpenPopup.style.display = "block";
-
-    preOpenPopup.addEventListener("click", function(){
-        this.style.display = "none";
-    });
 
     for(let i = 0; i < preItems.length; i++){
         setTimeout(function(){
@@ -358,6 +355,21 @@ function openPreBox(){
     }
 }
 
+// 박스 구매 초기화
+boxInit();
+function boxInit(){
+    setTimeout(function(){
+        preOpenPopup.addEventListener("click", function(){
+            this.style.display = "none";
+            
+            for(let i = 0; i < preItems.length; i++){
+                preItems[i].style.opacity = 0;
+                openBoxText.style.opacity = 0;
+            }
+        });
+    },5300);
+
+}
 
 
 //사운드 버튼
