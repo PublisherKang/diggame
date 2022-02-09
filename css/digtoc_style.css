@@ -1,0 +1,33 @@
+@charset "utrf-8";
+
+#wrap{background: #0b1329;}
+
+
+/* ========== header ========== */
+#header{border-bottom: 2px solid #2f3950; margin-bottom: 30px;}
+
+.headerIn{position: relative; width: 1024px; margin: 0 auto; height: 68px;}
+
+.logo{width: 96px; height: 26px; padding-top: 18px;}
+.logo a{display: block;}
+
+.gnb{width: 240px; position: absolute; top: 50%; right: 200px; transform: translateY(-50%); -webkit-transform: translateY(-50%);}
+
+.gnb ul{display: flex; justify-content: space-between;}
+
+.gnb ul li a{color: #fff; font-size: 20px;}
+
+.login_wrap{position: absolute; top: 50%; right: 0; transform: translateY(-50%); -webkit-transform: translateY(-50%);}
+.login_wrap ul{display: flex; width: 172px; justify-content: space-between;}
+.login_wrap ul li{width: 82px; height: 32px; border-radius: 32px; border: 1px solid #fff; text-align: center;}
+
+.login_wrap ul li a{display: block; color: #fff; line-height: 30px;}
+
+/* ========== container ========== */
+#container{}
+
+.cont1{width: 1024px; margin: 0 auto;}
+
+
+
+#footer{}

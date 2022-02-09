@@ -113,20 +113,63 @@
 
 
 /* 랭킹 wrap */
-.cont_ranking{width: 154px; height: 192px; border: 1px solid #fff; border-radius: 10px; position: absolute; top: 20px; right: 10px; background: rgba(0, 0, 0, .7); cursor: pointer;}
+.cont_ranking{width: 214px; border: 2px solid #fff; border-radius: 10px; background: rgba(0, 0, 0, .7); position: absolute; top: 14px; right: 14px;}
+.ranking_inner{padding: 8px 10px;}
 
-.ranking_inner{padding: 0 10px;}
+.ranking_inner ul{}
+.ranking_inner ul li{display: flex; justify-content: space-between; width: 100%; height: 30px; align-items: center; padding: 2px 0; box-sizing: content-box;}
 
-.ranking_inner .ranking_title{text-align: center; color: #fff; background: url(../images/ui/ranking_icon.svg) no-repeat 6px center /10px auto; padding: 13px 0 13px 12px; border-bottom: 1px solid #ccc; box-sizing: content-box;}
+.ranking_inner ul li .ch_img{width: 26px; height: 26px; border-radius: 50%; overflow: hidden;}
 
-.ranking_inner .ranking_list ul{border-bottom: 1px solid #fff; padding: 10px 0;}
-.ranking_inner .ranking_list ul li{color: #fff; padding: 10px 0 10px 32px; background-repeat: no-repeat; background-size: auto 25px; background-position: 0 center;}
+.ranking_inner ul li .ch_item{width: 26px; height: 26px;}
 
-.ranking_inner .ranking_list ul li:nth-of-type(1){background-image: url(../images/ui/rank1.svg);}
-.ranking_inner .ranking_list ul li:nth-of-type(2){background-image: url(../images/ui/rank2.svg);}
-.ranking_inner .ranking_list ul li:nth-of-type(3){background-image: url(../images/ui/rank3.svg);}
+.ranking_inner ul li .percent_wrap{width: 76px; height: 26px; display: flex; flex-direction: column; justify-content: space-between;}
+.ranking_inner ul li .percent_wrap p{padding-left: 14px; background-repeat: no-repeat; background-size: contain; background-position: 0 center; display: flex; align-items: center;}
 
-.ranking_inner .my_ranking{text-align: right; color: #fff; padding: 10px 0;}
+.ranking_inner ul li .percent_wrap .gem_gauge{background-image: url(../images/ui/gem_icon.png); width: 60px; height: 12px;}
+.ranking_inner ul li .percent_wrap .click_gauge{background-image: url(../images/ui/click_speed_icon.svg); width: 60px; height: 12px;}
+
+.ranking_inner ul li .percent_wrap .gem_gauge span{display: block; background: linear-gradient(0deg, #1897ea, #56ffff); width: 100%; height: 10px; border-radius: 2px;}
+.ranking_inner ul li .percent_wrap .click_gauge span{display: block; background: linear-gradient(0deg, #d55600, #f79c00); height: 10px; border-radius: 2px;}
+
+.ranking_inner ul li .user_score{width: 48px; height: 26px; color: #fff; font-size: 6px; display: flex; flex-direction: column; justify-content: space-between;}
+.ranking_inner ul li .user_score .gem_user_score{}
+.ranking_inner ul li .user_score .click_score{}
+
+/* 랭킹 개별 값 */
+.ranking_inner ul li:nth-of-type(1) .ch_img{background: #ffff00;}
+.ranking_inner ul li:nth-of-type(2) .ch_img{background: #97b3ff;}
+.ranking_inner ul li:nth-of-type(3) .ch_img{background: #8cdb25;}
+.ranking_inner ul li:nth-of-type(4) .ch_img{background: #c20000;}
+.ranking_inner ul li:nth-of-type(5) .ch_img{background: #0040b0;}
+.ranking_inner ul li:nth-of-type(6) .ch_img{background: #f7931e;}
+.ranking_inner ul li:nth-of-type(7) .ch_img{background: #a32eff;}
+.ranking_inner ul li:nth-of-type(8) .ch_img{background: #b3b3b3;}
+
+.ranking_inner ul li:nth-of-type(1) .gem_gauge span{width: 100%;}
+.ranking_inner ul li:nth-of-type(2) .gem_gauge span{width: 80%;}
+.ranking_inner ul li:nth-of-type(3) .gem_gauge span{width: 70%;}
+.ranking_inner ul li:nth-of-type(4) .gem_gauge span{width: 60%;}
+.ranking_inner ul li:nth-of-type(5) .gem_gauge span{width: 50%;}
+.ranking_inner ul li:nth-of-type(6) .gem_gauge span{width: 40%;}
+.ranking_inner ul li:nth-of-type(7) .gem_gauge span{width: 20%;}
+.ranking_inner ul li:nth-of-type(8) .gem_gauge span{width: 10%;}
+
+.ranking_inner ul li:nth-of-type(1) .click_gauge span{width: 45%;}
+.ranking_inner ul li:nth-of-type(2) .click_gauge span{width: 65%;}
+.ranking_inner ul li:nth-of-type(3) .click_gauge span{width: 25%;}
+.ranking_inner ul li:nth-of-type(4) .click_gauge span{width: 68%;}
+.ranking_inner ul li:nth-of-type(5) .click_gauge span{width: 85%;}
+.ranking_inner ul li:nth-of-type(6) .click_gauge span{width: 22%;}
+.ranking_inner ul li:nth-of-type(7) .click_gauge span{width: 70%;}
+.ranking_inner ul li:nth-of-type(8) .click_gauge span{width: 33%;}
+
+
+
+
+
+
+
 
 
 
