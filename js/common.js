@@ -1,7 +1,7 @@
 let score = 0;
 let outOfTime = false;
 let numInit = 0.00;
-let num = 1111.01;
+let num = 0.01;
 
 const items = document.querySelectorAll(".stone_item");
 
@@ -53,6 +53,19 @@ for(let i = 0; i < items.length; i++){
             }
         }
 
+
+
+        console.log(score);
+    });
+    
+    // 캐릭터 애니메이션
+    const characterParent = document.querySelector(".ch");
+    const character = document.querySelector(".ch img");
+    const characterMotion = character.nextElementSibling;
+    items[i].addEventListener("mousedown", function(){
+        character.classList.remove("on");
+        characterMotion.classList.add("on");
+
         //스코어 애니메이션
         let newSpan = document.createElement("span");
         // const stornImgs = document.querySelectorAll(".stone_item img");
@@ -60,13 +73,16 @@ for(let i = 0; i < items.length; i++){
         newSpan.textContent = num;
         newSpan.classList.add("ani_num");
         
-        this.appendChild(newSpan);
+        characterParent.appendChild(newSpan);
         
         newSpan.addEventListener("animationend",function(){
             this.remove();
         });
-
-        console.log(score);
+    });
+    
+    items[i].addEventListener("mouseup", function(){
+        character.classList.add("on");
+        characterMotion.classList.remove("on");
     });
 }
 
