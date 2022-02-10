@@ -84,6 +84,29 @@ for(let i = 0; i < items.length; i++){
         character.classList.add("on");
         characterMotion.classList.remove("on");
     });
+    
+    items[i].addEventListener("touchstart", function(){
+        character.classList.remove("on");
+        characterMotion.classList.add("on");
+
+        //스코어 애니메이션
+        let newSpan = document.createElement("span");
+        // const stornImgs = document.querySelectorAll(".stone_item img");
+
+        newSpan.textContent = num;
+        newSpan.classList.add("ani_num");
+        
+        characterParent.appendChild(newSpan);
+        
+        newSpan.addEventListener("animationend",function(){
+            this.remove();
+        });
+    });
+    
+    items[i].addEventListener("touchend", function(){
+        character.classList.add("on");
+        characterMotion.classList.remove("on");
+    });
 }
 
 const boost200 = document.querySelector(".boost_200");

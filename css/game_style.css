@@ -59,7 +59,7 @@
 
 
 /* 돌 이미지 위치 */
-.stone_item{width: 260px; height: auto; position: absolute; z-index: 10;}
+.stone_item{width: 260px; height: auto; position: absolute;}
 
 .stone_item img{cursor: pointer; /* cursor: url(../images/item2.png) 18 18 ,auto;  */-webkit-user-drag: none;}
 /* .stone_item img.cur3{cursor: url(../images/item3.png) 18 18 ,auto; -webkit-user-drag: none;} */
@@ -166,7 +166,7 @@
 
 /* === 캐릭터 === */
 .ch_wrap{}
-.ch{width: 172px; position: absolute; top: 250px; left: 330px;}
+.ch{width: 172px; position: absolute; top: 250px; left: 310px; pointer-events: none;}
 .ch img{position: absolute; top: 0; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); visibility: hidden; width: auto; height: 150px; user-select: none;}
 .ch img.on{visibility: visible;}
 
