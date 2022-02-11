@@ -12,7 +12,7 @@
 .user_message .user_ch{width: 50px; height: 50px; border-radius: 50%; overflow: hidden; background: #0040b0; box-shadow: 2px 2px 10px #000; margin-right: 10px;}
 .user_message .user_ch img{width: 50px; height: auto;}
 
-.text_box{font-size: 14px; max-width: 210px; overflow-wrap: break-word; display: block; border-radius: 8px; background: #9abdd8; padding: 12px 12px; position: relative;}
+.text_box{font-size: 14px; max-width: 188px; overflow-wrap: break-word; display: block; border-radius: 8px; background: #9abdd8; padding: 12px 12px; position: relative;}
 
 .text_box .user_name{color: #fff; font-size: 14px; position: absolute; top: -22px; left: 0;}
 

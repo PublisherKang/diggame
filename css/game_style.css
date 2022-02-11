@@ -4,10 +4,11 @@
 ::-moz-selection{background: transparent;}
 ::-webkit-selection{background: transparent;}
 
+
+img, div, span, p{-webkit-user-drag: none; -webkit-touch-callout: none; -webkit-user-select: none;-khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+
 input{user-select: auto; -webkit-user-select: auto;}
 input:focus{outline: none;}
-
-*{-webkit-user-drag: none; -webkit-touch-callout: none; -webkit-user-select: none;-khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
 
 
 
