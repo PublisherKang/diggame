@@ -7,6 +7,8 @@
 
 img, div, span, p{-webkit-user-drag: none; -webkit-touch-callout: none; -webkit-user-select: none;-khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
 
+img{-webkit-tap-highlight-color: transparent;}
+
 input{user-select: auto; -webkit-user-select: auto;}
 input:focus{outline: none;}
 
@@ -67,7 +69,7 @@ input:focus{outline: none;}
 /* 돌 이미지 위치 */
 .stone_item{width: 260px; height: auto; position: absolute;}
 
-.stone_item img{cursor: pointer; /* cursor: url(../images/item2.png) 18 18 ,auto;  */-webkit-user-drag: none; -webkit-tap-highlight-color: transparent;}
+.stone_item img{cursor: pointer; /* cursor: url(../images/item2.png) 18 18 ,auto;  */}
 /* .stone_item img.cur3{cursor: url(../images/item3.png) 18 18 ,auto; -webkit-user-drag: none;} */
 
 

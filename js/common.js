@@ -62,9 +62,13 @@ for(let i = 0; i < items.length; i++){
     const characterParent = document.querySelector(".ch");
     const character = document.querySelector(".ch img");
     const characterMotion = character.nextElementSibling;
+    const hitAudio = document.querySelector(".hit_audio");
     items[i].addEventListener("mousedown", function(){
         character.classList.remove("on");
         characterMotion.classList.add("on");
+        
+        // 타격 오디오
+        hitAudio.play();
 
         //스코어 애니메이션
         let newSpan = document.createElement("span");
@@ -84,17 +88,26 @@ for(let i = 0; i < items.length; i++){
     items[i].addEventListener("mouseup", function(){
         character.classList.add("on");
         characterMotion.classList.remove("on");
+        hitAudio.pause();
+        hitAudio.currentTime = 0;
     });
     
     items[i].addEventListener("touchstart", function(){
         character.classList.remove("on");
         characterMotion.classList.add("on");
 
+        //타격 오디오
+        hitAudio.play();
+
     });
     
     items[i].addEventListener("touchend", function(){
         character.classList.add("on");
         characterMotion.classList.remove("on");
+
+        //타격 오디오
+        hitAudio.pause();
+        hitAudio.currentTime = 0;
     });
 }
 
