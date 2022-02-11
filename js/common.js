@@ -12,18 +12,19 @@ const gameContainer = document.querySelector(".game_container");
 const failPop = document.querySelector(".fail_popup");
 
 
+
 //클릭하면 초당 클릭 스피드 올라감
-startGameSpeed();
-function startGameSpeed() {
-    startTime = new Date().getTime();
+// startGameSpeed();
+// function startGameSpeed() {
+//     startTime = new Date().getTime();
     
-    setInterval(function() {
-    var total = (new Date().getTime() - startTime) / 100000;
-    // console.log(total);
-    clicksTxt.textContent = (score / total).toFixed(2);
+//     setInterval(function() {
+//     var total = (new Date().getTime() - startTime) / 100000;
+//     // console.log(total);
+//     clicksTxt.textContent = (score / total).toFixed(2);
         
-    }, 1);
-}
+//     }, 1);
+// }
 
 const pointScore = document.getElementById("point_score");
 const invenPointScore = document.getElementById("inven_point_score");
@@ -68,7 +69,7 @@ for(let i = 0; i < items.length; i++){
         characterMotion.classList.add("on");
         
         // 타격 오디오
-        hitAudio.play();
+        // hitAudio.play();
 
         //스코어 애니메이션
         let newSpan = document.createElement("span");
@@ -88,8 +89,6 @@ for(let i = 0; i < items.length; i++){
     items[i].addEventListener("mouseup", function(){
         character.classList.add("on");
         characterMotion.classList.remove("on");
-        hitAudio.pause();
-        hitAudio.currentTime = 0;
     });
     
     items[i].addEventListener("touchstart", function(){
@@ -97,17 +96,13 @@ for(let i = 0; i < items.length; i++){
         characterMotion.classList.add("on");
 
         //타격 오디오
-        hitAudio.play();
+        // hitAudio.play();
 
     });
     
     items[i].addEventListener("touchend", function(){
         character.classList.add("on");
         characterMotion.classList.remove("on");
-
-        //타격 오디오
-        hitAudio.pause();
-        hitAudio.currentTime = 0;
     });
 }
 
