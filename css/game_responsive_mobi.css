@@ -1,0 +1,489 @@
+@charset "utrf-8";
+
+
+/* ========== header ========== */
+#header{border-bottom: 1px solid #2f3950; margin-bottom: 30px;}
+
+.headerIn{ width: 100%; height: 50px; padding: 0 20px;}
+
+.logo{width: 70px; height: 26px; padding-top: 14px;}
+
+.gnb{width: 160px; right: 30%; display: none;}
+
+.gnb ul li a{font-size: 14px;}
+
+.login_wrap{right: 20px;}
+.login_wrap ul{width: 110px;}
+.login_wrap ul li{width: 52px; height: 32px; border-radius: 32px;}
+
+.login_wrap ul li a{line-height: 30px; font-size: .5em;}
+
+/* ========== container ========== */
+#container{padding: 0 20px;}
+
+.cont1{width: 100%; padding-bottom: 100px; display: flex; flex-wrap: wrap;}
+
+
+/* ======================== gmae wrap ======================== */
+
+.game_wrap{width: 100%; height: 96vw; background: url(../images/background/back1.jpg) no-repeat 0 0 / 96vw 96vw; border-radius: 20px; box-shadow: 6px 6px 10px #000; margin-bottom: 4vw;}
+
+.game_header{width: 100%; height: 68px;}
+.game_headerIn{width: 100%; padding: 0 20px; height: 68px;}
+
+.game_headerIn .marker{width: 40px; height: 45px;}
+
+.play_time_wrap{ left: 30px; text-shadow: 2px 2px 3px #000; width: 200px;}
+
+.up_icon{padding: 0 4px; background: url(../images/ui/playtiime_rankup_icon.png) no-repeat center center / contain; margin-left: 4px;}
+
+.click_speed_wrap{right: 30px; font-size: 14px;}
+.click_speed_wrap #clicks{padding: 10px 0 10px 26px; background: url(../images/ui/click_speed_icon.svg) no-repeat 0 4px / 20px auto; font-size: 14px;}
+
+.point_wrap{font-size: 14px;}
+
+.point_wrap #point_score,
+.point_wrap #inven_point_score,
+.point_wrap #shop_point_score{padding: 8px 0 8px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto;}
+
+
+/* container */
+.game_container{ width: 100%; height: 632px}
+
+/* 아이템 소모량 */
+.now_item{width: 90px; height: 90px; background-color: rgba(0, 0, 0, .5);  border-radius: 8px; bottom: 30px; left: 20px;}
+.remaining_amount{padding: 12px 8px 6px;}
+.remaining_amount .pick{width: 66%; margin: 0 auto 8px;}
+
+
+/* 돌 이미지 위치 */
+.stone_item{width: 260px;}
+
+.stone_item.item1{top: 190px; left: 150px;}
+.stone_item.item2{top: 294px; left: 390px;}
+
+/* 돌 클릭시 숫자 애니메이션 */
+.ani_num{ top: -70px; left: 40px; background: url(../images/ui/ani_gem.png) no-repeat 0 center / 10px auto; padding: 0 0 0 14px; text-shadow: 2px 2px 2px #000;}
+
+.boost_200{width: 240px; top: 20px; left: 80px;}
+.boost_icon{width: 50px; height: 50px; background: url(../images/ui/booster_icon.png) no-repeat 0 0 / 50px auto; left: -56px;}
+
+.gauge_wrap{width: 240px; height: 40px; border-radius: 8px;}
+
+.gauge_wrap .gauge{height: 32px; border-radius: 6px; margin: 3px 0 0 3px;}
+
+.gauge_wrap .percent{font-size: 16px; text-shadow: 2px 2px 3px #000; left: 20px;}
+
+.gauge_wrap .boost_timer{ font-size: 16px; text-shadow: 2px 2px 3px #000;  left: 130px;}
+
+
+@keyframes gauge_down{
+    100%{width: 0;}
+    0%{width: 230px;}
+}
+
+/* 메뉴 버튼 */
+.menu_list{}
+.menu_list li{width: 50px; height: 50px; left: 20px;}
+
+.menu_list li:nth-of-type(1){top: 150px;}
+.menu_list li:nth-of-type(2){top: 210px;}
+.menu_list li:nth-of-type(3){top: 270px;}
+.menu_list li:nth-of-type(4){top: 330px;}
+.menu_list li:nth-of-type(5){top: 390px;}
+
+.menu_list li button{width: 50px; height: 50px;}
+
+/* 랭킹 wrap */
+.cont_ranking{width: 214px; border: 2px solid #fff; border-radius: 10px; top: 14px; right: 14px;}
+.ranking_inner{padding: 8px 10px;}
+
+.ranking_inner ul{}
+.ranking_inner ul li{width: 100%; height: 30px; padding: 2px 0;}
+
+.ranking_inner ul li .ch_img{width: 26px; height: 26px;}
+
+.ranking_inner ul li .ch_item{width: 26px; height: 26px;}
+
+.ranking_inner ul li .percent_wrap{width: 76px; height: 26px;}
+.ranking_inner ul li .percent_wrap p{padding-left: 14px;}
+
+.ranking_inner ul li .percent_wrap .gem_gauge{width: 60px; height: 12px;}
+.ranking_inner ul li .percent_wrap .click_gauge{width: 60px; height: 12px;}
+
+.ranking_inner ul li .percent_wrap .gem_gauge span{height: 10px; border-radius: 2px;}
+.ranking_inner ul li .percent_wrap .click_gauge span{height: 10px; border-radius: 2px;}
+
+.ranking_inner ul li .user_score{width: 48px; height: 26px; font-size: 6px;   }
+
+
+/* === 캐릭터 === */
+
+.ch{width: 172px; top: 250px; left: 310px;}
+.ch img{height: 150px;}
+
+/* =========== 컨테이너 끝 ============ */
+
+
+/* ================ 팝업 ================ */
+/* 인벤토리 팝업 */
+.inven_popup{background: url(../images/background/inventory_back.jpg) no-repeat 0 0 / contain;}
+
+.inven_header{width: 100%; height: 68px;}
+
+.inven_header .back_btn{left: 20px;  font-size: 16px; background: url(../images/ui/back_icon2.png) no-repeat 0 center / 20px auto; padding: 12px 0 12px 28px;}
+
+.inven_header .inven_name{font-size: 30px; left: 50%;}
+.inven_header .point_wrap{ right: 30px; left: auto;}
+
+/* inner */
+.inven_container{width: 100%; padding: 30px 30px 40px;}
+/* 업그레이드 wrap */
+.upgrade_wrap{width: 200px; border-radius: 20px; box-shadow: 4px 4px 10px #000; padding: 0 0 36px}
+
+.upgrade_wrap .equip{padding-top: 16px; font-size: 16px; margin-left: 10px; margin-bottom: 50px;}
+
+.upgrade_wrap .preview_item{width: 140px; margin: 0 auto 20px; border-radius: 22px;}
+
+.upgrade_wrap .item_level{font-size: 16px; margin-bottom: 8px;}
+
+.upgrade_wrap .item_rank span{font-size: 14px; }
+
+.upgrade_wrap .item_rank{margin-bottom: 20px;}
+
+.upgrade_wrap .durability{margin-bottom: 6px;}
+.upgrade_wrap .price{margin-bottom: 60px;}
+
+.upgrade_wrap .btn_wrap button{width: 140px; background: url(../images/ui/btn_img1.png) no-repeat 0 0 / contain; margin-bottom: 10px; padding: 10px 0; font-size: 14px;}
+
+
+/* 아이템 리스트 */
+.item_list_wrap{width: 420px; border-radius: 20px; background: #aaa; box-shadow: 4px 4px 10px #000; padding: 50px 10px 10px;}
+
+.item_tab_btn{top: 4px; left: 14px;}
+.item_tab_btn ul{width: 210px;}
+.item_tab_btn ul li{padding: 14px 10px; font-size: 15px;}
+
+.item_list_wrap .item_list{width: 400px; height: 356px; border-radius: 14px;}
+.item_list_wrap .item_list ul{width: 420px; height: 356px; padding: 10px 20px 10px 16px; background: #333;}
+
+.item_list_wrap .item_list ul li{width: 90px; height: 90px; padding: 8px;}
+
+.target_img{background: url(../images/ui/equip_frame.png) no-repeat 0 0/ contain;}
+
+
+/* 아이템 리스트 하단 샵넘어가는 버튼 wrap */
+.next_minting{width: 420px; height: 130px; border-radius: 20px; box-shadow: 4px 4px 10px #000; padding: 20px;}
+
+.next_inner span{font-size: 30px; padding: 8px 0 8px 114px; background: url(../images/ui/premium_box.png) no-repeat 0 center / 100px auto;}
+
+.next_inner button{width: 40px; height: 43px;}
+
+/* 업그레이드 완료시 */
+.complete_inner .complete_title{font-size: 26px;  margin-bottom: 40px; }
+
+.complete_inner .complete_item{width: 100px; margin-bottom: 20px;}
+
+.complete_inner .item_name{font-size: 24px;   margin-bottom: 40px;}
+.complete_inner .item_name .item_rank{font-size: 20px; margin-top: 10px;}
+
+.complete_inner .item_level{font-size: 24px;}
+
+/* repair 영역 */
+.repair_wrap{width: 400px; border-radius: 20px; left: 50%; padding: 20px;}
+
+.repair_inner .repair_ques{font-size: 16px; margin-bottom: 30px;}
+
+.repair_inner .price_wrap{font-size: 24px; margin-bottom: 30px;}
+
+.repair_inner .price_wrap .price{padding: 10px 0 10px 46px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 40px auto;}
+
+.repair_inner .button_wrap button{width: 170px; padding: 13px 0; font-size: 16px;}
+
+
+/* 샵 팝업 */
+.shop_popup{background: url(../images/background/shop_back.jpg) no-repeat 0 0 / cover; padding: 0 10px; }
+
+.shop_header{width: 100%; height: 68px; border-bottom: 2px solid #333;}
+
+.shop_header .back_btn{left: 10px; font-size: 16px; background: url(../images/ui/back_icon.png) no-repeat 0 center / 20px auto;  padding: 12px 0 12px 28px;}
+
+.shop_header .point_wrap{right: 30px;}
+
+.shop_header .shop_name{font-size: 30px;}
+
+
+.shop_container{padding: 40px 20px;}
+.shop_container .shop_menu_btn{margin-bottom: 30px;}
+
+.shop_container .shop_menu_btn ul li{width: 202px;}
+.shop_container .shop_menu_btn ul li button{width: 100%; padding: 18px 0; font-size: 16px; filter: drop-shadow(3px 3px 6px #000);}
+
+/* content_wrap */
+.content_wrap{width: 640px;}
+
+
+/* package_content */
+.content_wrap .package_content{width: 640px;}
+
+.package_content ul li{width: 306px; height:450px; background-size: 274px auto; box-shadow: 3px 3px 14px #222; border-radius: 32px;}
+
+.package_content ul li > div{padding: 50px 10px 0; font-size: 13px; margin-bottom: 30px;}
+
+.package_content ul li > div img{width: 140px;  margin: 0 auto 34px;}
+
+.package_content ul li p{width: 180px; padding: 20px; border-radius: 10px; box-shadow: 4px 4px 18px #222;}
+
+.package_content ul li .price{font-size: 24px; padding: 10px 0 10px 46px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 40px auto;}
+
+/* item_content */
+.item_content{width: 640px; }
+
+/* item_content 공통값 */
+.booster_list, .auto_list{width: 100%; padding: 20px;  border-radius: 24px; box-shadow: 4px 4px 10px #000; margin-bottom: 20px;}
+
+.booster_list .list_title, .auto_list .list_title{font-size: 26px; width: 180px;  padding-top: 130px;  background-position: center 14px; background-size: 100px auto;}
+
+.booster_list ul, .auto_list ul{width: 404px;}
+.booster_list ul li, .auto_list ul li{width: 192px; border-radius: 20px;    box-shadow: 4px 4px 10px #000; }
+
+.booster_list ul li .item, .auto_list ul li .item{padding: 10px 0 17px;}
+.booster_list ul li .item img, .auto_list ul li .item img{width: 100px;}
+
+.booster_list ul li .price_wrap, .auto_list ul li .price_wrap{padding: 12px 0;}
+
+.booster_list ul li .price_wrap .price, .auto_list ul li .price_wrap .price{font-size: 16px; padding: 4px 0 4px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto;}
+
+/* booster list 개별 값 */
+
+/* auto list 개별 값 */
+.auto_list .list_title{background-size: 84px auto;}
+
+/* auto list 개별값 */
+.auto_list{margin-bottom: 0;}
+
+/*  tool content  */
+.tool_content{width: 640px; }
+.tool_content ul{margin-bottom: 30px;}
+
+.tool_content ul li{width: 300px;}
+
+.tool_content .box_wrap{border-radius: 30px; padding: 16px 0 24px 0; margin-bottom: 24px; box-shadow: 4px 4px 18px #000;}
+.tool_content .box_wrap img{width: 140px; margin: 0 auto 14px;}
+.tool_content .box_wrap .box_title{font-size: 22px;  margin-bottom: 10px;}
+
+.tool_content .box_wrap .box_info{font-size: 16px;}
+
+.tool_content .price_wrap{width: 160px; padding: 18px; border-radius: 10px; margin-top: 20px;}
+.tool_content .price{font-size: 16px; padding: 10px 0 10px 26px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 22px auto;}
+
+
+/* opensea go */
+.go_opensea{width: 100%; border-radius: 20px;  box-shadow: 4px 4px 18px #000;}
+
+.go_opensea .speack_icon{width: 100px; height: 150px; background: url(../images/ui/notice_icon.png) no-repeat 0 0 / 100px auto; top: -18px; left: 16px;}
+
+.go_opensea .text{padding: 28px 0 24px 140px; font-size: 14px;}
+
+.go_opensea .opensea_btn{width: 140px; height: 80px; font-size: 16px; background: url(../images/ui/btn_img4.png) no-repeat 0 0 /contain; right: 7px;}
+
+
+/* 랭킹 팝업 */
+.ranking_popup{width: 100%; height: 100%;}
+
+.ranking_popup .ranking_wrap{width: 360px; height: 480px; border-radius: 20px; box-shadow: 4px 4px 18px #000; padding: 22px 18px 20px;}
+
+.ranking_popup .ranking_pop_close{top: 12px; right: 12px; width: 40px; height: 40px;}
+.ranking_popup .ranking_pop_close::after,
+.ranking_popup .ranking_pop_close::before{content: ""; width: 24px; height: 2px;}
+
+.ranking_pop_inner .rank_pop_title{padding: 0 0 22px 0;}
+
+.ranking_pop_inner .rank_pop_title span{font-size: 18px; background: url(../images/ui/trophy_icon.png) no-repeat 0 center / 38px auto; padding: 10px 0 10px 46px;}
+
+.ranking_pop_inner .rank_tab_btn{width: 100%; margin-bottom: 10px;}
+
+.ranking_pop_inner .rank_tab_btn li button{width: 158px;  padding: 12px 0; border-radius: 10px;}
+
+/* ranking_pop_list */
+.ranking_pop_list{width: 100%; border-radius: 20px; padding: 14px 12px;}
+
+
+/* playtime popup */
+.playtime_pop_list{width: 100%; border-radius: 20px; padding: 14px 12px;}
+
+/* ranking tab, playtime tab common */
+.ranking_pop_list .list_name,
+.playtime_pop_list .list_name{width: 100%; border-bottom: 2px solid #fff;}
+
+.ranking_pop_list .list_name p,
+.playtime_pop_list .list_name p{width: 50%; padding: 0 0 14px 0;}
+
+.ranking_pop_list .rank_list ul,
+.playtime_pop_list .time_list ul{border-bottom: 2px solid #fff;}
+
+.ranking_pop_list .rank_list ul li,
+.playtime_pop_list .time_list ul li{border-bottom: 1px solid #aaa;}
+
+.ranking_pop_list .rank_num,
+.playtime_pop_list .rank_num{width: 50px;  padding: 12px 0;}
+
+.ranking_pop_list .rank_list ul li:nth-of-type(1) .rank_num,
+.playtime_pop_list .time_list ul li:nth-of-type(1) .rank_num{background: url(../images/ui/rank1.svg) no-repeat center center / 30px auto;}
+
+.ranking_pop_list .rank_list ul li:nth-of-type(2) .rank_num,
+.playtime_pop_list .time_list ul li:nth-of-type(2) .rank_num{background: url(../images/ui/rank2.svg) no-repeat center center / 30px auto;}
+
+.ranking_pop_list .rank_list ul li:nth-of-type(3) .rank_num,
+.playtime_pop_list .time_list ul li:nth-of-type(3) .rank_num{background: url(../images/ui/rank3.svg) no-repeat center center / 30px auto;}
+
+.ranking_pop_list .user_id{width: 120px; padding: 12px 0;}
+.playtime_pop_list .user_id{width: 136px; padding: 12px 0;}
+
+.ranking_pop_list .user_score{width: 110px; padding: 12px 0 12px 20px; background: url(../images/ui/ani_gem2.png) no-repeat 0 center / 12px auto;}
+
+.playtime_pop_list .time_score{width: 80px; padding: 12px 0 12px 20px; background: url(../images/ui/rank_playtime_icon.png) no-repeat 0 center / 14px auto;}
+
+/* myrank */
+
+.point_wrap #rank_score{width: 110px; padding: 12px 0 12px 20px; background: url(../images/ui/ani_gem2.png) no-repeat 0 center / 12px auto;}
+
+.point_wrap #time_score{width: 87px; padding: 12px 0 12px 20px; background: url(../images/ui/rank_playtime_icon.png) no-repeat 0 center / 14px auto;}
+
+
+
+
+
+
+
+/* another room popup */
+.another_room_popup{width: 100%; height: 100%;}
+.another_wrap{width: 420px; left: 50%; border: 2px solid #aaaaaa; border-radius: 20px; padding: 24px 26px;}
+
+.another_ques{font-size: 18px; margin-bottom: 40px;}
+
+.another_inner .button_wrap button{width: 170px; padding: 13px 0; font-size: 16px;}
+
+/* immediately_repair_popup*/
+.immediately_wrap{width: 420px; left: 50%; border: 2px solid #aaaaaa; border-radius: 20px; padding: 24px 26px;}
+
+.immediately_ques{font-size: 18px; margin-bottom: 30px;}
+
+.immediately_ques span:nth-of-type(1){margin-bottom: 12px;}
+.immediately_ques span:nth-of-type(2){font-size: 14px;}
+
+.immediately_inner .button_wrap button{width: 170px; padding: 13px 0; font-size: 16px;}
+
+.package_buy_wrap{width: 420px;  left: 50%;  border: 2px solid #aaaaaa; border-radius: 20px; padding: 24px 26px;}
+
+.package_buy_ques{font-size: 18px; margin-bottom: 30px;}
+
+.package_buy_inner .button_wrap button{width: 170px; padding: 13px 0; font-size: 16px;}
+
+/* fail popup, comp popup */
+.fail_wrap, 
+.comp_wrap,
+.premiumitem_wrap,
+.vipitem_wrap{width: 420px; left: 50%; border: 2px solid #aaaaaa; border-radius: 20px; padding: 24px 26px;}
+
+.fail_wrap .fail_ques,
+.comp_wrap .comp_ques,
+.boxitem_ques{font-size: 24px; margin-bottom: 30px;}
+
+.fail_wrap .button_wrap button,
+.comp_wrap .button_wrap button,
+.premiumitem_wrap .button_wrap button,
+.vipitem_wrap .button_wrap button{width: 170px; padding: 13px 0; font-size: 16px;}
+
+.comp_ques span:nth-of-type(2){font-size: 14px; margin-top: 8px;}
+
+/* shop_item_buy_popup */
+.shop_item_wrap{border: 2px solid #aaaaaa; border-radius: 16px; padding: 30px 16px 20px;}
+.shop_item_wrap .pop_title{margin-bottom: 12px;}
+.shop_item_wrap .pop_title span{ font-size: 18px;}
+
+.shop_item_wrap .img_wrap{ width: 90px; margin: 0 auto 10px;}
+
+.shop_item_wrap .ques{font-size: 14px; margin-bottom: 24px;}
+
+.shop_item_wrap .quantity_wrap{width: 100px; margin: 0 auto 30px; font-size: 20px;}
+
+.shop_item_wrap .quantity_wrap button{width: 20px; height: 20px;  background-size: 20px 20px;}
+
+.shop_item_wrap .price_wrap{margin-bottom: 30px; font-size: 18px;}
+.shop_item_wrap .price_wrap .price{padding: 10px 0 10px 26px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 22px auto;}
+
+.shop_item_wrap .button_wrap{width: 350px;}
+.shop_item_wrap .button_wrap button{width: 170px; padding: 13px 0; font-size: 16px;}
+
+/* .shop_boxitem_popup{visibility: visible;} */
+.premiumitem_popup .boxitem_ques,
+.vipitem_popup .boxitem_ques{margin-bottom: 10px;}
+
+.premiumitem_popup .img_wrap,
+.vipitem_popup .img_wrap{width: 140px;}
+
+.premiumitem_popup .price_wrap,
+.vipitem_popup .price_wrap{ margin-bottom: 10px;}
+
+.premiumitem_popup .price_wrap span,
+.vipitem_popup .price_wrap span{font-size: 16px; padding: 8px 0 8px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto; }
+
+
+/* 랜덤 아이템 박스 팝업 */
+.pre_open_popup{background: rgba(0, 0, 0, .8) url(../images/ui/premium_box.png) no-repeat center center / 160px auto;}
+
+
+.pre_open_wrap ul{width: 370px; height: 140px;}
+.pre_open_wrap ul li{width: 62px;}
+
+.pre_open_wrap .open_text{width: 500px; font-size: 16px;}
+
+
+
+
+/* ========================= chat wrap ========================= */
+
+.chat_wrap{width: 100%; height: 700px; border-radius: 20px; box-shadow: 6px 6px 10px #000;}
+.room_number{height: 56px; text-shadow: 0 0 2px #86640f , 0 0 4px #ff0;  font-size: 16px; line-height: 56px;}
+
+.chat_inner{padding: 50px 14px 20px; height: 570px; width: 318px;}
+
+/* 유저 메세지 박스 */
+.user_message{margin-bottom: 54px;}
+
+
+.user_message .user_ch{width: 50px; height: 50px; box-shadow: 2px 2px 10px #000; margin-right: 10px;}
+.user_message .user_ch img{width: 50px;}
+
+.text_box{font-size: 14px; max-width: 210px; border-radius: 8px; padding: 12px 12px; }
+
+.text_box .user_name{ font-size: 14px; top: -22px;}
+
+.text_box .send_time{ font-size: 10px; bottom: -18px;}
+
+/* 나의 메세지 */
+.user_message.my_msg .user_ch{margin-left: 10px;}
+
+/* 메세지 입력 영역 */
+.message_wrap{height: 74px; padding: 0 20px;  z-index: 30;}
+
+.emoticon_btn{width: 43px; height: 43px;}
+
+.emoticon_btn button{width: 43px; height: 43px; border-radius: 10px; background: #b5a4ff url(../images/imoticon/imoticon57.png) no-repeat center center/ 34px auto;}
+
+.message_enter input{width: 210px; padding: 12px 46px 12px 8px; border-radius: 6px;}
+.message_enter .submit{width: 30px; height: 30px; background: #405ea4 url(../images/ui/send_message_icon.svg) no-repeat 8px center / 18px auto; right: 10px;}
+
+.emoticon_wrap{width: 260px; height: 78px; border-radius: 10px; bottom: 78px;}
+
+.emoticon_wrap ul{width: 278px; height: 78px; padding: 10px;}
+
+.emoticon_wrap ul li{width: 40px; height: 40px;}
+
+
+
+
+#footer{}
+
+

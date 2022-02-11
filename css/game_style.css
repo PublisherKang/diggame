@@ -1,12 +1,17 @@
 @charset "utf-8";
 
 ::selection{background: transparent;}
+::-moz-selection{background: transparent;}
+::-webkit-selection{background: transparent;}
+
+input{user-select: auto; -webkit-user-select: auto;}
+input:focus{outline: none;}
 
 *{-webkit-user-drag: none; -webkit-touch-callout: none; -webkit-user-select: none;-khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
 
 
 
-.game_wrap{width: 700px; height: 700px; /* position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); */ background: url(../images/background/back1.jpg) no-repeat 0 0 / 700px 700px; border-radius: 20px; overflow: hidden; position: relative;}
+.game_wrap{width: 700px; height: 700px; /* position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); */ background: url(../images/background/back1.jpg) no-repeat 0 0 / 700px 700px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: 6px 6px 10px #000;}
 
 .game_wrap.ani{animation: change_room_ani 3s; -webkit-animation: change_room_ani 3s;}
 
@@ -61,7 +66,7 @@
 /* 돌 이미지 위치 */
 .stone_item{width: 260px; height: auto; position: absolute;}
 
-.stone_item img{cursor: pointer; /* cursor: url(../images/item2.png) 18 18 ,auto;  */-webkit-user-drag: none;}
+.stone_item img{cursor: pointer; /* cursor: url(../images/item2.png) 18 18 ,auto;  */-webkit-user-drag: none; -webkit-tap-highlight-color: transparent;}
 /* .stone_item img.cur3{cursor: url(../images/item3.png) 18 18 ,auto; -webkit-user-drag: none;} */
 
 
@@ -182,7 +187,7 @@
 
 /* ================ 팝업 ================ */
 /* 인벤토리 팝업 */
-.inven_popup{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: url(../images/background/inventory_back.jpg) no-repeat 0 0 / contain; visibility: hidden; z-index: 301;}
+.inven_popup{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: url(../images/background/inventory_back.jpg) no-repeat 0 0 / cover; visibility: hidden; z-index: 301;}
 
 .inven_header{width: 100%; height: 68px; background: #222; position: relative;}
 
@@ -199,7 +204,7 @@
 .upgrade_wrap .equip{color: #fff; padding-top: 16px; font-size: 16px; margin-left: 10px; margin-bottom: 50px;}
 .upgrade_wrap .equip i{color: rgb(37, 223, 207); font-family: initial;}
 
-.upgrade_wrap .preview_item{width: 140px; margin: 0 auto 20px; cursor: pointer; border: 1px dashed #ccc; border-radius: 22px;}
+.upgrade_wrap .preview_item{width: 140px; height: 140px; margin: 0 auto 20px; cursor: pointer; border: 1px dashed #ccc; border-radius: 22px;}
 
 .upgrade_wrap .item_level{font-size: 16px; text-align: center; color: #fff; margin-bottom: 8px;}
 
@@ -230,7 +235,7 @@
 .item_tab_btn ul{display: flex; width: 210px; justify-content: space-between;}
 .item_tab_btn ul li{padding: 14px 10px; font-size: 15px; cursor: pointer; text-align: center;}
 
-.item_list_wrap .item_list{width: 400px; height: 356px; border-radius: 14px; overflow: hidden;}
+.item_list_wrap .item_list{width: 400px; height: 356px; border-radius: 14px; overflow: hidden; isolation: isolate;}
 .item_list_wrap .item_list ul{width: 420px; height: 356px; padding: 10px 20px 10px 16px; background: #333; overflow-y: auto;}
 .item_list_wrap .item_list ul::after{content: ""; display: block; clear: both;}
 .item_list_wrap .item_list ul li{width: 90px; height: 90px; cursor: pointer; padding: 8px; float: left; position: relative;}
@@ -504,7 +509,7 @@
 .premiumitem_popup,
 .vipitem_popup{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
 
-.fail_popup{z-index: 1321;}
+.fail_popup{z-index: 321;}
 
 .package_buy_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
 

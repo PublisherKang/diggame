@@ -58,7 +58,7 @@ for(let i = 0; i < items.length; i++){
         console.log(score);
     });
     
-    // 캐릭터 애니메이션
+    // 캐릭터 애니메이션 PC 마우스 이벤트
     const characterParent = document.querySelector(".ch");
     const character = document.querySelector(".ch img");
     const characterMotion = character.nextElementSibling;
@@ -80,6 +80,7 @@ for(let i = 0; i < items.length; i++){
         });
     });
     
+    // 모바일 터치 할때 애니메이션
     items[i].addEventListener("mouseup", function(){
         character.classList.add("on");
         characterMotion.classList.remove("on");
@@ -89,18 +90,6 @@ for(let i = 0; i < items.length; i++){
         character.classList.remove("on");
         characterMotion.classList.add("on");
 
-        //스코어 애니메이션
-        let newSpan = document.createElement("span");
-        // const stornImgs = document.querySelectorAll(".stone_item img");
-
-        newSpan.textContent = num;
-        newSpan.classList.add("ani_num");
-        
-        characterParent.appendChild(newSpan);
-        
-        newSpan.addEventListener("animationend",function(){
-            this.remove();
-        });
     });
     
     items[i].addEventListener("touchend", function(){
