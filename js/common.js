@@ -1,7 +1,7 @@
 let score = 0;
 let outOfTime = false;
 let numInit = 0.00;
-let num = 0.01;
+let num = 800.01;
 
 const items = document.querySelectorAll(".stone_item");
 
@@ -364,6 +364,8 @@ function shopToolBoxPopup(){
             for(let i = 0; i < gemScore.length; i++){
                 gemScore[i].textContent = score;
             }
+
+            openVipBox();
         }
     }
 
@@ -373,38 +375,68 @@ function shopToolBoxPopup(){
 
 
 const preOpenPopup = document.querySelector(".pre_open_popup");
-const preItems = document.querySelectorAll(".pre_open_wrap ul li");
-const openBoxText = document.querySelector(".pre_open_wrap .open_text");
+const vipOpenPopup = document.querySelector(".vip_open_popup");
+
+const preItemsUl = document.querySelector(".pre_open_wrap ul");
+const openPreBoxText = document.querySelector(".pre_open_wrap .open_text");
+const openVipBoxText = document.querySelector(".vip_open_wrap .open_text");
+const vipItemsUl = document.querySelector(".vip_open_wrap ul");
+
 // 프리미엄 박스 구매 팝업
+
 function openPreBox(){
-
     preOpenPopup.style.display = "block";
-
-    for(let i = 0; i < preItems.length; i++){
+    
+    for(let i = 0; i < 10; i++){
         setTimeout(function(){
-            preItems[i].style.opacity = 1;
-        }, 500 * i);
-
-        setTimeout(function(){
-            openBoxText.style.opacity = 1;
-        }, 5200);
+            preItemsUl.insertAdjacentHTML("beforeend", "<li>"+ "<img src=images/item/pick_rare.png>" +"</li>");
+        }, 300 * i)
     }
+    setTimeout(function(){
+        openPreBoxText.style.opacity = 1;
+    },3000);
+}
+
+function openVipBox(){
+    vipOpenPopup.style.display = "block";
+    
+    for(let i = 0; i < 10; i++){
+        setTimeout(function(){
+            vipItemsUl.insertAdjacentHTML("beforeend", "<li>"+ "<img src=images/item/pick_rare.png>" +"</li>");
+        }, 300 * i)
+    }
+
+    setTimeout(function(){
+        openVipBoxText.style.opacity = 1;
+    },3000);
 }
 
 // 박스 구매 초기화
 boxInit();
 function boxInit(){
-    setTimeout(function(){
-        preOpenPopup.addEventListener("click", function(){
+    preOpenPopup.addEventListener("click", function(){
+        const preItemsLi = document.querySelectorAll(".pre_open_wrap ul li");
+        if(preItemsLi.length === 10){
             this.style.display = "none";
             
-            for(let i = 0; i < preItems.length; i++){
-                preItems[i].style.opacity = 0;
-                openBoxText.style.opacity = 0;
-            }
-        });
-    },5300);
+            openPreBoxText.style.opacity = 0;
 
+            preItemsLi.forEach(e => e.remove());
+        }
+        
+    });
+    vipOpenPopup.addEventListener("click", function(){
+        const vipItemsLi = document.querySelectorAll(".vip_open_wrap ul li");
+        if(vipItemsLi.length === 10){
+            this.style.display = "none";
+            
+            openVipBoxText.style.opacity = 0;
+
+            vipItemsLi.forEach(e => e.remove());
+        }
+        
+    });
+    
 }
 
 

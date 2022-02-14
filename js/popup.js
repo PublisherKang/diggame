@@ -159,8 +159,6 @@ $(function(){
     $(".tool_content li").eq(0).click(function(){
         $(".premiumitem_popup").css("visibility", "visible");
 
-        
-        
     });
     $(".tool_content li").eq(1).click(function(){
         $(".vipitem_popup").css("visibility", "visible");
@@ -228,8 +226,6 @@ $(function(){
     // const silverBuyBtn = $("#silverPop .buy_btn");
     // const goldBuyBtn = $("#goldPop .buy_btn");
 
-    const silverPrice = 5000;
-    const goldPrice = 8000;
 
     silverPopBtn.click(function(){
         silverPop.css("visibility", "visible");
@@ -240,6 +236,24 @@ $(function(){
     });
 
 });
+
+$(function(){
+    function preBoxOpen(){
+        for(let i = 0; i < 10; i++){
+            setTimeout(function(){
+                $(".pre_open_wrap ul").append("<li>"+ "<img src=images/item/pick_rare.png>" +"</li>");
+            },500 * i)
+        }
+    }
+    function vipBoxOpen(){
+        for(let i = 0; i < 10; i++){
+            setTimeout(function(){
+                $(".vip_open_wrap ul").append("<li>"+ "<img src=images/item/pick_rare.png>" +"</li>");
+            },500 * i)
+        }
+    }
+});
+
 
 
 
