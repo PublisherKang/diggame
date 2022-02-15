@@ -49,15 +49,10 @@ $(function(){
     const targetListSpan = $(".item_list ul li span");
     const targetListImg = $(".item_list ul li img");           
     const previewItem = $(".preview_item");
-    let itemArray = [
-        "images/item/booster_10m.png",
-        "images/item/booster_1h.png",
-        "images/item/auto_click_10m.png",
-        "images/item/auto_click_1h.png",
-    ];
     
     
-    invenItemList.click(function(){
+    
+    invenItemList.click(function(event){
         let cloneThis = $(this).clone();
         targetListSpan.removeClass("target_img");
         $(this).find(targetListSpan).addClass("target_img");
@@ -71,18 +66,16 @@ $(function(){
 
    
         // =====================
-        const itemAttr = $(this).children().attr("src");
-        
-        console.log(itemAttr);
+        const itemAttr = $(this).children("img").attr("src");
+        let itemArray = [
+            "images/item/booster_10m.png",
+            "images/item/booster_1h.png",
+            "images/item/auto_click_10m.png",
+            "images/item/auto_click_1h.png",
+        ];
 
+        // console.log(itemAttr);
 
-        //인벤토리 아이템 equied 클래서 존재 여부에따라 equip 버튼 none block
-        
-        if(targetListSpan.hasClass("equip_img target_img") === true){
-            $(".equip_btn").css("display", "none");
-        }else{
-            $(".equip_btn").css("display", "block");
-        }
         
         if(itemAttr === "images/item/pick_rare.png" || itemAttr === "images/item/pick_legend.png"){
             $(".mint_item").addClass("mint_btn_on");
@@ -92,29 +85,32 @@ $(function(){
         
 
 
-
-        //클릭시 equip 글자 select 로 변경
-        // $(".equip span").html("<i></i>Select");
-        // $(".equip span i").css("background", "#ff0");
-
-        //클릭시 equied가 있다면 Select 텍스트 equip 변경
-        if(targetListSpan.hasClass("equip_img target_img") === true){
-            $(".equip span").html("<i></i>Equip");
-        }else{
+   //클릭시 equied가 있다면 Select 텍스트 equip 변경
+        if(targetListSpan.hasClass("target_img") === true){
+            $(".equip_btn").addClass("on");
             $(".equip span").html("<i></i>Select");
-            $(".equip span i").css("background", "#ff0")
+            $(".equip span i").css("background", "#ff0");
         }
+        if(targetListSpan.hasClass("equip_img target_img") === true){
+            $(".equip_btn").removeClass("on");
+            $(".equip span").html("<i></i>EQUIP");
+        }
+        
 
         //소모성 아이템 이미지 클릭 시
         
         if(itemAttr === itemArray[0] || itemAttr === itemArray[1] || itemAttr === itemArray[2] || itemAttr === itemArray[3]){
-            $(".useitem_btn").css("display", "block");
+            $(".useitem_btn").addClass("on");
             $(".useitem_btn").siblings("button").css("display", "none");
         }else{
-            $(".useitem_btn").css("display", "none");
+            $(".useitem_btn").removeClass("on");            
             $(".useitem_btn").siblings("button").css("display", "block");
         }
-        
+
+
+        // console.log(invenItemList);
+        console.log(itemAttr);
+        // console.log(($(this)));
     });
     // console.log(previewItem.children().first());
     
@@ -126,6 +122,10 @@ $(function(){
         invenItemList.find(".target_img").addClass("equip_img");
     });
     
+    $(".useitem_btn").click(function(event){
+        event.preventDefault();
+        $(".shop_use_popup").css("visibility", "visible");
+    });
     
 });
 

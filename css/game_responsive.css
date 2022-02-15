@@ -206,16 +206,19 @@
 .complete_inner .item_level{font-size: 3.42857vw;}
 
 /* repair 영역 */
-.repair_wrap{width: 57.142857vw; border-radius: 2.857142vw; padding: 2.857142vw;}
+.repair_wrap,
+.shop_use_wrap{width: 57.142857vw; border-radius: 2.857142vw; padding: 2.857142vw;}
 
 
-.repair_inner .repair_ques{font-size: 2.285714vw; margin-bottom: 4.285714vw;}
+.repair_inner .repair_ques,
+.use_inner .use_ques{font-size: 2.285714vw; margin-bottom: 4.285714vw;}
 
 .repair_inner .price_wrap{font-size: 3.42857vw; margin-bottom: 4.285714vw;}
 
 .repair_inner .price_wrap .price{padding: 1.428571vw 0 1.428571vw 6.57142vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 5.714285vw auto;}
 
-.repair_inner .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
+.repair_inner .button_wrap button,
+.use_inner .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
 
 
 /* 샵 팝업 */

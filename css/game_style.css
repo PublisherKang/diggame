@@ -229,8 +229,11 @@ input:focus{outline: none;}
 
 .upgrade_wrap .btn_wrap button{display: block; width: 140px; background: url(../images/ui/btn_img1.png) no-repeat 0 0 / contain; margin: 0 auto; margin-bottom: 10px; cursor: pointer; padding: 10px 0; font-size: 14px;}
 
+.upgrade_wrap .btn_wrap .equip_btn{display: none;}
+.upgrade_wrap .btn_wrap .equip_btn.on{display: block;}
 
 .upgrade_wrap .btn_wrap .useitem_btn{display: none;}
+.upgrade_wrap .btn_wrap .useitem_btn.on{display: block;}
 .upgrade_wrap .btn_wrap .mint_item{background-image: url(../images/ui/btn_img7.png);}
 
 .upgrade_wrap .btn_wrap .mint_item.mint_btn_on{background-image: url(../images/ui/btn_img6.png);}
@@ -248,12 +251,16 @@ input:focus{outline: none;}
 .item_list_wrap .item_list ul::after{content: ""; display: block; clear: both;}
 .item_list_wrap .item_list ul li{width: 90px; height: 90px; cursor: pointer; padding: 8px; float: left; position: relative;}
 
+.item_list_wrap .item_list ul li span{display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; box-sizing: border-box;}
+
 .item_list_wrap .item_list ul li:nth-of-type(4n){border-right: none;}
 .item_list_wrap .item_list ul li:nth-of-type(){border-bottom: none;}
 
 .equip_img{display: block; width: 100%; height: 100%; background: url(../images/ui/equip_frame.png) no-repeat 0 0/ contain; position: absolute; top: 0; left: 0;}
 
-.target_img{display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; border: 3px solid #ff0; border-radius: 10px; box-sizing: border-box;}
+.target_img{display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; border: 3px solid #ff0; border-radius: 10px; box-sizing: border-box;}
+
+.target_img.on{display: block;}
 
 
 /* 아이템 리스트 하단 샵넘어가는 버튼 wrap */
@@ -278,23 +285,26 @@ input:focus{outline: none;}
 
 .complete_inner .item_level{text-align: center; font-size: 24px; color: #fff;}
 
-/* repair 영역 */
-.repair_popup{width: 100%; height: 100%; background: rgba(0, 0, 0, .7); position: absolute; top: 0; left: 0; visibility: hidden; z-index: 310;}
-.repair_wrap{width: 400px; border-radius: 20px; border: 1px solid #fff; background: #222; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); padding: 20px;}
+/* repair, shop use 영역 */
+.repair_popup, .shop_use_popup{width: 100%; height: 100%; background: rgba(0, 0, 0, .7); position: absolute; top: 0; left: 0; visibility: hidden; z-index: 310;}
+.repair_wrap, .shop_use_wrap{width: 400px; border-radius: 20px; border: 1px solid #fff; background: #222; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); padding: 20px;}
 
 .repair_inner{}
-.repair_inner .repair_ques{color: #fff; line-height: 1.5; text-align: center; font-size: 16px; margin-bottom: 30px;}
+.repair_inner .repair_ques, .use_inner .use_ques{color: #fff; line-height: 1.5; text-align: center; font-size: 16px; margin-bottom: 30px;}
 
 .repair_inner .price_wrap{color: #fff; text-align: center; font-size: 24px; font-family: "sebang-bold"; margin-bottom: 30px;}
 
 .repair_inner .price_wrap .price{padding: 10px 0 10px 46px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 40px auto;}
 
-.repair_inner .button_wrap{display: flex; justify-content: space-around;}
+.repair_inner .button_wrap,
+.use_inner .button_wrap{display: flex; justify-content: space-around;}
 
-.repair_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
+.repair_inner .button_wrap button, .use_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
 
-.repair_inner .button_wrap .confirm{background-image: url(../images/ui/btn_img3.png);}
-.repair_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
+.repair_inner .button_wrap .confirm,
+.use_inner .button_wrap .confirm{background-image: url(../images/ui/btn_img3.png);}
+.repair_inner .button_wrap .cancel,
+.use_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
 
 
 /* 샵 팝업 */
@@ -625,4 +635,10 @@ input:focus{outline: none;}
 @keyframes shopBoxAni {
     0%{}
     100%{opacity: 1;}
+}
+
+
+
+@media screen and (max-width: 640px) {
+    .package_content ul li > div{font-size: 2.1875vw !important; }
 }
