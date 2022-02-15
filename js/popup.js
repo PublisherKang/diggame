@@ -33,14 +33,29 @@ $(function(){
 
         //샵 버튼 클래스 원 위치
         $(".shop_menu_btn li").removeClass("on");
+
+        $(".item_list ul li span").removeClass("target_img");
+
+        $(".equip span").html("<i></i>EQUIP");
+        $(".equip span i").css("background", "rgb(37, 223, 207)");
     });
 });
+
+
 
 $(function(){
     //아이템 추가하기
     const invenItemList = $(".item_list ul li");
-    const targetListSpan = $(".item_list ul li span");                  
+    const targetListSpan = $(".item_list ul li span");
+    const targetListImg = $(".item_list ul li img");           
     const previewItem = $(".preview_item");
+    let itemArray = [
+        "images/item/booster_10m.png",
+        "images/item/booster_1h.png",
+        "images/item/auto_click_10m.png",
+        "images/item/auto_click_1h.png",
+    ];
+    
     
     invenItemList.click(function(){
         let cloneThis = $(this).clone();
@@ -54,20 +69,16 @@ $(function(){
         previewItem.children().first().find("span").remove();
 
 
+        //클릭시 equip 글자 select 로 변경
+        $(".equip span").html("<i></i>Select");
+        $(".equip span i").css("background", "#ff0");
+
         // =====================
         const itemAttr = $(this).children().attr("src");
+        
         console.log(itemAttr);
 
-        let itemArray = [
-            "images/item/booster_10m.png",
-            "images/item/booster_1h.png",
-            "images/item/auto_click_10m.png",
-            "images/item/auto_click_1h.png",
-        ]
         
-        if(itemAttr === itemArray[1]){
-            $(this).addClass("aa");
-        }
 
         //인벤토리 아이템 equied 클래서 존재 여부에따라 equip 버튼 none block
         
@@ -76,13 +87,63 @@ $(function(){
         }else{
             $(".equip_btn").css("display", "block");
         }
-            
+        
+        if(itemAttr === "images/item/pick_rare.png" || itemAttr === "images/item/pick_legend.png"){
+            $(".mint_item").addClass("mint_btn_on");
+        }else{
+            $(".mint_item").removeClass("mint_btn_on");
+        }
         
 
 
+
+
+
+
+
+
+
+
+
+        //소모성 아이템 이미지 클릭 시
+        
+        if(itemAttr === itemArray[0] || itemAttr === itemArray[1] || itemAttr === itemArray[2] || itemAttr === itemArray[3]){
+            $(".useitem_btn").css("display", "block");
+            $(".useitem_btn").siblings("button").css("display", "none");
+        }else{
+            $(".useitem_btn").css("display", "none");
+            $(".useitem_btn").siblings("button").css("display", "block");
+        }
+        
     });
     // console.log(previewItem.children().first());
+    
+
+    //Eqip 버튼 클릭 했을때 장착 배경 표시
+    $(".equip_btn").click(function(){
+        const itemAttr = $(this).children().attr("src");
+        targetListSpan.removeClass("equip_img");
+        invenItemList.find(".target_img").addClass("equip_img");
+    });
+    
+    
 });
+
+
+// ***************************************************************
+// mint an item 버튼 클릭 했을때
+$(".mint_item").click(function(event){
+    const bottonAttr = $(this);
+    
+    if(bottonAttr.hasClass("mint_btn_on") === true){
+        alert("mem")
+    }
+    
+});
+// ***************************************************************
+
+
+
 
 $(function(){
     // repair 팝업
