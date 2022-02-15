@@ -69,6 +69,16 @@ $(function(){
             $(this).addClass("aa");
         }
 
+        //인벤토리 아이템 equied 클래서 존재 여부에따라 equip 버튼 none block
+        
+        if(targetListSpan.hasClass("equip_img target_img") === true){
+            $(".equip_btn").css("display", "none");
+        }else{
+            $(".equip_btn").css("display", "block");
+        }
+            
+        
+
 
     });
     // console.log(previewItem.children().first());
