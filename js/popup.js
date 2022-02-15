@@ -69,16 +69,12 @@ $(function(){
         previewItem.children().first().find("span").remove();
 
 
-        //클릭시 equip 글자 select 로 변경
-        $(".equip span").html("<i></i>Select");
-        $(".equip span i").css("background", "#ff0");
-
+   
         // =====================
         const itemAttr = $(this).children().attr("src");
         
         console.log(itemAttr);
 
-        
 
         //인벤토리 아이템 equied 클래서 존재 여부에따라 equip 버튼 none block
         
@@ -97,13 +93,17 @@ $(function(){
 
 
 
+        //클릭시 equip 글자 select 로 변경
+        // $(".equip span").html("<i></i>Select");
+        // $(".equip span i").css("background", "#ff0");
 
-
-
-
-
-
-
+        //클릭시 equied가 있다면 Select 텍스트 equip 변경
+        if(targetListSpan.hasClass("equip_img target_img") === true){
+            $(".equip span").html("<i></i>Equip");
+        }else{
+            $(".equip span").html("<i></i>Select");
+            $(".equip span i").css("background", "#ff0")
+        }
 
         //소모성 아이템 이미지 클릭 시
         
