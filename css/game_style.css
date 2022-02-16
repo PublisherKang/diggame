@@ -227,7 +227,7 @@ input:focus{outline: none;}
 
 .upgrade_wrap .btn_wrap{}
 
-.upgrade_wrap .btn_wrap button{display: block; width: 140px; background: url(../images/ui/btn_img1.png) no-repeat 0 0 / contain; margin: 0 auto; margin-bottom: 10px; cursor: pointer; padding: 10px 0; font-size: 14px;}
+.upgrade_wrap .btn_wrap button{display: none; width: 140px; background: url(../images/ui/btn_img1.png) no-repeat 0 0 / contain; margin: 0 auto; margin-bottom: 10px; cursor: pointer; padding: 10px 0; font-size: 14px;}
 
 .upgrade_wrap .btn_wrap .equip_btn{display: none;}
 .upgrade_wrap .btn_wrap .equip_btn.on{display: block;}
@@ -236,7 +236,15 @@ input:focus{outline: none;}
 .upgrade_wrap .btn_wrap .useitem_btn.on{display: block;}
 .upgrade_wrap .btn_wrap .mint_item{background-image: url(../images/ui/btn_img7.png);}
 
+.upgrade_wrap .btn_wrap .repair{display: none;}
+.upgrade_wrap .btn_wrap .repair.on{display: block;}
+
+.upgrade_wrap .btn_wrap .Upgrade{display: none;}
+.upgrade_wrap .btn_wrap .Upgrade.on{display: block;}
+
 .upgrade_wrap .btn_wrap .mint_item.mint_btn_on{background-image: url(../images/ui/btn_img6.png);}
+
+.upgrade_wrap .btn_wrap .mint_item.on{display: block;}
 
 /* 아이템 리스트 */
 .flex_right{display: flex; flex-direction: column; justify-content: space-between;}
@@ -258,9 +266,9 @@ input:focus{outline: none;}
 
 .equip_img{display: block; width: 100%; height: 100%; background: url(../images/ui/equip_frame.png) no-repeat 0 0/ contain; position: absolute; top: 0; left: 0;}
 
-.target_img{display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; border: 3px solid #ff0; border-radius: 10px; box-sizing: border-box;}
+.target_img{display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; border: 3px solid #ff0; border-radius: 10px; box-sizing: border-box;}
 
-.target_img.on{display: block;}
+
 
 
 /* 아이템 리스트 하단 샵넘어가는 버튼 wrap */

@@ -47,10 +47,14 @@ $(function(){
     //아이템 추가하기
     const invenItemList = $(".item_list ul li");
     const targetListSpan = $(".item_list ul li span");
-    const targetListImg = $(".item_list ul li img");           
+    const targetListImg = $(".item_list ul li img");
     const previewItem = $(".preview_item");
     
-    
+    // 첫번째 아이템 equip 장착 표시
+    targetListSpan.eq(0).addClass("equip_img");
+    if(targetListSpan.hasClass("equip_img") === true){
+        $(".equip_btn").removeClass("equip_img");
+    }
     
     invenItemList.click(function(event){
         let cloneThis = $(this).clone();
@@ -62,7 +66,6 @@ $(function(){
         //this 아이템 클릭시 해당 span 삭제 자식 요소 삭제
         previewItem.children().first().remove();
         previewItem.children().first().find("span").remove();
-
 
    
         // =====================
@@ -92,41 +95,47 @@ $(function(){
             $(".equip span i").css("background", "#ff0");
         }
         if(targetListSpan.hasClass("equip_img target_img") === true){
-            $(".equip_btn").removeClass("on");
             $(".equip span").html("<i></i>EQUIP");
+            $(".equip_btn").removeClass("on");
         }
         
 
         //소모성 아이템 이미지 클릭 시
         
-        if(itemAttr === itemArray[0] || itemAttr === itemArray[1] || itemAttr === itemArray[2] || itemAttr === itemArray[3]){
+        if(itemArray.includes(itemAttr)){
+        // if(itemAttr === itemArray[0] || itemAttr === itemArray[1] || itemAttr === itemArray[2] || itemAttr === itemArray[3]){
             $(".useitem_btn").addClass("on");
-            $(".useitem_btn").siblings("button").css("display", "none");
+            $(".equip_btn").removeClass("on");
+            $(".Upgrade").removeClass("on");
+            $(".mint_item").removeClass("on");
+            $(".repair").removeClass("on");
         }else{
-            $(".useitem_btn").removeClass("on");            
-            $(".useitem_btn").siblings("button").css("display", "block");
+            $(".useitem_btn").removeClass("on");
+            $(".Upgrade").addClass("on");
+            $(".mint_item").addClass("on");
+            $(".repair").addClass("on");
         }
-
-
-        // console.log(invenItemList);
+        
         console.log(itemAttr);
-        // console.log(($(this)));
     });
-    // console.log(previewItem.children().first());
-    
+
 
     //Eqip 버튼 클릭 했을때 장착 배경 표시
     $(".equip_btn").click(function(){
         const itemAttr = $(this).children().attr("src");
         targetListSpan.removeClass("equip_img");
         invenItemList.find(".target_img").addClass("equip_img");
+        
+        $(this).removeClass("on");
+        // console.log(this);
     });
     
     $(".useitem_btn").click(function(event){
         event.preventDefault();
         $(".shop_use_popup").css("visibility", "visible");
     });
-    
+
+
 });
 
 

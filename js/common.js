@@ -499,6 +499,32 @@ function changeRoom(){
 }
 
 
+// =======================================================
+// 인벤토리 아이템 추가
+invenItemAdd();
+function invenItemAdd(){
+    const invenItemUl = document.querySelector(".inven_container .item_list ul");
+
+    let invenImgList = [
+        "images/item/pick_common.png",
+        "images/item/pick_common2.png",
+        "images/item/pick_rare.png",
+        "images/item/pick_rare2.png",
+        "images/item/pick_legend.png",
+        "images/item/pick_legend2.png",
+        "images/item/auto_click_1h.png",
+        "images/item/auto_click_10m.png",
+        "images/item/booster_1h.png",
+        "images/item/booster_10m.png",   
+    ];
+
+    for(let i = 0; i <invenImgList.length; i++){
+        invenItemUl.insertAdjacentHTML("beforeend", "<li>"+ "<img src='" + invenImgList[i] + "'/>" +"<span></span></li>");
+    };
+
+
+    console.log(invenItemUl);
+}
 
 
 
