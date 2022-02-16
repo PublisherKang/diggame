@@ -469,10 +469,10 @@
 
 .room_number .chat_open{display: block;}
 
-.chat_inner{padding: 6.8875855vw 1.368523vw 1.955034vw; height: 29.55034vw; width: 100%;}
+.chat_inner{padding: 1.8875855vw 1.368523vw 1.955034vw; height: 29.55034vw; width: 100%;}
 
 /* 유저 메세지 박스 */
-.user_message{margin-bottom: 2.932551vw;}
+.user_message{margin-bottom: 4.932551vw; padding-top: 6vw;}
 
 
 .user_message .user_ch{width: 8.8875855vw; height: 8.8875855vw; box-shadow: 2px 2px 0.9775171vw #000; margin-right: 2.9775171vw;}
@@ -480,12 +480,13 @@
 
 .text_box{font-size: 1.368523vw; max-width: 50.527859vw; padding: 1.173020vw 2.173020vw; }
 
-.text_box .user_name{ font-size: 2.368523vw; top: -3.150537vw;}
+.text_box .user_name{ font-size: 2.368523vw; top: -4.150537vw;}
 .text_box .user_text_message{font-size: 3vw;}
 
 .text_box .send_time{ font-size: 1.9775171vw; bottom: -3.7595307vw;}
 
 /* 나의 메세지 */
+.user_message.my_msg{padding-top: 2vw;}
 .user_message.my_msg .user_ch{margin-left: 2.9775171vw;}
 
 /* 메세지 입력 영역 */
