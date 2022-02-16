@@ -19,4 +19,41 @@ $(document).ready(function(){
     }
 
 
+
+    //채팅창 크기 늘어남
+    $(function(){
+        const roomOpenBtn = $(".room_number .chat_open");
+        const roomCloseBtn = $(".room_number .chat_close");
+        
+        roomOpenBtn.click(function(){
+            $(".chat_wrap_in").animate({
+                "height" : "123.75vw",
+                "top" : "-68.75vw"
+
+            },500);
+
+            $(".chat_inner").animate({
+                "height" : "98.4375vw",
+            },500);
+
+            $(this).hide();
+            roomCloseBtn.show();
+        });
+
+        roomCloseBtn.click(function(){
+            $(".chat_wrap_in").animate({
+                "height" : "100%",
+                "top" : "0"
+
+            },500);
+
+            $(".chat_inner").animate({
+                "height" : "29.55034vw",
+            },500);
+
+            $(this).hide();
+            roomOpenBtn.show();
+        });
+    });
+
 });

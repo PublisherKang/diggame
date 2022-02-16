@@ -460,8 +460,14 @@
 
 /* ========================= chat wrap ========================= */
 
-.chat_wrap{width: 100%; height: 51.258064vw; border-radius: 1.955034vw; box-shadow: 6px 6px 0.9775171vw #000; margin-top: 4vw;}
-.room_number{height: 7.474095vw; text-shadow: 0 0 2px #86640f , 0 0 4px #ff0; font-size: 2.564027vw; line-height: 7.474095vw;}
+.chat_wrap{width: 100%; height: 55.258064vw;  box-shadow: 6px 6px 0.9775171vw #000; margin-top: 4vw;}
+
+.chat_wrap_in{position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 1.955034vw; overflow: hidden;}
+
+
+.room_number{height: 11.474095vw; text-shadow: 0 0 2px #86640f , 0 0 4px #ff0; font-size: 2.564027vw; line-height: 11.474095vw;}
+
+.room_number .chat_open{display: block;}
 
 .chat_inner{padding: 6.8875855vw 1.368523vw 1.955034vw; height: 29.55034vw; width: 100%;}
 
