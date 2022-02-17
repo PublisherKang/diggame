@@ -144,8 +144,10 @@ $(function(){
 $(".mint_item").click(function(event){
     const bottonAttr = $(this);
     
-    if(bottonAttr.hasClass("mint_btn_on") === true){
-        alert("mem")
+    if(bottonAttr.hasClass("mint_btn_on") === true){     
+        $(".minting_ques_modal").css("visibility", "visible")
+        
+        
     }
     
 });
@@ -247,6 +249,8 @@ $(function(){
         
     });
 });
+
+
 
 
 $(function(){

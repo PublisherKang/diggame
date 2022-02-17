@@ -510,21 +510,36 @@ input:focus{outline: none;}
 .another_inner .button_wrap .confirm{background-image: url(../images/ui/btn_img3.png);}
 .another_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
 
-/* immediately_repair_modal*/
-.immediately_repair_modal{visibility: hidden; width: 100%; height: 100%; background: transparent; position: absolute; top: 0; left: 0;}
-.immediately_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
+/* immediately_repair_modal mint_modal*/
+.immediately_repair_modal,
+.minting_ques_modal{visibility: hidden; width: 100%; height: 100%; background: transparent; position: absolute; top: 0; left: 0;}
 
-.immediately_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
+.immediately_wrap,
+.minting_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
 
-.immediately_ques span{display: block;}
-.immediately_ques span:nth-of-type(1){margin-bottom: 12px;}
-.immediately_ques span:nth-of-type(2){font-size: 14px; color: #ccc;}
+.immediately_ques,
+.minting_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
 
-.immediately_inner .button_wrap{display: flex; justify-content: space-between;}
-.immediately_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
+.immediately_ques span,
+.minting_ques span{display: block;}
+.immediately_ques span:nth-of-type(1),
+.minting_ques span:nth-of-type(1){margin-bottom: 12px;}
+.immediately_ques span:nth-of-type(2),
+.minting_ques span:nth-of-type(2){font-size: 14px; color: #ccc;}
+
+.immediately_inner .button_wrap,
+.minting_inner .button_wrap{display: flex; justify-content: space-between;}
+
+.immediately_inner .button_wrap button,
+.minting_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
 
 .immediately_inner .button_wrap .repair_now{background-image: url(../images/ui/btn_img2.png);}
-.immediately_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
+.immediately_inner .button_wrap .cancel,
+.minting_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
+
+.minting_inner .button_wrap .mint_now{background-image: url(../images/ui/btn_img6.png);}
+
+.minting_ques_modal{z-index: 320;}
 
 
 /* package_buy modal */
