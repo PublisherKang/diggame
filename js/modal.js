@@ -166,12 +166,11 @@ $(".mint_explan").scroll(function(){
     }else{
         $(".mint_wrap .item_area .mint_btn").removeClass("on");
     }
-    console.log(scrollTop);
+    
 });
 
 $(".mint_close_btn").click(function(){
     $(this).parents('.mint_popup').hide();
-    
 });
 
 // ***************************************************************

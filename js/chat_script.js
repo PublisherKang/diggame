@@ -34,10 +34,12 @@ $(document).ready(function(){
 
             $(".chat_inner").animate({
                 "height" : "98.4375vw",
+                scrollTop: $(".chat_wrap_in").height(),
             },500);
 
             $(this).hide();
             roomCloseBtn.show();
+            
         });
 
         roomCloseBtn.click(function(){
@@ -49,6 +51,7 @@ $(document).ready(function(){
 
             $(".chat_inner").animate({
                 "height" : "29.55034vw",
+                scrollTop: $(".chat_wrap_in").height(),
             },500);
 
             $(this).hide();
