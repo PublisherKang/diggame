@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
     <script src="js/common.js" defer></script>
-    <script src="js/popup.js" defer></script>
+    <script src="js/modal.js" defer></script>
 </head>
 <body>
     <div class="game_wrap" style="background-image: url('images/background/back1.jpg');">
@@ -256,7 +256,7 @@
             </div><!-- 캐릭터 -->
         </div><!-- 게임 컨테이너 -->
         <!-- ====== 팝업 ====== -->
-        <div class="inven_popup">
+        <div class="inven_modal">
             <div class="inven_header">
                 <button class="back_btn">Back to Game</button>
                 <p class="inven_name">INVENTORY</p>
@@ -397,8 +397,8 @@
                     </p>
                 </div>
             </div><!-- upgrade_complete -->
-        </div><!-- inven popup -->
-        <div class="shop_popup">
+        </div><!-- inven modal -->
+        <div class="shop_modal">
             <div class="shop_header">
                 <button class="back_btn">Back to Game</button>
                 <p class="shop_name">SHOP</p>
@@ -542,8 +542,8 @@
                     </div>
                 </div><!-- content_wrap -->
             </div>
-        </div><!-- shop popup -->
-        <div class="ranking_popup">
+        </div><!-- shop modal -->
+        <div class="ranking_modal">
             <div class="ranking_wrap">
                 <button type="button" class="ranking_pop_close"></button>
                 <div class="ranking_pop_inner">
@@ -666,8 +666,8 @@
                     </div>
                 </div>
             </div>
-        </div><!-- ranking_popup -->
-        <div class="repair_popup alert_popup">
+        </div><!-- ranking_modal -->
+        <div class="repair_modal alert_modal">
             <div class="repair_wrap">
                 <div class="repair_inner">
                     <p class="repair_ques">
@@ -684,8 +684,8 @@
                     </div>
                 </div>
             </div>
-        </div><!-- repair_popup -->
-        <div class="another_room_popup alert_popup">
+        </div><!-- repair_modal -->
+        <div class="another_room_modal alert_modal">
             <div class="another_wrap">
                 <div class="another_inner">
                     <p class="another_ques">
@@ -698,8 +698,8 @@
                     </div>
                 </div>
             </div>
-        </div><!-- another_room_popup -->
-        <div class="immediately_repair_popup alert_popup">
+        </div><!-- another_room_modal -->
+        <div class="immediately_repair_modal alert_modal">
             <div class="immediately_wrap">
                 <div class="immediately_inner">
                     <p class="immediately_ques">
@@ -712,8 +712,8 @@
                     </div>
                 </div>
             </div>
-        </div><!-- immediately_repair_popup -->
-        <div class="silver_buy_popup alert_popup" id="silver_pop">
+        </div><!-- immediately_repair_modal -->
+        <div class="silver_buy_modal alert_modal" id="silver_pop">
             <div class="package_buy_wrap">
                 <div class="package_buy_inner">
                     <p class="package_buy_ques">
@@ -726,8 +726,8 @@
                     </div>
                 </div>
             </div>
-        </div><!-- silver_buy_popup -->
-        <div class="gold_buy_popup alert_popup" id="gold_pop">
+        </div><!-- silver_buy_modal -->
+        <div class="gold_buy_modal alert_modal" id="gold_pop">
             <div class="package_buy_wrap">
                 <div class="package_buy_inner">
                     <p class="package_buy_ques">
@@ -740,8 +740,8 @@
                     </div>
                 </div>
             </div>
-        </div><!-- gold_buy_popup -->
-        <div class="fail_popup alert_popup">
+        </div><!-- gold_buy_modal -->
+        <div class="fail_modal alert_modal">
             <div class="fail_wrap">
                 <div class="fail_inner">
                     <p class="fail_ques">
@@ -752,8 +752,8 @@
                     </div>
                 </div>
             </div>
-        </div><!-- fail_popup -->
-        <div class="complete_buy_popup">
+        </div><!-- fail_modal -->
+        <div class="complete_buy_modal">
             <div class="comp_wrap">
                 <div class="comp_inner">
                     <p class="comp_ques">
@@ -765,8 +765,8 @@
                     </div>
                 </div>
             </div>
-        </div><!-- complete_buy_popup -->
-        <div class="shop_item_buy_popup alert_popup">
+        </div><!-- complete_buy_modal -->
+        <div class="shop_item_buy_modal alert_modal">
             <div class="shop_item_wrap">
                 <div class="shop_pop_inner">
                     <p class="pop_title">
@@ -798,8 +798,8 @@
                     </div>
                 </div>
             </div>
-        </div><!-- shop_item_buy_popup -->
-        <div class="shop_complete_popup alert_popup">
+        </div><!-- shop_item_buy_modal -->
+        <div class="shop_complete_modal alert_modal">
             <div class="comp_wrap">
                 <div class="comp_inner">
                     <p class="comp_ques">
@@ -815,8 +815,8 @@
                     </div>
                 </div>
             </div>
-        </div><!-- shop_complete_popup -->
-        <div class="premiumitem_popup alert_popup">
+        </div><!-- shop_complete_modal -->
+        <div class="premiumitem_modal alert_modal">
             <div class="premiumitem_wrap on">
                 <div class="boxitem_inner">
                     <p class="boxitem_ques">
@@ -836,7 +836,7 @@
                 </div>
             </div>
         </div>
-        <div class="vipitem_popup alert_popup">
+        <div class="vipitem_modal alert_modal">
             <div class="vipitem_wrap">
                 <div class="boxitem_inner">
                     <p class="boxitem_ques">
@@ -856,7 +856,7 @@
                 </div>
             </div>
         </div>
-        <div class="pre_open_popup">
+        <div class="pre_open_modal">
             <div class="pre_open_wrap">
                 <ul>
                     <li>

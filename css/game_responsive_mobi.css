@@ -127,7 +127,7 @@
 
 /* ================ 팝업 ================ */
 /* 인벤토리 팝업 */
-.inven_popup{background: url(../images/background/inventory_back.jpg) no-repeat 0 0 / contain;}
+.inven_modal{background: url(../images/background/inventory_back.jpg) no-repeat 0 0 / contain;}
 
 .inven_header{width: 100%; height: 68px;}
 
@@ -202,7 +202,7 @@
 
 
 /* 샵 팝업 */
-.shop_popup{background: url(../images/background/shop_back.jpg) no-repeat 0 0 / cover; padding: 0 10px; }
+.shop_modal{background: url(../images/background/shop_back.jpg) no-repeat 0 0 / cover; padding: 0 10px; }
 
 .shop_header{width: 100%; height: 68px; border-bottom: 2px solid #333;}
 
@@ -289,13 +289,13 @@
 
 
 /* 랭킹 팝업 */
-.ranking_popup{width: 100%; height: 100%;}
+.ranking_modal{width: 100%; height: 100%;}
 
-.ranking_popup .ranking_wrap{width: 360px; height: 480px; border-radius: 20px; box-shadow: 4px 4px 18px #000; padding: 22px 18px 20px;}
+.ranking_modal .ranking_wrap{width: 360px; height: 480px; border-radius: 20px; box-shadow: 4px 4px 18px #000; padding: 22px 18px 20px;}
 
-.ranking_popup .ranking_pop_close{top: 12px; right: 12px; width: 40px; height: 40px;}
-.ranking_popup .ranking_pop_close::after,
-.ranking_popup .ranking_pop_close::before{content: ""; width: 24px; height: 2px;}
+.ranking_modal .ranking_pop_close{top: 12px; right: 12px; width: 40px; height: 40px;}
+.ranking_modal .ranking_pop_close::after,
+.ranking_modal .ranking_pop_close::before{content: ""; width: 24px; height: 2px;}
 
 .ranking_pop_inner .rank_pop_title{padding: 0 0 22px 0;}
 
@@ -309,7 +309,7 @@
 .ranking_pop_list{width: 100%; border-radius: 20px; padding: 14px 12px;}
 
 
-/* playtime popup */
+/* playtime modal */
 .playtime_pop_list{width: 100%; border-radius: 20px; padding: 14px 12px;}
 
 /* ranking tab, playtime tab common */
@@ -356,15 +356,15 @@
 
 
 
-/* another room popup */
-.another_room_popup{width: 100%; height: 100%;}
+/* another room modal */
+.another_room_modal{width: 100%; height: 100%;}
 .another_wrap{width: 420px; left: 50%; border: 2px solid #aaaaaa; border-radius: 20px; padding: 24px 26px;}
 
 .another_ques{font-size: 18px; margin-bottom: 40px;}
 
 .another_inner .button_wrap button{width: 170px; padding: 13px 0; font-size: 16px;}
 
-/* immediately_repair_popup*/
+/* immediately_repair_modal*/
 .immediately_wrap{width: 420px; left: 50%; border: 2px solid #aaaaaa; border-radius: 20px; padding: 24px 26px;}
 
 .immediately_ques{font-size: 18px; margin-bottom: 30px;}
@@ -380,7 +380,7 @@
 
 .package_buy_inner .button_wrap button{width: 170px; padding: 13px 0; font-size: 16px;}
 
-/* fail popup, comp popup */
+/* fail modal, comp modal */
 .fail_wrap, 
 .comp_wrap,
 .premiumitem_wrap,
@@ -397,7 +397,7 @@
 
 .comp_ques span:nth-of-type(2){font-size: 14px; margin-top: 8px;}
 
-/* shop_item_buy_popup */
+/* shop_item_buy_modal */
 .shop_item_wrap{border: 2px solid #aaaaaa; border-radius: 16px; padding: 30px 16px 20px;}
 .shop_item_wrap .pop_title{margin-bottom: 12px;}
 .shop_item_wrap .pop_title span{ font-size: 18px;}
@@ -416,22 +416,22 @@
 .shop_item_wrap .button_wrap{width: 350px;}
 .shop_item_wrap .button_wrap button{width: 170px; padding: 13px 0; font-size: 16px;}
 
-/* .shop_boxitem_popup{visibility: visible;} */
-.premiumitem_popup .boxitem_ques,
-.vipitem_popup .boxitem_ques{margin-bottom: 10px;}
+/* .shop_boxitem_modal{visibility: visible;} */
+.premiumitem_modal .boxitem_ques,
+.vipitem_modal .boxitem_ques{margin-bottom: 10px;}
 
-.premiumitem_popup .img_wrap,
-.vipitem_popup .img_wrap{width: 140px;}
+.premiumitem_modal .img_wrap,
+.vipitem_modal .img_wrap{width: 140px;}
 
-.premiumitem_popup .price_wrap,
-.vipitem_popup .price_wrap{ margin-bottom: 10px;}
+.premiumitem_modal .price_wrap,
+.vipitem_modal .price_wrap{ margin-bottom: 10px;}
 
-.premiumitem_popup .price_wrap span,
-.vipitem_popup .price_wrap span{font-size: 16px; padding: 8px 0 8px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto; }
+.premiumitem_modal .price_wrap span,
+.vipitem_modal .price_wrap span{font-size: 16px; padding: 8px 0 8px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto; }
 
 
 /* 랜덤 아이템 박스 팝업 */
-.pre_open_popup{background: rgba(0, 0, 0, .8) url(../images/ui/premium_box.png) no-repeat center center / 160px auto;}
+.pre_open_modal{background: rgba(0, 0, 0, .8) url(../images/ui/premium_box.png) no-repeat center center / 160px auto;}
 
 
 .pre_open_wrap ul{width: 370px; height: 140px;}

@@ -16,7 +16,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
     <script src="js/common.js" defer></script>
-    <script src="js/popup.js" defer></script>
+    <script src="js/modal.js" defer></script>
     <script src="js/chat_script.js"></script>
 </head>
 <body>
@@ -301,8 +301,9 @@
                             </div>
                         </div><!-- 캐릭터 -->
                     </div><!-- 게임 컨테이너 -->
-                    <!-- ====== 팝업 ====== -->
-                    <div class="inven_popup">
+                    <!-- ====== 모달 시작 ====== -->
+                    <!-- 컨테이너 메인 모달 -->
+                    <div class="inven_modal">
                         <div class="inven_header">
                             <button class="back_btn">Back to Game</button>
                             <p class="inven_name">INVENTORY</p>
@@ -378,8 +379,8 @@
                                 </p>
                             </div>
                         </div><!-- upgrade_complete -->
-                    </div><!-- inven popup -->
-                    <div class="shop_popup">
+                    </div><!-- inven modal -->
+                    <div class="shop_modal">
                         <div class="shop_header">
                             <button class="back_btn">Back to Game</button>
                             <p class="shop_name">SHOP</p>
@@ -523,8 +524,8 @@
                                 </div>
                             </div><!-- content_wrap -->
                         </div>
-                    </div><!-- shop popup -->
-                    <div class="ranking_popup">
+                    </div><!-- shop modal -->
+                    <div class="ranking_modal">
                         <div class="ranking_wrap">
                             <button type="button" class="ranking_pop_close"></button>
                             <div class="ranking_pop_inner">
@@ -647,8 +648,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- ranking_popup -->
-                    <div class="repair_popup alert_popup">
+                    </div><!-- ranking_modal -->
+                    <div class="repair_modal alert_modal">
                         <div class="repair_wrap">
                             <div class="repair_inner">
                                 <p class="repair_ques">
@@ -665,8 +666,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- repair_popup -->
-                    <div class="another_room_popup alert_popup">
+                    </div><!-- repair_modal -->
+                    <div class="another_room_modal alert_modal">
                         <div class="another_wrap">
                             <div class="another_inner">
                                 <p class="another_ques">
@@ -679,8 +680,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- another_room_popup -->
-                    <div class="immediately_repair_popup alert_popup">
+                    </div><!-- another_room_modal -->
+                    <div class="immediately_repair_modal alert_modal">
                         <div class="immediately_wrap">
                             <div class="immediately_inner">
                                 <p class="immediately_ques">
@@ -693,8 +694,43 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- immediately_repair_popup -->
-                    <div class="silver_buy_popup alert_popup" id="silver_pop">
+                    </div><!-- immediately_repair_modal -->
+                    <!-- 컨테이너 메인 모달 끝 -->
+                    <!-- 인벤토리 모달 -->
+                    <div class="repair_fail_modal alert_modal">
+                        <div class="fail_wrap">
+                            <div class="fail_inner">
+                                <p class="fail_ques">
+                                    Not repaired!
+                                    <span>Please try again after repairing the item.</span>
+                                </p>
+                                <div class="button_wrap">
+                                    <button type="button" class="cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- repair_fail_modal -->
+                    <div class="minting_ques_modal alert_modal">
+                        <div class="minting_wrap">
+                            <div class="minting_inner">
+                                <p class="minting_ques">
+                                    <span>The mining toll is damaged!</span>
+                                    <span>Mining is reduced by 10%</span>
+                                </p>
+                                <div class="button_wrap">
+                                    <button type="button" class="repair_now">Repair Now</button>
+                                    <button type="button" class="cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- minting_modal -->
+
+                    
+
+                    <!-- 인벤토리 모달 끝 -->
+
+                    <!-- 샵 모달 -->
+                    <div class="silver_buy_modal alert_modal" id="silver_pop">
                         <div class="package_buy_wrap">
                             <div class="package_buy_inner">
                                 <p class="package_buy_ques">
@@ -707,8 +743,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- silver_buy_popup -->
-                    <div class="gold_buy_popup alert_popup" id="gold_pop">
+                    </div><!-- silver_buy_modal -->
+                    <div class="gold_buy_modal alert_modal" id="gold_pop">
                         <div class="package_buy_wrap">
                             <div class="package_buy_inner">
                                 <p class="package_buy_ques">
@@ -721,20 +757,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- gold_buy_popup -->
-                    <div class="fail_popup alert_popup">
-                        <div class="fail_wrap">
-                            <div class="fail_inner">
-                                <p class="fail_ques">
-                                    Out of Resources!
-                                </p>
-                                <div class="button_wrap">
-                                    <button type="button" class="cancel">Cancel</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- fail_popup -->
-                    <div class="complete_buy_popup">
+                    </div><!-- gold_buy_modal -->
+                    <div class="complete_buy_modal">
                         <div class="comp_wrap">
                             <div class="comp_inner">
                                 <p class="comp_ques">
@@ -746,8 +770,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- complete_buy_popup -->
-                    <div class="shop_item_buy_popup alert_popup">
+                    </div><!-- complete_buy_modal -->
+                    <div class="shop_item_buy_modal alert_modal">
                         <div class="shop_item_wrap">
                             <div class="shop_pop_inner">
                                 <p class="pop_title">
@@ -779,8 +803,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- shop_item_buy_popup -->
-                    <div class="shop_complete_popup alert_popup">
+                    </div><!-- shop_item_buy_modal -->
+                    <div class="shop_complete_modal alert_modal">
                         <div class="comp_wrap">
                             <div class="comp_inner">
                                 <p class="comp_ques">
@@ -796,8 +820,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- shop_complete_popup -->
-                    <div class="shop_use_popup alert_popup">
+                    </div><!-- shop_complete_modal -->
+                    <div class="shop_use_modal alert_modal">
                         <div class="shop_use_wrap">
                             <div class="use_inner">
                                 <p class="use_ques">
@@ -810,8 +834,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- repair_popup -->
-                    <div class="premiumitem_popup alert_popup">
+                    </div><!-- shop_use_modal -->
+                    <!-- 샵 내부 마이닝 툴 모달 시작 -->
+                    <div class="premiumitem_modal alert_modal">
                         <div class="premiumitem_wrap on">
                             <div class="boxitem_inner">
                                 <p class="boxitem_ques">
@@ -831,7 +856,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="vipitem_popup alert_popup">
+                    <div class="vipitem_modal alert_modal">
                         <div class="vipitem_wrap">
                             <div class="boxitem_inner">
                                 <p class="boxitem_ques">
@@ -851,23 +876,38 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pre_open_popup">
+                    <div class="pre_open_modal">
                         <div class="pre_open_wrap">
                             <ul></ul><!-- 샵 프리미엄 랜덤 아이템 리스트 추가영역 -->
                             <p class="open_text">
                                 An item has been placed in your inventory.
                             </p>
                         </div>
-                    </div><!-- pre_open_popup -->
-                    <div class="vip_open_popup">
+                    </div><!-- pre_open_modal -->
+                    <div class="vip_open_modal">
                         <div class="vip_open_wrap">
                             <ul></ul><!-- 샵 VIP 랜덤 아이템 리스트 추가영역 -->
                             <p class="open_text">
                                 An item has been placed in your inventory.
                             </p>
                         </div>
-                    </div><!-- vip_open_popup -->
+                    </div><!-- vip_open_modal -->
+                    <!-- 샵 내부 마이닝 툴 모달 끝 -->
+                    <!-- 실패시 공통 모달 -->
+                    <div class="fail_modal alert_modal">
+                        <div class="fail_wrap">
+                            <div class="fail_inner">
+                                <p class="fail_ques">
+                                    Out of Resources!
+                                </p>
+                                <div class="button_wrap">
+                                    <button type="button" class="cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- fail_modal -->
                 </div>
+                <!-- 채팅 영역 -->
                 <div class="chat_wrap">
                     <div class="chat_wrap_in">
                         <div class="room_number">

@@ -9,7 +9,7 @@ var startTime;
 
 const clicksTxt = document.getElementById("clicks");
 const gameContainer = document.querySelector(".game_container");
-const failPop = document.querySelector(".fail_popup");
+const failPop = document.querySelector(".fail_modal");
 
 
 
@@ -130,9 +130,9 @@ function packageBuy(){
     const vipSilverIcon = document.querySelector(".vip_silver");
     const vipGoldIcon = document.querySelector(".vip_gold");
     const marker = document.querySelector(".marker");
-    const completePopup = document.querySelector(".complete_buy_popup");
-    const completeConfirmBtn = document.querySelector(".complete_buy_popup .confirm");
-    const shopPopup = document.querySelector(".shop_popup");
+    const completeModal = document.querySelector(".complete_buy_modal");
+    const completeConfirmBtn = document.querySelector(".complete_buy_modal .confirm");
+    const shopModal = document.querySelector(".shop_modal");
     const packageContent = document.querySelector(".package_content");
 
     let silverPrice = 5000;
@@ -148,7 +148,7 @@ function packageBuy(){
             silverPop.style.visibility = "hidden";
             marker.style.display = "block";
             vipSilverIcon.style.visibility = "visible";
-            completePopup.style.visibility = "visible";
+            completeModal.style.visibility = "visible";
             
             score = Math.round((score - silverPrice) * 10000) / 10000;
             
@@ -156,7 +156,7 @@ function packageBuy(){
                 gemScore[i].textContent = score;
             }
 
-            completeConfirmBtn.addEventListener("click", popupHidden);
+            completeConfirmBtn.addEventListener("click", modalHidden);
 
         }
         //가격부족 구매 실패
@@ -173,7 +173,7 @@ function packageBuy(){
             marker.style.display = "block";
             vipGoldIcon.style.visibility = "visible";
             vipSilverIcon.style.visibility = "hidden";
-            completePopup.style.visibility = "visible";
+            completeModal.style.visibility = "visible";
             
             score = Math.round((score - goldPrice) * 10000) / 10000;
             
@@ -181,7 +181,7 @@ function packageBuy(){
                 gemScore[i].textContent = score;
             }
 
-            completeConfirmBtn.addEventListener("click", popupHidden);
+            completeConfirmBtn.addEventListener("click", modalHidden);
         }
         //가격부족 구매 실패
         else{
@@ -190,9 +190,9 @@ function packageBuy(){
         }
     }
 
-    function popupHidden(){
-        completePopup.style.visibility = "hidden";
-        shopPopup.style.visibility = "hidden";
+    function modalHidden(){
+        completeModal.style.visibility = "hidden";
+        shopModal.style.visibility = "hidden";
         packageContent.style.visibility = "hidden";
     }
 }
@@ -202,7 +202,7 @@ function packageBuy(){
 repairBuy();
 function repairBuy(){
     const rapairConfirmBtn = document.getElementById("repair_buy_confirm");
-    const repairPop = document.querySelector(".repair_popup");
+    const repairPop = document.querySelector(".repair_modal");
     const repairPrice = 25;
 
 
@@ -232,16 +232,16 @@ function repairBuy(){
 
 
 //샵 구매 팝업 수량 버튼
-shopBuyPopup();
-function shopBuyPopup(){
+shopBuyModal();
+function shopBuyModal(){
     const shopPopLeftBtn = document.querySelector(".left_btn");
     const shopPopRightBtn = document.querySelector(".right_btn");
     const quantity = document.querySelector(".quantity");
     const shopItemPriceClass = document.querySelector(".shop_item_wrap .price");
     const shopItemBtn = document.querySelector(".shop_item_wrap .cancel");
     const shopBuyBtn = document.getElementById("shop_buy_btn");
-    const shopItemBuyPop = document.querySelector(".shop_item_buy_popup");
-    const itemCompletePop = document.querySelector(".shop_complete_popup");
+    const shopItemBuyPop = document.querySelector(".shop_item_buy_modal");
+    const itemCompletePop = document.querySelector(".shop_complete_modal");
 
 
     let quantityNum = quantity.textContent;
@@ -313,10 +313,10 @@ function shopBuyPopup(){
     }
 }
 
-shopToolBoxPopup();
-function shopToolBoxPopup(){
-    const prePopup = document.querySelector(".premiumitem_popup");
-    const vipPopup = document.querySelector(".vipitem_popup");
+shopToolBoxModal();
+function shopToolBoxModal(){
+    const preModal = document.querySelector(".premiumitem_modal");
+    const vipModal = document.querySelector(".vipitem_modal");
     const preBuyBtn = document.querySelector(".pre_buy_btn");
     const vipBuyBtn = document.querySelector(".vip_buy_btn");
     const premiumBox = document.querySelector(".premium_price");
@@ -335,11 +335,11 @@ function shopToolBoxPopup(){
         //구매 실패시
         if(score < premiumBoxPriceNum){
             failPop.style.visibility = "visible";
-            prePopup.style.visibility = "hidden";
+            preModal.style.visibility = "hidden";
         }
         //구매 성공시
         else{
-            prePopup.style.visibility = "hidden";
+            preModal.style.visibility = "hidden";
             score = Math.round((score - premiumBoxPriceNum) * 10000) / 10000;
             for(let i = 0; i < gemScore.length; i++){
                 gemScore[i].textContent = score;
@@ -355,11 +355,11 @@ function shopToolBoxPopup(){
         //구매 실패시
         if(score < vipBoxPriceeNum){
             failPop.style.visibility = "visible";
-            vipPopup.style.visibility = "hidden";
+            vipModal.style.visibility = "hidden";
         }
         //구매 성공시
         else{
-            vipPopup.style.visibility = "hidden";
+            vipModal.style.visibility = "hidden";
             score = Math.round((score - vipBoxPriceeNum) * 10000) / 10000;
             for(let i = 0; i < gemScore.length; i++){
                 gemScore[i].textContent = score;
@@ -374,8 +374,8 @@ function shopToolBoxPopup(){
 }
 
 
-const preOpenPopup = document.querySelector(".pre_open_popup");
-const vipOpenPopup = document.querySelector(".vip_open_popup");
+const preOpenModal = document.querySelector(".pre_open_modal");
+const vipOpenModal = document.querySelector(".vip_open_modal");
 
 const preItemsUl = document.querySelector(".pre_open_wrap ul");
 const openPreBoxText = document.querySelector(".pre_open_wrap .open_text");
@@ -385,7 +385,7 @@ const vipItemsUl = document.querySelector(".vip_open_wrap ul");
 // 프리미엄 박스 구매 팝업
 
 function openPreBox(){
-    preOpenPopup.style.display = "block";
+    preOpenModal.style.display = "block";
     
     for(let i = 0; i < 10; i++){
         setTimeout(function(){
@@ -398,7 +398,7 @@ function openPreBox(){
 }
 
 function openVipBox(){
-    vipOpenPopup.style.display = "block";
+    vipOpenModal.style.display = "block";
     
     for(let i = 0; i < 10; i++){
         setTimeout(function(){
@@ -414,7 +414,7 @@ function openVipBox(){
 // 박스 구매 초기화
 boxInit();
 function boxInit(){
-    preOpenPopup.addEventListener("click", function(){
+    preOpenModal.addEventListener("click", function(){
         const preItemsLi = document.querySelectorAll(".pre_open_wrap ul li");
         if(preItemsLi.length === 10){
             this.style.display = "none";
@@ -425,7 +425,7 @@ function boxInit(){
         }
         
     });
-    vipOpenPopup.addEventListener("click", function(){
+    vipOpenModal.addEventListener("click", function(){
         const vipItemsLi = document.querySelectorAll(".vip_open_wrap ul li");
         if(vipItemsLi.length === 10){
             this.style.display = "none";
@@ -470,7 +470,7 @@ function openseaOpen(){
 changeRoom();
 function changeRoom(){
     const changeRoomBtn = document.getElementById("change_room_btn");
-    const anotherRoomPop = document.querySelector(".another_room_popup");
+    const anotherRoomPop = document.querySelector(".another_room_modal");
     const gameWrap = document.querySelector(".game_wrap");
     const imgNumber = 7;
     
@@ -514,8 +514,8 @@ function invenItemAdd(){
         "images/item/pick_legend2.png",
         "images/item/auto_click_1h.png",
         "images/item/auto_click_10m.png",
+        "images/item/booster_10m.png",
         "images/item/booster_1h.png",
-        "images/item/booster_10m.png",   
     ];
 
     for(let i = 0; i <invenImgList.length; i++){

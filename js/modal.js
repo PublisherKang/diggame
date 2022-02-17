@@ -7,21 +7,21 @@ $(function(){
     // 인벤 팝업
     invenPopBtn.click(function(ev){
         ev.preventDefault();
-        $(".inven_popup").css("visibility", "visible");
-        $(".ranking_popup").hide();
-        $(".another_room_popup").css("visibility", "hidden");
+        $(".inven_modal").css("visibility", "visible");
+        $(".ranking_modal").hide();
+        $(".another_room_modal").css("visibility", "hidden");
     });
 
     // 샵 팝업
     shopPopBtn.click(function(ev){
         ev.preventDefault();
-        $(".shop_popup").css("visibility", "visible");
+        $(".shop_modal").css("visibility", "visible");
         $(".package_content").css("visibility", "visible");
-        $(".ranking_popup").hide();
+        $(".ranking_modal").hide();
         $(".shop_menu_btn li").eq(0).addClass("on")
-        $(".another_room_popup").css("visibility", "hidden");
+        $(".another_room_modal").css("visibility", "hidden");
     });
-
+    
     // Back 버튼
     backBtn.click(function(ev){
         ev.preventDefault();
@@ -132,7 +132,7 @@ $(function(){
     
     $(".useitem_btn").click(function(event){
         event.preventDefault();
-        $(".shop_use_popup").css("visibility", "visible");
+        $(".shop_use_modal").css("visibility", "visible");
     });
 
 
@@ -157,8 +157,8 @@ $(".mint_item").click(function(event){
 $(function(){
     // repair 팝업
     const repairBtn = $(".btn_wrap .repair");
-    const repairPop = $(".repair_popup");
-    const repairCancelBtn = $(".repair_popup .cancel");
+    const repairPop = $(".repair_modal");
+    const repairCancelBtn = $(".repair_modal .cancel");
     repairBtn.click(function(ev){
         ev.preventDefault();
         repairPop.css("visibility", "visible");
@@ -178,8 +178,8 @@ $(function(){
 
     goToolBtn.click(function(ev){
         ev.preventDefault();
-        $(".inven_popup").css("visibility", "hidden");
-        $(".shop_popup").css("visibility", "visible");
+        $(".inven_modal").css("visibility", "hidden");
+        $(".shop_modal").css("visibility", "visible");
         $(".package_content").css("visibility", "visible");
         $(".shop_menu_btn li").eq(0).addClass("on")
     });
@@ -207,15 +207,15 @@ $(function(){
     const rankingBtn = $(".menu_list li .rank_btn");
     rankingBtn.click(function(ev){
         ev.preventDefault();
-        $(".ranking_popup").show();
+        $(".ranking_modal").show();
     });
 
-    $(".ranking_popup").click(function(ev){
-        if($(".ranking_popup").is(ev.target)){
+    $(".ranking_modal").click(function(ev){
+        if($(".ranking_modal").is(ev.target)){
             $(".rank_tab_btn li").removeClass("on")
             $(".rank_tab_btn li").eq(0).addClass("on");
             
-            $(".ranking_popup").hide();
+            $(".ranking_modal").hide();
         }
 
     });
@@ -224,7 +224,7 @@ $(function(){
     const rankCloseBtn = $(".ranking_pop_close");
     rankCloseBtn.click(function(ev){
         ev.preventDefault();
-        $(".ranking_popup").hide();
+        $(".ranking_modal").hide();
     
         $(".rank_tab_btn li").removeClass("on")
         $(".rank_tab_btn li").eq(0).addClass("on");
@@ -237,11 +237,11 @@ $(function(){
 //샵 마이닝 툴 팝업
 $(function(){
     $(".tool_content li").eq(0).click(function(){
-        $(".premiumitem_popup").css("visibility", "visible");
+        $(".premiumitem_modal").css("visibility", "visible");
 
     });
     $(".tool_content li").eq(1).click(function(){
-        $(".vipitem_popup").css("visibility", "visible");
+        $(".vipitem_modal").css("visibility", "visible");
 
         
         
@@ -253,13 +253,13 @@ $(function(){
     //채널 변경 버튼
     $(".ch_change_btn").click(function(ev){
         ev.preventDefault();
-        $(".another_room_popup").css("visibility", "visible");
-        $(".ranking_popup").hide();
+        $(".another_room_modal").css("visibility", "visible");
+        $(".ranking_modal").hide();
     });
 
-    $(".another_room_popup .cancel").click(function(ev){
+    $(".another_room_modal .cancel").click(function(ev){
         ev.preventDefault();
-        $(".another_room_popup").css("visibility", "hidden");
+        $(".another_room_modal").css("visibility", "hidden");
     });
 });
 
@@ -285,14 +285,14 @@ $(function(){
     const repairNow = $(".repair_now");
     nowItemBtn.click(function(ev){
         ev.preventDefault();
-        $(".immediately_repair_popup").css("visibility", "visible");
+        $(".immediately_repair_modal").css("visibility", "visible");
     });
 
     repairNow.click(function(ev){
         ev.preventDefault();
-        $(".repair_popup").css("visibility", "visible");
-        $(".repair_popup").css("background", "transparent")
-        $(this).parents('.alert_popup').css("visibility", "hidden");
+        $(".repair_modal").css("visibility", "visible");
+        $(".repair_modal").css("background", "transparent")
+        $(this).parents('.alert_modal').css("visibility", "hidden");
     });
 });
 
@@ -317,22 +317,22 @@ $(function(){
 
 });
 
-$(function(){
-    function preBoxOpen(){
-        for(let i = 0; i < 10; i++){
-            setTimeout(function(){
-                $(".pre_open_wrap ul").append("<li>"+ "<img src=images/item/pick_rare.png>" +"</li>");
-            },500 * i)
-        }
-    }
-    function vipBoxOpen(){
-        for(let i = 0; i < 10; i++){
-            setTimeout(function(){
-                $(".vip_open_wrap ul").append("<li>"+ "<img src=images/item/pick_rare.png>" +"</li>");
-            },500 * i)
-        }
-    }
-});
+// $(function(){
+//     function preBoxOpen(){
+//         for(let i = 0; i < 10; i++){
+//             setTimeout(function(){
+//                 $(".pre_open_wrap ul").append("<li>"+ "<img src=images/item/pick_rare.png>" +"</li>");
+//             },500 * i)
+//         }
+//     }
+//     function vipBoxOpen(){
+//         for(let i = 0; i < 10; i++){
+//             setTimeout(function(){
+//                 $(".vip_open_wrap ul").append("<li>"+ "<img src=images/item/pick_rare.png>" +"</li>");
+//             },500 * i)
+//         }
+//     }
+// });
 
 
 
@@ -340,8 +340,8 @@ $(function(){
 
 //샵 아이템 구매 팝업
 $(function(){
-    function shopPopupList(number){
-        $(".shop_item_buy_popup").css("visibility", "visible")
+    function shopModalList(number){
+        $(".shop_item_buy_modal").css("visibility", "visible")
         $(".pop_title span").eq(number).siblings().removeClass("on");
         $(".pop_title span").eq(number).addClass("on");
         $(".img_wrap img").eq(number).siblings().removeClass("on");
@@ -352,7 +352,7 @@ $(function(){
 
     for(let i = 0; i < shopBuyBtn.length; i++){
         shopBuyBtn.eq(i).click(function(ev){
-            shopPopupList(i);
+            shopModalList(i);
         });    
         
     }
@@ -368,6 +368,6 @@ $(function(){
 $(function(){
     const cancelBtn = $(".cancel");
     cancelBtn.click(function(){
-        $(this).parents(".alert_popup").css("visibility", "hidden");
+        $(this).parents(".alert_modal").css("visibility", "hidden");
     });
 });
