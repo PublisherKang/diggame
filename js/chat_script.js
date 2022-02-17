@@ -35,7 +35,7 @@ $(document).ready(function(){
             //채팅 창 맨 아래로 위치
             $(".chat_inner").animate({
                 "height" : "98.4375vw",
-                scrollTop: $(".chat_inner").height(),
+                scrollTop: $(".message_inner").height(),
             },500);
 
             $(this).hide();
@@ -52,7 +52,7 @@ $(document).ready(function(){
             //채팅 창 맨 아래로 위치
             $(".chat_inner").animate({
                 "height" : "29.55034vw",
-                scrollTop: $(".chat_inner").height(),
+                scrollTop: $(".message_inner").height(),
             },0);
 
             $(this).hide();
