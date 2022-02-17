@@ -32,9 +32,10 @@ $(document).ready(function(){
 
             },500);
 
+            //채팅 창 맨 아래로 위치
             $(".chat_inner").animate({
                 "height" : "98.4375vw",
-                scrollTop: $(".chat_wrap_in").height(),
+                scrollTop: $(".chat_inner").height(),
             },500);
 
             $(this).hide();
@@ -45,14 +46,14 @@ $(document).ready(function(){
         roomCloseBtn.click(function(){
             $(".chat_wrap_in").animate({
                 "height" : "100%",
-                "top" : "0"
+                "top" : "0",
+            },0);
 
-            },500);
-
+            //채팅 창 맨 아래로 위치
             $(".chat_inner").animate({
                 "height" : "29.55034vw",
-                scrollTop: $(".chat_wrap_in").height(),
-            },500);
+                scrollTop: $(".chat_inner").height(),
+            },0);
 
             $(this).hide();
             roomOpenBtn.show();

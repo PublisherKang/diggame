@@ -155,10 +155,12 @@ $(".mint_item_btn").click(function(event){
 $(".mint_now").click(function(){
     $(this).parents('.alert_modal').css("visibility", "hidden");
     $(".mint_popup").show();
+    $(".mint_explan").scrollTop(0);
 });
 
 
 $(".mint_explan").scroll(function(){
+
     let scrollTop = $(this).scrollTop();
 
     if(scrollTop > 490){
@@ -172,6 +174,12 @@ $(".mint_explan").scroll(function(){
 $(".mint_close_btn").click(function(){
     $(this).parents('.mint_popup').hide();
 });
+
+
+
+// mintScroll.scrollTop;
+
+
 
 // ***************************************************************
 
