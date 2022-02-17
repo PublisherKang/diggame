@@ -522,7 +522,7 @@
 
 
 /* ======= 민팅 팝업 ======= */
-.mint_popup{width: 82vw; height: 144vw; top: 6vw; border: 1px solid #ccc; padding: 0; display: block; padding-bottom: 14vw;}
+.mint_popup{width: 82vw; height: 144vw; top: 6vw; border: 1px solid #ccc; padding: 0; display: none; padding-bottom: 14vw;}
 
 .mint_popup .head_title{padding: 10px 0 10px 10px;}
 .mint_popup .mint_close_btn{width: 30px; height: 30px; right: 10px;}
