@@ -336,7 +336,7 @@
                                     <button type="button" class="equip_btn">Equip</button>
                                     <button type="button" class="repair on">Repair</button>
                                     <button type="button" class="Upgrade on">Upgrade</button>
-                                    <button type="button" class="mint_item on">Mint an Item</button>
+                                    <button type="button" class="mint_item_btn on">Mint an Item</button>
                                 </div>
                             </div>
                             <div class="flex_right">
@@ -982,8 +982,68 @@
                     </div>
                 </div><!-- chat_wrap -->
             </div>
+            <!-- mint popup 시작 -->
+            <div class="mint_popup">
+                <p class="head_title">DIGTOC - Mint an Item
+                    <button class="mint_close_btn"></button>
+                </p>
+                <div class="mint_wrap">
+                    <div class="item_area">
+                        <p class="mint_item">
+                            <img src="images/item/pick_legend.png" alt="">
+                        </p>
+                        <p class="item_level">Level 1. Pick</p>
+                        <p class="item_rank">
+                            <span class="item_common">Common</span>
+                            <span class="item_rare">Rare</span>
+                            <span class="item_legen on">Legend</span>
+                        </p>
+                        <p class="unit_price">
+                            Unit Price : <span>0.01</span> <span>ETH</span>
+                        </p>
+                        <button class="mint_btn">Mint Now</button>
+                    </div>
+                    <div class="mint_explan">
+                        <div class="explan_inner">
+                            <p class="explan_title">DIGTOC Item Minting Guide</p>
+                            <div class="sale_area">
+                                <p class="sub_title">[Sale]</p>
+                                <p class="contents_text">Equipment minted with NFT can be sold on exchanges such as OpenSea.IO. Even after converting to NFT, you can use the equipment as long as you have it. If you hand over the equipment to someone else, the equipment is automatically released and automatically replaced with the most efficient equipment you have.</p>
+                            </div>
+                            <div class="purchase_area">
+                                <p class="sub_title">[Purchase]</p>
+                                <p class="contents_text">
+                                    Purchased equipment is immediately reflected and added to Inventory when you log in to the site through MetaMask.
+                                </p>
+                            </div>
+                            <div class="ontheweb_area">
+                                <p class="sub_title">On the web</p>
+                                <p class="contents_text">
+                                    <span>1. At the time of purchase, DIGTOC are randomly selected and randomly distributed.</span>
+                                    <span>2. The total purchase amount is changed according to the quantity requested, and exchange or refund is not possible after purchase.</span>
+                                    <span>3. Purchases are made only with MetaMask, and cannot be purchased with other wallets.</span>
+                                    <span>4. EtherBucks payments may be delayed depending on the Ethereum network speed. (about 1 hour)</span>
+                                </p>
+                            </div>
+                            <div class="onthemobile_area">
+                                <p class="sub_title">On the mobile</p>
+                                <p class="contents_text">
+                                    <span>1. Open Metamask App on Mobile</span>
+                                    <span>2. Click on the top left menu button</span>
+                                    <span>3. Select Browser</span>
+                                    <span>4. Click the top and input DIGTOC url (https://digtoc.io)</span>
+                                    <span>5. On the Digtoc site, click on mint now.</span>
+                                    <span>6. Sign Metamask</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- mint popup -->
         </div><!-- container -->
         <footer id="footer"></footer><!-- footer -->
+        
+        
     </div><!-- wrap -->
 </body>
 </html>

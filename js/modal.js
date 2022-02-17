@@ -81,9 +81,9 @@ $(function(){
 
         
         if(itemAttr === "images/item/pick_rare.png" || itemAttr === "images/item/pick_legend.png"){
-            $(".mint_item").addClass("mint_btn_on");
+            $(".mint_item_btn").addClass("mint_btn_on");
         }else{
-            $(".mint_item").removeClass("mint_btn_on");
+            $(".mint_item_btn").removeClass("mint_btn_on");
         }
         
 
@@ -107,12 +107,12 @@ $(function(){
             $(".useitem_btn").addClass("on");
             $(".equip_btn").removeClass("on");
             $(".Upgrade").removeClass("on");
-            $(".mint_item").removeClass("on");
+            $(".mint_item_btn").removeClass("on");
             $(".repair").removeClass("on");
         }else{
             $(".useitem_btn").removeClass("on");
             $(".Upgrade").addClass("on");
-            $(".mint_item").addClass("on");
+            $(".mint_item_btn").addClass("on");
             $(".repair").addClass("on");
         }
         
@@ -141,7 +141,7 @@ $(function(){
 
 // ***************************************************************
 // mint an item 버튼 클릭 했을때
-$(".mint_item").click(function(event){
+$(".mint_item_btn").click(function(event){
     const bottonAttr = $(this);
     
     if(bottonAttr.hasClass("mint_btn_on") === true){     
@@ -151,6 +151,28 @@ $(".mint_item").click(function(event){
     }
     
 });
+
+$(".mint_now").click(function(){
+    $(this).parents('.alert_modal').css("visibility", "hidden");
+    $(".mint_popup").show();
+});
+
+
+$(".mint_explan").scroll(function(){
+    let scrollTop = $(this).scrollTop();
+
+    if(scrollTop > 490){
+        $(".mint_wrap .item_area .mint_btn").addClass("on");
+    }else{
+        $(".mint_wrap .item_area .mint_btn").removeClass("on");
+    }
+});
+
+$(".mint_close_btn").click(function(){
+    $(this).parents('.mint_popup').hide();
+    
+});
+
 // ***************************************************************
 
 
