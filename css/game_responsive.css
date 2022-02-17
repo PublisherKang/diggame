@@ -518,3 +518,44 @@
 #footer{}
 
 
+
+
+
+/* ======= 민팅 팝업 ======= */
+.mint_popup{width: 82vw; height: 138vw; top: 6vw; border: 1px solid #ccc; padding: 0; display: block;}
+
+.mint_popup .head_title{padding: 10px 0 10px 10px;}
+.mint_popup .mint_close_btn{width: 30px; height: 30px; right: 20px;}
+
+.mint_popup .mint_close_btn::after,
+.mint_popup .mint_close_btn::before{width: 24px; height: 2px;}
+
+.mint_wrap{display: flex; flex-direction: column;}
+
+.mint_wrap .item_area{width: 100%; padding-bottom: 6vw;}
+
+.mint_wrap .item_area .mint_item{width: 20vw; margin: 7vw auto 6vw;}
+.mint_wrap .item_area .item_level{font-size: 4.4vw; margin-bottom: 3vw;}
+
+.mint_wrap .item_area .item_rank{font-size: 3.8vw; margin-bottom: 4vw;}
+
+.mint_wrap .item_area .unit_price{font-size: 3.8vw; margin-bottom: 5vw;}
+
+.mint_wrap .item_area .mint_btn{width: 36vw; height: 9.6vw; font-size: 3.8vw;}
+
+.mint_wrap .mint_explan{width: 100%}
+
+.mint_wrap .explan_inner{padding: 8vw 6vw;}
+
+.mint_wrap .explan_inner .explan_title{font-size: 4.3vw; margin-bottom: 6vw;}
+
+.mint_wrap .explan_inner > div{margin-bottom: 6vw;}
+
+.mint_wrap .explan_inner .sub_title{font-size: 3.8vw; margin-bottom: 4vw;}
+
+.mint_wrap .explan_inner .contents_text{font-size: 3.2vw}
+
+.mint_wrap .explan_inner .contents_text span{margin-bottom: 4vw;}
+
+.mint_wrap .explan_inner .ontheweb_area .sub_title,
+.mint_wrap .explan_inner .onthemobile_area .sub_title{padding-bottom: 2.4vw;}
