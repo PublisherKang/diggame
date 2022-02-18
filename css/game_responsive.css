@@ -523,7 +523,7 @@
 
 /* ======= 민팅 팝업 ======= */
 .mint_modal,
-.mint_success_modal{width: 82vw; height: 144vw; top: 6vw; border: 1px solid #ccc; padding: 0;/*  display: none; */ padding-bottom: 14vw;}
+.mint_success_modal{width: 82vw; height: 144vw; top: 6vw; border: 1px solid #ccc; padding: 0; padding-bottom: 14vw;}
 
 .mint_modal .head_title,
 .mint_success_modal .head_title{padding: 10px 0 10px 10px;}
@@ -585,14 +585,14 @@
 .mint_success_wrap .mint_explan{padding: 0 6vw;}
 .mint_success_wrap .explan_inner{display: flex; justify-content: space-between; flex-direction: column;}
 
-.mint_success_wrap .explan_inner .sale_area{width: 100%; margin-bottom: 5vw;}
+.mint_success_wrap .explan_inner .sale_area{width: 100%; margin-bottom: 5vw; letter-spacing: 0.2px;}
 .mint_success_wrap .explan_inner .purchase_area{width: 100%;}
 
-.mint_success_wrap .explan_inner .sub_title{font-size: 18px; margin-bottom: 14px;}
+.mint_success_wrap .explan_inner .sub_title{font-size: 4vw; margin-bottom: 3vw;}
 
-.mint_success_wrap .explan_inner .contents_text{font-size: 12px;}
+.mint_success_wrap .explan_inner .contents_text{font-size: 3vw;}
 
-.mint_success_wrap .explan_inner .purchase_area .contents_text{letter-spacing: 1.4px;}
+.mint_success_wrap .explan_inner .purchase_area .contents_text{letter-spacing: 0;}
 
-.mint_success_wrap .back_game{width: 200px; border-radius: 10px; line-height: 2.6; font-size: 16px; bottom: 40px; right: 50px;}
-.mint_success_wrap .back_game span{padding: 8px 30px 8px 0; background: url(../images/ui/right_arrow.svg) no-repeat right center/ 22px auto;}
+.mint_success_wrap .back_game{width: 44vw; border-radius: 10px; line-height: 2.6; font-size: 3vw; bottom: 8vw; right: 6vw;}
+.mint_success_wrap .back_game span{padding: 2vw 6vw 2vw 0; background: url(../images/ui/right_arrow.svg) no-repeat right center/ 4vw auto;}
