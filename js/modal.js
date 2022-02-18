@@ -187,10 +187,14 @@ $(function(){
         $(this).removeClass("on");
         $(".repair").removeClass("on");
         $(".mint_item_btn").removeClass("on");
+        $(".equip_btn").removeClass("on");
+        
         
         $(".item_list_wrap").addClass("upgrade");
         $(".upgrade_now").addClass("on");
         $(".up_cancel").addClass("on");
+
+        targetListSpan.removeClass("target_img");
 
         
         //아이템 리스트 클릭이벤트 제거
@@ -206,7 +210,7 @@ $(function(){
         $(".Upgrade").addClass("on");
         $(".repair").addClass("on");
         $(".mint_item_btn").addClass("on");
-        
+
         invenItemList.on("click", listClickEvent);
         
     });
