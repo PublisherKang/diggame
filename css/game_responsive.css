@@ -445,15 +445,15 @@
 
 /* ======================================================================== */
 /* 랜덤 아이템 박스 팝업 */
-.pre_open_modal, .vip_open_modal{background: rgba(0, 0, 0, .8) url(../images/ui/shop_premium_box_open.png) no-repeat center center / 160px auto;}
+.pre_open_modal, .vip_open_modal{background: rgba(0, 0, 0, .8) url(../images/ui/shop_premium_box_open.png) no-repeat center center / 26vw auto;}
 
-.vip_open_modal{background: rgba(0, 0, 0, .8) url(../images/ui/shop_vip_box_open.png) no-repeat center center / 160px auto;}
+.vip_open_modal{background: rgba(0, 0, 0, .8) url(../images/ui/shop_vip_box_open.png) no-repeat center center / 26vw auto;}
 
-.pre_open_wrap ul, .vip_open_modal ul{width: 370px; height: 140px}
+.pre_open_wrap ul, .vip_open_modal ul{width: 66vw; height: 24vw}
 
-.pre_open_wrap ul li, .vip_open_modal ul li{width: 62px; margin-right: 15px;}
+.pre_open_wrap ul li, .vip_open_modal ul li{width: 10vw; margin-right: 4vw;}
 
-.pre_open_wrap .open_text, .vip_open_modal .open_text{width: 500px;  font-size: 16px;}
+.pre_open_wrap .open_text, .vip_open_modal .open_text{width: 90vw;  font-size: 3.4vw; bottom: 10vw;}
 
 
 
