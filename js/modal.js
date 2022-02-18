@@ -154,7 +154,7 @@ $(".mint_item_btn").click(function(event){
 
 $(".mint_now").click(function(){
     $(this).parents('.alert_modal').css("visibility", "hidden");
-    $(".mint_popup").show();
+    $(".mint_modal").show();
     $(".mint_explan").scrollTop(0);
 });
 
@@ -172,12 +172,19 @@ $(".mint_explan").scroll(function(){
 });
 
 $(".mint_close_btn").click(function(){
-    $(this).parents('.mint_popup').hide();
+    $(this).parents('.mint_modal').hide();
 });
 
 
+// 민팅 완료뒤 back to game 버튼 클릭시
+$(".back_game").click(function(){
+    $(this).parents('.mint_success_modal').hide();
+    $(".inven_modal").css("visibility", "hidden");
+});
 
-// mintScroll.scrollTop;
+$(".mint_close_btn.success").click(function(){
+    $(this).parents('.mint_success_modal').hide();
+});
 
 
 

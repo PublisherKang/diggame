@@ -984,8 +984,8 @@
                     </div>
                 </div><!-- chat_wrap -->
             </div>
-            <!-- mint popup 시작 -->
-            <div class="mint_popup">
+            <!-- mint modal 시작 -->
+            <div class="mint_modal">
                 <p class="head_title">DIGTOC - Mint an Item
                     <button class="mint_close_btn"></button>
                 </p>
@@ -998,7 +998,7 @@
                         <p class="item_rank">
                             <span class="item_common">Common</span>
                             <span class="item_rare">Rare</span>
-                            <span class="item_legen on">Legend</span>
+                            <span class="item_legend on">Legend</span>
                         </p>
                         <p class="unit_price">
                             Unit Price : <span>0.01</span> <span>ETH</span>
@@ -1010,7 +1010,7 @@
                             <p class="explan_title">DIGTOC Item Minting Guide</p>
                             <div class="sale_area">
                                 <p class="sub_title">[Sale]</p>
-                                <p class="contents_text">Equipment minted with NFT can be sold on exchanges such as OpenSea.IO. Even after converting to NFT, you can use the equipment as long as you have it. If you hand over the equipment to someone else, the equipment is automatically released and automatically replaced with the most efficient equipment you have.</p>
+                                <p class="contents_text">Equipment minted with NFT can be sold on exchanges such as OpenSea.io. Even after converting to NFT, you can use the equipment as long as you have it. If you hand over the equipment to someone else, the equipment is automatically released and automatically replaced with the most efficient equipment you have.</p>
                             </div>
                             <div class="purchase_area">
                                 <p class="sub_title">[Purchase]</p>
@@ -1041,7 +1041,49 @@
                         </div>
                     </div>
                 </div>
-            </div><!-- mint popup -->
+            </div><!-- mint modal -->
+            <!-- 민팅 완료 모달 시작 -->
+            <div class="mint_success_modal">
+                <p class="head_title">DIGTOC - Mint an Item
+                    <button class="mint_close_btn success"></button>
+                </p>
+                <div class="mint_success_wrap">
+                    <div class="inner_title">
+                        Minting was successful!
+                    </div>
+                    <div class="item_area">
+                        <p class="mint_item">
+                            <img src="images/item/pick_legend.png" alt="">
+                        </p>
+                        <div class="item_info">
+                            <p class="item_level">Level 1. Pick</p>
+                            <p class="item_rank">
+                                <span class="item_common">Common</span>
+                                <span class="item_rare">Rare</span>
+                                <span class="item_legend on">Legend</span>
+                            </p>
+                            <p class="unit_price">
+                                Unit Price : <span>0.01</span> <span>ETH</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mint_explan">
+                        <div class="explan_inner">
+                            <div class="sale_area">
+                                <p class="sub_title">[Sale]</p>
+                                <p class="contents_text">Equipment minted with NFT can be sold on exchanges such as OpenSea.io. Even after converting to NFT, you can use the equipment as long as you have it. If you hand over the equipment to someone else, the equipment is automatically released and automatically replaced with the most efficient equipment you have.</p>
+                            </div>
+                            <div class="purchase_area">
+                                <p class="sub_title">[Purchase]</p>
+                                <p class="contents_text">
+                                    Purchased equipment is immediately reflected and added to Inventory when you log in to the site through MetaMask.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="back_game"><span>Back to game</span></button>
+                </div>
+            </div><!-- mint_success_modal -->
         </div><!-- container -->
         <footer id="footer"></footer><!-- footer -->
         
