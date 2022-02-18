@@ -503,7 +503,7 @@
 
 .emoticon_btn button{width: 10.2033235vw; height: 10.2033235vw; border-radius: 0.9775171vw; background: #b5a4ff url(../images/imoticon/imoticon57.png) no-repeat center center/ 8.323558vw auto;}
 
-.message_enter input{width: 80.527859vw; border-radius: 6px; padding: 2.714285vw 3.7142857vw 2.714285vw 1.142857vw;}
+.message_enter input{width: 80.527859vw; border-radius: 6px; padding: 3.414285vw 3.7142857vw 3.414285vw 1.142857vw;}
 .message_enter .submit{width: 7.932551vw; height: 7.932551vw; background: #405ea4 url(../images/ui/send_message_icon.svg) no-repeat 2.142857vw center / 4.759530vw auto; right: 0.9775171vw;}
 
 .emoticon_wrap{width: 64.516129vw; height: 14.6695992vw; border-radius: 0.9775171vw; bottom: 15.142857vw;}
