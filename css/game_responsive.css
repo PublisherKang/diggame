@@ -18,7 +18,7 @@
 .login_wrap ul{width: 30.752688vw;}
 .login_wrap ul li{width: 14.0830889vw; height: 7.128054vw; border-radius: 3.128054vw;}
 
-.login_wrap ul li a{line-height: 6.932551vw; font-size: 11px;}
+.login_wrap ul li a{line-height: 6.932551vw; font-size: 2vw;}
 
 /* ========== container ========== */
 #container{padding: 0 1.955034vw;}
@@ -467,7 +467,7 @@
 
 /* ========================= chat wrap ========================= */
 
-.chat_wrap{width: 100%; height: 55.258064vw;  box-shadow: 6px 6px 0.9775171vw #000; margin-top: 4vw;}
+.chat_wrap{width: 100%; height: 55.258064vw;  box-shadow: 6px 6px 0.9775171vw #000; margin-top: 4vw; border-radius: 1.955034vw;}
 
 .chat_wrap_in{position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 1.955034vw; overflow: hidden;}
 
@@ -487,7 +487,7 @@
 
 .text_box{font-size: 1.368523vw; max-width: 50.527859vw; padding: 1.173020vw 2.173020vw; }
 
-.text_box .user_name{ font-size: 2.368523vw; top: -4.150537vw;}
+.text_box .user_name{ font-size: 2.368523vw; top: -4.150537vw; width: 70vw;}
 .text_box .user_text_message{font-size: 3vw;}
 
 .text_box .send_time{ font-size: 1.9775171vw; bottom: -3.7595307vw;}

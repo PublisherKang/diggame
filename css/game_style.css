@@ -237,18 +237,21 @@ input:focus{outline: none;}
 .upgrade_wrap .btn_wrap .mint_item_btn{background-image: url(../images/ui/btn_img7.png); cursor: initial;}
 
 .upgrade_wrap .btn_wrap .repair{display: none;}
-.upgrade_wrap .btn_wrap .repair.on{display: block;}
 
 .upgrade_wrap .btn_wrap .Upgrade{display: none;}
-.upgrade_wrap .btn_wrap .Upgrade.on{display: block;}
 
 .upgrade_wrap .btn_wrap .mint_item_btn.mint_btn_on{background-image: url(../images/ui/btn_img6.png); cursor: pointer;}
 
 .upgrade_wrap .btn_wrap .mint_item_btn.on{display: block;}
+.upgrade_wrap .btn_wrap .upgrade_now{background-image: url(../images/ui/btn_img7.png); cursor: initial;}
+
+.upgrade_wrap .btn_wrap button.on{display: block;}
 
 /* 아이템 리스트 */
 .flex_right{display: flex; flex-direction: column; justify-content: space-between;}
 .item_list_wrap{width: 420px; border-radius: 20px; background: #aaa; box-shadow: 4px 4px 10px #000; position: relative; padding: 50px 10px 10px;}
+
+.item_list_wrap.upgrade{background: #ffbf00;}
 
 .item_tab_btn{position: absolute; top: 4px; left: 14px;}
 .item_tab_btn ul{display: flex; width: 210px; justify-content: space-between;}

@@ -56,7 +56,10 @@ $(function(){
         $(".equip_btn").removeClass("equip_img");
     }
     
-    invenItemList.click(function(event){
+    invenItemList.on("click", listClickEvent);
+
+    //인벤토리 아이템 클릭시 이벤트 함수
+    function listClickEvent(event){
         let cloneThis = $(this).clone();
         targetListSpan.removeClass("target_img");
         $(this).find(targetListSpan).addClass("target_img");
@@ -77,6 +80,21 @@ $(function(){
             "images/item/auto_click_1h.png",
         ];
 
+        let miningItemCommon = [
+            "images/item/pick_common.png",
+            "images/item/pick_common2.png",
+        ]
+
+        let miningItemRare = [
+            "images/item/pick_rare.png",
+            "images/item/pick_rare2.png",
+        ]
+
+        let miningItemLegend = [
+            "images/item/pick_legend.png",
+            "images/item/pick_legend2.png",
+        ]
+
         // console.log(itemAttr);
 
         
@@ -87,8 +105,32 @@ $(function(){
         }
         
 
+        // 아이템 클릭시 선택된 아이템 이름 변경
+        miningItemCommon.forEach(e =>{
+            if(e === itemAttr){
+                $(".item_common").text("Common").css("color", "#ccc");
+            }
+        });
+        miningItemRare.forEach(e =>{
+            if(e === itemAttr){
+                $(".item_common").text("Rare").css("color", "#00ffff");
+            }
+        });
+        miningItemLegend.forEach(e =>{
+            if(e === itemAttr){
+                $(".item_common").text("Legend").css("color", "#ff0");
+            }
+        });
 
-   //클릭시 equied가 있다면 Select 텍스트 equip 변경
+        itemArray.forEach(e => {
+            if(e === itemAttr){
+                $(".item_common").text("Item").css("color", "#ccc");
+            }
+        });
+
+
+
+        //클릭시 equied가 있다면 Select 텍스트 equip 변경
         if(targetListSpan.hasClass("target_img") === true){
             $(".equip_btn").addClass("on");
             $(".equip span").html("<i></i>Select");
@@ -117,7 +159,7 @@ $(function(){
         }
         
         console.log(itemAttr);
-    });
+    };
 
 
     //Eqip 버튼 클릭 했을때 장착 배경 표시
@@ -134,6 +176,42 @@ $(function(){
         event.preventDefault();
         $(".shop_use_modal").css("visibility", "visible");
     });
+
+
+
+
+    //=============== 업그레이드 영역 ===============
+
+    //업그레이드 버튼 클릭시
+    $(".Upgrade").click(function(){
+        $(this).removeClass("on");
+        $(".repair").removeClass("on");
+        $(".mint_item_btn").removeClass("on");
+        
+        $(".item_list_wrap").addClass("upgrade");
+        $(".upgrade_now").addClass("on");
+        $(".up_cancel").addClass("on");
+
+        
+        //아이템 리스트 클릭이벤트 제거
+        invenItemList.off("click");
+    });
+
+    $(".up_cancel").click(function(){
+        $(this).removeClass("on");
+        $(".item_list_wrap").removeClass("upgrade");
+        $(".upgrade_now").removeClass("on");
+        $(".up_cancel").removeClass("on");
+        
+        $(".Upgrade").addClass("on");
+        $(".repair").addClass("on");
+        $(".mint_item_btn").addClass("on");
+        
+        invenItemList.on("click", listClickEvent);
+        
+    });
+
+
 
 
 });
@@ -189,6 +267,9 @@ $(".mint_close_btn.success").click(function(){
 
 
 // ***************************************************************
+
+
+
 
 
 
