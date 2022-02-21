@@ -526,9 +526,19 @@ function invenItemAdd(){
     };
 
 
-    console.log(invenItemUl);
+    // console.log(invenItemUl);
 }
 
+//새로운 아이템이 인벤에 추가 되었을때 New 아이템
+newItemAdd();
+function newItemAdd(){
+    const itemLi = document.querySelectorAll(".item_list li")[3];
+    let newSpan = document.createElement("i");
+
+    newSpan.classList.add("new_item_text");
+    newSpan.textContent = "New";
+    itemLi.append(newSpan);
+}
 
 
 

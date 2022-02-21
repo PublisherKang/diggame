@@ -1,4 +1,5 @@
 // 인벤토리 팝업
+$(document).ready(function(){});
 $(function(){
     const invenPopBtn = $(".inventory_btn");
     const backBtn = $(".back_btn");
@@ -315,7 +316,6 @@ $(function(){
     $(".upgrade_complete").click(function(){
         $(this).hide();
         $(".upgrade_now").removeClass("upgradeon");
-        targetListSpan.removeClass("upgrade_target");
     });
 
 
