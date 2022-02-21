@@ -508,8 +508,11 @@ function invenItemAdd(){
     let invenImgList = [
         "images/item/pick_common.png",
         "images/item/pick_common2.png",
+        "images/item/pick_common2.png",
+        "images/item/pick_rare.png",
         "images/item/pick_rare.png",
         "images/item/pick_rare2.png",
+        "images/item/pick_legend.png",
         "images/item/pick_legend.png",
         "images/item/pick_legend2.png",
         "images/item/auto_click_1h.png",

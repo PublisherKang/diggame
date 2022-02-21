@@ -243,7 +243,8 @@ input:focus{outline: none;}
 .upgrade_wrap .btn_wrap .mint_item_btn.mint_btn_on{background-image: url(../images/ui/btn_img6.png); cursor: pointer;}
 
 .upgrade_wrap .btn_wrap .mint_item_btn.on{display: block;}
-.upgrade_wrap .btn_wrap .upgrade_now{background-image: url(../images/ui/btn_img7.png); cursor: initial;}
+.upgrade_wrap .btn_wrap .upgrade_now{background-image: url(../images/ui/btn_img7.png); cursor: initial; user-select: none;}
+.upgrade_wrap .btn_wrap .upgrade_now.upgradeon{background-image: url(../images/ui/btn_img2.png); cursor: pointer; user-select: initial;}
 
 .upgrade_wrap .btn_wrap button.on{display: block;}
 
@@ -255,7 +256,10 @@ input:focus{outline: none;}
 
 .item_tab_btn{position: absolute; top: 4px; left: 14px;}
 .item_tab_btn ul{display: flex; width: 210px; justify-content: space-between;}
-.item_tab_btn ul li{padding: 14px 10px; font-size: 15px; cursor: pointer; text-align: center;}
+.item_tab_btn ul li{padding: 14px 10px; font-size: 15px; cursor: pointer; text-align: center; display: none;}
+
+.item_tab_btn ul li.upgrade_tab_btn{display: none;}
+.item_tab_btn ul li.on{display: block;}
 
 .item_list_wrap .item_list{width: 400px; height: 356px; border-radius: 14px; overflow: hidden; isolation: isolate;}
 .item_list_wrap .item_list ul{width: 420px; height: 356px; padding: 10px 20px 10px 16px; background: #333; overflow-y: auto;}
@@ -271,6 +275,7 @@ input:focus{outline: none;}
 
 .target_img{display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; border: 3px solid #ff0; border-radius: 10px; box-sizing: border-box;}
 
+.upgrade_target{display: block; width: 100%; height: 100%; background: url(../images/ui/upgrade_check_icon.png) no-repeat center center/ 40px auto; position: absolute; top: 0; left: 0;}
 
 
 

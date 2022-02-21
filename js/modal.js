@@ -50,12 +50,36 @@ $(function(){
     const targetListImg = $(".item_list ul li img");
     const previewItem = $(".preview_item");
     
+    let itemArray = [
+        "images/item/booster_10m.png",
+        "images/item/booster_1h.png",
+        "images/item/auto_click_10m.png",
+        "images/item/auto_click_1h.png",
+    ];
+
+    let miningItemCommon = [
+        "images/item/pick_common.png",
+        "images/item/pick_common2.png",
+    ]
+
+    let miningItemRare = [
+        "images/item/pick_rare.png",
+        "images/item/pick_rare2.png",
+    ]
+
+    let miningItemLegend = [
+        "images/item/pick_legend.png",
+        "images/item/pick_legend2.png",
+    ]
+
+
     // 첫번째 아이템 equip 장착 표시
     targetListSpan.eq(0).addClass("equip_img");
     if(targetListSpan.hasClass("equip_img") === true){
         $(".equip_btn").removeClass("equip_img");
     }
-    
+
+
     invenItemList.on("click", listClickEvent);
 
     //인벤토리 아이템 클릭시 이벤트 함수
@@ -73,27 +97,7 @@ $(function(){
    
         // =====================
         const itemAttr = $(this).children("img").attr("src");
-        let itemArray = [
-            "images/item/booster_10m.png",
-            "images/item/booster_1h.png",
-            "images/item/auto_click_10m.png",
-            "images/item/auto_click_1h.png",
-        ];
-
-        let miningItemCommon = [
-            "images/item/pick_common.png",
-            "images/item/pick_common2.png",
-        ]
-
-        let miningItemRare = [
-            "images/item/pick_rare.png",
-            "images/item/pick_rare2.png",
-        ]
-
-        let miningItemLegend = [
-            "images/item/pick_legend.png",
-            "images/item/pick_legend2.png",
-        ]
+        
 
         // console.log(itemAttr);
 
@@ -158,7 +162,7 @@ $(function(){
             $(".repair").addClass("on");
         }
         
-        console.log(itemAttr);
+        // console.log(itemAttr);
     };
 
 
@@ -167,7 +171,7 @@ $(function(){
         const itemAttr = $(this).children().attr("src");
         targetListSpan.removeClass("equip_img");
         invenItemList.find(".target_img").addClass("equip_img");
-        
+        $(".equip span").html("<i></i>EQUIP");
         $(this).removeClass("on");
         // console.log(this);
     });
@@ -181,40 +185,138 @@ $(function(){
 
 
     //=============== 업그레이드 영역 ===============
+    
 
     //업그레이드 버튼 클릭시
     $(".Upgrade").click(function(){
+        
         $(this).removeClass("on");
         $(".repair").removeClass("on");
         $(".mint_item_btn").removeClass("on");
         $(".equip_btn").removeClass("on");
-        
+        $(".item_tab_btn ul li").removeClass("on");
         
         $(".item_list_wrap").addClass("upgrade");
         $(".upgrade_now").addClass("on");
         $(".up_cancel").addClass("on");
+        $(".upgrade_tab_btn").addClass("on");
 
         targetListSpan.removeClass("target_img");
+
+
+        
+
+        $(".item_list ul li img").each(function(index, item){
+           
+            let itemListAttr = item.getAttribute("src");
+            
+            if(itemArray.includes(itemListAttr)){
+                this.parentElement.style.display = "none";
+            }
+
+        });
+        
+
+
+        // if(itemArray.includes(itemListAttr = item)){
+        //     invenItemList.css("display", "none")
+        // }
+
+        
 
         
         //아이템 리스트 클릭이벤트 제거
         invenItemList.off("click");
-    });
 
+        invenItemList.on("click", upgradeClickFunc);
+    
+    });
+    
+    function upgradeClickFunc(){
+        // let cloneThis = $(this).clone();
+        // targetListSpan.removeClass("target_img");
+        $(this).find(targetListSpan).toggleClass("upgrade_target");
+        // previewItem.append(cloneThis);
+
+        // //this 아이템 클릭시 해당 span 삭제 자식 요소 삭제
+        // previewItem.children().first().remove();
+        // previewItem.children().first().find("span").remove();
+        
+        let targetListLength = $(".upgrade_target").length;
+
+        const targetSpan = document.querySelectorAll(".upgrade_target");
+        const targetTagSpan = document.querySelectorAll(".item_list ul li span");
+        // console.log(targetSpan);
+        // console.log(targetTagSpan);
+        // let isValid = false;
+
+        targetSpan.forEach(e => {
+            let targetItemAttr = e.previousElementSibling.getAttribute("src");
+            
+            if(targetListLength === 3){
+                if(miningItemCommon[0] === targetItemAttr || miningItemCommon[1] === targetItemAttr){
+                    $(".upgrade_now").addClass("upgradeon");
+                }                
+            }else{
+                $(".upgrade_now").removeClass("upgradeon");
+            }
+        });
+
+
+
+        
+    }
+
+    //취소 버튼 클릭시
     $(".up_cancel").click(function(){
         $(this).removeClass("on");
         $(".item_list_wrap").removeClass("upgrade");
         $(".upgrade_now").removeClass("on");
         $(".up_cancel").removeClass("on");
+        $(".item_tab_btn ul li").addClass("on");
         
         $(".Upgrade").addClass("on");
         $(".repair").addClass("on");
         $(".mint_item_btn").addClass("on");
+        $(".upgrade_tab_btn").removeClass("on");
+        $(".upgrade_now").removeClass("upgradeon");
 
+        targetListSpan.removeClass("upgrade_target");
+
+
+        //취소 버튼 클릭시 이전 이벤트 다시 활성화
         invenItemList.on("click", listClickEvent);
+
+
+        $(".item_list ul li img").each(function(index, item){
+           
+            let itemListAttr = item.getAttribute("src");
+            
+            if(itemArray.includes(itemListAttr)){
+                this.parentElement.style.display = "block";
+            }
+
+        });
+
+
+        invenItemList.unbind("click", upgradeClickFunc);
         
     });
 
+    
+    //업그레이드 NOW 버튼 클릭시
+
+    $(".upgrade_now").click(function(){
+        if($(this).hasClass("upgradeon") === true){
+            $(".upgrade_complete").show();
+        }
+    });
+    
+    $(".upgrade_complete").click(function(){
+        $(this).hide();
+        $(".upgrade_now").removeClass("upgradeon");
+        targetListSpan.removeClass("upgrade_target");
+    });
 
 
 
