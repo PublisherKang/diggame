@@ -1,6 +1,5 @@
 // 인벤토리 팝업
-$(document).ready(function(){});
-$(function(){
+$(document).ready(function(){
     const invenPopBtn = $(".inventory_btn");
     const backBtn = $(".back_btn");
     const shopPopBtn = $(".shop_btn");
@@ -40,11 +39,9 @@ $(function(){
         $(".equip span").html("<i></i>EQUIP");
         $(".equip span i").css("background", "rgb(37, 223, 207)");
     });
-});
 
 
 
-$(function(){
     //아이템 추가하기
     const invenItemList = $(".item_list ul li");
     const targetListSpan = $(".item_list ul li span");
@@ -320,55 +317,52 @@ $(function(){
 
 
 
-});
 
-
-// ***************************************************************
-// mint an item 버튼 클릭 했을때
-$(".mint_item_btn").click(function(event){
-    const bottonAttr = $(this);
-    
-    if(bottonAttr.hasClass("mint_btn_on") === true){     
-        $(".minting_ques_modal").css("visibility", "visible")
+    // ***************************************************************
+    // mint an item 버튼 클릭 했을때
+    $(".mint_item_btn").click(function(event){
+        const bottonAttr = $(this);
         
+        if(bottonAttr.hasClass("mint_btn_on") === true){     
+            $(".minting_ques_modal").css("visibility", "visible")
+            
+            
+        }
         
-    }
-    
-});
+    });
 
-$(".mint_now").click(function(){
-    $(this).parents('.alert_modal').css("visibility", "hidden");
-    $(".mint_modal").show();
-    $(".mint_explan").scrollTop(0);
-});
+    $(".mint_now").click(function(){
+        $(this).parents('.alert_modal').css("visibility", "hidden");
+        $(".mint_modal").show();
+        $(".mint_explan").scrollTop(0);
+    });
 
 
-$(".mint_explan").scroll(function(){
+    $(".mint_explan").scroll(function(){
 
-    let scrollTop = $(this).scrollTop();
+        let scrollTop = $(this).scrollTop();
 
-    if(scrollTop > 490){
-        $(".mint_wrap .item_area .mint_btn").addClass("on");
-    }else{
-        $(".mint_wrap .item_area .mint_btn").removeClass("on");
-    }
-    
-});
+        if(scrollTop > 490){
+            $(".mint_wrap .item_area .mint_btn").addClass("on");
+        }else{
+            $(".mint_wrap .item_area .mint_btn").removeClass("on");
+        }    
+    });
 
-$(".mint_close_btn").click(function(){
-    $(this).parents('.mint_modal').hide();
-});
+    $(".mint_close_btn").click(function(){
+        $(this).parents('.mint_modal').hide();
+    });
 
 
-// 민팅 완료뒤 back to game 버튼 클릭시
-$(".back_game").click(function(){
-    $(this).parents('.mint_success_modal').hide();
-    $(".inven_modal").css("visibility", "hidden");
-});
+    // 민팅 완료뒤 back to game 버튼 클릭시
+    $(".back_game").click(function(){
+        $(this).parents('.mint_success_modal').hide();
+        $(".inven_modal").css("visibility", "hidden");
+    });
 
-$(".mint_close_btn.success").click(function(){
-    $(this).parents('.mint_success_modal').hide();
-});
+    $(".mint_close_btn.success").click(function(){
+        $(this).parents('.mint_success_modal').hide();
+    });
 
 
 
@@ -377,10 +371,6 @@ $(".mint_close_btn.success").click(function(){
 
 
 
-
-
-
-$(function(){
     // repair 팝업
     const repairBtn = $(".btn_wrap .repair");
     const repairPop = $(".repair_modal");
@@ -395,10 +385,10 @@ $(function(){
         ev.preventDefault();
         repairPop.css("visibility", "hidden");
     });
-});
 
 
-$(function(){
+
+
     // 인벤토리에서 상점 바로가기 버튼
     const goToolBtn = $(".go_tools");
 
@@ -409,9 +399,9 @@ $(function(){
         $(".package_content").css("visibility", "visible");
         $(".shop_menu_btn li").eq(0).addClass("on")
     });
-});
 
-$(function(){
+
+
     // 샵 텝 메뉴
     const shopMenuBtn = $(".shop_menu_btn ul li");
     // const shopTarget = $(evnet.target);
@@ -425,10 +415,9 @@ $(function(){
         $(".content_wrap > div").css("visibility", "hidden");
         $(".content_wrap > div").eq(idx).css("visibility", "visible");
     });
-    
-});
 
-$(function(){
+
+
     //컨테이너 랭킹 클릭 랭킹 팝업 나타남
     const rankingBtn = $(".menu_list li .rank_btn");
     rankingBtn.click(function(ev){
@@ -456,12 +445,10 @@ $(function(){
         $(".rank_tab_btn li").eq(0).addClass("on");
     
     });
-    
-});
 
 
-//샵 마이닝 툴 팝업
-$(function(){
+
+    //샵 마이닝 툴 팝업
     $(".tool_content li").eq(0).click(function(){
         $(".premiumitem_modal").css("visibility", "visible");
 
@@ -472,12 +459,8 @@ $(function(){
         
         
     });
-});
 
 
-
-
-$(function(){
     //채널 변경 버튼
     $(".ch_change_btn").click(function(ev){
         ev.preventDefault();
@@ -489,10 +472,10 @@ $(function(){
         ev.preventDefault();
         $(".another_room_modal").css("visibility", "hidden");
     });
-});
 
 
-$(function(){
+
+
     const rankTabBtn = $(".rank_tab_btn li");
     rankTabBtn.click(function(ev){
         ev.preventDefault();
@@ -504,11 +487,10 @@ $(function(){
         $(".list_wrap > div").siblings().removeClass("on");
         $(".list_wrap > div").eq(idx).addClass("on");
     });
-});
 
 
-//즉시 수리 팝업
-$(function(){
+
+    //즉시 수리 팝업
     const nowItemBtn = $(".now_item");
     const repairNow = $(".repair_now");
     nowItemBtn.click(function(ev){
@@ -522,10 +504,10 @@ $(function(){
         $(".repair_modal").css("background", "transparent")
         $(this).parents('.alert_modal').css("visibility", "hidden");
     });
-});
 
-// 상점 실버, 골드 구매 버튼 팝업
-$(function(){
+
+
+    // 상점 실버, 골드 구매 버튼 팝업
     const silverPopBtn = $(".vip_silver_wrap");              
     const goldPopBtn = $(".vip_gold_wrap");
     const silverPop = $("#silver_pop");
@@ -542,8 +524,6 @@ $(function(){
     goldPopBtn.click(function(){
         goldPop.css("visibility", "visible");
     });
-
-});
 
 // $(function(){
 //     function preBoxOpen(){
@@ -566,8 +546,7 @@ $(function(){
 
 
 
-//샵 아이템 구매 팝업
-$(function(){
+    //샵 아이템 구매 팝업
     function shopModalList(number){
         $(".shop_item_buy_modal").css("visibility", "visible")
         $(".pop_title span").eq(number).siblings().removeClass("on");
@@ -585,17 +564,22 @@ $(function(){
         
     }
 
-    
-});
 
 
 
 
 
-// 캔슬 버튼
-$(function(){
+
+    // 캔슬 버튼
     const cancelBtn = $(".cancel");
     cancelBtn.click(function(){
         $(this).parents(".alert_modal").css("visibility", "hidden");
     });
+
+
+
+
+
+
+
 });
