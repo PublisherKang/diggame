@@ -37,13 +37,13 @@
 .game_headerIn .marker{width: 5.714285vw; height: 6.428571vw}
 
 
-.play_time_wrap{left: 4.285714vw; width: 30.571428vw;}
+.play_time_wrap{left: 2vw; width: 28.771428vw;}
 .play_time{font-size: 2vw;}
 .play_time_rank{font-size: 2vw;}
 
 .up_icon{padding: 0 4px; margin-left: 4px;}
 
-.click_speed_wrap{right: 4.285714vw; font-size: 2vw;}
+.click_speed_wrap{right: 12.285714vw; font-size: 2vw;}
 .click_speed_wrap #clicks{padding: 1.428571vw 0 1.428571vw 3.714285vw; background: url(../images/ui/click_speed_icon.svg) no-repeat 0 4px / 2.857142vw auto; font-size: 2vw;}
 
 .point_wrap{font-size: 2vw;}
@@ -51,6 +51,10 @@
 .point_wrap #point_score,
 .point_wrap #inven_point_score,
 .point_wrap #shop_point_score{padding: 1.142857vw 0 1.142857vw 3.42857vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 2.857142vw auto;}
+
+
+.game_headerIn .rank_btn{top: 50%; right: 3vw;}
+.game_headerIn .rank_btn button{width: 7vw; height: 7vw; background: url(../images/ui/room_ranking_icon1.png) no-repeat center center / 7vw auto;}
 
 
 
@@ -192,6 +196,8 @@
 .item_list_wrap .item_list ul li{width: 12.85714vw; height: 12.85714vw; padding: 1.142857vw;}
 
 .upgrade_target{background: url(../images/ui/upgrade_check_icon.png) no-repeat center center/ 5vw auto;}
+
+.item_list_wrap .item_list ul li .new_item_text{width: 4.571428vw; height: 4.571428vw; line-height: 4.571428vw; font-size: 1.6vw;}
 
 
 /* 아이템 리스트 하단 샵넘어가는 버튼 wrap */

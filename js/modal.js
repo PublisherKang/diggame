@@ -40,6 +40,9 @@ $(document).ready(function(){
         $(".equip span i").css("background", "rgb(37, 223, 207)");
     });
 
+    $(".game_headerIn .rank_btn").click(function(){
+        $(".cont_ranking").toggleClass("on");
+    });
 
 
     //아이템 추가하기
