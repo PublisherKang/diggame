@@ -21,7 +21,7 @@
 
 .text_box .user_name{color: #fff; font-size: 14px; position: absolute; top: -22px; left: 0; width: 170px;}
 
-.text_box .user_text_message{line-height: 1.4;}
+.text_box .user_text_message{line-height: 1.2;}
 
 .text_box .send_time{color: #ccc; font-size: 10px; position: absolute; bottom: -18px; left: 0;}
 

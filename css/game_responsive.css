@@ -440,6 +440,7 @@
 .comp_wrap .comp_ques,
 .boxitem_ques{font-size: 3.42857vw; margin-bottom: 4.285714vw;}
 .fail_ques span{font-size: 2vw; display: block; margin-top: 1.7vw;}
+.fail_ques span:nth-of-type(1){font-size: 4vw;}
 
 
 .fail_wrap .button_wrap button,

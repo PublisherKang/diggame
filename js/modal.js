@@ -121,23 +121,23 @@ $(document).ready(function(){
         // 아이템 클릭시 선택된 아이템 이름 변경
         miningItemCommon.forEach(e =>{
             if(e === itemAttr){
-                $(".item_common").text("Common").css("color", "#ccc");
+                $(".inven_modal .item_common").text("Common").css("color", "#ccc");
             }
         });
         miningItemRare.forEach(e =>{
             if(e === itemAttr){
-                $(".item_common").text("Rare").css("color", "#00ffff");
+                $(".inven_modal .item_common").text("Rare").css("color", "#00ffff");
             }
         });
         miningItemLegend.forEach(e =>{
             if(e === itemAttr){
-                $(".item_common").text("Legend").css("color", "#ff0");
+                $(".inven_modal .item_common").text("Legend").css("color", "#ff0");
             }
         });
 
         itemArray.forEach(e => {
             if(e === itemAttr){
-                $(".item_common").text("Item").css("color", "#ccc");
+                $(".inven_modal .item_common").text("Item").css("color", "#ccc");
             }
         });
 

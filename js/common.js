@@ -10,6 +10,7 @@ var startTime;
 const clicksTxt = document.getElementById("clicks");
 const gameContainer = document.querySelector(".game_container");
 const failPop = document.querySelector(".fail_modal");
+const repairFailPop = document.querySelector(".repair_moneyfail_modal");
 
 
 
@@ -225,7 +226,7 @@ function repairBuy(){
         //구매 실패 했을 때
         else{
             repairPop.style.visibility = "hidden";
-            failPop.style.visibility = "visible";
+            repairFailPop.style.visibility = "visible";
         }
     }
 }

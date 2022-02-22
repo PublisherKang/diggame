@@ -1,0 +1,9 @@
+/* 아이템 내구도 감소시 클래스 추가 */
+.font_red{color: #f00;}
+
+
+/* 아이템 종류별로 색상 추가 */
+.item_common{color: #aaa;}/* 기본 아이템 */
+.item_rare{color: rgb(0, 255, 255);}/* 레어 아이템 */
+.item_legend{color: #ff0;}
+
