@@ -137,6 +137,10 @@
 .ch{width: 24.571428vw; top: 35.714285vw; left: 44.285714vw;}
 .ch img{height: 21.428571vw;}
 
+.ch_wrap .user_text{bottom: 0.857142vw; left: 5.142857vw; border-radius: 10px; color: #fff; padding: 1.142857vw 1.7142857vw; max-width: 17.14285vw; font-size: 1.714285vw;}
+
+.ch_wrap .user_text::after{left: 1.71428vw; border-top: 1.714285vw solid rgba(0, 0, 0, .7);    border-right: 1.42857vw solid transparent; border-left: 1.42857vw solid transparent; transform: translateY(100%); -webkit-transform: translateY(100%); }
+
 
 /* =========== 컨테이너 끝 ============ */
 
