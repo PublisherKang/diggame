@@ -39,7 +39,7 @@ input:focus{outline: none;}
 .game_headerIn .marker .vip_gold{visibility: hidden;}
 .game_headerIn .marker .vip_silver{visibility: hidden;}
 
-.play_time_wrap{position: absolute; top: 50%; left: 30px; transform: translateY(-50%); -webkit-transform: translateY(-50%); line-height: 1.5; text-shadow: 2px 2px 3px #000; display: flex; justify-content: space-between; flex-wrap: wrap; width: 200px; align-items: center;}
+.play_time_wrap{position: absolute; top: 50%; left: 30px; transform: translateY(-50%); -webkit-transform: translateY(-50%); line-height: 1.5; text-shadow: 2px 2px 3px #000; display: flex; justify-content: space-between; flex-wrap: wrap; width: 146px; align-items: center;}
 .play_time{color: #fff;}
 .play_time_rank{color: #fff;}
 .up_icon{padding: 0 4px; background: url(../images/ui/playtiime_rankup_icon.png) no-repeat center center / contain; margin-left: 4px;}
@@ -63,15 +63,30 @@ input:focus{outline: none;}
 
 
 /* 아이템 소모량 */
-.now_item{width: 90px; height: 90px; background-color: rgba(0, 0, 0, .5); border: 1px solid #fff; border-radius: 8px; position: absolute; bottom: 30px; left: 20px; cursor: url(../images/ui/basic_pointer.png) 0 0 ,auto;}
-.remaining_amount{color: #fff; text-align: center; padding: 12px 8px 6px;}
-.remaining_amount .pick{width: 66%; display: block; margin: 0 auto 8px;}
+.now_item{width: 200px; height: 100px; background-color: rgba(0, 0, 0, .5); border: 1px solid #fff; border-radius: 8px; position: absolute; bottom: 30px; left: 20px; cursor: url(../images/ui/basic_pointer.png) 0 0 ,auto;}
+.remaining_amount{display: flex; justify-content: space-between; align-items: center; width: 88%; height: 100%; margin: 0 auto;}
+.remaining_amount .pick{width: 72px; height: auto; display: block;}
+
+.remaining_amount .item_info{color: #fff;}
+
+.remaining_amount .item_info .item_level{font-size: 14px; line-height: 1.4;}
+
+.remaining_amount .item_info .item_rank{margin-bottom: 10px;}
+.remaining_amount .item_info .item_rank span{display: none;}
+.remaining_amount .item_info .item_rank span.on{display: block;}
+
+.remaining_amount .item_info .item_rank .item_common{color: #aaa;}
+
+.remaining_amount .item_info .durability{text-align: right; background: url(../images/ui/durability_icon2.png) no-repeat 10px center/ 14px auto; line-height: 1.4;}
+.remaining_amount .item_info .price{text-align: right; background: url(../images/ui/mining_icon2.png) no-repeat 10px center/ 14px auto; line-height: 1.4;}
+
+
 
 
 /* 돌 이미지 위치 */
 .stone_item{width: 260px; height: auto; position: absolute;}
 
-.stone_item img{cursor: url(../images/ui/basic_pointer.png) 0 0 ,auto; cursor: url(../images/ui/mining_pointer.png) 14 14 ,auto;}
+.stone_item img{/* cursor: url(../images/ui/basic_pointer.png) 0 0 ,auto; */ cursor: url(../images/ui/mining_pointer.png) 14 14 ,auto;}
 .stone_item img.cur3{cursor: url(../images/ui/mining_pointer2.png) 14 14 ,auto; -webkit-user-drag: none;}
 
 
@@ -123,18 +138,18 @@ input:focus{outline: none;}
 
 
 /* 랭킹 wrap */
-.cont_ranking{width: 214px; border: 2px solid #fff; border-radius: 10px; background: rgba(0, 0, 0, .7); position: absolute; top: 6px; right: 14px; visibility: hidden; z-index: 10;}
+.cont_ranking{width: 240px; border: 2px solid #fff; border-radius: 10px; background: rgba(0, 0, 0, .7); position: absolute; top: 6px; right: 14px; visibility: hidden; z-index: 10;}
 .cont_ranking.on{visibility: visible;}
-.ranking_inner{padding: 8px 10px;}
+.ranking_inner{padding: 8px 10px; position: relative;}
 
 .ranking_inner ul{}
 .ranking_inner ul li{display: flex; justify-content: space-between; width: 100%; height: 30px; align-items: center; padding: 2px 0; box-sizing: content-box;}
 
-.ranking_inner ul li .ch_img{width: 26px; height: 26px; border-radius: 50%; overflow: hidden;}
+.ranking_inner ul li .ch_img{width: 30px; height: 30px; border-radius: 50%; overflow: hidden;}
 
-.ranking_inner ul li .ch_item{width: 26px; height: 26px;}
+.ranking_inner ul li .ch_item{width: 30px; height: 30px; cursor: pointer;}
 
-.ranking_inner ul li .percent_wrap{width: 76px; height: 26px; display: flex; flex-direction: column; justify-content: space-between;}
+.ranking_inner ul li .percent_wrap{width: 84px; height: 26px; display: flex; flex-direction: column; justify-content: space-between;}
 .ranking_inner ul li .percent_wrap p{padding-left: 14px; background-repeat: no-repeat; background-size: contain; background-position: 0 center; display: flex; align-items: center;}
 
 .ranking_inner ul li .percent_wrap .gem_gauge{background-image: url(../images/ui/gem_icon.png); width: 60px; height: 12px;}
@@ -146,6 +161,30 @@ input:focus{outline: none;}
 .ranking_inner ul li .user_score{width: 48px; height: 26px; color: #fff; font-size: 6px; display: flex; flex-direction: column; justify-content: space-between;}
 .ranking_inner ul li .user_score .gem_user_score{}
 .ranking_inner ul li .user_score .click_score{}
+
+
+/* 랭킹 유저 아이템 정보 */
+.user_item_info{width: 94px; background: rgba(0, 0, 0, .8); position: absolute; top: 12px; left: 80px; border-radius: 10px; padding: 16px 0; display: none;}
+.user_item_info .pick{display: block; width: 50px; margin: 0 auto 16px;}
+
+.user_item_info .item_info{color: #fff; text-align: center;}
+.user_item_info .item_level{line-height: 1.4;}
+.user_item_info .item_rank{margin-bottom: 14px;}
+.user_item_info .item_rank span{display: none;}
+.user_item_info .item_rank span.on{display: block;}
+
+.user_item_info .item_rank .item_common{color: #aaa;}
+.user_item_info .item_rank .item_rare{color: rgb(0, 255, 255);}
+.user_item_info .item_rank .item_legend{color: #ff0;}
+
+.user_item_info .durability{line-height: 1.6; background: url(../images/ui/durability_icon2.png) no-repeat 0 center / 14px auto; display: inline-block; padding-left: 18px;}
+.user_item_info .price{line-height: 1.6; background: url(../images/ui/mining_icon2.png) no-repeat 0 center / 14px auto; display: inline-block; padding-left: 18px;}
+
+
+
+
+
+
 
 /* 랭킹 개별 값 */
 .ranking_inner ul li:nth-of-type(1) .ch_img{background: #ffff00;}

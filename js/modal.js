@@ -42,7 +42,15 @@ $(document).ready(function(){
 
     $(".game_headerIn .rank_btn").click(function(){
         $(".cont_ranking").toggleClass("on");
+        $(".user_item_info").hide();
     });
+
+    //랭킹 팝업의 아이템 이미지 클릭시 유저 정보 나옴
+    $(".ch_item").click(function(){
+        $(this).parents(".ranking_inner ul").siblings().removeClass("on");
+        $(this).parents(".ranking_inner ul").siblings().toggle();
+    });
+
 
 
     //아이템 추가하기

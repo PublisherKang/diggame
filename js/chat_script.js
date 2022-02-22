@@ -61,5 +61,12 @@ $(document).ready(function(){
     });
 
 
+    $(".user_ch").click(function(){
+        $(this).parents(".user_message").siblings().find(".user_menu").removeClass("on");
+
+        $(this).siblings(".user_menu").toggleClass("on");
+    });
+
+
     
 });

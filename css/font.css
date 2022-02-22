@@ -9,3 +9,43 @@
     src: url('../font/sebang-bold.otf') format('opentype');
     font-family: "sebang-bold";
 }
+
+
+
+
+
+/* noto - sans */
+@font-face {
+    src: url('../font/NotoSans-Black.ttf') format('truetype');
+    font-family: "NotoSans-Black";
+}
+
+@font-face {
+    src: url('../font/NotoSans-Bold.ttf') format('truetype');
+    font-family: "NotoSans-Bold";
+}
+
+@font-face {
+    src: url('../font/NotoSans-Light.ttf') format('truetype');
+    font-family: "NotoSans-Light";
+}
+
+@font-face {
+    src: url('../font/NotoSans-Medium.ttf') format('truetype');
+    font-family: "NotoSans-Medium";
+}
+
+@font-face {
+    src: url('../font/NotoSans-Regular.ttf') format('truetype');
+    font-family: "NotoSans-Regular";
+}
+
+@font-face {
+    src: url('../font/NotoSans-SemiBold.ttf') format('truetype');
+    font-family: "NotoSans-SemiBold";
+}
+
+@font-face {
+    src: url('../font/NotoSans-Thin.ttf') format('truetype');
+    font-family: "NotoSans-Thin";
+}
