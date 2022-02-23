@@ -65,7 +65,7 @@
 
 
 /* 아이템 소모량 */
-.now_item{width: 32.571428vw; height: 15.28571vw; border-radius: 1.142857vw; bottom: 4.28571vw; left: 2.857142vw;}
+.now_item{width: 34.571428vw; height: 15.28571vw; border-radius: 1.142857vw; bottom: 4.28571vw; left: 2.857142vw;}
 .remaining_amount{width: 88%; height: 100%;}
 .remaining_amount .pick{width: 10.285714vw;}
 

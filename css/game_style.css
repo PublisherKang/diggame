@@ -165,6 +165,7 @@ input:focus{outline: none;}
 
 /* 랭킹 유저 아이템 정보 */
 .user_item_info{width: 94px; background: rgba(0, 0, 0, .8); position: absolute; top: 12px; left: 80px; border-radius: 10px; padding: 26px 0; display: none;}
+.user_item_info.on{display: block;}
 .user_item_info .pick{display: block; width: 50px; margin: 0 auto 16px;}
 
 .user_item_info .item_info{color: #fff; text-align: center;}
@@ -469,7 +470,7 @@ input:focus{outline: none;}
 /* 랭킹 팝업 */
 .ranking_modal{width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: none;}
 
-.ranking_modal .ranking_wrap{width: 360px; height: 480px; background: #363d48; border-radius: 20px; box-shadow: 4px 4px 18px #000; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); padding: 22px 18px 20px;}
+.ranking_modal .ranking_wrap{width: 360px; height: 480px; background: #363d48; border-radius: 20px; box-shadow: 4px 4px 18px #000; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); padding: 22px 18px 20px; z-index: 10;}
 
 .ranking_modal .ranking_pop_close{position: absolute; top: 12px; right: 12px; width: 40px; height: 40px; background: #1a1a1a; border-radius: 50%; position: absolute;}
 .ranking_modal .ranking_pop_close::after,
@@ -555,7 +556,7 @@ input:focus{outline: none;}
 
 /* another room modal */
 .another_room_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
-.another_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
+.another_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px; z-index: 10;}
 
 .another_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 40px;}
 
@@ -570,7 +571,7 @@ input:focus{outline: none;}
 .minting_ques_modal{visibility: hidden; width: 100%; height: 100%; background: transparent; position: absolute; top: 0; left: 0;}
 
 .immediately_wrap,
-.minting_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
+.minting_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px; z-index: 10;}
 
 .immediately_ques,
 .minting_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}

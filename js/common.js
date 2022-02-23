@@ -543,28 +543,34 @@ function newItemAdd(){
 
 
 
-// 커서 이미지 교체 애니메이션
-const cursorTarget = document.querySelectorAll(".stone_item img");
-for(let i = 0; i < cursorTarget.length; i++){
-    function hideCur(event){
-        cursorTarget[i].classList.add("cur3");
-        event.preventDefault();
+
+
+function pcOnlyMouseEvent(){
+    if(window.matchMedia("(min-width: 1024px)").matches){
+        // 커서 이미지 교체 애니메이션
+        const cursorTarget = document.querySelectorAll(".stone_item img");
+        for(let i = 0; i < cursorTarget.length; i++){
+            function hideCur(event){
+                cursorTarget[i].classList.add("cur3");
+                event.preventDefault();
+            }
+            function moveCur(event){
+                cursorTarget[i].classList.remove("cur3");
+                event.preventDefault();
+            }
+            function showCur(event){
+                cursorTarget[i].classList.remove("cur3");
+                event.preventDefault();
+            }
+            
+            cursorTarget[i].onmousedown = hideCur;
+            cursorTarget[i].onmousemove = moveCur;
+            cursorTarget[i].onmouseup  = showCur;
+        }
     }
-    function moveCur(event){
-        cursorTarget[i].classList.remove("cur3");
-        event.preventDefault();
-    }
-    function showCur(event){
-        cursorTarget[i].classList.remove("cur3");
-        event.preventDefault();
-    }
-    
-    cursorTarget[i].onmousedown = hideCur;
-    cursorTarget[i].onmousemove = moveCur;
-    cursorTarget[i].onmouseup  = showCur;
 }
 
-
+pcOnlyMouseEvent();
 
 
 //모바일 더블클릭시 화면 확대 방지
