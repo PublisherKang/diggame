@@ -163,7 +163,23 @@
 
 .ranking_inner ul li .user_score{width: 6.857142vw; height: 3.714285vw;font-size: 6px;}
 
-/* 랭킹 개별 값 */
+
+/* 랭킹 유저 아이템 정보 */
+.user_item_info{width: 13.428571vw; top: 1.714285vw; left: 11.428571vw; border-radius: 1.428571vw; padding: 3.71428vw 0;}
+.user_item_info .pick{width: 7.142857vw; margin: 0 auto 2.28571vw;}
+
+.user_item_info .item_rank{margin-bottom: 2vw;}
+
+.user_item_info .durability{background: url(../images/ui/durability_icon2.png) no-repeat 0 center / 2vw auto; padding-left: 2.57142vw;}
+.user_item_info .price{background: url(../images/ui/mining_icon2.png) no-repeat 0 center / 2vw auto; display: inline-block; padding-left: 2.57142vw;}
+
+
+
+
+
+
+
+
 
 /* === 캐릭터 === */
 .ch{width: 24.571428vw; top: 35.714285vw; left: 44.285714vw;}
