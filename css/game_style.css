@@ -221,7 +221,7 @@ input:focus{outline: none;}
 .ch img{position: absolute; top: 0; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); visibility: hidden; width: auto; height: 150px; user-select: none;}
 .ch img.on{visibility: visible;}
 
-.ch_wrap .user_text{position: absolute; bottom: 6px; left: 36px; background: rgba(0, 0, 0, .7); border-radius: 10px; color: #fff; padding: 8px 12px; max-width: 120px; overflow-wrap: break-word; line-height: 1.5; font-size: 12px;}
+.ch_wrap .user_text{position: absolute; bottom: 6px; left: 36px; background: rgba(0, 0, 0, .7); border-radius: 10px; color: #fff; padding: 8px 12px; max-width: 120px; overflow-wrap: break-word; line-height: 1.5; font-size: 12px; font-family: "NotoSans-Medium";}
 
 .ch_wrap .user_text::after{content: ""; display: block; position: absolute; bottom: 0; left: 12px; border-top: 12px solid rgba(0, 0, 0, .7); border-right: 10px solid transparent; border-left: 10px solid transparent; transform: translateY(100%); -webkit-transform: translateY(100%);}
 
@@ -556,7 +556,7 @@ input:focus{outline: none;}
 
 /* another room modal */
 .another_room_modal,
-.trade_modal,
+.trade_alert_modal,
 .accept_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
 
 .another_wrap,
@@ -630,7 +630,8 @@ input:focus{outline: none;}
 .premiumitem_modal,
 .repair_moneyfail_modal,
 .vipitem_modal,
-.waiting_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
+.waiting_modal,
+.player_cancel_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
 
 .fail_modal,
 .repair_moneyfail_modal{z-index: 321;}
@@ -641,15 +642,24 @@ input:focus{outline: none;}
 .fail_ques span:nth-of-type(1),
 .waiting_ques span:nth-of-type(1){font-size: 30px;}
 
-.package_buy_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
+.package_buy_wrap,
+.player_cancel_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
 
-.package_buy_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
+.package_buy_ques,
+.player_cancel_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
 
-.package_buy_inner .button_wrap{display: flex; justify-content: space-between;}
-.package_buy_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
+.package_buy_inner .button_wrap,
+.player_cancel_inner .button_wrap{display: flex; justify-content: space-between;}
+
+.player_cancel_inner .button_wrap{justify-content: center;}
+
+
+.package_buy_inner .button_wrap button,
+.player_cancel_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
 
 .package_buy_inner .button_wrap .buy_btn{background-image: url(../images/ui/btn_img3.png);}
-.package_buy_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
+.package_buy_inner .button_wrap .cancel,
+.player_cancel_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
 
 /* fail modal, comp modal */
 .fail_wrap, 

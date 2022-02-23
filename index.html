@@ -679,7 +679,111 @@
                             </div>
                         </div>
                     </div><!-- another_room_modal -->
-                    <div class="trade_modal alert_modal">
+
+                    <!-- 트레이드 모달 시작 -->
+                    <div class="trade_modal"></div>
+                    <!-- 트레이드 모달 끝 -->
+
+                    <!-- 컨테이너 메인 모달 끝 -->
+                    <!-- 샵 아이템 모달 시작-->
+                    <div class="shop_item_buy_modal alert_modal">
+                        <div class="shop_item_wrap">
+                            <div class="shop_pop_inner">
+                                <p class="pop_title">
+                                    <span class="mining100 on">Mining 100% UP / 10M</span>
+                                    <span class="mining200">Mining 200% UP / 1H</span>
+                                    <span class="auto10m">Auto Click / 10M</span>
+                                    <span class="auto1h">Auto Click / 1H</span>
+                                </p>
+                                <p class="img_wrap">
+                                    <img class="mining100 on" src="images/item/booster_10m.png" alt="">
+                                    <img class="mining200" src="images/item/booster_1h.png" alt="">
+                                    <img class="auto10m" src="images/item/auto_click_10m.png" alt="">
+                                    <img class="auto1h" src="images/item/auto_click_1h.png" alt="">
+                                </p>
+                                <p class="ques">
+                                    How many would you like to purchase?
+                                </p>
+                                <p class="quantity_wrap">
+                                    <button type="button" class="left_btn"></button>
+                                    <span class="quantity">1</span>
+                                    <button type="button" class="right_btn"></button>
+                                </p>
+                                <p class="price_wrap">
+                                    <span class="price">200</span>
+                                </p>
+                                <div class="button_wrap">
+                                    <button type="button" class="buy_btn" id="shop_buy_btn">Buy</button>
+                                    <button type="button" class="cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- shop_item_buy_modal -->
+                    <!-- 샵 아이템 모달 끝 -->
+
+                    <!-- 샵 내부 마이닝 툴 모달 시작 -->
+                    <div class="premiumitem_modal alert_modal">
+                        <div class="premiumitem_wrap on">
+                            <div class="boxitem_inner">
+                                <p class="boxitem_ques">
+                                    Are you sure<br>
+                                    you want to buy it?
+                                </p>
+                                <p class="img_wrap">
+                                    <img src="images/ui/premium_box.png" alt="">
+                                </p>
+                                <p class="price_wrap">
+                                    <span class="premium_price">1000</span>
+                                </p>
+                                <div class="button_wrap">
+                                    <button type="button" class="pre_buy_btn">Buy</button>
+                                    <button type="button" class="cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vipitem_modal alert_modal">
+                        <div class="vipitem_wrap">
+                            <div class="boxitem_inner">
+                                <p class="boxitem_ques">
+                                    Are you sure<br>
+                                    you want to buy it?
+                                </p>
+                                <p class="img_wrap">
+                                    <img src="images/ui/vip_box.png" alt="">
+                                </p>
+                                <p class="price_wrap">
+                                    <span class="vipbox_price">800</span>
+                                </p>
+                                <div class="button_wrap">
+                                    <button type="button" class="vip_buy_btn">Buy</button>
+                                    <button type="button" class="cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 샵 내부 마이닝 툴 모달 끝 -->
+
+                    <div class="pre_open_modal">
+                        <div class="pre_open_wrap">
+                            <ul></ul><!-- 샵 프리미엄 랜덤 아이템 리스트 추가영역 -->
+                            <p class="open_text">
+                                An item has been placed in your inventory.
+                            </p>
+                        </div>
+                    </div><!-- pre_open_modal -->
+                    <div class="vip_open_modal">
+                        <div class="vip_open_wrap">
+                            <ul></ul><!-- 샵 VIP 랜덤 아이템 리스트 추가영역 -->
+                            <p class="open_text">
+                                An item has been placed in your inventory.
+                            </p>
+                        </div>
+                    </div><!-- vip_open_modal -->
+                    <!-- 샵 내부 마이닝 툴 모달 끝 -->
+
+                    <!-- 경고창 모달 시작 -->
+                    <div class="trade_alert_modal alert_modal">
                         <div class="trade_wrap">
                             <div class="trade_inner">
                                 <p class="trade_ques">
@@ -737,7 +841,6 @@
                             </div>
                         </div>
                     </div><!-- immediately_repair_modal -->
-                    <!-- 컨테이너 메인 모달 끝 -->
                     <!-- 인벤토리 모달 -->
                     <div class="repair_fail_modal alert_modal">
                         <div class="fail_wrap">
@@ -767,7 +870,6 @@
                         </div>
                     </div><!-- minting_ques_modal -->
                     <!-- 인벤토리 모달 끝 -->
-                    <!-- 샵 모달 -->
                     <div class="silver_buy_modal alert_modal" id="silver_pop">
                         <div class="package_buy_wrap">
                             <div class="package_buy_inner">
@@ -809,39 +911,7 @@
                             </div>
                         </div>
                     </div><!-- complete_buy_modal -->
-                    <div class="shop_item_buy_modal alert_modal">
-                        <div class="shop_item_wrap">
-                            <div class="shop_pop_inner">
-                                <p class="pop_title">
-                                    <span class="mining100 on">Mining 100% UP / 10M</span>
-                                    <span class="mining200">Mining 200% UP / 1H</span>
-                                    <span class="auto10m">Auto Click / 10M</span>
-                                    <span class="auto1h">Auto Click / 1H</span>
-                                </p>
-                                <p class="img_wrap">
-                                    <img class="mining100 on" src="images/item/booster_10m.png" alt="">
-                                    <img class="mining200" src="images/item/booster_1h.png" alt="">
-                                    <img class="auto10m" src="images/item/auto_click_10m.png" alt="">
-                                    <img class="auto1h" src="images/item/auto_click_1h.png" alt="">
-                                </p>
-                                <p class="ques">
-                                    How many would you like to purchase?
-                                </p>
-                                <p class="quantity_wrap">
-                                    <button type="button" class="left_btn"></button>
-                                    <span class="quantity">1</span>
-                                    <button type="button" class="right_btn"></button>
-                                </p>
-                                <p class="price_wrap">
-                                    <span class="price">200</span>
-                                </p>
-                                <div class="button_wrap">
-                                    <button type="button" class="buy_btn" id="shop_buy_btn">Buy</button>
-                                    <button type="button" class="cancel">Cancel</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- shop_item_buy_modal -->
+                    
                     <div class="shop_complete_modal alert_modal">
                         <div class="comp_wrap">
                             <div class="comp_inner">
@@ -873,64 +943,7 @@
                             </div>
                         </div>
                     </div><!-- shop_use_modal -->
-                    <!-- 샵 내부 마이닝 툴 모달 시작 -->
-                    <div class="premiumitem_modal alert_modal">
-                        <div class="premiumitem_wrap on">
-                            <div class="boxitem_inner">
-                                <p class="boxitem_ques">
-                                    Are you sure<br>
-                                    you want to buy it?
-                                </p>
-                                <p class="img_wrap">
-                                    <img src="images/ui/premium_box.png" alt="">
-                                </p>
-                                <p class="price_wrap">
-                                    <span class="premium_price">1000</span>
-                                </p>
-                                <div class="button_wrap">
-                                    <button type="button" class="pre_buy_btn">Buy</button>
-                                    <button type="button" class="cancel">Cancel</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="vipitem_modal alert_modal">
-                        <div class="vipitem_wrap">
-                            <div class="boxitem_inner">
-                                <p class="boxitem_ques">
-                                    Are you sure<br>
-                                    you want to buy it?
-                                </p>
-                                <p class="img_wrap">
-                                    <img src="images/ui/vip_box.png" alt="">
-                                </p>
-                                <p class="price_wrap">
-                                    <span class="vipbox_price">800</span>
-                                </p>
-                                <div class="button_wrap">
-                                    <button type="button" class="vip_buy_btn">Buy</button>
-                                    <button type="button" class="cancel">Cancel</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pre_open_modal">
-                        <div class="pre_open_wrap">
-                            <ul></ul><!-- 샵 프리미엄 랜덤 아이템 리스트 추가영역 -->
-                            <p class="open_text">
-                                An item has been placed in your inventory.
-                            </p>
-                        </div>
-                    </div><!-- pre_open_modal -->
-                    <div class="vip_open_modal">
-                        <div class="vip_open_wrap">
-                            <ul></ul><!-- 샵 VIP 랜덤 아이템 리스트 추가영역 -->
-                            <p class="open_text">
-                                An item has been placed in your inventory.
-                            </p>
-                        </div>
-                    </div><!-- vip_open_modal -->
-                    <!-- 샵 내부 마이닝 툴 모달 끝 -->
+                    
                     <!-- 실패시 공통 모달 -->
                     <div class="fail_modal alert_modal">
                         <div class="fail_wrap">
@@ -956,7 +969,20 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- repair_fail_modal -->
+                    </div><!-- repair_moneyfail_modal -->
+                    <div class="player_cancel_modal alert_modal">
+                        <div class="player_cancel_wrap">
+                            <div class="player_cancel_inner">
+                                <p class="player_cancel_ques">
+                                    A player's trade<br>
+                                    request has been cancelled.
+                                </p>
+                                <div class="button_wrap">
+                                    <button type="button" class="cancel">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- player_cancel_modal -->
                 </div>
                 <!-- 채팅 영역 -->
                 <div class="chat_wrap">
