@@ -141,7 +141,7 @@
 .ranking_inner ul li .percent_wrap .gem_gauge span{height: 1.428571vw;}
 .ranking_inner ul li .percent_wrap .click_gauge span{height: 1.428571vw;}
 
-.ranking_inner ul li .user_score{width: 6.857142vw; height: 3.714285vw;font-size: 6px;}
+.ranking_inner ul li .user_score{width: 6.857142vw; height: 3.714285vw;font-size: 1.5vw;}
 
 
 /* 랭킹 유저 아이템 정보 */
@@ -387,18 +387,26 @@
 
 /* myrank */
 
-
 .point_wrap #rank_score{width: 15.714285vw; padding: 1.714285vw 0 1.714285vw 2.857142vw; background: url(../images/ui/ani_gem2.png) no-repeat 0 center / 1.714285vw auto;}
 
 .point_wrap #time_score{width: 12.428571vw; padding: 1.714285vw 0 1.714285vw 2.857142vw; background: url(../images/ui/rank_playtime_icon.png) no-repeat 0 center / 2vw auto;}
 
 
 /* another room modal */
-.another_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
+.another_wrap,
+.trade_wrap,
+.accept_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
 
-.another_ques{font-size: 2.57142857vw; margin-bottom: 5.714285vw;}
+.another_ques,
+.trade_ques,
+.accept_ques{font-size: 2.57142857vw; margin-bottom: 5.714285vw;}
+.accept_ques{margin-bottom: 3.2vw;}
 
-.another_inner .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
+.accept_ques .player_name{font-size: 4vw; margin-bottom: 2vw; display: block;}
+
+.another_inner .button_wrap button,
+.trade_inner .button_wrap button,
+.accept_inner .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
 
 /* immediately_repair_modal, mint_modal*/
 .immediately_wrap,
@@ -426,19 +434,25 @@
 .fail_wrap, 
 .comp_wrap,
 .premiumitem_wrap,
-.vipitem_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
+.vipitem_wrap,
+.waiting_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
 
 .fail_wrap .fail_ques,
 .comp_wrap .comp_ques,
-.boxitem_ques{font-size: 3.42857vw; margin-bottom: 4.285714vw;}
-.fail_ques span{font-size: 2vw; display: block; margin-top: 1.7vw;}
-.fail_ques span:nth-of-type(1){font-size: 4vw;}
+.boxitem_ques,
+.waiting_wrap .waiting_ques{font-size: 3.42857vw; margin-bottom: 4.285714vw;}
+
+.fail_ques span,
+.waiting_ques span{font-size: 2vw; display: block; margin-top: 1.7vw;}
+.fail_ques span:nth-of-type(1),
+.waiting_ques span:nth-of-type(1){font-size: 4vw;}
 
 
 .fail_wrap .button_wrap button,
 .comp_wrap .button_wrap button,
 .premiumitem_wrap .button_wrap button,
-.vipitem_wrap .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
+.vipitem_wrap .button_wrap button,
+.waiting_wrap .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
 
 .comp_ques span:nth-of-type(2){font-size: 2vw; margin-top: 1.142857vw;}
 
@@ -518,9 +532,10 @@
 .user_message .user_ch{width: 8.8875855vw; height: 8.8875855vw; box-shadow: 2px 2px 0.9775171vw #000; margin-right: 2.9775171vw;}
 .user_message .user_ch img{width: 8.8875855vw;}
 
+.user_message .user_name_wrap{ font-size: 2.368523vw; top: 1.7vw; left: 12vw;}
+
 .text_box{font-size: 1.368523vw; max-width: 50.527859vw; padding: 1.173020vw 2.173020vw; }
 
-.text_box .user_name{ font-size: 2.368523vw; top: -4.150537vw; width: 70vw;}
 .text_box .user_text_message{font-size: 3vw;}
 
 .text_box .send_time{ font-size: 1.9775171vw; bottom: -3.7595307vw;}
@@ -528,6 +543,7 @@
 /* 나의 메세지 */
 .user_message.my_msg{padding-top: 2vw;}
 .user_message.my_msg .user_ch{margin-left: 2.9775171vw;}
+.user_message.my_msg .user_name_wrap{top: -2.3vw; right: 14.2vw; left: auto;}
 
 /* 메세지 입력 영역 */
 .message_wrap{height: 14.2336265vw; padding: 0 1.955034vw;}

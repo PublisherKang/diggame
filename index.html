@@ -679,6 +679,50 @@
                             </div>
                         </div>
                     </div><!-- another_room_modal -->
+                    <div class="trade_modal alert_modal">
+                        <div class="trade_wrap">
+                            <div class="trade_inner">
+                                <p class="trade_ques">
+                                    Would you like to request<br>
+                                    an trade from this player?
+                                </p>
+                                <div class="button_wrap">
+                                    <button type="button" class="confirm" id="change_room_btn">Confirm</button>
+                                    <button type="button" class="cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- trade_modal -->
+                    <div class="accept_modal alert_modal">
+                        <div class="accept_wrap">
+                            <div class="accept_inner">
+                                <p class="accept_ques">
+                                    <span class="player_name">Player 3</span>
+                                    <span>
+                                        Has applied for this trade.<br>
+                                        will you accept?
+                                    </span>
+                                </p>
+                                <div class="button_wrap">
+                                    <button type="button" class="accept" id="change_room_btn">Accept</button>
+                                    <button type="button" class="cancel">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- accept_modal -->
+                    <div class="waiting_modal alert_modal">
+                        <div class="waiting_wrap">
+                            <div class="waiting_inner">
+                                <p class="waiting_ques">
+                                    <span>Waiting...</span>
+                                    <span>Waiting for a response from the player.</span>
+                                </p>
+                                <div class="button_wrap">
+                                    <button type="button" class="cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- waiting_modal -->
                     <div class="immediately_repair_modal alert_modal">
                         <div class="immediately_wrap">
                             <div class="immediately_inner">
@@ -721,12 +765,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- minting_modal -->
-
-                    
-
+                    </div><!-- minting_ques_modal -->
                     <!-- 인벤토리 모달 끝 -->
-
                     <!-- 샵 모달 -->
                     <div class="silver_buy_modal alert_modal" id="silver_pop">
                         <div class="package_buy_wrap">
@@ -932,8 +972,10 @@
                                     <p class="user_ch">
                                         <img src="images/character/character5_profile.png" alt="">
                                     </p>
-                                    <div class="text_box">
+                                    <div class="user_name_wrap">
                                         <span class="user_name">Player 1</span>
+                                    </div>
+                                    <div class="text_box">
                                         <p class="user_text_message">Hello, Everyone~</p>
                                         <span class="send_time">01:18</span>
                                     </div>
@@ -959,10 +1001,12 @@
                                     <p class="user_ch">
                                         <img src="images/character/character5_profile.png" alt="">
                                     </p>
-                                    <div class="text_box">
+                                    <div class="user_name_wrap">
                                         <span class="user_name">Player 1</span>
+                                    </div>
+                                    <div class="text_box">
                                         <p class="user_text_message">I'm new to this game, how can I collect resources quickly? Any tips?</p>
-                                        <span class="send_time">01:19</span>
+                                        <span class="send_time">01:18</span>
                                     </div>
                                     <div class="user_menu">
                                         <button>Whisper</button>
@@ -982,14 +1026,97 @@
                                         <button>Trade</button>
                                     </div>
                                 </div>
-                                <div class="user_message">
+                                <div class="user_message user2">
                                     <p class="user_ch">
                                         <img src="images/character/character3_profile.png" alt="">
                                     </p>
-                                    <div class="text_box">
+                                    <div class="user_name_wrap">
                                         <span class="user_name">Player 2</span>
+                                    </div>
+                                    <div class="text_box">
                                         <p class="user_text_message">Then, collect resources to buy pickaxes and upgrade them.</p>
                                         <span class="send_time">01:19</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button>Whisper</button>
+                                        <button>Trade</button>
+                                    </div>
+                                </div>
+                                <div class="user_message user3 whisper">
+                                    <p class="user_ch">
+                                        <img src="images/character/character1_profile.png" alt="">
+                                    </p>
+                                    <div class="user_name_wrap">
+                                        <span class="user_name">Player 5</span>
+                                        <span class="whisper_color">Whisper</span>
+                                    </div>
+                                    <div class="text_box">
+                                        <p class="user_text_message">Hi, do you have a pickaxe of level 5 or higher of legend rank??</p>
+                                        <span class="send_time">01:19</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button>Whisper</button>
+                                        <button>Trade</button>
+                                    </div>
+                                </div>
+                                <div class="user_message my_msg">
+                                    <p class="user_ch">
+                                        <img src="images/character/character6_profile.png" alt="">
+                                    </p>
+                                    <div class="text_box">
+                                        <p class="user_text_message">I need to rest now</p>
+                                        <span class="send_time">01:20</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button>Whisper</button>
+                                        <button>Trade</button>
+                                    </div>
+                                </div>
+                                <div class="user_message my_msg whisper">
+                                    <p class="user_ch">
+                                        <img src="images/character/character6_profile.png" alt="">
+                                    </p>
+                                    <div class="user_name_wrap">
+                                        <span class="whisper_color">Whisper To</span>
+                                        <span class="user_name">Player 5</span>
+                                    </div>
+                                    <div class="text_box">
+                                        <p class="user_text_message">Yes</p>
+                                        <span class="send_time">01:20</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button>Whisper</button>
+                                        <button>Trade</button>
+                                    </div>
+                                </div>
+                                <div class="user_message my_msg whisper">
+                                    <p class="user_ch">
+                                        <img src="images/character/character6_profile.png" alt="">
+                                    </p>
+                                    <div class="user_name_wrap">
+                                        <span class="whisper_color">Whisper To</span>
+                                        <span class="user_name">Player 5</span>
+                                    </div>
+                                    <div class="text_box">
+                                        <p class="user_text_message">I'll trade you</p>
+                                        <span class="send_time">01:20</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button>Whisper</button>
+                                        <button>Trade</button>
+                                    </div>
+                                </div>
+                                <div class="user_message user3 whisper">
+                                    <p class="user_ch">
+                                        <img src="images/character/character1_profile.png" alt="">
+                                    </p>
+                                    <div class="user_name_wrap">
+                                        <span class="user_name">Player 5</span>
+                                        <span class="whisper_color">Whisper</span>
+                                    </div>
+                                    <div class="text_box">
+                                        <p class="user_text_message">ok</p>
+                                        <span class="send_time">01:20</span>
                                     </div>
                                     <div class="user_menu">
                                         <button>Whisper</button>

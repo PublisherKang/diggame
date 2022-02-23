@@ -544,7 +544,8 @@ function newItemAdd(){
 
 
 
-
+// 윈도우에서만 마우스 커서 이벤트 발생하는 함수
+pcOnlyMouseEvent();
 function pcOnlyMouseEvent(){
     if(window.matchMedia("(min-width: 1024px)").matches){
         // 커서 이미지 교체 애니메이션
@@ -570,7 +571,6 @@ function pcOnlyMouseEvent(){
     }
 }
 
-pcOnlyMouseEvent();
 
 
 //모바일 더블클릭시 화면 확대 방지

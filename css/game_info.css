@@ -7,3 +7,5 @@
 .item_rare{color: rgb(0, 255, 255);}/* 레어 아이템 */
 .item_legend{color: #ff0;}
 
+.whisper .text_box{background: #a4ff4d !important;}
+.whisper_color{color: #a3fd4d !important;}

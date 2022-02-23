@@ -555,16 +555,37 @@ input:focus{outline: none;}
 
 
 /* another room modal */
-.another_room_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
-.another_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px; z-index: 10;}
+.another_room_modal,
+.trade_modal,
+.accept_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
 
-.another_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 40px;}
+.another_wrap,
+.trade_wrap,
+.accept_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px; z-index: 10;}
 
-.another_inner .button_wrap{display: flex; justify-content: space-between;}
-.another_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
+.another_ques,
+.trade_ques,
+.accept_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 40px;}
 
-.another_inner .button_wrap .confirm{background-image: url(../images/ui/btn_img3.png);}
-.another_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
+.accept_ques{margin-bottom: 20px;}
+
+.accept_ques .player_name{font-size: 24px; margin-bottom: 10px; display: block;}
+
+.another_inner .button_wrap,
+.trade_inner .button_wrap,
+.accept_inner .button_wrap{display: flex; justify-content: space-between;}
+
+.another_inner .button_wrap button,
+.trade_inner .button_wrap button,
+.accept_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
+
+.another_inner .button_wrap .confirm,
+.trade_inner .button_wrap .confirm,
+.accept_inner .button_wrap .accept{background-image: url(../images/ui/btn_img3.png);}
+
+.another_inner .button_wrap .cancel,
+.trade_inner .button_wrap .cancel,
+.accept_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
 
 /* immediately_repair_modal mint_modal*/
 .immediately_repair_modal,
@@ -608,13 +629,18 @@ input:focus{outline: none;}
 .shop_complete_modal,
 .premiumitem_modal,
 .repair_moneyfail_modal,
-.vipitem_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
+.vipitem_modal,
+.waiting_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
 
 .fail_modal,
 .repair_moneyfail_modal{z-index: 321;}
 
-.fail_ques span{font-size: 14px; display: block; margin-top: 10px;}
-.fail_ques span:nth-of-type(1){font-size: 30px;}
+.fail_ques span,
+.waiting_ques span{font-size: 14px; display: block; margin-top: 10px;}
+
+.fail_ques span:nth-of-type(1),
+.waiting_ques span:nth-of-type(1){font-size: 30px;}
+
 .package_buy_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
 
 .package_buy_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
@@ -629,21 +655,25 @@ input:focus{outline: none;}
 .fail_wrap, 
 .comp_wrap,
 .premiumitem_wrap,
-.vipitem_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
+.vipitem_wrap,
+.waiting_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
 
 .fail_wrap .fail_ques,
 .comp_wrap .comp_ques,
-.boxitem_ques{font-size: 24px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
+.boxitem_ques,
+.waiting_wrap .waiting_ques{font-size: 24px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
 
 .fail_wrap .button_wrap, 
 .comp_wrap .button_wrap,
 .premiumitem_wrap .button_wrap,
-.vipitem_wrap .button_wrap{display: flex; justify-content: center;}
+.vipitem_wrap .button_wrap,
+.waiting_wrap .button_wrap{display: flex; justify-content: center;}
 
 .fail_wrap .button_wrap button,
 .comp_wrap .button_wrap button,
 .premiumitem_wrap .button_wrap button,
-.vipitem_wrap .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; background-image: url(../images/ui/btn_img1.png); display: block; padding: 13px 0; font-size: 16px;}
+.vipitem_wrap .button_wrap button,
+.waiting_wrap .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; background-image: url(../images/ui/btn_img1.png); display: block; padding: 13px 0; font-size: 16px;}
 
 .comp_ques span{display: block;}
 .comp_ques span:nth-of-type(2){font-size: 14px; margin-top: 8px;}
