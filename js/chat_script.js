@@ -1,10 +1,15 @@
 $(document).ready(function(){
     
     //이모티콘 버튼 클릭했을때 이모티콘 wrap 활성화
-    const emoticonBtn = $(".emoticon_btn button");
+    const chatEmoticonBtn = $(".chat_wrap .emoticon_btn button");
+    const tradeEmoticonBtn = $(".trade_modal .emoticon_btn button");
 
-    emoticonBtn.click(function(){
-        $(".emoticon_wrap").toggle({});
+    chatEmoticonBtn.click(function(){
+        $(".chat_wrap .emoticon_wrap").toggle({});
+    });
+
+    tradeEmoticonBtn.click(function(){
+        $(".trade_modal .emoticon_wrap").toggle({});
     });
 
 

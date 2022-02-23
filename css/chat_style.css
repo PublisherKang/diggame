@@ -11,13 +11,13 @@
 .chat_inner{padding: 50px 14px 20px; background: #1f1f33; overflow-y: scroll; height: 570px; width: 318px;}
 
 /* 유저 메세지 박스 */
-.user_message{margin-bottom: 54px; display: flex; align-items: flex-start; position: relative;}
+.user_message{margin-bottom: 30px; display: flex; align-items: flex-start; position: relative; padding-top: 20px;}
 
 
 .user_message .user_ch{width: 50px; height: 50px; border-radius: 50%; overflow: hidden; background: #0040b0; box-shadow: 2px 2px 10px #000; margin-right: 10px; cursor: pointer;}
 .user_message .user_ch img{width: 50px; height: auto;}
 
-.user_message .user_name_wrap{color: #fff; font-size: 14px; position: absolute; top: -22px; left: 60px;}
+.user_message .user_name_wrap{color: #fff; font-size: 14px; position: absolute; top: 0; left: 60px;}
 
 
 .user_message .user_name_wrap .whisper_color{color: #a3fd4d;}
@@ -41,6 +41,7 @@
 /* 나의 메세지 */
 .user_message.my_msg{display: flex; flex-direction: row-reverse;}
 .user_message.my_msg .user_ch{background: #f7931e; margin-left: 10px;}
+.user_message.my_msg .user_ch img{width: 50px; height: auto; transform: scaleX(-1); -webkit-transform: scaleX(-1);}
 
 .user_message.my_msg .text_box{background: #ffe78d;}
 .user_message.my_msg .text_box .send_time{right: 0; left: auto;}
@@ -66,3 +67,7 @@
 
 .emoticon_wrap ul li{width: 40px; height: 40px;}
 .emoticon_wrap ul li button{display: block;}
+
+
+
+

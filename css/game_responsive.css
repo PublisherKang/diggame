@@ -526,13 +526,13 @@
 .chat_inner{padding: 1.8875855vw 1.368523vw 1.955034vw; height: 29.55034vw; width: 100%;}
 
 /* 유저 메세지 박스 */
-.user_message{margin-bottom: 4.932551vw; padding-top: 6vw;}
+.user_message{margin-bottom: 4.932551vw; padding-top: 4.4vw;}
 
 
 .user_message .user_ch{width: 8.8875855vw; height: 8.8875855vw; box-shadow: 2px 2px 0.9775171vw #000; margin-right: 2.9775171vw;}
 .user_message .user_ch img{width: 8.8875855vw;}
 
-.user_message .user_name_wrap{ font-size: 2.368523vw; top: 1.7vw; left: 12vw;}
+.user_message .user_name_wrap{ font-size: 2.368523vw; top: 0; left: 12vw;}
 
 .text_box{font-size: 1.368523vw; max-width: 50.527859vw; padding: 1.173020vw 2.173020vw; }
 
