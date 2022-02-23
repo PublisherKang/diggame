@@ -65,16 +65,16 @@
 
 
 /* 아이템 소모량 */
-.now_item{width: 200px; height: 100px; border-radius: 8px; bottom: 30px; left: 20px;}
+.now_item{width: 28.571428vw; height: 14.28571vw; border-radius: 1.142857vw; bottom: 4.28571vw; left: 2.857142vw;}
 .remaining_amount{width: 88%; height: 100%;}
-.remaining_amount .pick{width: 72px;}
+.remaining_amount .pick{width: 10.285714vw;}
 
-.remaining_amount .item_info .item_level{font-size: 14px;}
+.remaining_amount .item_info .item_level{font-size: 2vw;}
 
-.remaining_amount .item_info .item_rank{margin-bottom: 10px;}
+.remaining_amount .item_info .item_rank{margin-bottom: 1.428571vw;}
 
-.remaining_amount .item_info .durability{background: url(../images/ui/durability_icon2.png) no-repeat 10px center/ 14px auto;}
-.remaining_amount .item_info .price{background: url(../images/ui/mining_icon2.png) no-repeat 10px center/ 14px auto;}
+.remaining_amount .item_info .durability{background: url(../images/ui/durability_icon2.png) no-repeat 1.428571vw center/ 2vw auto;}
+.remaining_amount .item_info .price{background: url(../images/ui/mining_icon2.png) no-repeat 1.428571vw center/ 2vw auto;}
 
 
 /* 돌 이미지 위치 */
