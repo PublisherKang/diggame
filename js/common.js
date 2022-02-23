@@ -30,6 +30,7 @@ const repairFailPop = document.querySelector(".repair_moneyfail_modal");
 const pointScore = document.getElementById("point_score");
 const invenPointScore = document.getElementById("inven_point_score");
 const shopPointScore = document.getElementById("shop_point_score");
+const tradePointScore = document.getElementById("trade_point_score");
 const rankScore = document.getElementById("rank_score");
 const gemScore = document.querySelectorAll(".gem_score")
 

@@ -394,7 +394,7 @@
 
 /* another room modal */
 .another_wrap,
-.trade_wrap,
+.trade_alert_wrap,
 .accept_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
 
 .another_ques,

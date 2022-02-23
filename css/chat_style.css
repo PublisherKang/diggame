@@ -57,7 +57,7 @@
 .emoticon_btn button{width: 43px; height: 43px; border-radius: 10px; background: #b5a4ff url(../images/imoticon/imoticon57.png) no-repeat center center/ 34px auto; box-shadow: 0 0 4px 2px #6f659d inset; cursor: pointer;}
 
 .message_enter{position: relative;}
-.message_enter input{width: 210px; padding: 12px 46px 12px 8px; border: none; border-radius: 6px; box-sizing: border-box;}
+.message_enter input{width: 210px; padding: 12px 46px 12px 8px; border: none; border-radius: 6px; box-sizing: border-box; background: #fff;}
 .message_enter .submit{width: 30px; height: 30px; border-radius: 50%; background: #405ea4 url(../images/ui/send_message_icon.svg) no-repeat 8px center / 18px auto; position: absolute; top: 50%; right: 10px; transform: translateY(-50%); -webkit-transform: translateY(-50%);}
 
 .emoticon_wrap{width: 260px; height: 78px; background: rgba(0, 0, 0, .5); border-radius: 10px; position: absolute; bottom: 78px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); overflow: hidden; display: none;}

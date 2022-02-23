@@ -51,7 +51,8 @@ input:focus{outline: none;}
 
 .point_wrap #point_score,
 .point_wrap #inven_point_score,
-.point_wrap #shop_point_score{padding: 8px 0 8px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto; line-height: 2;}
+.point_wrap #shop_point_score,
+.point_wrap #trade_point_score{padding: 8px 0 8px 24px; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 20px auto; line-height: 2;}
 
 .game_headerIn .rank_btn{position: absolute; top: 50%; right: 20px; transform: translateY(-50%); -webkit-transform: translateY(-50%);}
 .game_headerIn .rank_btn button{width: 40px; height: 40px; background: url(../images/ui/room_ranking_icon1.png) no-repeat center center / 40px auto;}
@@ -560,7 +561,7 @@ input:focus{outline: none;}
 .accept_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
 
 .another_wrap,
-.trade_wrap,
+.trade_alert_wrap,
 .accept_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px; z-index: 10;}
 
 .another_ques,
@@ -766,5 +767,62 @@ input:focus{outline: none;}
 @media screen and (max-width: 640px) {
     .package_content ul li > div{font-size: 2.1875vw !important; }
 }
+
+
+
+/* ==================== 트레이드 영역 ==================== */
+
+.trade_modal{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: #363d48; z-index: 301;}
+
+.trade_header {width: 100%; height: 68px; background: #0e0f12; position: relative;}
+
+.trade_header .trade_name {font-size: 30px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); color: #fff;}
+
+.trade_header .point_wrap {position: absolute; top: 50%; right: 30px; left: auto; transform: translateY(-50%); -webkit-transform: translateY(-50%);}
+
+/* 트레이드 컨테이너 */
+.trade_container{display: flex; justify-content: space-between; padding: 24px;}
+
+/* 트레이드 캐릭터 공통값 */
+.my_trade_wrap, .user_trade_wrap{width: 140px;}
+
+.trade_ch{text-align: center; margin-bottom: 24px;}
+.trade_ch .trade_ch_img{width: 120px; border-radius: 50%; overflow: hidden; margin: 14px auto 16px; box-shadow: 4px 4px 10px #000;}
+
+.trade_ch span{color: #fff; font-size: 16px;}
+
+.trade_item_wrap{width: 140px; height: 220px; border-radius: 10px; background: #1a1a1a; box-shadow: inset 0 0 10px 6px #000; text-align: center; position: relative; margin-bottom: 10px;}
+
+.upload_wrap{width: 100%; height: 100%; padding-top: 150px; background: url(../images/ui/trade_upload_item_icon.png) no-repeat center 54px / 74px auto;}
+.upload_wrap span{color: #f0f0f0; line-height: 1.5;}
+
+
+.trade_inner_item{display: none;}
+
+.item_rank span{display: none;}
+.item_rank span.on{display: block;}
+
+
+/* ==== 잠금 wrap ==== */
+.lock_wrap{width: 140px; height: 220px; border-radius: 10px; background: #1a1a1a url(../images/ui/trade_lock.png) no-repeat center center / 60px auto;; box-shadow: inset 0 0 10px 6px #000; position: absolute; top: 0; left: 0; z-index: 10; user-select: none; display: none;}
+
+
+.gem_price_wrap .gem_price{background: #1a1a1a url(../images/ui/gem_icon.svg) no-repeat 14px center / 20px auto; box-shadow: inset 0 0 10px 4px #000; width: 140px; height: 40px; border-radius: 10px; color: #fff; text-align: right; padding: 0 16px 0 40px; box-sizing: border-box; font-family: "sebang";}
+
+.gem_price_wrap input::-webkit-outer-spin-button,
+.gem_price_wrap input::-webkit-inner-spin-button{-webkit-appearance: none;}
+
+
+/* 트레이드 캐릭터 개별값 */
+
+.trade_ch.my_ch .trade_ch_img{background: #f7931e;}
+.trade_ch.user_ch .trade_ch_img{background: #ffff00;}
+.trade_ch.user_ch .trade_ch_img img{transform: scaleX(-1); -webkit-transform: scaleX(-1);}
+
+
+
+.trade_chat_wrap{}
+
+
 
 
