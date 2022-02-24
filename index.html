@@ -95,7 +95,7 @@
                             <div class="remaining_amount">
                                 <img class="pick" src="images/item/pick_common.png" alt="">
                                 <div class="item_info">
-                                    <p class="item_level">Level 1. Pick</p>
+                                    <p class="item_level">Lv.1 Pick</p>
                                     <p class="item_rank">
                                         <span class="item_common on">Common</span>
                                         <span class="item_rare">Rare</span>
@@ -271,7 +271,7 @@
                                 <div class="user_item_info">
                                     <img class="pick" src="images/item/pick_legend.png" alt="">
                                     <div class="item_info">
-                                        <p class="item_level">Level 1. Pick</p>
+                                        <p class="item_level">Lv.1 Pick</p>
                                         <p class="item_rank">
                                             <span class="item_common">Common</span>
                                             <span class="item_rare">Rare</span>
@@ -309,14 +309,17 @@
                         <div class="inven_container">
                             <div class="upgrade_wrap">
                                 <p class="equip">
-                                    <span><i></i>EQUIP</span>
+                                    <span>EQUIP</span>
                                 </p>
                                 <div class="preview_item">
                                     <img src="images/item/pick_common.png" alt="">
                                 </div>
-                                <p class="item_level">Level 1. Pick</p>
+                                <p class="item_level">
+                                    Lv.1 Pick
+                                    <span class="lock_btn"></span>
+                                </p>
                                 <p class="item_rank">
-                                    <span class="item_common">Common</span>
+                                    <span class="item_common on">Common</span>
                                     <span class="item_rare">Rare</span>
                                     <span class="item_legend">Legend</span>
                                 </p>
@@ -347,7 +350,24 @@
                                         </ul>
                                     </div>
                                     <div class="item_list">
-                                        <ul></ul><!-- 인벤토리 아이템 리스트 -->
+                                        <ul>
+                                            <!-- <li>
+                                                <div class="item_wrap">
+                                                    <img src="images/item/pick_common.png">
+                                                    <p class="item_level">+7</p>
+                                                    <p class="item_lock"></p>
+                                                    <div class="item_info">
+                                                        <p class="durability">
+                                                            <span class="now_durability">240</span> / <span class="max_durability">240</span>
+                                                        </p>
+                                                        <p class="price">
+                                                            <span class="mining_gem">1.60</span> Gem
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <span class="equip_img target_img"></span>
+                                            </li> -->
+                                        </ul><!-- 인벤토리 아이템 리스트 -->
                                     </div>
                                 </div>
                                 <div class="next_minting">
@@ -371,9 +391,9 @@
                                     <span class="item_rank">Common</span>
                                 </p>
                                 <p class="item_level">
-                                    <span>Level 1</span>
+                                    <span>Lv.1</span>
                                     ->
-                                    <span>Level 2</span>
+                                    <span>Lv.2</span>
                                 </p>
                             </div>
                         </div><!-- upgrade_complete -->
@@ -705,19 +725,19 @@
                                     </div>
                                     <div class="trade_inner_item">
                                         <p class="trade_item">
-                                            <img src="" alt="">
+                                            <img src="images/item/pick_legend.png" alt="">
                                         </p>
-                                        <p class="item_level">Level 1. Pick</p>
+                                        <p class="item_level">Lv.1 Pick</p>
                                         <p class="item_rank">
                                             <span class="item_common">Common</span>
                                             <span class="item_rare">Rare</span>
                                             <span class="item_legend on">Legend</span>
                                         </p>
                                         <p class="durability">
-                                            Durability: <span>25</span> / <span>190</span>
+                                            <span>240</span> / <span>240</span>
                                         </p>
                                         <p class="price">
-                                            Mining: <span>0.01</span> Gem
+                                            <span>1.60</span> Gem
                                         </p>
                                     </div>
                                     <!-- 아이템 잠금 영역 -->
@@ -758,7 +778,7 @@
                                                 <span class="send_time">01:18</span>
                                             </div>
                                         </div>
-                                        <<div class="user_message my_msg">
+                                        <div class="user_message my_msg">
                                             <p class="user_ch">
                                                 <img src="images/character/character6_profile.png" alt="">
                                             </p>
@@ -775,7 +795,7 @@
                                     </div>
                                     <div class="message_enter">
                                         <form>
-                                            <input id="send" type="text" placeholder="Send your messages" autocomplete="off" maxlength="60">
+                                            <input id="trade_send" type="text" placeholder="Send your messages" autocomplete="off" maxlength="60">
                                             <button type="button" class="submit"></button>
                                         </form>
                                     </div>
@@ -800,19 +820,19 @@
                                     </div>
                                     <div class="trade_inner_item">
                                         <p class="trade_item">
-                                            <img src="" alt="">
+                                            <img src="images/item/pick_legend.png" alt="">
                                         </p>
-                                        <p class="item_level">Level 1. Pick</p>
+                                        <p class="item_level">Lv.1 Pick</p>
                                         <p class="item_rank">
                                             <span class="item_common">Common</span>
                                             <span class="item_rare">Rare</span>
                                             <span class="item_legend on">Legend</span>
                                         </p>
                                         <p class="durability">
-                                            Durability: <span>25</span> / <span>190</span>
+                                            <span>240</span> / <span>240</span>
                                         </p>
                                         <p class="price">
-                                            Mining: <span>0.01</span> Gem
+                                            <span>1.60</span> Gem
                                         </p>
                                     </div>
                                     <!-- 아이템 잠금 영역 -->
@@ -822,6 +842,40 @@
                                     <input type="number" class="gem_price" value="0.00">
                                 </div>
                             </div><!-- user_trade_wrap -->
+                        </div><!-- trade_container -->
+                        <div class="trade_btn_wrap">
+                            <button class="confirm">Confirm</button>
+                            <button class="cancel">Close</button>
+                        </div>
+                        <!-- 트레이드 인벤토리 시작 -->
+                        <div class="trade_inven_wrap">
+                            <p class="title">My Inventory</p>
+                            <button class="close_btn"></button>
+                            <div class="trade_inven_inner">
+                                <div class="item_info_wrap">
+                                    <div class="preview_item">
+                                        <img src="images/item/pick_common.png" alt="">
+                                    </div>
+                                    <p class="item_level trade">
+                                        Lv.1 Pick
+                                        <!-- <span class="lock_btn"></span> -->
+                                    </p>
+                                    <p class="item_rank">
+                                        <span class="item_common on">Common</span>
+                                        <span class="item_rare">Rare</span>
+                                        <span class="item_legend">Legend</span>
+                                    </p>
+                                    <p class="durability">
+                                        <span>25</span> / <span>190</span>
+                                    </p>
+                                    <p class="price">
+                                        <span>0.01</span> Gem
+                                    </p>
+                                </div>
+                                <div class="trade_item_list">
+                                    <ul></ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- 트레이드 모달 끝 -->
@@ -933,12 +987,12 @@
                                     an trade from this player?
                                 </p>
                                 <div class="button_wrap">
-                                    <button type="button" class="confirm" id="change_room_btn">Confirm</button>
+                                    <button type="button" class="confirm">Confirm</button>
                                     <button type="button" class="cancel">Cancel</button>
                                 </div>
                             </div>
                         </div>
-                    </div><!-- trade_modal -->
+                    </div><!-- trade_alert_modal -->
                     <div class="accept_modal alert_modal">
                         <div class="accept_wrap">
                             <div class="accept_inner">
@@ -950,7 +1004,7 @@
                                     </span>
                                 </p>
                                 <div class="button_wrap">
-                                    <button type="button" class="accept" id="change_room_btn">Accept</button>
+                                    <button type="button" class="accept">Accept</button>
                                     <button type="button" class="cancel">No</button>
                                 </div>
                             </div>
@@ -1148,8 +1202,8 @@
                                         <span class="send_time">01:18</span>
                                     </div>
                                     <div class="user_menu">
-                                        <button>Whisper</button>
-                                        <button>Trade</button>
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
                                     </div>
                                 </div>
                                 <div class="user_message my_msg">
@@ -1161,8 +1215,8 @@
                                         <span class="send_time">01:18</span>
                                     </div>
                                     <div class="user_menu">
-                                        <button>Whisper</button>
-                                        <button>Trade</button>
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
                                     </div>
                                 </div>
                                 <div class="user_message">
@@ -1177,8 +1231,8 @@
                                         <span class="send_time">01:18</span>
                                     </div>
                                     <div class="user_menu">
-                                        <button>Whisper</button>
-                                        <button>Trade</button>
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
                                     </div>
                                 </div>
                                 <div class="user_message my_msg">
@@ -1190,8 +1244,8 @@
                                         <span class="send_time">01:18</span>
                                     </div>
                                     <div class="user_menu">
-                                        <button>Whisper</button>
-                                        <button>Trade</button>
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
                                     </div>
                                 </div>
                                 <div class="user_message user2">
@@ -1206,8 +1260,8 @@
                                         <span class="send_time">01:19</span>
                                     </div>
                                     <div class="user_menu">
-                                        <button>Whisper</button>
-                                        <button>Trade</button>
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
                                     </div>
                                 </div>
                                 <div class="user_message user3 whisper">
@@ -1223,8 +1277,8 @@
                                         <span class="send_time">01:19</span>
                                     </div>
                                     <div class="user_menu">
-                                        <button>Whisper</button>
-                                        <button>Trade</button>
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
                                     </div>
                                 </div>
                                 <div class="user_message my_msg">
@@ -1236,8 +1290,8 @@
                                         <span class="send_time">01:20</span>
                                     </div>
                                     <div class="user_menu">
-                                        <button>Whisper</button>
-                                        <button>Trade</button>
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
                                     </div>
                                 </div>
                                 <div class="user_message my_msg whisper">
@@ -1253,8 +1307,8 @@
                                         <span class="send_time">01:20</span>
                                     </div>
                                     <div class="user_menu">
-                                        <button>Whisper</button>
-                                        <button>Trade</button>
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
                                     </div>
                                 </div>
                                 <div class="user_message my_msg whisper">
@@ -1270,8 +1324,8 @@
                                         <span class="send_time">01:20</span>
                                     </div>
                                     <div class="user_menu">
-                                        <button>Whisper</button>
-                                        <button>Trade</button>
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
                                     </div>
                                 </div>
                                 <div class="user_message user3 whisper">
@@ -1287,8 +1341,8 @@
                                         <span class="send_time">01:20</span>
                                     </div>
                                     <div class="user_menu">
-                                        <button>Whisper</button>
-                                        <button>Trade</button>
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
                                     </div>
                                 </div>
                             </div>
@@ -1320,7 +1374,7 @@
                         <p class="mint_item">
                             <img src="images/item/pick_legend.png" alt="">
                         </p>
-                        <p class="item_level">Level 1. Pick</p>
+                        <p class="item_level">Lv.1 Pick</p>
                         <p class="item_rank">
                             <span class="item_common">Common</span>
                             <span class="item_rare">Rare</span>
@@ -1382,7 +1436,7 @@
                             <img src="images/item/pick_legend.png" alt="">
                         </p>
                         <div class="item_info">
-                            <p class="item_level">Level 1. Pick</p>
+                            <p class="item_level">Lv.1 Pick</p>
                             <p class="item_rank">
                                 <span class="item_common">Common</span>
                                 <span class="item_rare">Rare</span>

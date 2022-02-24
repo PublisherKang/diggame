@@ -69,6 +69,7 @@
 .remaining_amount{width: 88%; height: 100%;}
 .remaining_amount .pick{width: 10.285714vw;}
 
+.remaining_amount .item_info{width: 18vw;}
 .remaining_amount .item_info .item_level{font-size: 2.4vw;}
 
 .remaining_amount .item_info .item_rank{margin-bottom: 1vw; font-size: 2.4vw;}

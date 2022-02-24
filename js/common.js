@@ -505,42 +505,165 @@ function changeRoom(){
 // 인벤토리 아이템 추가
 invenItemAdd();
 function invenItemAdd(){
-    const invenItemUl = document.querySelector(".inven_container .item_list ul");
+    const invenItemUl = document.querySelector(".item_list_wrap .item_list ul");
+    const tradeInvenItemUl = document.querySelector(".trade_item_list ul");
 
-    let invenImgList = [
-        "images/item/pick_common.png",
-        "images/item/pick_common2.png",
-        "images/item/pick_common2.png",
-        "images/item/pick_rare.png",
-        "images/item/pick_rare.png",
-        "images/item/pick_rare2.png",
-        "images/item/pick_legend.png",
-        "images/item/pick_legend.png",
-        "images/item/pick_legend2.png",
-        "images/item/auto_click_1h.png",
-        "images/item/auto_click_10m.png",
-        "images/item/booster_10m.png",
-        "images/item/booster_1h.png",
+    console.log(tradeInvenItemUl);
+
+    let invenMineItemList = [
+        {
+            itemImg : "images/item/pick_common.png",
+            level : 1,
+            grade : "common",
+            mining : 0.01,
+            durability : 240,
+            maxDurability : 240,
+        },
+        {
+            itemImg : "images/item/pick_common2.png",
+            level : 1,
+            grade : "common",
+            mining : 0.01,
+            durability : 240,
+            maxDurability : 240,
+        },
+        {
+            itemImg : "images/item/pick_rare.png",
+            level : 1,
+            grade : "rare",
+            mining : 0.01,
+            durability : 240,
+            maxDurability : 240,
+        },
+        {
+            itemImg : "images/item/pick_rare2.png",
+            level : 1,
+            grade : "rare",
+            mining : 0.01,
+            durability : 240,
+            maxDurability : 240,
+        },
+        {
+            itemImg : "images/item/pick_legend.png",
+            level : 1,
+            grade : "legend",
+            mining : 0.01,
+            durability : 240,
+            maxDurability : 240,
+        },
+        {
+            itemImg : "images/item/pick_legend2.png",
+            level : 1,
+            grade : "legend",
+            mining : 0.01,
+            durability : 240,
+            maxDurability : 240,
+        },
     ];
+    
+    let autoItemList = [
+        {
+            itemImg : "images/item/auto_click_1h.png",
+        },
+        {
+            itemImg : "images/item/auto_click_10m.png",
+        },
+    ]
 
-    for(let i = 0; i <invenImgList.length; i++){
-        invenItemUl.insertAdjacentHTML("beforeend", "<li>"+ "<img src='" + invenImgList[i] + "'/>" +"<span></span></li>");
+    let boostItemList = [
+        {
+            itemImg : "images/item/booster_10m.png",
+        },
+        {
+            itemImg : "images/item/booster_1h.png",
+        },
+    ]
+
+
+    for(let i = 0; i < invenMineItemList.length; i++){
+        invenItemUl.insertAdjacentHTML("beforeend", "<li><div>"+ "<img src='" + invenMineItemList[i].itemImg + "'/><p class=\"item_level\">" + "+" + invenMineItemList[i].level + "</p>" + "<div class=\"item_info\">" + "<p class=\"durability\">" + "<span class=\"now_durability\">" + invenMineItemList[i].durability + "</span>" + "<span class=\"max_durability\">" + "/ " + + invenMineItemList[i].maxDurability + "</span>" + "</p>" + "<p class=\"price\"><span class=\"mining_gem\">"+ invenMineItemList[i].mining +"</span></p>" + "</div>" +"</div>" +"<span></span></li>");
     };
+
+    for(let j = 0; j < autoItemList.length; j++){
+        invenItemUl.insertAdjacentHTML("beforeend", "<li><div>"+ "<img src='" + autoItemList[j].itemImg + "'/>" + "</div><span></span></li>")
+    }
+    
+    for(let k = 0; k < boostItemList.length; k++){
+        invenItemUl.insertAdjacentHTML("beforeend", "<li><div>"+ "<img src='" + boostItemList[k].itemImg + "'/>" + "</div><span></span></li>")
+    }
+    
+
+    
+    // 트레이드 인벤토리 ================
+    for(let i = 0; i < invenMineItemList.length; i++){
+        tradeInvenItemUl.insertAdjacentHTML("beforeend", "<li><div>"+ "<img src='" + invenMineItemList[i].itemImg + "'/><p class=\"item_level\">" + "+" + invenMineItemList[i].level + "</p>" + "<div class=\"item_info\">" + "<p class=\"durability\">" + "<span class=\"now_durability\">" + invenMineItemList[i].durability + "</span>" + "<span class=\"max_durability\">" + "/ " + + invenMineItemList[i].maxDurability + "</span>" + "</p>" + "<p class=\"price\"><span class=\"mining_gem\">"+ invenMineItemList[i].mining +"</span></p>" + "</div>" +"</div>" +"<span></span></li>");
+    };
+
+
+    // const durabilitySpan = document.querySelector(".now_durability");
+    // durabilitySpan.textContent = itemDurability.durability;
+
+    // const itemListLi = document.createElement("li");
+    // const itemListDiv = document.createElement("div");
+    // const itemListDivInDiv = document.createElement("div");
+    // const itemListImg = document.createElement("img");
+    // const itemListP = document.createElement("p");
+    // const itemListP2 = document.createElement("p");
+    // const itemListSpan = document.createElement("span");
+    
+    // const itemLiDiv = document.querySelectorAll(".item_list ul li .item_wrap");
+    // const itemLiDivDiv = document.querySelectorAll(".item_list ul li > div > div");
+
+    // const invenItemInfoDurability = document.querySelectorAll("durability");
+    
+    // // li추가
+    // invenItemUl.append(itemListLi);
+
+    // //div 추가
+    // itemListDiv.classList.add("item_wrap");
+    // itemListLi.append(itemListDiv);
+    
+    // //img 추가
+    // itemListDiv.append(itemListImg);
+    // itemListImg.setAttribute("src", invenImgList[0]);
+
+    // // p추가
+    // itemListDiv.append(itemListP);
+    // itemListP.classList.add("item_level");
+    // itemListP.textContent = "+" + itemLevel.lv1;
+
+    // itemListDiv.append(itemListP2);
+    // itemListP2.classList.add("item_lock");
+
+    // itemListDiv.append(itemListDivInDiv);
+    // itemListDivInDiv.classList.add("item_info");
+
+
+    // itemLiDivDiv.forEach(e => {
+    //     e.classList.add("item_info");
+    // });
+
+    // invenItemInfoDurability.forEach(e => {
+
+    // });
+
+
 
 
     // console.log(invenItemUl);
 }
 
 //새로운 아이템이 인벤에 추가 되었을때 New 아이템
-newItemAdd();
-function newItemAdd(){
-    const itemLi = document.querySelectorAll(".item_list li")[3];
-    let newSpan = document.createElement("i");
 
-    newSpan.classList.add("new_item_text");
-    newSpan.textContent = "New";
-    itemLi.append(newSpan);
-}
+// newItemAdd();
+// function newItemAdd(){
+//     const itemLi = document.querySelectorAll(".item_list li")[3];
+//     let newSpan = document.createElement("i");
+
+//     newSpan.classList.add("new_item_text");
+//     newSpan.textContent = "New";
+//     itemLi.append(newSpan);
+// }
 
 
 

@@ -74,4 +74,26 @@ $(document).ready(function(){
 
 
     
+    // 채팅창 트레이드 버튼 눌렀을때
+    $(".trade_btn").click(function(){
+        $(".trade_modal").show();
+    });
+
+    //트레이드 채팅창 닫기 버튼
+    $(".trade_btn_wrap .cancel").click(function(){
+        $(this).parents(".trade_modal").hide();
+    });
+
+
+
 });
+
+// 모바일 pc 윈도우 클릭 했을 때 user menu 사라지게 함
+//버블링 방지
+window.addEventListener("click", function(){
+    const userMenuBtn = document.querySelectorAll(".user_menu");
+
+    userMenuBtn.forEach(e => {
+        e.classList.remove("on");
+    });
+}, true);

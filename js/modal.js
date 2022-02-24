@@ -1,4 +1,3 @@
-// 인벤토리 팝업
 $(document).ready(function(){
     const invenPopBtn = $(".inventory_btn");
     const backBtn = $(".back_btn");
@@ -36,8 +35,7 @@ $(document).ready(function(){
 
         $(".item_list ul li span").removeClass("target_img");
 
-        $(".equip span").html("<i></i>EQUIP");
-        $(".equip span i").css("background", "rgb(37, 223, 207)");
+        $(".equip span").html("EQUIP");
     });
 
     $(".game_headerIn .rank_btn").click(function(){
@@ -54,10 +52,10 @@ $(document).ready(function(){
 
 
     //아이템 추가하기
-    const invenItemList = $(".item_list ul li");
-    const targetListSpan = $(".item_list ul li span");
-    const targetListImg = $(".item_list ul li img");
-    const previewItem = $(".preview_item");
+    const invenItemList = $(".inven_modal .item_list ul li");
+    const targetListSpan = $(".inven_modal .item_list ul li > span");
+    const targetListImg = $(".inven_modal .item_list ul li img");
+    const previewItem = $("inven_modal .preview_item");
     
     let itemArray = [
         "images/item/booster_10m.png",
@@ -88,6 +86,11 @@ $(document).ready(function(){
         $(".equip_btn").removeClass("equip_img");
     }
 
+    //인벤토리 잠금 버튼
+    $(".lock_btn").click(function(){
+        $(this).toggleClass("lockon");
+    });
+
 
     invenItemList.on("click", listClickEvent);
 
@@ -105,7 +108,7 @@ $(document).ready(function(){
 
    
         // =====================
-        const itemAttr = $(this).children("img").attr("src");
+        const itemAttr = $(this).children().children("img").attr("src");
         
 
         // console.log(itemAttr);
@@ -146,12 +149,15 @@ $(document).ready(function(){
         //클릭시 equied가 있다면 Select 텍스트 equip 변경
         if(targetListSpan.hasClass("target_img") === true){
             $(".equip_btn").addClass("on");
-            $(".equip span").html("<i></i>Select");
-            $(".equip span i").css("background", "#ff0");
+            $(".equip span").html("Select");
+            $(".equip span").css("color", "#ff0");
+            $(".upgrade_wrap").css("border", "2px solid #ff0");
         }
         if(targetListSpan.hasClass("equip_img target_img") === true){
-            $(".equip span").html("<i></i>EQUIP");
+            $(".equip span").html("EQUIP");
+            $(".equip span").css("color", "#00ff9a");
             $(".equip_btn").removeClass("on");
+            $(".upgrade_wrap").css("border", "2px solid #00ff9a");
         }
         
 
@@ -180,7 +186,7 @@ $(document).ready(function(){
         const itemAttr = $(this).children().attr("src");
         targetListSpan.removeClass("equip_img");
         invenItemList.find(".target_img").addClass("equip_img");
-        $(".equip span").html("<i></i>EQUIP");
+        $(".equip span").html("EQUIP");
         $(this).removeClass("on");
         // console.log(this);
     });
@@ -576,6 +582,23 @@ $(document).ready(function(){
     }
 
 
+    //트레이드 업로드 영역 클릭시
+    $(".my_trade_wrap .upload_wrap").click(function(){
+        $(".trade_inven_wrap").css({
+            "transform" : "translateY(0%)",
+            "transition" : "all .3s ease-in",
+            "opacity" : 1,
+        });
+    });
+
+    //트레이드 인벤토리 닫기버튼
+    $(".trade_inven_wrap .close_btn").click(function(){
+        $(this).parents(".trade_inven_wrap").css({
+            "transform" : "translateY(100%)",
+            "transition" : "all .3s ease-in",
+            "opacity" : 0,
+        });
+    });
 
 
 
