@@ -1,7 +1,7 @@
 let score = 0;
 let outOfTime = false;
 let numInit = 0.00;
-let num = 800.01;
+let num = 0.01;
 
 const items = document.querySelectorAll(".stone_item");
 
@@ -14,18 +14,18 @@ const repairFailPop = document.querySelector(".repair_moneyfail_modal");
 
 
 
-//클릭하면 초당 클릭 스피드 올라감
-// startGameSpeed();
-// function startGameSpeed() {
-//     startTime = new Date().getTime();
+// 클릭하면 초당 클릭 스피드 올라감
+startGameSpeed();
+function startGameSpeed() {
+    startTime = new Date().getTime();
     
-//     setInterval(function() {
-//     var total = (new Date().getTime() - startTime) / 100000;
-//     // console.log(total);
-//     clicksTxt.textContent = (score / total).toFixed(2);
+    setInterval(function() {
+    var total = (new Date().getTime() - startTime) / 100000;
+    // console.log(total);
+    clicksTxt.textContent = (score / total).toFixed(2);
         
-//     }, 1);
-// }
+    }, 1);
+}
 
 const pointScore = document.getElementById("point_score");
 const invenPointScore = document.getElementById("inven_point_score");
