@@ -218,25 +218,33 @@ input:focus{outline: none;}
 
 /* === 캐릭터 === */
 .ch_wrap{}
-.ch{width: 172px; position: absolute; top: 250px; left: 310px; pointer-events: none;}
+.ch{width: 160px; position: absolute; top: 250px; left: 310px; pointer-events: none;}
 .ch img{position: absolute; top: 0; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); visibility: hidden; width: auto; height: 134px; user-select: none;}
 .ch img.on{visibility: visible;}
 
 /* 캐릭터 위치 */
-.ch.ch2{top: 244px; left: 70px; transform: scaleX(-1); -webkit-transform: scaleX(-1);}
-.ch.ch3{top: 320px; left: 136px; transform: scaleX(-1); -webkit-transform: scaleX(-1);}
-.ch.ch4{top: 400px; left: 320px; transform: scaleX(-1); -webkit-transform: scaleX(-1);}
-.ch.ch5{top: 450px; left: 400px; transform: scaleX(-1); -webkit-transform: scaleX(-1);}
+.ch.ch2{top: 244px; left: 70px;}
+.ch.ch2 img{transform: translateX(-50%) scaleX(-1); -webkit-transform: translateX(-50%) scaleX(-1);}
+.ch.ch3{top: 320px; left: 136px;}
+.ch.ch3 img{transform: translateX(-50%) scaleX(-1); -webkit-transform: translateX(-50%) scaleX(-1);}
+.ch.ch4{top: 400px; left: 320px;}
+.ch.ch4 img{transform: translateX(-50%) scaleX(-1); -webkit-transform: translateX(-50%) scaleX(-1);}
+.ch.ch5{top: 450px; left: 400px;}
+.ch.ch5 img{transform: translateX(-50%) scaleX(-1); -webkit-transform: translateX(-50%) scaleX(-1);}
 .ch.ch6{top: 360px; left: 530px;}
 
 
 
-.ch_wrap .user_text{position: absolute; bottom: 6px; left: 36px; background: rgba(0, 0, 0, .7); border-radius: 10px; color: #fff; padding: 8px 12px; max-width: 120px; overflow-wrap: break-word; line-height: 1.5; font-size: 12px; font-family: "NotoSans-Medium";}
+.ch_wrap .user_text{position: absolute; bottom: 6px; left: 36px; background: rgba(0, 0, 0, .7); border-radius: 10px; color: #fff; padding: 8px 12px; max-width: 120px; overflow-wrap: break-word; line-height: 1.5; font-size: 12px; font-family: "NotoSans-Medium"; box-sizing: border-box;}
 
 .ch_wrap .user_text::after{content: ""; display: block; position: absolute; bottom: 0; left: 12px; border-top: 12px solid rgba(0, 0, 0, .7); border-right: 10px solid transparent; border-left: 10px solid transparent; transform: translateY(100%); -webkit-transform: translateY(100%);}
 
-
-
+/* 말풍선 위치 */
+.ch.ch2 .user_text{}
+.ch.ch3 .user_text{bottom: -3px;}
+.ch.ch4 .user_text{bottom: -14px;}
+.ch.ch5 .user_text{bottom: -10px;}
+.ch.ch6 .user_text{bottom: -10px;}
 
 
 
@@ -320,10 +328,11 @@ input:focus{outline: none;}
 
 .item_tab_btn{position: absolute; top: 4px; left: 14px;}
 .item_tab_btn ul{display: flex; width: 210px; justify-content: space-between;}
-.item_tab_btn ul li{padding: 14px 10px; font-size: 15px; cursor: url(../images/ui/basic_pointer.png) 0 0 ,auto; text-align: center; display: none;}
+.item_tab_btn ul li{font-size: 15px; cursor: url(../images/ui/basic_pointer.png) 0 0 ,auto; text-align: center;}
+.item_tab_btn ul li button{padding: 14px 10px;}
 
 .item_tab_btn ul li.upgrade_tab_btn{display: none;}
-.item_tab_btn ul li.on{display: block;}
+.item_tab_btn ul li.on{background: #ff0;}
 
 .item_list_wrap .item_list{width: 400px; height: 356px; border-radius: 14px; overflow: hidden; isolation: isolate;}
 .item_list_wrap .item_list ul{width: 420px; height: 356px; padding: 10px 20px 10px 16px; background: #333; overflow-y: auto;}
@@ -830,7 +839,10 @@ input:focus{outline: none;}
 .trade_header .point_wrap {position: absolute; top: 50%; right: 30px; left: auto; transform: translateY(-50%); -webkit-transform: translateY(-50%);}
 
 /* 트레이드 컨테이너 */
-.trade_container{display: flex; justify-content: space-between; padding: 24px 24px 0 24px;}
+.trade_container{display: flex; justify-content: space-between; padding: 24px 24px 0 24px; position: relative;}
+
+/* confirm 버튼 클릭시 유저 선택 막기 */
+.confirm_select_none{width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 20; background: rgba(0, 0, 0, .2); display: none;}
 
 /* 트레이드 캐릭터 공통값 */
 .my_trade_wrap, .user_trade_wrap{width: 140px;}
@@ -936,6 +948,7 @@ input:focus{outline: none;}
 .trade_btn_wrap button{width: 152px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 11px 0; font-size: 16px;;}
 
 .trade_btn_wrap .confirm{background-image: url(../images/ui/btn_img3.png);}
+.trade_btn_wrap .unconfirm{background-image: url(../images/ui/btn_img3.png); display: none;}
 .trade_btn_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
 
 
@@ -985,7 +998,7 @@ input:focus{outline: none;}
 
 .trade_inven_inner .left_layer{width: calc(100% - 400px);}
 
-.trade_inven_inner .item_info_wrap{width: 272px; padding: 30px 0; display: none;}
+.trade_inven_inner .item_info_wrap{width: 272px; padding: 30px 0;}
 
 .trade_inven_inner .preview_item {width: 140px; height: 140px; margin: 0 auto 28px; cursor: url(../images/ui/basic_pointer.png) 0 0 ,auto;}
 

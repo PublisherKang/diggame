@@ -51,6 +51,12 @@ $(document).ready(function(){
     });
 
 
+    //인벤토리 ALL Item Miningtool 버튼 클릭했을때 탭
+    $(".item_tab_btn ul li").click(function(){
+        $(this).siblings().removeClass("on");
+        $(this).addClass("on");
+    });
+
 
     //아이템 추가하기
     const invenItemList = $(".inven_modal .item_list ul li");
@@ -645,10 +651,36 @@ $(document).ready(function(){
         $(".trade_inner_item").hide();
     });
     
-    //트레이드 confirm 버튼 클릭시 캐릭터 이미지 confirm 표시
+    //트레이드 confirm 버튼 클릭시 캐릭터 이미지 confirm 표시 및 unconfirm 활성
     $(".trade_btn_wrap .confirm").click(function(){
         $(".trade_ch.my_ch .confirm_area").show();
+        $(this).hide();
+        $(".trade_btn_wrap .unconfirm").show();
+        $(".confirm_select_none").show();
     });
+
+    // 트레이드 unconfirm 클릭시
+    $(".trade_btn_wrap .unconfirm").click(function(){
+        $(".trade_ch.my_ch .confirm_area").hide();
+        $(this).hide();
+        $(".trade_btn_wrap .confirm").show();
+        $(".confirm_select_none").hide();
+    });
+
+    //트레이드 close버튼 클릭시
+    $(".trade_btn_wrap .cancel").click(function(){
+        $(this).parents(".trade_modal").hide();
+        $(".confirm_area").hide();
+        $(".trade_btn_wrap .unconfirm").hide();
+        $(".trade_btn_wrap .confirm").show();
+        $(".confirm_select_none").hide();
+    });
+
+
+
+
+
+
 
     // 캔슬 버튼
     const cancelBtn = $(".cancel");
