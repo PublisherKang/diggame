@@ -893,7 +893,7 @@ input:focus{outline: none;}
 
 
 /* 트레이드 인 채팅창 */
-.trade_chat_wrap{width: 326px; overflow: hidden; box-shadow: inset 0 0 10px 4px #000; border-radius: 10px; background: #1a1a1a; font-family: "NotoSans-Medium"; position: relative;}
+.trade_chat_wrap{width: 326px; overflow: hidden; box-shadow: inset 0 0 10px 4px #000; border-radius: 10px; background: #1a1a1a; font-family: "NotoSans-Medium"; position: relative; letter-spacing: 0;}
 
 .trade_chat_wrap .trade_chat_inner{padding: 24px 14px 20px;  overflow-y: scroll; height: 460px; width: 346px; background: transparent;}
 
