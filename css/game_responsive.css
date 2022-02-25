@@ -170,7 +170,7 @@
 .ch.ch6{top: 54vw; left: 74vw;}
 
 
-.ch_wrap .user_text{bottom: 0.857142vw; left: 5.142857vw; border-radius: 10px; color: #fff; padding: 1.142857vw 1.7142857vw; max-width: 17.14285vw; font-size: 1.714285vw;}
+.ch_wrap .user_text{bottom: 0.857142vw; left: 5.142857vw; border-radius: 10px; color: #fff; padding: 1.142857vw 1.7142857vw; max-width: 17.14285vw; font-size: 2.4vw;}
 
 .ch_wrap .user_text::after{left: 1.71428vw; border-top: 1.714285vw solid rgba(0, 0, 0, .7);    border-right: 1.42857vw solid transparent; border-left: 1.42857vw solid transparent; transform: translateY(100%); -webkit-transform: translateY(100%); }
 
@@ -222,7 +222,7 @@
 .item_list_wrap .item_list{width: 55.142857vw; height: 50.857142vw; border-radius: 2vw;}
 .item_list_wrap .item_list ul{width: 57.5vw; height: 50.857142vw; padding: 1.428571vw 2.857142vw 1.428571vw 2.285714vw;}
 
-.item_list_wrap .item_list ul li{width: 12.85714vw; height: 12.85714vw; padding: 1.142857vw;}
+.item_list_wrap .item_list ul li{width: 16.85714vw; height: 16.85714vw; padding: 1.142857vw;}
 
 .upgrade_target{background: url(../images/ui/upgrade_check_icon.png) no-repeat center center/ 5vw auto;}
 
@@ -548,7 +548,8 @@
 
 .room_number{height: 11.474095vw; text-shadow: 0 0 2px #86640f , 0 0 4px #ff0; font-size: 2.564027vw; line-height: 11.474095vw;}
 
-.room_number .chat_open{display: block;}
+.room_number .chat_open{display: block; background: url(../images/ui/mobile_chat_big.png) no-repeat center center/ contain;}
+.room_number .chat_close{display: block; background: url(../images/ui/mobile_chat_small.png) no-repeat center center/ contain; display: none;}
 
 .chat_inner{padding: 1.8875855vw 1.368523vw 1.955034vw; height: 29.55034vw; width: 100%;}
 
@@ -773,7 +774,7 @@
 
 
 /* 인벤토리 아이템 수정 */
-.item_list ul li > div .item_level{width: 3.428571vw; height: 3.428571vw; line-height: 3.428571vw; top: 1.428571vw; right: 1.428571vw; border-radius: 4px;}
+.item_list ul li > div .item_level{width: 3.428571vw; height: 3.428571vw; line-height: 4vw; top: 1.428571vw; right: 1.428571vw; border-radius: 4px; font-size: 1.8vw;}
 
 .item_list ul li > div .item_lock{width: 2.571428vw; height: 2.571428vw; top: 5.7142857vw; right: 1.428571vw;}
 

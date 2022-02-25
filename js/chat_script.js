@@ -45,7 +45,6 @@ $(document).ready(function(){
 
             $(this).hide();
             roomCloseBtn.show();
-            
         });
 
         roomCloseBtn.click(function(){
