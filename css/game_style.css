@@ -279,10 +279,16 @@ input:focus{outline: none;}
 .upgrade_wrap .item_rank .item_rare,
 .upgrade_wrap .item_rank .item_legend{display: none;}
 
-.upgrade_wrap .durability{text-align: center; color: #fff; margin-bottom: 6px; background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 14px auto; display: inline-block; padding-left: 20px;}
-.upgrade_wrap .durability .up_num{color: rgb(0, 255, 85); background: url(../images/ui/inven_up_icon.png) no-repeat right center / 10px auto; padding-right: 12px;}
-.upgrade_wrap .price{text-align: center; color: #fff; margin-bottom: 30px; background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 14px auto; display: inline-block; padding-left: 20px;}
-.upgrade_wrap .price .up_num{color: rgb(0, 255, 85); background: url(../images/ui/inven_up_icon.png) no-repeat right center / 10px auto; padding-right: 12px;}
+.upgrade_wrap .durability{text-align: center; color: #fff; margin-bottom: 6px; display: block;}
+
+.upgrade_wrap .durability span:nth-of-type(1){ background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 14px auto; padding-left: 20px;}
+
+.upgrade_wrap .durability .up_num{color: rgb(0, 255, 85); background: url(../images/ui/inven_up_icon.png) no-repeat right center / 10px auto; padding-right: 12px; display: none;}
+.upgrade_wrap .price{text-align: center; color: #fff; margin-bottom: 30px; display: block;}
+
+.upgrade_wrap .price span:nth-of-type(1){background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 14px auto; padding-left: 20px;}
+
+.upgrade_wrap .price .up_num{color: rgb(0, 255, 85); background: url(../images/ui/inven_up_icon.png) no-repeat right center / 10px auto; padding-right: 12px; display: none;}
 .upgrade_wrap .btn_wrap{}
 
 .upgrade_wrap .btn_wrap button{display: none; width: 140px; background: url(../images/ui/btn_img1.png) no-repeat 0 0 / contain; margin: 0 auto; margin-bottom: 10px; cursor: url(../images/ui/basic_pointer.png) 0 0 ,auto; padding: 10px 0; font-size: 14px;}

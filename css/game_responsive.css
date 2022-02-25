@@ -205,11 +205,15 @@
 .upgrade_wrap .item_rank{margin-bottom: 2.857142vw;}
 
 
-.upgrade_wrap .durability{margin-bottom: 6px; font-size: 2vw; background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 2vw auto; padding-left: 3vw;}
+.upgrade_wrap .durability{margin-bottom: 6px; font-size: 2vw;}
+
+.upgrade_wrap .durability span:nth-of-type(1){background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 2vw auto; padding-left: 3vw;}
 
 .upgrade_wrap .durability .up_num{background: url(../images/ui/inven_up_icon.png) no-repeat right center / 1.428571vw auto; padding-right: 1.71428vw;}
 
-.upgrade_wrap .price{margin-bottom: 2.7vw; font-size: 2vw; background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 2vw auto; padding-left: 3vw;}
+.upgrade_wrap .price{margin-bottom: 2.7vw; font-size: 2vw;}
+
+.upgrade_wrap .price span:nth-of-type(1){background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 2vw auto; padding-left: 3vw;}
 
 .upgrade_wrap .price .up_num{background: url(../images/ui/inven_up_icon.png) no-repeat right center / 1.428571vw auto; padding-right: 1.71428vw;}
 

@@ -153,12 +153,14 @@ $(document).ready(function(){
             $(".equip span").html("Select");
             $(".equip span").css("color", "#ff0");
             $(".upgrade_wrap").css("border", "2px solid #ff0");
+            $(".up_num").show();
         }
         if(targetListSpan.hasClass("equip_img target_img") === true){
             $(".equip span").html("EQUIP");
             $(".equip span").css("color", "#00ff9a");
             $(".equip_btn").removeClass("on");
             $(".upgrade_wrap").css("border", "2px solid #00ff9a");
+            $(".up_num").hide();
         }
         
 
