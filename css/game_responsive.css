@@ -564,6 +564,9 @@
 
 .text_box{font-size: 1.368523vw; max-width: 50.527859vw; padding: 1.173020vw 2.173020vw; }
 
+.user_menu{top: 10.85714vw;}
+.user_menu button{width: 16vw; font-size: 3vw; padding: 2vw 0;}
+
 .text_box .user_text_message{font-size: 3vw;}
 
 .text_box .send_time{ font-size: 1.9775171vw; bottom: -3.7595307vw;}
@@ -838,3 +841,8 @@
 .trade_message_wrap .emoticon_btn{width: 8.2vw; height: 8.2vw;}
 .trade_message_wrap .emoticon_btn button{width: 8.2vw; height: 8.2vw;}
 .trade_chat_wrap .message_enter input{width: 32.86vw; padding: 2.41vw 3.714vw 2.41vw 1.14vw;}
+
+.trade_chat_wrap .emoticon_wrap{width: 42.5vw; bottom: 11.14vw;}
+.trade_chat_wrap .emoticon_wrap ul{width: 42.5vw;}
+.trade_chat_wrap .emoticon_wrap ul li{width: 7.91vw; height: 7.91vw;}
+
