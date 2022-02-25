@@ -219,8 +219,17 @@ input:focus{outline: none;}
 /* === 캐릭터 === */
 .ch_wrap{}
 .ch{width: 172px; position: absolute; top: 250px; left: 310px; pointer-events: none;}
-.ch img{position: absolute; top: 0; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); visibility: hidden; width: auto; height: 150px; user-select: none;}
+.ch img{position: absolute; top: 0; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); visibility: hidden; width: auto; height: 134px; user-select: none;}
 .ch img.on{visibility: visible;}
+
+/* 캐릭터 위치 */
+.ch.ch2{top: 244px; left: 70px; transform: scaleX(-1); -webkit-transform: scaleX(-1);}
+.ch.ch3{top: 320px; left: 136px; transform: scaleX(-1); -webkit-transform: scaleX(-1);}
+.ch.ch4{top: 400px; left: 320px; transform: scaleX(-1); -webkit-transform: scaleX(-1);}
+.ch.ch5{top: 450px; left: 400px; transform: scaleX(-1); -webkit-transform: scaleX(-1);}
+.ch.ch6{top: 360px; left: 530px;}
+
+
 
 .ch_wrap .user_text{position: absolute; bottom: 6px; left: 36px; background: rgba(0, 0, 0, .7); border-radius: 10px; color: #fff; padding: 8px 12px; max-width: 120px; overflow-wrap: break-word; line-height: 1.5; font-size: 12px; font-family: "NotoSans-Medium";}
 
@@ -325,7 +334,7 @@ input:focus{outline: none;}
 
 .upgrade_target{display: block; width: 100%; height: 100%; background: url(../images/ui/upgrade_check_icon.png) no-repeat center center/ 40px auto; position: absolute; top: 0; left: 0;}
 
-.item_list_wrap .item_list ul li .new_item_text{display: block; width: 32px; height: 32px; text-align: center; line-height: 32px; border-radius: 50%; position: absolute; top: 0; right: 0; background-color: rgb(83, 250, 77); font-size: 11px; left: auto;}
+.item_list_wrap .item_list ul li .new_item_text{display: block; width: 32px; height: 32px; text-align: center; line-height: 32px; border-radius: 50%; position: absolute; top: 0; left: -4px; background-color: rgb(83, 250, 77); font-size: 11px;}
 
 
 
@@ -559,15 +568,18 @@ input:focus{outline: none;}
 /* another room modal */
 .another_room_modal,
 .trade_alert_modal,
-.accept_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.accept_modal,
+.trade_continue_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
 
 .another_wrap,
 .trade_alert_wrap,
-.accept_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px; z-index: 10;}
+.accept_wrap,
+.continue_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px; z-index: 10;}
 
 .another_ques,
 .trade_ques,
-.accept_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 40px;}
+.accept_ques,
+.continue_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 40px;}
 
 .accept_ques{margin-bottom: 20px;}
 
@@ -575,29 +587,36 @@ input:focus{outline: none;}
 
 .another_inner .button_wrap,
 .trade_inner .button_wrap,
-.accept_inner .button_wrap{display: flex; justify-content: space-between;}
+.accept_inner .button_wrap,
+.continue_inner .button_wrap{display: flex; justify-content: space-between;}
 
 .another_inner .button_wrap button,
 .trade_inner .button_wrap button,
-.accept_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
+.accept_inner .button_wrap button,
+.continue_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
 
 .another_inner .button_wrap .confirm,
 .trade_inner .button_wrap .confirm,
-.accept_inner .button_wrap .accept{background-image: url(../images/ui/btn_img3.png);}
+.accept_inner .button_wrap .accept,
+.continue_inner .button_wrap .trade{background-image: url(../images/ui/btn_img3.png);}
 
 .another_inner .button_wrap .cancel,
 .trade_inner .button_wrap .cancel,
-.accept_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
+.accept_inner .button_wrap .cancel,
+.continue_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
 
 /* immediately_repair_modal mint_modal*/
 .immediately_repair_modal,
-.minting_ques_modal{visibility: hidden; width: 100%; height: 100%; background: transparent; position: absolute; top: 0; left: 0;}
+.minting_ques_modal,
+.mint_lock_ques_modal{visibility: hidden; width: 100%; height: 100%; background: transparent; position: absolute; top: 0; left: 0;}
 
 .immediately_wrap,
-.minting_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px; z-index: 10;}
+.minting_wrap,
+.mint_lock_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px; z-index: 10;}
 
 .immediately_ques,
-.minting_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
+.minting_ques,
+.mint_lock_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
 
 .immediately_ques span,
 .minting_ques span{display: block;}
@@ -606,17 +625,22 @@ input:focus{outline: none;}
 .immediately_ques span:nth-of-type(2),
 .minting_ques span:nth-of-type(2){font-size: 14px; color: #ccc;}
 
+
 .immediately_inner .button_wrap,
-.minting_inner .button_wrap{display: flex; justify-content: space-between;}
+.minting_inner .button_wrap,
+.mint_lock_inner .button_wrap{display: flex; justify-content: space-between;}
 
 .immediately_inner .button_wrap button,
-.minting_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
+.minting_inner .button_wrap button,
+.mint_lock_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
 
 .immediately_inner .button_wrap .repair_now{background-image: url(../images/ui/btn_img2.png);}
 .immediately_inner .button_wrap .cancel,
-.minting_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
+.minting_inner .button_wrap .cancel,
+.mint_lock_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
 
-.minting_inner .button_wrap .mint_now{background-image: url(../images/ui/btn_img6.png);}
+.minting_inner .button_wrap .mint_now,
+.mint_lock_inner .button_wrap .confirm{background-image: url(../images/ui/btn_img6.png);}
 
 .minting_ques_modal{z-index: 320;}
 
@@ -633,59 +657,76 @@ input:focus{outline: none;}
 .repair_moneyfail_modal,
 .vipitem_modal,
 .waiting_modal,
-.player_cancel_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
+.player_cancel_modal,
+.player_trading,
+.success_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
 
 .fail_modal,
 .repair_moneyfail_modal{z-index: 321;}
 
 .fail_ques span,
-.waiting_ques span{font-size: 14px; display: block; margin-top: 10px;}
+.waiting_ques span,
+.success_ques span{font-size: 14px; display: block; margin-top: 10px;}
 
 .fail_ques span:nth-of-type(1),
-.waiting_ques span:nth-of-type(1){font-size: 30px;}
+.waiting_ques span:nth-of-type(1),
+.success_ques span:nth-of-type(1){font-size: 30px;}
 
 .package_buy_wrap,
-.player_cancel_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
+.player_cancel_wrap,
+.player_trading_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
 
 .package_buy_ques,
-.player_cancel_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
+.player_cancel_ques,
+.player_trading_ques{font-size: 18px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
 
 .package_buy_inner .button_wrap,
-.player_cancel_inner .button_wrap{display: flex; justify-content: space-between;}
+.player_cancel_inner .button_wrap,
+.player_trading_inner .button_wrap{display: flex; justify-content: space-between;}
 
-.player_cancel_inner .button_wrap{justify-content: center;}
+.player_cancel_inner .button_wrap,
+.player_trading_inner .button_wrap{justify-content: center;}
 
 
 .package_buy_inner .button_wrap button,
-.player_cancel_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
+.player_cancel_inner .button_wrap button,
+.player_trading_inner .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; display: block; padding: 13px 0; font-size: 16px;}
 
 .package_buy_inner .button_wrap .buy_btn{background-image: url(../images/ui/btn_img3.png);}
 .package_buy_inner .button_wrap .cancel,
-.player_cancel_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
+.player_cancel_inner .button_wrap .cancel,
+.player_trading_inner .button_wrap .cancel{background-image: url(../images/ui/btn_img1.png);}
 
 /* fail modal, comp modal */
 .fail_wrap, 
 .comp_wrap,
 .premiumitem_wrap,
 .vipitem_wrap,
-.waiting_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
+.waiting_wrap,
+.success_wrap{width: 420px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 20px; background: #1a1a1a; padding: 24px 26px;}
 
 .fail_wrap .fail_ques,
 .comp_wrap .comp_ques,
 .boxitem_ques,
-.waiting_wrap .waiting_ques{font-size: 24px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
+.waiting_wrap .waiting_ques,
+.success_ques{font-size: 24px; color: #fff; text-align: center; line-height: 1.5; margin-bottom: 30px;}
+
+
 
 .fail_wrap .button_wrap, 
 .comp_wrap .button_wrap,
 .premiumitem_wrap .button_wrap,
 .vipitem_wrap .button_wrap,
-.waiting_wrap .button_wrap{display: flex; justify-content: center;}
+.waiting_wrap .button_wrap,
+.success_wrap .button_wrap{display: flex; justify-content: center;}
+
 
 .fail_wrap .button_wrap button,
 .comp_wrap .button_wrap button,
 .premiumitem_wrap .button_wrap button,
 .vipitem_wrap .button_wrap button,
-.waiting_wrap .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; background-image: url(../images/ui/btn_img1.png); display: block; padding: 13px 0; font-size: 16px;}
+.waiting_wrap .button_wrap button,
+.success_wrap .button_wrap button{width: 170px; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 0 0; background-image: url(../images/ui/btn_img1.png); display: block; padding: 13px 0; font-size: 16px;}
 
 .comp_ques span{display: block;}
 .comp_ques span:nth-of-type(2){font-size: 14px; margin-top: 8px;}
@@ -788,7 +829,9 @@ input:focus{outline: none;}
 .my_trade_wrap, .user_trade_wrap{width: 140px;}
 
 .trade_ch{text-align: center; margin-bottom: 24px;}
-.trade_ch .trade_ch_img{width: 120px; border-radius: 50%; overflow: hidden; margin: 14px auto 16px; box-shadow: 4px 4px 10px #000;}
+.trade_ch .trade_ch_img{width: 120px; border-radius: 50%; overflow: hidden; margin: 14px auto 16px; box-shadow: 4px 4px 10px #000; position: relative;}
+
+.trade_ch .trade_ch_img .confirm_area{width: 100%; height: 100%; border-radius: 50%; background: rgba(0, 0, 0, .9); border: 2px solid #ccff00; color: #ccff00; text-align: center; position: absolute; top: 0; left: 0; box-sizing: border-box; line-height: 7.5; display: none;}
 
 .trade_ch span{color: #fff; font-size: 16px;}
 
@@ -798,10 +841,21 @@ input:focus{outline: none;}
 .upload_wrap span{color: #f0f0f0; line-height: 1.5;}
 
 
-.trade_inner_item{display: none; padding: 20px 0;}
+.trade_inner_item{width: 100%; display: none; padding: 20px 0; position: absolute; top: 0; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%);}
+
+
 .trade_inner_item.on{display: block;}
 
-.trade_item{width: 86px; margin: 0 auto 14px;}
+.trade_item{width: 86px; margin: 0 auto 14px; position: relative;}
+
+.trade_inner_item .item_close_btn{display: block; width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, .7); position: absolute; top: 8px; right: 0; transform: translate(50%, -50%); -webkit-transform: translate(50%, -50%);}
+
+.trade_inner_item .item_close_btn::after,
+.trade_inner_item .item_close_btn::before{content: ""; display: block; width: 20px; height: 1px; background: #000; position: absolute; top: 50%; left: 50%;}
+.trade_inner_item .item_close_btn::after{transform: translate(-50%, -50%) rotate(45deg); -webkit-transform: translate(-50%, -50%) rotate(45deg);}
+.trade_inner_item .item_close_btn::before{transform: translate(-50%, -50%) rotate(-45deg); -webkit-transform: translate(-50%, -50%) rotate(-45deg);}
+
+
 
 .trade_inner_item .item_level{color: #fff; font-size: 14px; margin-bottom: 10px;}
 .trade_inner_item .item_rank{margin-bottom: 10px;}
@@ -845,6 +899,7 @@ input:focus{outline: none;}
 
 .trade_chat_inner .system_msg_wrap{margin-bottom: 20px;}
 .trade_chat_inner .system_msg_wrap p{color: #ffff00; margin-bottom: 10px;}
+.trade_chat_inner .system_msg_wrap p span{line-height: 1.4;}
 
 .trade_chat_inner .message_wrap{background: #1a1a1a;}
 
@@ -921,50 +976,23 @@ input:focus{outline: none;}
 
 .trade_inven_inner{width: 96%; height: 356px; margin: 0 auto; background: #1a1a1a; box-shadow: inset 0 0 10px 4px #000; border-radius: 10px; display: flex; justify-content: space-between; overflow: hidden;}
 
-.trade_inven_inner .item_info_wrap{width: 272px; padding: 30px 0;}
+.trade_inven_inner .left_layer{width: calc(100% - 400px);}
 
-.trade_inven_inner .preview_item {
-    width: 140px;
-    height: 140px;
-    margin: 0 auto 28px;
-    cursor: url(../images/ui/basic_pointer.png) 0 0 ,auto;
-}
+.trade_inven_inner .item_info_wrap{width: 272px; padding: 30px 0; display: none;}
 
-.trade_inven_inner .item_level.trade{
-    font-size: 20px;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 8px;
-    position: relative;
-}
+.trade_inven_inner .preview_item {width: 140px; height: 140px; margin: 0 auto 28px; cursor: url(../images/ui/basic_pointer.png) 0 0 ,auto;}
+
+.trade_inven_inner .item_level.trade{font-size: 20px; text-align: center; color: #fff; margin-bottom: 8px; position: relative;}
 
 
-.trade_inven_inner .item_rank{
-    margin-bottom: 20px;
-}
+.trade_inven_inner .item_rank{margin-bottom: 20px;}
 
 .trade_inven_inner .item_rank span{display: none; text-align: center; font-size: 16px;}
 .trade_inven_inner .item_rank span.on{display: block;}
 
-.trade_inven_inner .durability{
-    width: 100px;
-    text-align: right;
-    color: #fff;
-    margin: 0 auto;
-    font-size: 14px;
-    background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 18px auto;
-    padding: 6px 0;
-}
+.trade_inven_inner .durability{width: 94px; text-align: right; color: #fff; margin: 0 auto; font-size: 14px; background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 18px auto; padding: 6px 0;}
 
-.trade_inven_inner .price{
-    width: 100px;
-    text-align: right;
-    color: #fff;
-    margin: 0 auto;
-    font-size: 14px;
-    background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 18px auto;
-    padding: 6px 0;
-}
+.trade_inven_inner .price{width: 94px; text-align: right; color: #fff; margin: 0 auto; font-size: 14px; background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 18px auto; padding: 6px 0;}
 
 
 
@@ -988,3 +1016,5 @@ input:focus{outline: none;}
 .trade_item_list ul li > div .durability{display: block; text-align: right; background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 14px auto; color: #fff; width: 100%; font-size: 10px; margin: 0 auto; padding: 3px 0;}
 
 .trade_item_list ul li > div .price{display: block; text-align: right; background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 14px auto; color: #fff; width: 100%; font-size: 10px; margin: 0 auto; padding: 3px 0;}
+
+.trade_inven_wrap .select_btn{width: 170px; text-align: center; background: url(../images/ui/btn_img1.png) no-repeat 0 0 / cover; display: block; padding: 13px 0; font-size: 16px; margin: 10px auto 0;}

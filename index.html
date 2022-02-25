@@ -294,6 +294,26 @@
                                 <!-- <audio class="hit_audio" src="audio/hit.mp3"></audio> -->
                                 <span class="user_text">Hello, Everyone~</span>
                             </div>
+                            <div class="ch ch2">
+                                <img class="on" src="images/character/character1_stand.png" alt="">
+                                <!-- <span class="user_text">Hello, Everyone~</span> -->
+                            </div>
+                            <div class="ch ch3">
+                                <img class="on" src="images/character/character6_stand.png" alt="">
+                                <!-- <span class="user_text">Hello, Everyone~</span> -->
+                            </div>
+                            <div class="ch ch4">
+                                <img class="on" src="images/character/character2_stand.png" alt="">
+                                <!-- <span class="user_text">Hello, Everyone~</span> -->
+                            </div>
+                            <div class="ch ch5">
+                                <img class="on" src="images/character/character4_stand.png" alt="">
+                                <!-- <span class="user_text">Hello, Everyone~</span> -->
+                            </div>
+                            <div class="ch ch6">
+                                <img class="on" src="images/character/character8_stand.png" alt="">
+                                <!-- <span class="user_text">Hello, Everyone~</span> -->
+                            </div>
                         </div><!-- 캐릭터 -->
                     </div><!-- 게임 컨테이너 -->
                     <!-- ====== 모달 시작 ====== -->
@@ -324,10 +344,10 @@
                                     <span class="item_legend">Legend</span>
                                 </p>
                                 <p class="durability">
-                                    Durability: <span>25</span> / <span>190</span>
+                                    <span>25</span> / <span>190</span> 
                                 </p>
                                 <p class="price">
-                                    Mining: <span>0.01</span> Gem
+                                    <span>0.01</span> Gem
                                 </p>
                                 <div class="btn_wrap">
                                     <button type="button" class="useitem_btn">Use</button>
@@ -713,6 +733,7 @@
                                 <div class="trade_ch my_ch">
                                     <p class="trade_ch_img">
                                         <img src="images/character/trade_character6_profile.png" alt="">
+                                        <span class="confirm_area">Confirm</span>
                                     </p>
                                     <span class="my_name">Player 5</span>
                                 </div>
@@ -726,6 +747,7 @@
                                     <div class="trade_inner_item">
                                         <p class="trade_item">
                                             <img src="images/item/pick_legend.png" alt="">
+                                            <button class="item_close_btn"></button>
                                         </p>
                                         <p class="item_level">Lv.1 Pick</p>
                                         <p class="item_rank">
@@ -787,6 +809,17 @@
                                                 <span class="send_time">01:18</span>
                                             </div>
                                         </div>
+                                        <div class="system_msg_wrap color_green">
+                                            <p>&lt; System &gt;
+                                                <span class="system_msg">Level 5. Traded Pock(Legendary) for 25.00 Gems. [01:21]</span>    
+                                            </p>
+                                            <p>&lt; System &gt;
+                                                <span class="system_msg">Level 5. Traded Pock(Legendary) for 25.00 Gems. [01:21]</span>    
+                                            </p>
+                                            <p>&lt; System &gt;
+                                                <span class="system_msg">Level 5. Traded Pock(Legendary) for 25.00 Gems. [01:21]</span>    
+                                            </p>
+                                        </div>
                                     </div>
                                 </div><!-- chat_inner -->
                                 <div class="trade_message_wrap">
@@ -808,6 +841,7 @@
                                 <div class="trade_ch user_ch">
                                     <p class="trade_ch_img">
                                         <img src="images/character/trade_character1_profile.png" alt="">
+                                        <span class="confirm_area">Confirm</span>
                                     </p>
                                     <span class="user_name">Player 3</span>
                                 </div>
@@ -852,30 +886,33 @@
                             <p class="title">My Inventory</p>
                             <button class="close_btn"></button>
                             <div class="trade_inven_inner">
-                                <div class="item_info_wrap">
-                                    <div class="preview_item">
-                                        <img src="images/item/pick_common.png" alt="">
+                                <div class="left_layer">
+                                    <div class="item_info_wrap">
+                                        <div class="preview_item">
+                                            <img src="images/item/pick_common.png" alt="">
+                                        </div>
+                                        <p class="item_level trade">
+                                            Lv.1 Pick
+                                            <!-- <span class="lock_btn"></span> -->
+                                        </p>
+                                        <p class="item_rank">
+                                            <span class="item_common on">Common</span>
+                                            <span class="item_rare">Rare</span>
+                                            <span class="item_legend">Legend</span>
+                                        </p>
+                                        <p class="durability">
+                                            <span>25</span> / <span>190</span>
+                                        </p>
+                                        <p class="price">
+                                            <span>0.01</span> Gem
+                                        </p>
                                     </div>
-                                    <p class="item_level trade">
-                                        Lv.1 Pick
-                                        <!-- <span class="lock_btn"></span> -->
-                                    </p>
-                                    <p class="item_rank">
-                                        <span class="item_common on">Common</span>
-                                        <span class="item_rare">Rare</span>
-                                        <span class="item_legend">Legend</span>
-                                    </p>
-                                    <p class="durability">
-                                        <span>25</span> / <span>190</span>
-                                    </p>
-                                    <p class="price">
-                                        <span>0.01</span> Gem
-                                    </p>
                                 </div>
                                 <div class="trade_item_list">
                                     <ul></ul>
                                 </div>
                             </div>
+                            <button class="select_btn">Select</button>
                         </div>
                     </div>
                     <!-- 트레이드 모달 끝 -->
@@ -993,6 +1030,20 @@
                             </div>
                         </div>
                     </div><!-- trade_alert_modal -->
+                    <div class="trade_continue_modal alert_modal">
+                        <div class="continue_wrap">
+                            <div class="continue_inner">
+                                <p class="continue_ques">
+                                    Would you like<br>
+                                    to continue trading?
+                                </p>
+                                <div class="button_wrap">
+                                    <button type="button" class="trade" id="change_room_btn">Trade</button>
+                                    <button type="button" class="cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- trade_continue_modal -->
                     <div class="accept_modal alert_modal">
                         <div class="accept_wrap">
                             <div class="accept_inner">
@@ -1023,6 +1074,19 @@
                             </div>
                         </div>
                     </div><!-- waiting_modal -->
+                    <div class="success_modal alert_modal">
+                        <div class="success_wrap">
+                            <div class="success_inner">
+                                <p class="success_ques">
+                                    <span>Success!</span>
+                                    <span>The trade has been completed.</span>
+                                </p>
+                                <div class="button_wrap">
+                                    <button type="button" class="cancel">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- success_modal -->
                     <div class="immediately_repair_modal alert_modal">
                         <div class="immediately_wrap">
                             <div class="immediately_inner">
@@ -1055,7 +1119,8 @@
                         <div class="minting_wrap">
                             <div class="minting_inner">
                                 <p class="minting_ques">
-                                    <span>Are you sure you want to mint this item?</span>
+                                    <span>Are you sure you<br>
+                                        want to mint this item?</span>
                                     <span>This will lead to an external pop-up window.</span>
                                 </p>
                                 <div class="button_wrap">
@@ -1065,6 +1130,20 @@
                             </div>
                         </div>
                     </div><!-- minting_ques_modal -->
+                    <div class="mint_lock_ques_modal alert_modal">
+                        <div class="mint_lock_wrap">
+                            <div class="mint_lock_inner">
+                                <p class="mint_lock_ques">
+                                    <span>This item is locked.<br>
+                                        Unlock and proceed?</span>
+                                </p>
+                                <div class="button_wrap">
+                                    <button type="button" class="confirm">Confirm</button>
+                                    <button type="button" class="cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- mint_lock_ques_modal -->
                     <!-- 인벤토리 모달 끝 -->
                     <div class="silver_buy_modal alert_modal" id="silver_pop">
                         <div class="package_buy_wrap">
@@ -1179,6 +1258,19 @@
                             </div>
                         </div>
                     </div><!-- player_cancel_modal -->
+                    <div class="player_trading alert_modal">
+                        <div class="player_trading_wrap">
+                            <div class="player_trading_inner">
+                                <p class="player_trading_ques">
+                                    This player is trading!<br>
+                                    Please try again later.
+                                </p>
+                                <div class="button_wrap">
+                                    <button type="button" class="cancel">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- player_trading_modal -->
                 </div>
                 <!-- 채팅 영역 -->
                 <div class="chat_wrap">

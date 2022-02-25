@@ -82,6 +82,7 @@ $(document).ready(function(){
     //트레이드 채팅창 닫기 버튼
     $(".trade_btn_wrap .cancel").click(function(){
         $(this).parents(".trade_modal").hide();
+        $(".confirm_area").hide();
     });
 
 

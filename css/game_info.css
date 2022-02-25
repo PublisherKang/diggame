@@ -15,3 +15,6 @@
 
 /* 업로드 영역 */
 .upload_wrap.blind{opacity: .4;}
+
+/* 시스템 영역 */
+.system_msg_wrap.color_green p{color: rgb(60, 255, 229) !important;}

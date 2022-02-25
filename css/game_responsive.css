@@ -160,7 +160,15 @@
 
 /* === 캐릭터 === */
 .ch{width: 24.571428vw; top: 35.714285vw; left: 44.285714vw;}
-.ch img{height: 21.428571vw;}
+.ch img{height: 20.428571vw;}
+
+/* 캐릭터 위치 */
+.ch.ch2{top: 38vw; left: 13vw;}
+.ch.ch3{top: 44vw; left: 23vw;}
+.ch.ch4{top: 54vw; left: 45vw;}
+.ch.ch5{top: 62vw; left: 58vw;}
+.ch.ch6{top: 54vw; left: 74vw;}
+
 
 .ch_wrap .user_text{bottom: 0.857142vw; left: 5.142857vw; border-radius: 10px; color: #fff; padding: 1.142857vw 1.7142857vw; max-width: 17.14285vw; font-size: 1.714285vw;}
 
@@ -396,25 +404,31 @@
 /* another room modal */
 .another_wrap,
 .trade_alert_wrap,
-.accept_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
+.accept_wrap,
+.continue_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
 
 .another_ques,
 .trade_ques,
-.accept_ques{font-size: 2.57142857vw; margin-bottom: 5.714285vw;}
+.accept_ques,
+.continue_ques{font-size: 2.57142857vw; margin-bottom: 5.714285vw;}
+
 .accept_ques{margin-bottom: 3.2vw;}
 
 .accept_ques .player_name{font-size: 4vw; margin-bottom: 2vw; display: block;}
 
 .another_inner .button_wrap button,
 .trade_inner .button_wrap button,
-.accept_inner .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
+.accept_inner .button_wrap button,
+.continue_inner .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
 
 /* immediately_repair_modal, mint_modal*/
 .immediately_wrap,
-.minting_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
+.minting_wrap,
+.mint_lock_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
 
 .immediately_ques,
-.minting_ques{font-size: 2.57142857vw; margin-bottom: 4.285714vw;}
+.minting_ques,
+.mint_lock_ques{font-size: 2.57142857vw; margin-bottom: 4.285714vw;}
 
 .immediately_ques span:nth-of-type(1),
 .minting_ques span:nth-of-type(1){margin-bottom: 1.714285vw;}
@@ -422,7 +436,8 @@
 .minting_ques span:nth-of-type(2){font-size: 2vw;}
 
 .immediately_inner .button_wrap button,
-.minting_inner .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
+.minting_inner .button_wrap button,
+.mint_lock_wrap .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
 
 
 .package_buy_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
@@ -436,24 +451,35 @@
 .comp_wrap,
 .premiumitem_wrap,
 .vipitem_wrap,
-.waiting_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
+.waiting_wrap,
+.player_cancel_wrap,
+.player_trading_wrap,
+.success_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
 
 .fail_wrap .fail_ques,
 .comp_wrap .comp_ques,
 .boxitem_ques,
-.waiting_wrap .waiting_ques{font-size: 3.42857vw; margin-bottom: 4.285714vw;}
+.waiting_wrap .waiting_ques,
+.player_cancel_ques,
+.player_trading_ques,
+.success_ques{font-size: 3.42857vw; margin-bottom: 4.285714vw;}
 
 .fail_ques span,
-.waiting_ques span{font-size: 2vw; display: block; margin-top: 1.7vw;}
+.waiting_ques span,
+.success_ques span{font-size: 2vw; display: block; margin-top: 1.7vw;}
 .fail_ques span:nth-of-type(1),
-.waiting_ques span:nth-of-type(1){font-size: 4vw;}
+.waiting_ques span:nth-of-type(1),
+.success_ques span:nth-of-type(1){font-size: 4vw;}
 
 
 .fail_wrap .button_wrap button,
 .comp_wrap .button_wrap button,
 .premiumitem_wrap .button_wrap button,
 .vipitem_wrap .button_wrap button,
-.waiting_wrap .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
+.waiting_wrap .button_wrap button,
+.success_wrap .button_wrap button,
+.player_cancel_wrap .button_wrap button,
+.player_trading_wrap .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
 
 .comp_ques span:nth-of-type(2){font-size: 2vw; margin-top: 1.142857vw;}
 
@@ -646,3 +672,161 @@
 
 .mint_success_wrap .back_game{width: 44vw; border-radius: 10px; line-height: 2.6; font-size: 3vw; bottom: 8vw; right: 6vw;}
 .mint_success_wrap .back_game span{padding: 2vw 6vw 2vw 0; background: url(../images/ui/right_arrow.svg) no-repeat right center/ 4vw auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================== 트레이드 영역 ==================== */
+
+.trade_header {height: 9.714285vw;}
+
+.trade_header .trade_name {font-size: 4.285714vw;}
+
+.trade_header .point_wrap {right: 4.285714vw;}
+
+/* 트레이드 컨테이너 */
+.trade_container{padding: 3.428571vw 3.428571vw 0 3.428571vw;}
+
+/* 트레이드 캐릭터 공통값 */
+.my_trade_wrap, .user_trade_wrap{width: 20vw;}
+
+.trade_ch{margin-bottom: 3.428571vw;}
+.trade_ch .trade_ch_img{width: 17.1428571vw; margin: 2vw auto 2.285714vw; box-shadow: 4px 4px 10px #000;}
+
+.trade_ch .trade_ch_img .confirm_area{border: 1px solid #ccff00; line-height: 7.5;}
+
+.trade_ch span{font-size: 2.285714vw;}
+
+.trade_item_wrap{width: 20vw; height: 31.428571vw; border-radius: 10px; box-shadow: inset 0 0 10px 6px #000; margin-bottom: 1.4285714vw;}
+
+.upload_wrap{padding-top: 21.428571vw; background: url(../images/ui/trade_upload_item_icon.png) no-repeat center 7.71428571vw / 10.571428vw auto;}
+.upload_wrap span{line-height: 1.5;}
+
+
+.trade_inner_item{padding: 2.857142vw 0;}
+
+.trade_item{width: 12.28571vw; margin: 0 auto 2vw;}
+
+.trade_inner_item .item_close_btn{width: 4.2857142vw; height: 4.2857142vw; top: 1.142857vw;}
+
+.trade_inner_item .item_close_btn::after,
+.trade_inner_item .item_close_btn::before{width: 2.857142vw; height: 1px;}
+
+.trade_inner_item .item_level{font-size: 2vw; margin-bottom: 1.428571vw;}
+.trade_inner_item .item_rank{margin-bottom: 1.428571vw;}
+
+.trade_inner_item .durability{line-height: 1.5; font-size: 1.714285vw; background: url(../images/ui/durability_icon2.png) no-repeat 4vw center / 2.285714vw auto; padding-right: 2.857142vw;}
+
+.trade_inner_item .price{line-height: 1.5; font-size: 1.714285vw; background: url(../images/ui/mining_icon2.png) no-repeat 4vw center / 2.285714vw auto; padding-right: 2.857142vw;}
+
+
+/* ==== 잠금 wrap ==== */
+.lock_wrap{width: 20vw; height: 31.428571vw; border-radius: 10px; background: #1a1a1a url(../images/ui/trade_lock.png) no-repeat center center / 8.571428vw auto;; box-shadow: inset 0 0 10px 6px #000;}
+
+
+.gem_price_wrap .gem_price{background: #1a1a1a url(../images/ui/gem_icon.png) no-repeat 2vw center / 3.428571vw auto; box-shadow: inset 0 0 10px 4px #000; width: 20vw; height: 5.714285vw; border-radius: 10px; padding: 0 2.2857142vw 0 5.7142857vw;}
+
+
+/* 트레이드 인 채팅창 */
+.trade_chat_wrap{width: 46.571428vw; box-shadow: inset 0 0 10px 4px #000; border-radius: 10px;}
+
+.trade_chat_wrap .trade_chat_inner{padding: 3.428571vw 2vw 2.857142vw; height: 65.71428vw; width: 49.428571vw;}
+
+.trade_chat_inner .system_msg_wrap{margin-bottom: 2.857142vw;}
+.trade_chat_inner .system_msg_wrap p{color: #ffff00; margin-bottom: 1.428571vw;}
+.trade_chat_inner .system_msg_wrap p span{line-height: 1.4;}
+
+
+/* 내 캐릭터 */
+.trade_chat_inner .user_message.my_msg .user_ch{margin-right: 1.428571vw; margin-left: 0;}
+
+.trade_chat_inner .user_message .user_ch{margin-left: 1.428571vw;}
+
+.trade_chat_wrap .text_box{max-width: 32.285714vw;}
+
+.trade_chat_inner .user_message .user_name_wrap{right: 8.571428vw;}
+
+.trade_chat_wrap .trade_message_wrap{height: 10.57142vw; padding: 0 2.857142vw;}
+
+.trade_chat_wrap .message_enter input{width: 32.857142vw;}
+
+/* 트레이드 버튼 영역 */
+.trade_btn_wrap{width: 46.571428vw; margin: 2vw auto 0;}
+
+.trade_btn_wrap button{width: 21.714285vw; padding: 1.571428vw 0; font-size: 2.2857142vw;}
+
+
+/* 인벤토리 모달 수정 영역 */
+.lock_btn{width: 2.2857142vw; height: 3.428571vw; top: -4px; right: 5.4285714vw;}
+
+
+/* 인벤토리 아이템 수정 */
+.item_list ul li > div .item_level{width: 3.428571vw; height: 3.428571vw; line-height: 3.428571vw; top: 1.428571vw; right: 1.428571vw; border-radius: 4px;}
+
+.item_list ul li > div .item_lock{width: 2.571428vw; height: 2.571428vw; top: 5.7142857vw; right: 1.428571vw;}
+
+.item_list ul li > div .item_info{bottom: 1.428571vw; width: 76%;}
+
+.item_list ul li > div .durability{background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 2vw auto; font-size: 1.428571vw; padding: 3px 0;}
+
+.item_list ul li > div .price{background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 2vw auto; font-size: 1.428571vw; padding: 3px 0;}
+
+/* 트레이드 내부 인벤토리 */
+
+.trade_inven_wrap{height: 68.571428vw; border-radius: 10px;}
+
+.trade_inven_wrap .title{font-size: 2.857142vw; padding: 2.285714vw 2vw;}
+
+.trade_inven_wrap .close_btn{width: 4.285714vw; height: 4.285714vw; top: 1.428571vw; right: 1.428571vw;}
+
+.trade_inven_wrap .close_btn::before,
+.trade_inven_wrap .close_btn::after{width: 2.857142vw; height: 2px;}
+
+.trade_inven_inner{width: 96%; height: 50.857142vw; box-shadow: inset 0 0 10px 4px #000; border-radius: 10px;}
+
+.trade_inven_inner .left_layer{width: calc(100% - 57.14285vw);}
+
+.trade_inven_inner .item_info_wrap{width: 38.85714vw; padding: 4.285714vw 0;}
+
+.trade_inven_inner .preview_item {width: 20vw; height: 20vw; margin: 0 auto 4vw;}
+
+.trade_inven_inner .item_level.trade{font-size: 2.857142vw; margin-bottom: 1.142857vw;}
+
+.trade_inven_inner .item_rank{margin-bottom: 2.857142vw;}
+
+.trade_inven_inner .item_rank span{font-size: 2.285714vw;}
+
+.trade_inven_inner .durability{width: 13.428571vw; font-size: 2vw; background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 2.571428vw auto; padding: 6px 0;}
+
+.trade_inven_inner .price{width: 13.428571vw; font-size: 2vw; background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 2.571428vw auto; padding: 6px 0;}
+
+
+.trade_inven_inner .trade_item_list{width: 57.14285vw; height: 50.857142vw;}
+.trade_inven_inner .trade_item_list ul{width: 60vw; height: 50.857142vw; padding: 1.428571vw 2.85714vw 1.428571vw 2.285714vw;}
+
+.trade_inven_inner .trade_item_list ul li{width: 17.142857vw; height: 17.142857vw; padding: 1.142857vw;}
+
+.trade_item_list ul li > div .item_level{width: 3.428571vw; height: 3.428571vw; line-height: 3.428571vw; top: 1.428571vw; right: 1.428571vw; border-radius: 4px;}
+
+.trade_item_list ul li > div .item_lock{width: 2.571428vw; height: 2.571428vw; top: 5.714285vw; right: 1.428571vw;}
+
+.trade_item_list ul li > div .item_info{bottom: 1.428571vw; width: 76%;}
+
+
+.trade_item_list ul li > div .durability{background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 2vw auto; font-size: 1.428571vw; padding: 3px 0;}
+
+.trade_item_list ul li > div .price{background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 2vw auto; font-size: 1.428571vw; padding: 3px 0;}
+
+.trade_inven_wrap .select_btn{width: 24.285714vw; padding: 1.85714vw 0; font-size: 2.285714vw; margin: 1.428571vw auto 0;}

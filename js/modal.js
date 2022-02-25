@@ -41,6 +41,7 @@ $(document).ready(function(){
     $(".game_headerIn .rank_btn").click(function(){
         $(".cont_ranking").toggleClass("on");
         $(".user_item_info").removeClass("on");
+        $(".gem_gauge span").toggleClass("on");
     });
 
     //랭킹 팝업의 아이템 이미지 클릭시 유저 정보 나옴
@@ -600,9 +601,25 @@ $(document).ready(function(){
         });
     });
 
+    //트레이드 아이템 클릭했을 때 
+    const tradeInvenItemList = $(".trade_item_list ul li");
+    const tradeTargetListSpan = $(".trade_item_list ul li > span");
+
+    tradeInvenItemList.click(function(){
+        tradeTargetListSpan.removeClass("target_img");
+        $(this).find(tradeTargetListSpan).addClass("target_img");
+    });  
 
 
-
+    //트레이드 업로드 아이템 닫기 버튼 클릭시
+    $(".item_close_btn").click(function(){
+        $(".trade_inner_item").hide();
+    });
+    
+    //트레이드 confirm 버튼 클릭시 캐릭터 이미지 confirm 표시
+    $(".trade_btn_wrap .confirm").click(function(){
+        $(".trade_ch.my_ch .confirm_area").show();
+    });
 
     // 캔슬 버튼
     const cancelBtn = $(".cancel");

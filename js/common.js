@@ -593,11 +593,15 @@ function invenItemAdd(){
     }
     
 
-    
+
     // 트레이드 인벤토리 ================
     for(let i = 0; i < invenMineItemList.length; i++){
         tradeInvenItemUl.insertAdjacentHTML("beforeend", "<li><div>"+ "<img src='" + invenMineItemList[i].itemImg + "'/><p class=\"item_level\">" + "+" + invenMineItemList[i].level + "</p>" + "<div class=\"item_info\">" + "<p class=\"durability\">" + "<span class=\"now_durability\">" + invenMineItemList[i].durability + "</span>" + "<span class=\"max_durability\">" + "/ " + + invenMineItemList[i].maxDurability + "</span>" + "</p>" + "<p class=\"price\"><span class=\"mining_gem\">"+ invenMineItemList[i].mining +"</span></p>" + "</div>" +"</div>" +"<span></span></li>");
     };
+
+    const InvenItemLi = document.querySelectorAll(".item_list_wrap .item_list ul li");
+    
+    InvenItemLi[2].insertAdjacentHTML("beforeend", "<i class=\"new_item_text\">New</i>")
 
 
     // const durabilitySpan = document.querySelector(".now_durability");
