@@ -193,7 +193,7 @@
 /* 업그레이드 wrap */
 .upgrade_wrap{width: 28.571428vw; border-radius: 2.857142vw; background: #222; box-shadow: 4px 4px 1.428571vw #000; padding: 0 0 2.142857vw; height: 81vw;}
 
-.upgrade_wrap .equip{padding-top: 2.285714vw; font-size: 2.285714vw; margin-left: 4.428571vw; margin-bottom: 4.1428571vw;}
+.upgrade_wrap .equip{padding-top: 2.285714vw; font-size: 2.285714vw; margin-bottom: 4.1428571vw;}
 .upgrade_wrap .equip i{left: -2.4vw; width: 1.2vw; height: 1.2vw;}
 
 .upgrade_wrap .preview_item{width: 20vw; height: 20vw; margin: 0 auto 2.857142vw; border-radius: 3.1428571vw;}

@@ -61,9 +61,12 @@ $(document).ready(function(){
     let itemArray = [
         "images/item/booster_10m.png",
         "images/item/booster_1h.png",
+    ]
+
+    let autoItem = [
         "images/item/auto_click_10m.png",
         "images/item/auto_click_1h.png",
-    ];
+    ]
 
     let miningItemCommon = [
         "images/item/pick_common.png",
@@ -125,23 +128,43 @@ $(document).ready(function(){
         // 아이템 클릭시 선택된 아이템 이름 변경
         miningItemCommon.forEach(e =>{
             if(e === itemAttr){
-                $(".inven_modal .item_common").text("Common").css("color", "#ccc");
+                $(".inven_modal .upgrade_wrap .item_level").text("Lv 1. Pick");
+                $(".inven_modal .upgrade_wrap .item_common").text("Common").css("color", "#ccc");
             }
         });
         miningItemRare.forEach(e =>{
             if(e === itemAttr){
-                $(".inven_modal .item_common").text("Rare").css("color", "#00ffff");
+                $(".inven_modal .upgrade_wrap .item_level").text("Lv 1. Pick");
+                $(".inven_modal .upgrade_wrap .item_common").text("Rare").css("color", "#00ffff");
             }
         });
         miningItemLegend.forEach(e =>{
             if(e === itemAttr){
-                $(".inven_modal .item_common").text("Legend").css("color", "#ff0");
+                $(".inven_modal .upgrade_wrap .item_level").text("Lv 1. Pick");
+                $(".inven_modal .upgrade_wrap .item_common").text("Legend").css("color", "#ff0");
             }
         });
 
-        itemArray.forEach(e => {
-            if(e === itemAttr){
-                $(".inven_modal .item_common").text("Item").css("color", "#ccc");
+        itemArray.forEach((e, index, arr) => {
+            if(arr[0] === itemAttr){
+                $(".inven_modal .upgrade_wrap .item_level").text("Mining 100% UP/10M");
+                $(".inven_modal .upgrade_wrap .item_common").text("Item").css("color", "#ccc");
+            }
+            if(arr[1] === itemAttr){
+                $(".inven_modal .upgrade_wrap .item_level").text("Mining 200% UP/1H");
+                $(".inven_modal .upgrade_wrap .item_common").text("Item").css("color", "#ccc");
+            }
+            
+        });
+
+        autoItem.forEach((e, index, arr) => {
+            if(arr[0] === itemAttr){
+                $(".inven_modal .upgrade_wrap .item_level").text("Auto Click/10M");
+                $(".inven_modal .upgrade_wrap .item_common").text("Item").css("color", "#ccc");
+            }
+            if(arr[1] === itemAttr){
+                $(".inven_modal .upgrade_wrap .item_level").text("Auto Click/1H");
+                $(".inven_modal .upgrade_wrap .item_common").text("Item").css("color", "#ccc");
             }
         });
 
@@ -166,19 +189,23 @@ $(document).ready(function(){
 
         //소모성 아이템 이미지 클릭 시
         
-        if(itemArray.includes(itemAttr)){
-        // if(itemAttr === itemArray[0] || itemAttr === itemArray[1] || itemAttr === itemArray[2] || itemAttr === itemArray[3]){
+        if(itemArray.includes(itemAttr) || autoItem.includes(itemAttr)){
             $(".useitem_btn").addClass("on");
             $(".equip_btn").removeClass("on");
             $(".Upgrade").removeClass("on");
             $(".mint_item_btn").removeClass("on");
             $(".repair").removeClass("on");
+            $(".upgrade_wrap .durability").hide();
+            $(".upgrade_wrap .price").hide();
         }else{
             $(".useitem_btn").removeClass("on");
             $(".Upgrade").addClass("on");
             $(".mint_item_btn").addClass("on");
             $(".repair").addClass("on");
+            $(".upgrade_wrap .durability").show();
+            $(".upgrade_wrap .price").show();
         }
+
         
         // console.log(itemAttr);
     };

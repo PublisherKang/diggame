@@ -563,10 +563,10 @@ function invenItemAdd(){
     
     let autoItemList = [
         {
-            itemImg : "images/item/auto_click_1h.png",
+            itemImg : "images/item/auto_click_10m.png",
         },
         {
-            itemImg : "images/item/auto_click_10m.png",
+            itemImg : "images/item/auto_click_1h.png",
         },
     ]
 
