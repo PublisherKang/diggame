@@ -700,6 +700,16 @@ function pcOnlyMouseEvent(){
 }
 
 
+//game_wrap 마우스 우클릭 메뉴 방지
+// mouseRightBtnFalse();
+// function mouseRightBtnFalse(){
+//     const gameWrap = document.querySelector(".game_wrap");
+//     gameWrap.oncontextmenu = function (e) {
+        
+//         return false;
+//        }
+// }
+
 
 //모바일 더블클릭시 화면 확대 방지
 // document.documentElement.addEventListener('touchstart', function (event){
