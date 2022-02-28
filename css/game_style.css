@@ -536,9 +536,9 @@ input:focus{outline: none;}
 .ranking_pop_list .list_name p,
 .playtime_pop_list .list_name p{width: 50%; padding: 0 0 14px 0; color: #fff; text-align: center;}
 
-.ranking_pop_list .rank_list{height: 260px; overflow-y: scroll}
-.ranking_pop_list .rank_list ul,
-.playtime_pop_list .time_list ul{border-bottom: 2px solid #fff;}
+.ranking_pop_list .rank_list,
+.playtime_pop_list .time_list{height: 260px; overflow-y: scroll}
+
 
 .ranking_pop_list .rank_list ul li,
 .playtime_pop_list .time_list ul li{display: flex; justify-content: flex-start; color: #fff; border-bottom: 1px solid #aaa;}
@@ -567,7 +567,7 @@ input:focus{outline: none;}
 
 /* myrank */
 .ranking_pop_list .my_rank,
-.playtime_pop_list .my_rank{color: #fff; display: flex; justify-content: start;}
+.playtime_pop_list .my_rank{color: #fff; display: flex; justify-content: start; border-top: 2px solid #fff;}
 
 .ranking_pop_list .my_rank .point_wrap,
 .playtime_pop_list .my_rank .point_wrap{position: static; top: 0; right: 0; transform: none;}

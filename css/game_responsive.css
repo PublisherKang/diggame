@@ -387,7 +387,8 @@
 .ranking_pop_list .rank_num,
 .playtime_pop_list .rank_num{width: 7.1428571vw; padding: 1.714285vw 0; font-size: 1vw;}
 
-.ranking_pop_list .rank_list{height: 35.142857vw;}
+.ranking_pop_list .rank_list,
+.playtime_pop_list .time_list{height: 35.142857vw;}
 .ranking_pop_list .rank_list ul li:nth-of-type(1) .rank_num,
 .playtime_pop_list .time_list ul li:nth-of-type(1) .rank_num{background: url(../images/ui/rank1.svg) no-repeat center center / 4.285714vw auto;}
 
