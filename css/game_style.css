@@ -536,6 +536,7 @@ input:focus{outline: none;}
 .ranking_pop_list .list_name p,
 .playtime_pop_list .list_name p{width: 50%; padding: 0 0 14px 0; color: #fff; text-align: center;}
 
+.ranking_pop_list .rank_list{height: 260px; overflow-y: scroll}
 .ranking_pop_list .rank_list ul,
 .playtime_pop_list .time_list ul{border-bottom: 2px solid #fff;}
 
