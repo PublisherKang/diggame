@@ -751,12 +751,11 @@ input:focus{outline: none;}
 /* shop_item_buy_modal */
 .shop_item_wrap{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); border: 2px solid #aaaaaa; border-radius: 16px; background: #1a1a1a; padding: 30px 16px 20px;}
 .shop_item_wrap .pop_title{text-align: center; color: #fff; margin-bottom: 12px;}
-.shop_item_wrap .pop_title span{display: none; font-size: 18px;}
-.shop_item_wrap .pop_title span.on{display: block;}
+.shop_item_wrap .pop_title span{font-size: 18px;}
+
 
 .shop_item_wrap .img_wrap{text-align: center; width: 90px; margin: 0 auto 10px;}
-.shop_item_wrap .img_wrap img{display: none;}
-.shop_item_wrap .img_wrap img.on{display: block;}
+
 .shop_item_wrap .ques{color: #fff; text-align: center; font-size: 14px; margin-bottom: 24px;}
 
 .shop_item_wrap .quantity_wrap{display: flex; width: 100px; margin: 0 auto 30px; justify-content: space-between; color: #fff; font-size: 20px;}

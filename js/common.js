@@ -240,11 +240,20 @@ function shopBuyModal(){
     const shopPopRightBtn = document.querySelector(".right_btn");
     const quantity = document.querySelector(".quantity");
     const shopItemPriceClass = document.querySelector(".shop_item_wrap .price");
-    const shopItemBtn = document.querySelector(".shop_item_wrap .cancel");
-    const shopBuyBtn = document.getElementById("shop_buy_btn");
+    const shopItemCancelBtn = document.querySelector(".shop_item_wrap .cancel");
+    // const shopBuyBtn = document.getElementById("shop_buy_btn");
     const shopItemBuyPop = document.querySelector(".shop_item_buy_modal");
     const itemCompletePop = document.querySelector(".shop_complete_modal");
 
+    const shopBoost100BuyPop = document.querySelector(".shop_item_buy_modal.boost100");
+    const shopBoost200BuyPop = document.querySelector(".shop_item_buy_modal.boost200");
+    const shopAuto10mBuyPop = document.querySelector(".shop_item_buy_modal.auto10m");
+    const shopAuto1hBuyPop = document.querySelector(".shop_item_buy_modal.auto1h");
+
+    const shopBoost100BuyBtn = document.getElementById("boost100_buy_btn");
+    const shopBoost200BuyBtn = document.getElementById("boost200_buy_btn");
+    const shopAuto10mBuyBtn = document.getElementById("auto10m_buy_btn");
+    const shopAuto1hBuyBtn = document.getElementById("auto1h_buy_btn");
 
     let quantityNum = quantity.textContent;
     let shopItemPriceClassNum = shopItemPriceClass.textContent;
@@ -252,11 +261,16 @@ function shopBuyModal(){
 
     let num = parseInt(quantityNum);
     let price = parseInt(shopItemPriceClassNum);
- 
+
 
     shopPopRightBtn.addEventListener("click", increase);
     shopPopLeftBtn.addEventListener("click", decrease);
-    shopBuyBtn.addEventListener("click", shopBuy);
+    // shopBuyBtn.addEventListener("click", shopBuy);
+
+    shopBoost100BuyBtn.addEventListener("click", shopBoost100Buy);
+    shopBoost200BuyBtn.addEventListener("click", shopBoost200Buy);
+    shopAuto10mBuyBtn.addEventListener("click", shopAuto10mBuy);
+    shopAuto1hBuyBtn.addEventListener("click", shopAuto1hBuy);
 
     //구매 수량 증가
     function increase(){
@@ -282,7 +296,7 @@ function shopBuyModal(){
     }
     
     //구매 취소시 수량 초기화
-    shopItemBtn.addEventListener("click", priceInit);
+    shopItemCancelBtn.addEventListener("click", priceInit);
     function priceInit(){
         num = 1;
         price = 200;
@@ -291,17 +305,86 @@ function shopBuyModal(){
     }
     
     // 구매 버튼 누를때
-    function shopBuy(){
+    function shopBoost100Buy(){
         //구매 실패시                           
         if(score < price){
             failPop.style.visibility = "visible";
-            shopItemBuyPop.style.visibility = "hidden";
+            shopBoost100BuyPop.style.visibility = "hidden";
 
             priceInit();
         }
         //구매 성공시
         else{
-            shopItemBuyPop.style.visibility = "hidden";
+            shopBoost100BuyPop.style.visibility = "hidden";
+            itemCompletePop.style.visibility = "visible";
+
+            score = Math.round((score - price) * 10000) / 10000;
+
+            for(let i = 0; i < gemScore.length; i++){
+                gemScore[i].textContent = score;
+
+            }
+            priceInit();
+        }
+    }
+    // 구매 버튼 누를때
+    function shopBoost200Buy(){
+        //구매 실패시                           
+        if(score < price){
+            failPop.style.visibility = "visible";
+            shopBoost200BuyPop.style.visibility = "hidden";
+
+            priceInit();
+        }
+        //구매 성공시
+        else{
+            shopBoost200BuyPop.style.visibility = "hidden";
+            itemCompletePop.style.visibility = "visible";
+
+            score = Math.round((score - price) * 10000) / 10000;
+
+            for(let i = 0; i < gemScore.length; i++){
+                gemScore[i].textContent = score;
+
+            }
+            priceInit();
+        }
+    }
+    // 구매 버튼 누를때
+    function shopAuto10mBuy(){
+        //구매 실패시                           
+        if(score < price){
+            failPop.style.visibility = "visible";
+            shopAuto10mBuyPop.style.visibility = "hidden";
+
+            priceInit();
+        }
+        //구매 성공시
+        else{
+            shopAuto10mBuyPop.style.visibility = "hidden";
+            itemCompletePop.style.visibility = "visible";
+
+            score = Math.round((score - price) * 10000) / 10000;
+
+            for(let i = 0; i < gemScore.length; i++){
+                gemScore[i].textContent = score;
+
+            }
+            priceInit();
+        }
+    }
+    // 구매 버튼 누를때
+    function shopAuto1hBuy(){
+        //구매 실패시                           
+        if(score < price){
+            failPop.style.visibility = "visible";
+            shopAuto1hBuyPop.style.visibility = "hidden";
+
+            priceInit();
+        }
+        //구매 성공시
+        else{
+            shopAuto1hBuyPop.style.visibility = "hidden";
             itemCompletePop.style.visibility = "visible";
 
             score = Math.round((score - price) * 10000) / 10000;

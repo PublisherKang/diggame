@@ -601,7 +601,7 @@ $(document).ready(function(){
 
     //샵 아이템 구매 팝업
     function shopModalList(number){
-        $(".shop_item_buy_modal").css("visibility", "visible")
+        $(".shop_item_buy_modal").eq(number).css("visibility", "visible")
         $(".pop_title span").eq(number).siblings().removeClass("on");
         $(".pop_title span").eq(number).addClass("on");
         $(".img_wrap img").eq(number).siblings().removeClass("on");
