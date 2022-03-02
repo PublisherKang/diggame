@@ -754,6 +754,28 @@ function invenItemAdd(){
 
 
 
+//캐릭터 선택창 이벤트
+createCharactor();
+function createCharactor(){
+    const createCharactorList = document.querySelectorAll(".login_ch_list ul li");
+
+    createCharactorList.forEach(ev => {
+
+        ev.addEventListener("click", function(e){
+            for(let i = 0; i < createCharactorList.length; i++){
+                createCharactorList[i].classList.remove("on");
+            }
+            e.currentTarget.classList.add("on");
+        });
+    });
+}
+
+
+
+
+
+
+
 
 // 윈도우에서만 마우스 커서 이벤트 발생하는 함수
 pcOnlyMouseEvent();

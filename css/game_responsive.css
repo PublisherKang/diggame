@@ -25,8 +25,28 @@
 
 .cont1{width: 100%; padding-bottom: 9.7751710vw; display: flex; flex-wrap: wrap;}
 
+/* 로그인 팝업창 */
+.game_login{border-radius: 2.857142vw;}
+
+.ch_welcom_title{font-size: 5.714285vw; margin: 10.57142vw auto 7.714285vw;}
+
+.game_login_inner{width: 100%; height: 60.571428vw; padding: 0 3.428571vw;}
+
+.game_login_inner .name_wrap{width: 49.571428vw; padding: 11.428571vw 0 7.1428571vw;}
+.game_login_inner .name_wrap label[for="ch_name"]{font-size: 2.857142vw;}
+
+.game_login_inner .name_wrap input{width: 32.571428vw; padding: 2vw 1.428571vw; border-radius: 10px;}
+
+.login_ch_list{padding: 0 3.714285vw;}
+.login_ch_list ul{height: 26.571428vw;}
+
+.login_ch_list ul li{width: 12.28571vw; height: 12.28571vw;}
+
+.login_create_btn{width: 26.571428vw; height: 7.142857vw; bottom: 5.714285vw; font-size: 2.571428vw;}
 
 /* ======================== gmae wrap ======================== */
+
+.game_parent{width: 100%; height: 100%;}
 
 .game_wrap{width: 100%; height: 100%; background: url(../images/background/back1.jpg) no-repeat 0 0 / 100% 100%; border-radius: 2.8571428vw; box-shadow: 6px 6px 1.4285714vw #000; isolation: isolate;}
 
@@ -465,7 +485,8 @@
 .waiting_wrap,
 .player_cancel_wrap,
 .player_trading_wrap,
-.success_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
+.success_wrap,
+.create_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
 
 .fail_wrap .fail_ques,
 .comp_wrap .comp_ques,
@@ -473,7 +494,8 @@
 .waiting_wrap .waiting_ques,
 .player_cancel_ques,
 .player_trading_ques,
-.success_ques{font-size: 3.42857vw; margin-bottom: 4.285714vw;}
+.success_ques,
+.create_ques{font-size: 3.42857vw; margin-bottom: 4.285714vw;}
 
 .fail_ques span,
 .waiting_ques span,
@@ -490,7 +512,8 @@
 .waiting_wrap .button_wrap button,
 .success_wrap .button_wrap button,
 .player_cancel_wrap .button_wrap button,
-.player_trading_wrap .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
+.player_trading_wrap .button_wrap button,
+.create_wrap .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
 
 .comp_ques span:nth-of-type(2){font-size: 2vw; margin-top: 1.142857vw;}
 
