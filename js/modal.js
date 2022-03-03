@@ -389,7 +389,7 @@ $(document).ready(function(){
         $(".mint_modal").show();
         $(".mint_explan").scrollTop(0);
     });
-
+ 
 
     $(".mint_explan").scroll(function(){
 

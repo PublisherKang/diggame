@@ -754,21 +754,62 @@ function invenItemAdd(){
 
 
 
+
 //캐릭터 선택창 이벤트
 createCharactor();
 function createCharactor(){
     const createCharactorList = document.querySelectorAll(".login_ch_list ul li");
+    const loginWrap = document.querySelector(".game_login");
+    const createBtn = document.querySelector(".login_create_btn");
+    const chNameInput = document.getElementById("ch_name");
+    const chNameInputValue = chNameInput.value;
+    const aleatModal = document.querySelector(".create_symbol_modal");
+    const symbolModalBtn = document.querySelector(".create_symbol_modal .cancel")
+    
 
+    
+    
     createCharactorList.forEach(ev => {
-
-        ev.addEventListener("click", function(e){
-            for(let i = 0; i < createCharactorList.length; i++){
-                createCharactorList[i].classList.remove("on");
-            }
-            e.currentTarget.classList.add("on");
-        });
+        ev.addEventListener("click", listAddClassOn);
     });
+    
+    function listAddClassOn(e){
+        for(let i = 0; i < createCharactorList.length; i++){
+            createCharactorList[i].classList.remove("on");
+        }
+        e.currentTarget.classList.add("on");
+
+        createCharactorList.forEach(e => {
+            if(e.classList.contains("on") && this.value !== ""){
+                createBtn.classList.add("on");
+            }
+        });
+    }
+    
+
+    createBtn.addEventListener("click", function(){
+        if(this.classList.contains("on")){
+            //on 활성화 되었을때
+            if(chNameInputValue.length === null){
+                aleatModal.style.visibility = "visible";
+
+                symbolModalBtn.addEventListener("click", function(){
+                    chNameInput.focus();
+                    chNameInput.value = "";
+                });
+            }else{
+                loginWrap.style.display = "none";
+            }
+        }else{
+            chNameInput.focus();
+            //on 활성화 되지 않았을때
+        }
+    });
+    
+
+    
 }
+
 
 
 
