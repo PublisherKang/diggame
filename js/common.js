@@ -236,35 +236,66 @@ function repairBuy(){
 //샵 구매 팝업 수량 버튼
 shopBuyModal();
 function shopBuyModal(){
-    const shopPopLeftBtn = document.querySelector(".left_btn");
-    const shopPopRightBtn = document.querySelector(".right_btn");
-    const quantity = document.querySelector(".quantity");
-    const shopItemPriceClass = document.querySelector(".shop_item_wrap .price");
-    const shopItemCancelBtn = document.querySelector(".shop_item_wrap .cancel");
-    // const shopBuyBtn = document.getElementById("shop_buy_btn");
-    const shopItemBuyPop = document.querySelector(".shop_item_buy_modal");
-    const itemCompletePop = document.querySelector(".shop_complete_modal");
+    const shopPopBoost100LeftBtn = document.querySelector(".boost100 .left_btn"),
+        shopPopBoost200LeftBtn = document.querySelector(".boost200 .left_btn"),
+        shopPopAuto10mLeftBtn = document.querySelector(".auto10m .left_btn"),
+        shopPopAuto1hLeftBtn = document.querySelector(".auto1h .left_btn"),
+        shopPopBoost100RightBtn = document.querySelector(".boost100 .right_btn"),
+        shopPopBoost200RightBtn = document.querySelector(".boost200 .right_btn"),
+        shopPopAuto10mRightBtn = document.querySelector(".auto10m .right_btn"),
+        shopPopAuto1hRightBtn = document.querySelector(".auto1h .right_btn"),
+        // quantity = document.querySelectorAll(".shop_item_wrap .quantity"),
+        quantityBoost100 = document.querySelector(".boost100 .quantity"),
+        quantityBoost200 = document.querySelector(".boost200 .quantity"),
+        quantityAuto10m = document.querySelector(".auto10m .quantity"),
+        quantityAuto1h = document.querySelector(".auto1h .quantity"),
+        // shopItemPriceClass = document.querySelectorAll(".shop_item_wrap .price"),
+        boost100PriceClass = document.querySelector(".boost100 .price"),
+        boost200PriceClass = document.querySelector(".boost200 .price"),
+        auto10mPriceClass = document.querySelector(".auto10m .price"),
+        auto1hPriceClass = document.querySelector(".auto1h .price"),
+        shopItemCancelBtn = document.querySelectorAll(".shop_item_wrap .cancel"),
+        // shopItemBuyPop = document.querySelector(".shop_item_buy_modal"),
+        itemCompletePop = document.querySelector(".shop_complete_modal"),
+        shopBoost100BuyPop = document.querySelector(".shop_item_buy_modal.boost100"),
+        shopBoost200BuyPop = document.querySelector(".shop_item_buy_modal.boost200"),
+        shopAuto10mBuyPop = document.querySelector(".shop_item_buy_modal.auto10m"),
+        shopAuto1hBuyPop = document.querySelector(".shop_item_buy_modal.auto1h"),
+        shopBoost100BuyBtn = document.getElementById("boost100_buy_btn"),
+        shopBoost200BuyBtn = document.getElementById("boost200_buy_btn"),
+        shopAuto10mBuyBtn = document.getElementById("auto10m_buy_btn"),
+        shopAuto1hBuyBtn = document.getElementById("auto1h_buy_btn");
 
-    const shopBoost100BuyPop = document.querySelector(".shop_item_buy_modal.boost100");
-    const shopBoost200BuyPop = document.querySelector(".shop_item_buy_modal.boost200");
-    const shopAuto10mBuyPop = document.querySelector(".shop_item_buy_modal.auto10m");
-    const shopAuto1hBuyPop = document.querySelector(".shop_item_buy_modal.auto1h");
-
-    const shopBoost100BuyBtn = document.getElementById("boost100_buy_btn");
-    const shopBoost200BuyBtn = document.getElementById("boost200_buy_btn");
-    const shopAuto10mBuyBtn = document.getElementById("auto10m_buy_btn");
-    const shopAuto1hBuyBtn = document.getElementById("auto1h_buy_btn");
-
-    let quantityNum = quantity.textContent;
-    let shopItemPriceClassNum = shopItemPriceClass.textContent;
     
+    let boost100QuantityNum = quantityBoost100.textContent,
+        boost200QuantityNum = quantityBoost200.textContent,
+        auto10mQuantityNum = quantityAuto10m.textContent,
+        auto1hQuantityNum = quantityAuto1h.textContent;
+    
+    let boost100PriceClassNum = boost100PriceClass.textContent,
+        boost200PriceClassNum = boost200PriceClass.textContent,
+        auto10mPriceClassNum = auto10mPriceClass.textContent,
+        auto1hPriceClassNum = auto1hPriceClass.textContent;
+    
+    let boost100Num = parseInt(boost100QuantityNum),
+        boost200Num = parseInt(boost200QuantityNum),
+        auto10mNum = parseInt(auto10mQuantityNum),
+        auto10hNum = parseInt(auto1hQuantityNum);
 
-    let num = parseInt(quantityNum);
-    let price = parseInt(shopItemPriceClassNum);
+    let boost100Price = parseInt(boost100PriceClassNum),
+        boost200Price = parseInt(boost200PriceClassNum),
+        auto10mPrice = parseInt(auto10mPriceClassNum),
+        auto1hPrice = parseInt(auto1hPriceClassNum);
 
 
-    shopPopRightBtn.addEventListener("click", increase);
-    shopPopLeftBtn.addEventListener("click", decrease);
+    shopPopBoost100LeftBtn.addEventListener("click", decreaseBoost100);
+    shopPopBoost200LeftBtn.addEventListener("click", decreaseBoost200);
+    shopPopAuto10mLeftBtn.addEventListener("click", decreaseAuto10m);
+    shopPopAuto1hLeftBtn.addEventListener("click", decreaseAuto1h);
+    shopPopBoost100RightBtn.addEventListener("click", increaseBoost100);
+    shopPopBoost200RightBtn.addEventListener("click", increaseBoost200);
+    shopPopAuto10mRightBtn.addEventListener("click", increaseAuto10m);
+    shopPopAuto1hRightBtn.addEventListener("click", increaseAuto1h);
     // shopBuyBtn.addEventListener("click", shopBuy);
 
     shopBoost100BuyBtn.addEventListener("click", shopBoost100Buy);
@@ -272,42 +303,129 @@ function shopBuyModal(){
     shopAuto10mBuyBtn.addEventListener("click", shopAuto10mBuy);
     shopAuto1hBuyBtn.addEventListener("click", shopAuto1hBuy);
 
-    //구매 수량 증가
-    function increase(){
-        num++;
-        price = price + 200;
-        quantity.textContent = num;
-        shopItemPriceClass.textContent = price;
-        console.log(num);
-        console.log(price);
+    //구매 수량 증가 boost100
+    function increaseBoost100(){
+        boost100Num++;
+        boost100Price = boost100Price + 200;
+        quantityBoost100.textContent = boost100Num;
+        boost100PriceClass.textContent = boost100Price;
     }
     
-    //구매 수량 감소
-    function decrease(){
-        if(num <= 1){
+    //구매 수량 감소 boost100
+    function decreaseBoost100(){
+        if(boost100Num <= 1){
             return;
         }
-        num--;
-        price = price - 200;
-        quantity.textContent = num;
-        shopItemPriceClass.textContent = price;
-        console.log(num);
-        console.log(price);
+        boost100Num--;
+        boost100Price = boost100Price - 200;
+        quantityBoost100.textContent = boost100Num;
+        boost100PriceClass.textContent = boost100Price;
+        
+
     }
+    //구매 수량 증가 boost200
+    function increaseBoost200(){
+        boost200Num++;
+        boost200Price = boost200Price + 200;
+        quantityBoost200.textContent = boost200Num;
+        boost200PriceClass.textContent = boost200Price;
+
+    }
+    
+    //구매 수량 감소 boost200
+    function decreaseBoost200(){
+        if(boost200Num <= 1){
+            return;
+        }
+        boost200Num--;
+        boost200Price = boost200Price - 200;
+        quantityBoost200.textContent = boost200Num;
+        boost200PriceClass.textContent = boost200Price;
+
+    }
+    //구매 수량 증가 Auto10m
+    function increaseAuto10m(){
+        auto10mNum++;
+        auto10mPrice = auto10mPrice + 200;
+        quantityAuto10m.textContent = auto10mNum;
+        auto10mPriceClass.textContent = auto10mPrice;
+
+    }
+    
+    //구매 수량 감소 Auto10m
+    function decreaseAuto10m(){
+        if(auto10mNum <= 1){
+            return;
+        }
+        auto10mNum--;
+        auto10mPrice = auto10mPrice - 200;
+        quantityAuto10m.textContent = auto10mNum;
+        auto10mPriceClass.textContent = auto10mPrice;
+
+    }
+
+    //구매 수량 증가 Auto1h
+    function increaseAuto1h(){
+        auto10hNum++;
+        auto1hPrice = auto1hPrice + 200;
+        quantityAuto1h.textContent = auto10hNum;
+        auto1hPriceClass.textContent = auto1hPrice;
+
+    }
+    
+    //구매 수량 감소 Auto11h
+    function decreaseAuto1h(){
+        if(auto10hNum <= 1){
+            return;
+        }
+        auto10hNum--;
+        auto1hPrice = auto1hPrice - 200;
+        quantityAuto1h.textContent = auto10hNum;
+        auto1hPriceClass.textContent = auto1hPrice;
+
+    }
+
+
+
+
+
+
     
     //구매 취소시 수량 초기화
-    shopItemCancelBtn.addEventListener("click", priceInit);
+    shopItemCancelBtn.forEach(e => {
+        e.addEventListener("click", priceInit);
+    });
+    
     function priceInit(){
-        num = 1;
-        price = 200;
-        quantity.textContent = 1;
-        shopItemPriceClass.textContent = 200;
+        boost100Num = 1;
+        boost200Num = 1;
+        auto10mNum = 1;
+        auto10hNum = 1;
+
+        boost100Price = 200;
+        boost200Price = 200;
+        auto10mPrice = 200;
+        auto1hPrice = 200;
+
+        quantityBoost100.textContent = 1;
+        quantityBoost200.textContent = 1;
+        quantityAuto10m.textContent = 1;
+        quantityAuto1h.textContent = 1;
+        
+        boost100PriceClass.textContent = 200;
+        boost200PriceClass.textContent = 200;
+        auto10mPriceClass.textContent = 200;
+        auto1hPriceClass.textContent = 200;
+        
     }
     
+
+
+
     // 구매 버튼 누를때
     function shopBoost100Buy(){
         //구매 실패시                           
-        if(score < price){
+        if(score < boost100Price){
             failPop.style.visibility = "visible";
             shopBoost100BuyPop.style.visibility = "hidden";
 
@@ -318,7 +436,7 @@ function shopBuyModal(){
             shopBoost100BuyPop.style.visibility = "hidden";
             itemCompletePop.style.visibility = "visible";
 
-            score = Math.round((score - price) * 10000) / 10000;
+            score = Math.round((score - boost100Price) * 10000) / 10000;
 
             for(let i = 0; i < gemScore.length; i++){
                 gemScore[i].textContent = score;
@@ -327,10 +445,14 @@ function shopBuyModal(){
             priceInit();
         }
     }
+
+    
+
+
     // 구매 버튼 누를때
     function shopBoost200Buy(){
         //구매 실패시                           
-        if(score < price){
+        if(score < boost200Price){
             failPop.style.visibility = "visible";
             shopBoost200BuyPop.style.visibility = "hidden";
 
@@ -341,7 +463,7 @@ function shopBuyModal(){
             shopBoost200BuyPop.style.visibility = "hidden";
             itemCompletePop.style.visibility = "visible";
 
-            score = Math.round((score - price) * 10000) / 10000;
+            score = Math.round((score - boost200Price) * 10000) / 10000;
 
             for(let i = 0; i < gemScore.length; i++){
                 gemScore[i].textContent = score;
@@ -353,7 +475,7 @@ function shopBuyModal(){
     // 구매 버튼 누를때
     function shopAuto10mBuy(){
         //구매 실패시                           
-        if(score < price){
+        if(score < auto10mPrice){
             failPop.style.visibility = "visible";
             shopAuto10mBuyPop.style.visibility = "hidden";
 
@@ -364,7 +486,7 @@ function shopBuyModal(){
             shopAuto10mBuyPop.style.visibility = "hidden";
             itemCompletePop.style.visibility = "visible";
 
-            score = Math.round((score - price) * 10000) / 10000;
+            score = Math.round((score - auto10mPrice) * 10000) / 10000;
 
             for(let i = 0; i < gemScore.length; i++){
                 gemScore[i].textContent = score;
@@ -376,7 +498,7 @@ function shopBuyModal(){
     // 구매 버튼 누를때
     function shopAuto1hBuy(){
         //구매 실패시                           
-        if(score < price){
+        if(score < auto1hPrice){
             failPop.style.visibility = "visible";
             shopAuto1hBuyPop.style.visibility = "hidden";
 
@@ -387,7 +509,7 @@ function shopBuyModal(){
             shopAuto1hBuyPop.style.visibility = "hidden";
             itemCompletePop.style.visibility = "visible";
 
-            score = Math.round((score - price) * 10000) / 10000;
+            score = Math.round((score - auto1hPrice) * 10000) / 10000;
 
             for(let i = 0; i < gemScore.length; i++){
                 gemScore[i].textContent = score;
@@ -765,7 +887,6 @@ function createCharactor(){
     const chNameInputValue = chNameInput.value;
     const aleatModal = document.querySelector(".create_symbol_modal");
     const symbolModalBtn = document.querySelector(".create_symbol_modal .cancel")
-    
 
     
     
@@ -809,7 +930,6 @@ function createCharactor(){
 
     
 }
-
 
 
 
