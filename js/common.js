@@ -874,6 +874,31 @@ function invenItemAdd(){
 //     itemLi.append(newSpan);
 // }
 
+tabBtnFunc();
+function tabBtnFunc(){
+    const invenItemTabBtn = document.querySelectorAll(".item_tab_btn ul li");
+    const invenItemList1 = document.querySelector(".tab_list1");
+    const invenItemList2 = document.querySelector(".tab_list2");
+    const invenItemtab1 = document.querySelector(".tab1");
+    const invenItemtab2 = document.querySelector(".tab2");
+
+    [...invenItemTabBtn].forEach(list => {
+        list.addEventListener("click",tabEventFunc);
+        console.log(list);
+        
+        
+    });
+
+    function tabEventFunc(e){
+        e.preventDefault();
+        invenItemTabBtn.forEach(list => {
+            list.classList.remove("on");
+        });
+        e.currentTarget.classList.add("on");
+    }
+
+    
+}
 
 
 

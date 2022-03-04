@@ -52,10 +52,10 @@ $(document).ready(function(){
 
 
     //인벤토리 ALL Item Miningtool 버튼 클릭했을때 탭
-    $(".item_tab_btn ul li").click(function(){
-        $(this).siblings().removeClass("on");
-        $(this).addClass("on");
-    });
+    // $(".item_tab_btn ul li").click(function(){
+    //     $(this).siblings().removeClass("on");
+    //     $(this).addClass("on");
+    // });
 
 
     //아이템 추가하기

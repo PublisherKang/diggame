@@ -69,5 +69,6 @@
 .emoticon_wrap ul li button{display: block;}
 
 
-
+/* 시스템 메세지 */
+.chat_wrap .system_msg_wrap{color: #ff0; line-height: 1.5; padding: 8px 0;}
 
