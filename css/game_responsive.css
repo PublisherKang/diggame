@@ -35,7 +35,7 @@
 .game_login_inner .name_wrap{width: 49.571428vw; padding: 11.428571vw 0 7.1428571vw;}
 .game_login_inner .name_wrap label[for="ch_name"]{font-size: 2.857142vw;}
 
-.game_login_inner .name_wrap input{width: 32.571428vw; padding: 2vw 1.428571vw; border-radius: 10px;}
+.game_login_inner .name_wrap input{width: 32.571428vw; padding: 1.4vw 1.428571vw; border-radius: 10px; font-size: 3vw;}
 
 .login_ch_list{padding: 0 3.714285vw;}
 .login_ch_list ul{height: 26.571428vw;}
@@ -244,7 +244,7 @@
 .item_list_wrap{width: 58vw; border-radius: 2.857142vw; box-shadow: 4px 4px 1.428571vw #000; padding: 7.1428571vw 1.428571vw 1.428571vw;}
 
 .item_tab_btn{top: 4px; left: 2vw;}
-.item_tab_btn ul{width: 40vw;}
+.item_tab_btn ul{width: 38vw;}
 .item_tab_btn ul li{font-size: 2.142857vw;}
 .item_tab_btn ul li button{padding: 2vw 1.428571vw;}
 
@@ -627,7 +627,8 @@
 
 .emoticon_wrap ul li{width: 8.910068vw; height: 8.910068vw;}
 
-
+/* 시스템 메세지 */
+.chat_wrap .system_msg_wrap{color: #ff0; line-height: 1.5; padding: 8px 0; font-size: 2.6vw;}
 
 
 #footer{}

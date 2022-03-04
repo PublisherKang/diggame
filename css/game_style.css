@@ -59,8 +59,8 @@ input:focus{outline: none;}
 
 .game_headerIn .marker{width: 40px; height: 45px; display: none; position: relative;}
 .game_headerIn .marker img{position: absolute; top: 0; left: 0;}
-.game_headerIn .marker .vip_gold{visibility: hidden;}
-.game_headerIn .marker .vip_silver{visibility: hidden;}
+.game_headerIn .marker .vip_gold{display: none;}
+.game_headerIn .marker .vip_silver{display: none;}
 
 .play_time_wrap{position: absolute; top: 50%; left: 30px; transform: translateY(-50%); -webkit-transform: translateY(-50%); line-height: 1.5; text-shadow: 2px 2px 3px #000; display: flex; justify-content: space-between; flex-wrap: wrap; width: 146px; align-items: center;}
 .play_time{color: #fff;}
@@ -350,14 +350,19 @@ input:focus{outline: none;}
 .item_list_wrap.upgrade{background: #ffbf00;}
 
 .item_tab_btn{position: absolute; top: 4px; left: 14px;}
-.item_tab_btn ul{display: flex; width: 210px; justify-content: space-between;}
+.item_tab_btn ul{display: flex; width: 154px; justify-content: space-between;}
 .item_tab_btn ul li{font-size: 15px; cursor: url(../images/ui/basic_pointer.png) 0 0 ,auto; text-align: center;}
 .item_tab_btn ul li button{padding: 14px 10px;}
 
-.item_tab_btn ul li.upgrade_tab_btn{display: none;}
-.item_tab_btn ul li.on{background: #ff0;}
+.item_tab_btn ul li.upgrade_tab_btn{display: none; padding: 14px 10px;}
+.item_tab_btn ul li button{color: #444;}
+.item_tab_btn ul li.on button{font-family: "sebang-bold"; color: #222;}
 
-.item_list_wrap .item_list{width: 400px; height: 356px; border-radius: 14px; overflow: hidden; isolation: isolate;}
+.item_list_wrap .item_list{width: 400px; height: 356px; border-radius: 14px; overflow: hidden; isolation: isolate; display: none;}
+
+.item_list_wrap .item_list.on{display: block;}
+
+
 .item_list_wrap .item_list ul{width: 420px; height: 356px; padding: 10px 20px 10px 16px; background: #333; overflow-y: auto;}
 .item_list_wrap .item_list ul::after{content: ""; display: block; clear: both;}
 .item_list_wrap .item_list ul li{width: 120px; height: 120px; cursor: url(../images/ui/basic_pointer.png) 0 0 ,auto; padding: 8px; float: left; position: relative;}
@@ -400,7 +405,7 @@ input:focus{outline: none;}
 .complete_inner .item_level{text-align: center; font-size: 24px; color: #fff;}
 
 /* repair, shop use 영역 */
-.repair_modal, .shop_use_modal{width: 100%; height: 100%; background: rgba(0, 0, 0, .7); position: absolute; top: 0; left: 0; visibility: hidden; z-index: 310;}
+.repair_modal, .shop_use_modal{width: 100%; height: 100%; background: rgba(0, 0, 0, .7); position: absolute; top: 0; left: 0; display: none; z-index: 310;}
 .repair_wrap, .shop_use_wrap{width: 400px; border-radius: 20px; border: 1px solid #fff; background: #222; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); padding: 20px;}
 
 .repair_inner{}
@@ -609,7 +614,7 @@ input:focus{outline: none;}
 .another_room_modal,
 .trade_alert_modal,
 .accept_modal,
-.trade_continue_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.trade_continue_modal{display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
 
 .another_wrap,
 .trade_alert_wrap,
@@ -648,7 +653,7 @@ input:focus{outline: none;}
 /* immediately_repair_modal mint_modal*/
 .immediately_repair_modal,
 .minting_ques_modal,
-.mint_lock_ques_modal{visibility: hidden; width: 100%; height: 100%; background: transparent; position: absolute; top: 0; left: 0;}
+.mint_lock_ques_modal{display: none; width: 100%; height: 100%; background: transparent; position: absolute; top: 0; left: 0;}
 
 .immediately_wrap,
 .minting_wrap,
@@ -701,7 +706,7 @@ input:focus{outline: none;}
 .player_trading,
 .success_modal,
 .create_symbol_modal,
-.create_exists_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
+.create_exists_modal{display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
 
 .create_symbol_modal,
 .create_exists_modal{z-index: auto;}

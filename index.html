@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="css/game_responsive.css" media="screen and (max-width: 1023px)">
     <link rel="stylesheet" href="css/game_info.css">
     <!-- <link rel="stylesheet" href="css/game_responsive_mobi.css" media="screen and (max-width: 768px)"> -->
+    <link rel="stylesheet" href="css/animation.css">
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
     <script src="js/common.js" defer></script>
     <script src="js/modal.js" defer></script>
-    <script src="js/chat_script.js"></script>
+    <script src="js/chat_script.js" defer></script>
+    <script src="js/animation.js" defer></script>
 </head>
 <body>
     <div id="wrap">
@@ -378,7 +380,7 @@
                                 <div class="ch ch1">
                                     <img class="on" src="images/character/character7_stand.png" alt="">
                                     <img src="images/character/character7_motion2.png" alt="">
-                                    <!-- <audio class="hit_audio" src="audio/hit.mp3"></audio> -->
+                                    <audio class="hit_audio" src="audio/mouse-click.mp3"></audio>
                                     <span class="user_text">Hello, Everyone~</span>
                                 </div>
                                 <div class="ch ch2">
@@ -451,8 +453,6 @@
                                         <div class="item_tab_btn">
                                             <ul>
                                                 <li class="on">
-                                                    <button>All</button></li>
-                                                <li>
                                                     <button>Item</button></li>
                                                 <li>
                                                     <button>Mining Tool</button></li>
@@ -1270,7 +1270,7 @@
                         </div><!-- immediately_repair_modal -->
                         <!-- 인벤토리 모달 -->
                         <div class="repair_fail_modal alert_modal">
-                            <div class="fail_wrap">
+                            <div class="fail_wrap horizontal">
                                 <div class="fail_inner">
                                     <p class="fail_ques">
                                         Not repaired!
@@ -1388,7 +1388,7 @@
                         
                         <!-- 실패시 공통 모달 -->
                         <div class="fail_modal alert_modal">
-                            <div class="fail_wrap">
+                            <div class="fail_wrap jello-horizontal">
                                 <div class="fail_inner">
                                     <p class="fail_ques">
                                         Out of Resources!
@@ -1400,7 +1400,7 @@
                             </div>
                         </div><!-- fail_modal -->
                         <div class="repair_moneyfail_modal alert_modal">
-                            <div class="fail_wrap">
+                            <div class="fail_wrap jello-horizontal">
                                 <div class="fail_inner">
                                     <p class="fail_ques">
                                         <span>Repair Failed!</span>
@@ -1495,6 +1495,14 @@
                                         <button class="trade_btn">Trade</button>
                                     </div>
                                 </div>
+                                <div class="system_msg_wrap">
+                                                <p>&lt; System &gt;
+                                                    <span class="system_msg">Player 3 joined the trading room.</span>    
+                                                </p>
+                                                <p>&lt; System &gt;
+                                                    <span class="system_msg">Player 2 joined the trading room.</span>
+                                                </p>
+                                            </div>
                                 <div class="user_message my_msg">
                                     <p class="user_ch">
                                         <img src="images/character/character6_profile.png" alt="">
@@ -1729,5 +1737,35 @@
         
         
     </div><!-- wrap -->
+    <script>
+
+        // 타격 시 오디오
+        
+            const myAudio = new Audio();
+            myAudio.src = "audio/click_sound.mp3";
+
+
+            const itemss = document.querySelectorAll(".stone_item");
+            const hitAudio = document.querySelector(".hit_audio");
+            itemss.forEach(e => {
+                e.addEventListener("mousedown", function(){
+                    myAudio.play();
+                });
+                e.addEventListener("mouseup", function(){
+                    myAudio.currentTime = 0;
+                });
+
+                e.addEventListener("touchstart", function(){
+                    myAudio.play();
+                });
+                e.addEventListener("touchend", function(){
+                    myAudio.currentTime = 0;
+                });
+
+            });
+        
+        
+
+    </script>
 </body>
 </html>
