@@ -245,12 +245,12 @@ $(document).ready(function(){
         $(".repair").removeClass("on");
         $(".mint_item_btn").removeClass("on");
         $(".equip_btn").removeClass("on");
-        $(".item_tab_btn ul li").removeClass("on");
+        $(".item_tab_btn ul li").hide();
         
         $(".item_list_wrap").addClass("upgrade");
         $(".upgrade_now").addClass("on");
         $(".up_cancel").addClass("on");
-        $(".upgrade_tab_btn").addClass("on");
+        $(".upgrade_tab_btn").show();
 
         targetListSpan.removeClass("target_img");
 
@@ -324,13 +324,14 @@ $(document).ready(function(){
         $(".item_list_wrap").removeClass("upgrade");
         $(".upgrade_now").removeClass("on");
         $(".up_cancel").removeClass("on");
-        $(".item_tab_btn ul li").addClass("on");
+        $(".item_tab_btn ul li").show();
         
         $(".Upgrade").addClass("on");
         $(".repair").addClass("on");
         $(".mint_item_btn").addClass("on");
-        $(".upgrade_tab_btn").removeClass("on");
+        $(".upgrade_tab_btn").hide();
         $(".upgrade_now").removeClass("upgradeon");
+
 
         targetListSpan.removeClass("upgrade_target");
 

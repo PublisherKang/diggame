@@ -354,8 +354,9 @@ input:focus{outline: none;}
 .item_tab_btn ul li{font-size: 15px; cursor: url(../images/ui/basic_pointer.png) 0 0 ,auto; text-align: center;}
 .item_tab_btn ul li button{padding: 14px 10px;}
 
-.item_tab_btn ul li.upgrade_tab_btn{display: none;}
-.item_tab_btn ul li.on{background: #ff0;}
+.item_tab_btn ul li.upgrade_tab_btn{display: none; padding: 14px 10px;}
+.item_tab_btn ul li button{color: #444;}
+.item_tab_btn ul li.on button{font-family: "sebang-bold"; color: #222;}
 
 .item_list_wrap .item_list{width: 400px; height: 356px; border-radius: 14px; overflow: hidden; isolation: isolate;}
 .item_list_wrap .item_list ul{width: 420px; height: 356px; padding: 10px 20px 10px 16px; background: #333; overflow-y: auto;}
