@@ -8,7 +8,7 @@ $(document).ready(function(){
         ev.preventDefault();
         $(".inven_modal").css("visibility", "visible");
         $(".ranking_modal").hide();
-        $(".another_room_modal").css("visibility", "hidden");
+        $(".another_room_modal").css("display", "none");
     });
 
     // 샵 팝업
@@ -18,7 +18,7 @@ $(document).ready(function(){
         $(".package_content").css("visibility", "visible");
         $(".ranking_modal").hide();
         $(".shop_menu_btn li").eq(0).addClass("on")
-        $(".another_room_modal").css("visibility", "hidden");
+        $(".another_room_modal").css("display", "none");
     });
     
     // Back 버튼
@@ -229,7 +229,7 @@ $(document).ready(function(){
     
     $(".useitem_btn").click(function(event){
         event.preventDefault();
-        $(".shop_use_modal").css("visibility", "visible");
+        $(".shop_use_modal").css("display", "block");
     });
 
 
@@ -378,7 +378,7 @@ $(document).ready(function(){
         const bottonAttr = $(this);
         
         if(bottonAttr.hasClass("mint_btn_on") === true){     
-            $(".minting_ques_modal").css("visibility", "visible")
+            $(".minting_ques_modal").css("display", "block")
             
             
         }
@@ -386,7 +386,7 @@ $(document).ready(function(){
     });
 
     $(".mint_now").click(function(){
-        $(this).parents('.alert_modal').css("visibility", "hidden");
+        $(this).parents('.alert_modal').css("display", "none");
         $(".mint_modal").show();
         $(".mint_explan").scrollTop(0);
     });
@@ -431,13 +431,13 @@ $(document).ready(function(){
     const repairCancelBtn = $(".repair_modal .cancel");
     repairBtn.click(function(ev){
         ev.preventDefault();
-        repairPop.css("visibility", "visible");
+        repairPop.css("display", "block");
         repairPop.css("background", "rgba(0, 0, 0, .7)");
 
     });
     repairCancelBtn.click(function(ev){
         ev.preventDefault();
-        repairPop.css("visibility", "hidden");
+        repairPop.css("display", "none");
     });
 
 
@@ -504,11 +504,11 @@ $(document).ready(function(){
 
     //샵 마이닝 툴 팝업
     $(".tool_content li").eq(0).click(function(){
-        $(".premiumitem_modal").css("visibility", "visible");
+        $(".premiumitem_modal").css("display", "block");
 
     });
     $(".tool_content li").eq(1).click(function(){
-        $(".vipitem_modal").css("visibility", "visible");
+        $(".vipitem_modal").css("display", "block");
 
         
         
@@ -518,13 +518,13 @@ $(document).ready(function(){
     //채널 변경 버튼
     $(".ch_change_btn").click(function(ev){
         ev.preventDefault();
-        $(".another_room_modal").css("visibility", "visible");
+        $(".another_room_modal").css("display", "block");
         $(".ranking_modal").hide();
     });
 
     $(".another_room_modal .cancel").click(function(ev){
         ev.preventDefault();
-        $(".another_room_modal").css("visibility", "hidden");
+        $(".another_room_modal").css("display", "none");
     });
 
 
@@ -549,14 +549,14 @@ $(document).ready(function(){
     const repairNow = $(".repair_now");
     nowItemBtn.click(function(ev){
         ev.preventDefault();
-        $(".immediately_repair_modal").css("visibility", "visible");
+        $(".immediately_repair_modal").css("display", "block");
     });
 
     repairNow.click(function(ev){
         ev.preventDefault();
-        $(".repair_modal").css("visibility", "visible");
+        $(".repair_modal").css("display", "block");
         $(".repair_modal").css("background", "transparent")
-        $(this).parents('.alert_modal').css("visibility", "hidden");
+        $(this).parents('.alert_modal').css("display", "none");
     });
 
 
@@ -572,11 +572,11 @@ $(document).ready(function(){
 
 
     silverPopBtn.click(function(){
-        silverPop.css("visibility", "visible");
+        silverPop.css("display", "block");
     });
 
     goldPopBtn.click(function(){
-        goldPop.css("visibility", "visible");
+        goldPop.css("display", "block");
     });
 
 // $(function(){
@@ -602,7 +602,7 @@ $(document).ready(function(){
 
     //샵 아이템 구매 팝업
     function shopModalList(number){
-        $(".shop_item_buy_modal").eq(number).css("visibility", "visible")
+        $(".shop_item_buy_modal").eq(number).css("display", "block");
         $(".pop_title span").eq(number).siblings().removeClass("on");
         $(".pop_title span").eq(number).addClass("on");
         $(".img_wrap img").eq(number).siblings().removeClass("on");
@@ -686,7 +686,7 @@ $(document).ready(function(){
     // 캔슬 버튼
     const cancelBtn = $(".cancel");
     cancelBtn.click(function(){
-        $(this).parents(".alert_modal").css("visibility", "hidden");
+        $(this).parents(".alert_modal").css("display", "none");
     });
 
 

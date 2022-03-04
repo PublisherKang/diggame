@@ -59,8 +59,8 @@ input:focus{outline: none;}
 
 .game_headerIn .marker{width: 40px; height: 45px; display: none; position: relative;}
 .game_headerIn .marker img{position: absolute; top: 0; left: 0;}
-.game_headerIn .marker .vip_gold{visibility: hidden;}
-.game_headerIn .marker .vip_silver{visibility: hidden;}
+.game_headerIn .marker .vip_gold{display: none;}
+.game_headerIn .marker .vip_silver{display: none;}
 
 .play_time_wrap{position: absolute; top: 50%; left: 30px; transform: translateY(-50%); -webkit-transform: translateY(-50%); line-height: 1.5; text-shadow: 2px 2px 3px #000; display: flex; justify-content: space-between; flex-wrap: wrap; width: 146px; align-items: center;}
 .play_time{color: #fff;}
@@ -401,7 +401,7 @@ input:focus{outline: none;}
 .complete_inner .item_level{text-align: center; font-size: 24px; color: #fff;}
 
 /* repair, shop use 영역 */
-.repair_modal, .shop_use_modal{width: 100%; height: 100%; background: rgba(0, 0, 0, .7); position: absolute; top: 0; left: 0; visibility: hidden; z-index: 310;}
+.repair_modal, .shop_use_modal{width: 100%; height: 100%; background: rgba(0, 0, 0, .7); position: absolute; top: 0; left: 0; display: none; z-index: 310;}
 .repair_wrap, .shop_use_wrap{width: 400px; border-radius: 20px; border: 1px solid #fff; background: #222; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); padding: 20px;}
 
 .repair_inner{}
@@ -610,7 +610,7 @@ input:focus{outline: none;}
 .another_room_modal,
 .trade_alert_modal,
 .accept_modal,
-.trade_continue_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.trade_continue_modal{display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
 
 .another_wrap,
 .trade_alert_wrap,
@@ -649,7 +649,7 @@ input:focus{outline: none;}
 /* immediately_repair_modal mint_modal*/
 .immediately_repair_modal,
 .minting_ques_modal,
-.mint_lock_ques_modal{visibility: hidden; width: 100%; height: 100%; background: transparent; position: absolute; top: 0; left: 0;}
+.mint_lock_ques_modal{display: none; width: 100%; height: 100%; background: transparent; position: absolute; top: 0; left: 0;}
 
 .immediately_wrap,
 .minting_wrap,
@@ -702,7 +702,7 @@ input:focus{outline: none;}
 .player_trading,
 .success_modal,
 .create_symbol_modal,
-.create_exists_modal{visibility: hidden; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
+.create_exists_modal{display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 320;}
 
 .create_symbol_modal,
 .create_exists_modal{z-index: auto;}

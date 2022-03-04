@@ -147,10 +147,10 @@ function packageBuy(){
     function silverBuy(){
         //실버 버튼 구매 성공
         if(score >= silverPrice){
-            silverPop.style.visibility = "hidden";
+            silverPop.style.display = "none";
             marker.style.display = "block";
-            vipSilverIcon.style.visibility = "visible";
-            completeModal.style.visibility = "visible";
+            vipSilverIcon.style.display = "block";
+            completeModal.style.display = "block";
             
             score = Math.round((score - silverPrice) * 10000) / 10000;
             
@@ -163,19 +163,19 @@ function packageBuy(){
         }
         //가격부족 구매 실패
         else{
-            silverPop.style.visibility = "hidden";
-            failPop.style.visibility = "visible";
+            silverPop.style.display = "none";
+            failPop.style.display = "block";
         }
     }
 
     function goldBuy(){
         //골드 버튼 구매 성공
         if(score >= goldPrice){
-            goldPop.style.visibility = "hidden";
+            goldPop.style.display = "none";
             marker.style.display = "block";
-            vipGoldIcon.style.visibility = "visible";
-            vipSilverIcon.style.visibility = "hidden";
-            completeModal.style.visibility = "visible";
+            vipGoldIcon.style.display = "block";
+            vipSilverIcon.style.display = "none";
+            completeModal.style.display = "block";
             
             score = Math.round((score - goldPrice) * 10000) / 10000;
             
@@ -187,13 +187,13 @@ function packageBuy(){
         }
         //가격부족 구매 실패
         else{
-            goldPop.style.visibility = "hidden";
-            failPop.style.visibility = "visible";
+            goldPop.style.display = "none";
+            failPop.style.display = "block";
         }
     }
 
     function modalHidden(){
-        completeModal.style.visibility = "hidden";
+        completeModal.style.display = "none";
         shopModal.style.visibility = "hidden";
         packageContent.style.visibility = "hidden";
     }
@@ -215,7 +215,7 @@ function repairBuy(){
         if(score >= repairPrice){
             //여기에 수리 수치 정상화
 
-            repairPop.style.visibility = "hidden";
+            repairPop.style.display = "none";
 
             score = Math.round((score - repairPrice) * 10000) / 10000;
 
@@ -226,8 +226,8 @@ function repairBuy(){
         }
         //구매 실패 했을 때
         else{
-            repairPop.style.visibility = "hidden";
-            repairFailPop.style.visibility = "visible";
+            repairPop.style.display = "none";
+            repairFailPop.style.display = "block";
         }
     }
 }
@@ -426,15 +426,15 @@ function shopBuyModal(){
     function shopBoost100Buy(){
         //구매 실패시                           
         if(score < boost100Price){
-            failPop.style.visibility = "visible";
-            shopBoost100BuyPop.style.visibility = "hidden";
+            failPop.style.display = "block";
+            shopBoost100BuyPop.style.display = "none";
 
             priceInit();
         }
         //구매 성공시
         else{
-            shopBoost100BuyPop.style.visibility = "hidden";
-            itemCompletePop.style.visibility = "visible";
+            shopBoost100BuyPop.style.display = "none";
+            itemCompletePop.style.display = "block";
 
             score = Math.round((score - boost100Price) * 10000) / 10000;
 
@@ -453,15 +453,15 @@ function shopBuyModal(){
     function shopBoost200Buy(){
         //구매 실패시                           
         if(score < boost200Price){
-            failPop.style.visibility = "visible";
-            shopBoost200BuyPop.style.visibility = "hidden";
+            failPop.style.display = "block";
+            shopBoost200BuyPop.style.display = "none";
 
             priceInit();
         }
         //구매 성공시
         else{
-            shopBoost200BuyPop.style.visibility = "hidden";
-            itemCompletePop.style.visibility = "visible";
+            shopBoost200BuyPop.style.display = "none";
+            itemCompletePop.style.display = "block";
 
             score = Math.round((score - boost200Price) * 10000) / 10000;
 
@@ -476,15 +476,15 @@ function shopBuyModal(){
     function shopAuto10mBuy(){
         //구매 실패시                           
         if(score < auto10mPrice){
-            failPop.style.visibility = "visible";
-            shopAuto10mBuyPop.style.visibility = "hidden";
+            failPop.style.display = "block";
+            shopAuto10mBuyPop.style.display = "none";
 
             priceInit();
         }
         //구매 성공시
         else{
-            shopAuto10mBuyPop.style.visibility = "hidden";
-            itemCompletePop.style.visibility = "visible";
+            shopAuto10mBuyPop.style.display = "none";
+            itemCompletePop.style.display = "block";
 
             score = Math.round((score - auto10mPrice) * 10000) / 10000;
 
@@ -499,15 +499,15 @@ function shopBuyModal(){
     function shopAuto1hBuy(){
         //구매 실패시                           
         if(score < auto1hPrice){
-            failPop.style.visibility = "visible";
-            shopAuto1hBuyPop.style.visibility = "hidden";
+            failPop.style.display = "block";
+            shopAuto1hBuyPop.style.display = "none";
 
             priceInit();
         }
         //구매 성공시
         else{
-            shopAuto1hBuyPop.style.visibility = "hidden";
-            itemCompletePop.style.visibility = "visible";
+            shopAuto1hBuyPop.style.display = "none";
+            itemCompletePop.style.display = "block";
 
             score = Math.round((score - auto1hPrice) * 10000) / 10000;
 
@@ -541,12 +541,12 @@ function shopToolBoxModal(){
     function preFunc(){
         //구매 실패시
         if(score < premiumBoxPriceNum){
-            failPop.style.visibility = "visible";
-            preModal.style.visibility = "hidden";
+            failPop.style.display = "block";
+            preModal.style.display = "none";
         }
         //구매 성공시
         else{
-            preModal.style.visibility = "hidden";
+            preModal.style.display = "none";
             score = Math.round((score - premiumBoxPriceNum) * 10000) / 10000;
             for(let i = 0; i < gemScore.length; i++){
                 gemScore[i].textContent = score;
@@ -561,12 +561,12 @@ function shopToolBoxModal(){
     function vipFunc(){
         //구매 실패시
         if(score < vipBoxPriceeNum){
-            failPop.style.visibility = "visible";
-            vipModal.style.visibility = "hidden";
+            failPop.style.display = "block";
+            vipModal.style.display = "none";
         }
         //구매 성공시
         else{
-            vipModal.style.visibility = "hidden";
+            vipModal.style.display = "none";
             score = Math.round((score - vipBoxPriceeNum) * 10000) / 10000;
             for(let i = 0; i < gemScore.length; i++){
                 gemScore[i].textContent = score;
@@ -687,7 +687,7 @@ function changeRoom(){
         let randomImg = Math.floor(Math.random() * imgNumber);
 
         //팝업 끄기
-        anotherRoomPop.style.visibility = "hidden";
+        anotherRoomPop.style.display = "none";
         
         setTimeout(function(){
             gameWrap.style.backgroundImage = `url('images/background/back${randomImg + 1}.jpg')`;
