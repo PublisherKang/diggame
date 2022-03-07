@@ -1,3 +1,9 @@
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +27,12 @@
     <script src="js/modal.js" defer></script>
     <script src="js/chat_script.js" defer></script>
     <script src="js/animation.js" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="~/LockScreen/LockScreen.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-base64@3.6.1/base64.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@3.0.0-rc.5/dist/web3.min.js"></script>
+    <script src="~/js/DigTocAPI.js"></script>
+    <script src="~/js/metamask.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -37,7 +49,7 @@
                             <a href="#">Info</a>
                         </li>
                         <li>
-                            <a href="#">Store</a>                            
+                            <a href="#">Store</a>
                         </li>
                         <li>
                             <a href="#">Support</a>
@@ -47,12 +59,12 @@
                 <div class="login_wrap">
                     <ul>
                         <li>
-                            <a href="#">
+                            <a class="login_btn" href="#">
                                 Log in
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a class="signUp_btn" href="#">
                                 Sign Up
                             </a>
                         </li>
@@ -69,7 +81,7 @@
                         <div class="game_login_inner">
                             <div class="name_wrap">
                                 <label for="ch_name">Nickname</label>
-                                <input type="text" id="ch_name" maxlength="20" autocomplete="off"/>
+                                <input type="text" id="ch_name" maxlength="20" autocomplete="off" />
                             </div>
                             <div class="login_ch_list">
                                 <ul>
@@ -120,7 +132,7 @@
                                     <p class="create_ques">
                                         <span>
                                             Please omit<br>
-                                            the special symbols (!@#$)<br>
+                                            the special symbols (!&#64;#$)<br>
                                             and blank spaces.
                                         </span>
                                     </p>
@@ -229,7 +241,7 @@
                                     </li><!-- 랭킹 -->
                                     <li>
                                         <button class="audio_btn"></button>
-                                        <!-- <audio class="audio" src="audio/sound.wav" autoplay></audio> -->
+                                        <audio class="audio" src="audio/back1.mp3" autoplay></audio>
                                     </li><!-- 오디오 -->
                                 </ul>
                             </div><!-- 메뉴 버튼 리스트-->
@@ -453,9 +465,14 @@
                                         <div class="item_tab_btn">
                                             <ul>
                                                 <li class="on">
-                                                    <button>Item</button></li>
+                                                    <button>All</button>
+                                                </li>
                                                 <li>
-                                                    <button>Mining Tool</button></li>
+                                                    <button>Item</button>
+                                                </li>
+                                                <li>
+                                                    <button>Mining Tool</button>
+                                                </li>
                                                 <li class="upgrade_tab_btn">Upgrade</li>
                                             </ul>
                                         </div>
@@ -482,7 +499,8 @@
                                     </div>
                                     <div class="next_minting">
                                         <div class="next_inner">
-                                            <span>Let's get<br>
+                                            <span>
+                                                Let's get<br>
                                                 Mining Tools
                                             </span>
                                             <button type="button" class="go_tools"></button>
@@ -665,7 +683,7 @@
                                             <button type="button">Total Mining</button>
                                         </li>
                                         <li>
-                                            <button type="button">Total Play Time</button>    
+                                            <button type="button">Total Play Time</button>
                                         </li>
                                     </ul>
                                     <div class="list_wrap">
@@ -809,7 +827,7 @@
                                 </div>
                             </div>
                         </div><!-- another_room_modal -->
-    
+
                         <!-- 트레이드 모달 시작 -->
                         <div class="trade_modal">
                             <div class="trade_header">
@@ -859,16 +877,18 @@
                                         <input type="number" class="gem_price" value="0.00">
                                     </div>
                                 </div><!-- my_trade_wrap -->
-                                
+
                                 <!-- 트레이드 채팅창 -->
                                 <div class="trade_chat_wrap">
                                     <div class="trade_chat_inner">
                                         <div class="message_inner">
                                             <div class="system_msg_wrap">
-                                                <p>&lt; System &gt;
-                                                    <span class="system_msg">Player 3 joined the trading room.</span>    
+                                                <p>
+                                                    &lt; System &gt;
+                                                    <span class="system_msg">Player 3 joined the trading room.</span>
                                                 </p>
-                                                <p>&lt; System &gt;
+                                                <p>
+                                                    &lt; System &gt;
                                                     <span class="system_msg">Player 2 joined the trading room.</span>
                                                 </p>
                                             </div>
@@ -900,14 +920,17 @@
                                                 </div>
                                             </div>
                                             <div class="system_msg_wrap color_green">
-                                                <p>&lt; System &gt;
-                                                    <span class="system_msg">Level 5. Traded Pock(Legendary) for 25.00 Gems. [01:21]</span>    
+                                                <p>
+                                                    &lt; System &gt;
+                                                    <span class="system_msg">Level 5. Traded Pock(Legendary) for 25.00 Gems. [01:21]</span>
                                                 </p>
-                                                <p>&lt; System &gt;
-                                                    <span class="system_msg">Level 5. Traded Pock(Legendary) for 25.00 Gems. [01:21]</span>    
+                                                <p>
+                                                    &lt; System &gt;
+                                                    <span class="system_msg">Level 5. Traded Pock(Legendary) for 25.00 Gems. [01:21]</span>
                                                 </p>
-                                                <p>&lt; System &gt;
-                                                    <span class="system_msg">Level 5. Traded Pock(Legendary) for 25.00 Gems. [01:21]</span>    
+                                                <p>
+                                                    &lt; System &gt;
+                                                    <span class="system_msg">Level 5. Traded Pock(Legendary) for 25.00 Gems. [01:21]</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -1008,7 +1031,7 @@
                             </div>
                         </div>
                         <!-- 트레이드 모달 끝 -->
-    
+
                         <!-- 컨테이너 메인 모달 끝 -->
                         <!-- 샵 아이템 모달 시작-->
                         <div class="shop_item_buy_modal boost100 alert_modal">
@@ -1098,7 +1121,8 @@
                                     <p class="pop_title">
                                         <span class="auto1h">Auto Click / 1H</span>
                                     </p>
-                                    <p class="img_wrap">>
+                                    <p class="img_wrap">
+                                        >
                                         <img class="auto1h" src="images/item/auto_click_1h.png" alt="">
                                     </p>
                                     <p class="ques">
@@ -1120,7 +1144,7 @@
                             </div>
                         </div><!-- shop_item_buy_modal -->
                         <!-- 샵 아이템 모달 끝 -->
-    
+
                         <!-- 샵 내부 마이닝 툴 모달 시작 -->
                         <div class="premiumitem_modal alert_modal">
                             <div class="premiumitem_wrap on">
@@ -1163,7 +1187,7 @@
                             </div>
                         </div>
                         <!-- 샵 내부 마이닝 툴 모달 끝 -->
-    
+
                         <div class="pre_open_modal">
                             <div class="pre_open_wrap">
                                 <ul></ul><!-- 샵 프리미엄 랜덤 아이템 리스트 추가영역 -->
@@ -1181,7 +1205,7 @@
                             </div>
                         </div><!-- vip_open_modal -->
                         <!-- 샵 내부 마이닝 툴 모달 끝 -->
-    
+
                         <!-- 경고창 모달 시작 -->
                         <div class="trade_alert_modal alert_modal">
                             <div class="trade_alert_wrap">
@@ -1286,8 +1310,10 @@
                             <div class="minting_wrap">
                                 <div class="minting_inner">
                                     <p class="minting_ques">
-                                        <span>Are you sure you<br>
-                                            want to mint this item?</span>
+                                        <span>
+                                            Are you sure you<br>
+                                            want to mint this item?
+                                        </span>
                                         <span>This will lead to an external pop-up window.</span>
                                     </p>
                                     <div class="button_wrap">
@@ -1301,8 +1327,10 @@
                             <div class="mint_lock_wrap">
                                 <div class="mint_lock_inner">
                                     <p class="mint_lock_ques">
-                                        <span>This item is locked.<br>
-                                            Unlock and proceed?</span>
+                                        <span>
+                                            This item is locked.<br>
+                                            Unlock and proceed?
+                                        </span>
                                     </p>
                                     <div class="button_wrap">
                                         <button type="button" class="confirm">Confirm</button>
@@ -1353,7 +1381,7 @@
                                 </div>
                             </div>
                         </div><!-- complete_buy_modal -->
-                        
+
                         <div class="shop_complete_modal alert_modal">
                             <div class="comp_wrap">
                                 <div class="comp_inner">
@@ -1385,7 +1413,7 @@
                                 </div>
                             </div>
                         </div><!-- shop_use_modal -->
-                        
+
                         <!-- 실패시 공통 모달 -->
                         <div class="fail_modal alert_modal">
                             <div class="fail_wrap jello-horizontal">
@@ -1495,14 +1523,6 @@
                                         <button class="trade_btn">Trade</button>
                                     </div>
                                 </div>
-                                <div class="system_msg_wrap">
-                                                <p>&lt; System &gt;
-                                                    <span class="system_msg">Player 3 joined the trading room.</span>    
-                                                </p>
-                                                <p>&lt; System &gt;
-                                                    <span class="system_msg">Player 2 joined the trading room.</span>
-                                                </p>
-                                            </div>
                                 <div class="user_message my_msg">
                                     <p class="user_ch">
                                         <img src="images/character/character6_profile.png" alt="">
@@ -1634,7 +1654,8 @@
             </div>
             <!-- mint modal 시작 -->
             <div class="mint_modal">
-                <p class="head_title">DIGTOC - Mint an Item
+                <p class="head_title">
+                    DIGTOC - Mint an Item
                     <button class="mint_close_btn"></button>
                 </p>
                 <div class="mint_wrap">
@@ -1692,7 +1713,8 @@
             </div><!-- mint modal -->
             <!-- 민팅 완료 모달 시작 -->
             <div class="mint_success_modal">
-                <p class="head_title">DIGTOC - Mint an Item
+                <p class="head_title">
+                    DIGTOC - Mint an Item
                     <button class="mint_close_btn success"></button>
                 </p>
                 <div class="mint_success_wrap">
@@ -1734,10 +1756,10 @@
             </div><!-- mint_success_modal -->
         </div><!-- container -->
         <footer id="footer"></footer><!-- footer -->
-        
-        
+
+
     </div><!-- wrap -->
-    <script>
+        <script>
 
         // 타격 시 오디오
         
