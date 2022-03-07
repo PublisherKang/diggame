@@ -45,12 +45,21 @@ $(".game_headerIn .rank_btn").click(function () {
     $(".cont_ranking").toggleClass("on");
     $(".user_item_info").removeClass("on");
     $(".gem_gauge span").toggleClass("on");
+    
+    const btnAudio = new Audio();
+    btnAudio.src = "audio/mouse-click.mp3";
+    btnAudio.play();
+    
 });
 
 //랭킹 팝업의 아이템 이미지 클릭시 유저 정보 나옴
 $(".ch_item").click(function () {
     // $(this).parents(".ranking_inner ul").siblings().removeClass("on");
     $(this).parents(".ranking_inner ul").siblings().toggleClass("on");
+
+    const btnAudio = new Audio();
+    btnAudio.src = "audio/mouse-click.mp3";
+    btnAudio.play();
 });
 
 
@@ -744,7 +753,7 @@ $(".menu_list ul li").click(function(){
     const btnAudio = new Audio();
     btnAudio.src = "audio/mouse-click.mp3";
     btnAudio.play();
-    console.log(btnAudio.play());
+    
 });
 
 
@@ -755,9 +764,6 @@ const cancelBtn = $(".cancel");
 cancelBtn.click(function () {
     $(this).parents(".alert_modal").css("display", "none");
 });
-
-
-
 
 
 

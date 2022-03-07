@@ -733,21 +733,7 @@ function boxInit() {
 }
 
 
-//사운드 버튼
-soundOn();
-function soundOn() {
-    const audioBtn = document.querySelector(".audio_btn");
-    const audio = document.querySelector(".audio");
-    audioBtn.addEventListener("click", function () {
-        this.classList.toggle("off");
-        if (audio.paused) {
-            audio.play();
-        }
-        else {
-            audio.pause();
-        }
-    });
-}
+
 
 //오픈씨 바로가기
 openseaOpen();
@@ -766,6 +752,23 @@ function changeRoom() {
     const anotherRoomPop = document.querySelector(".another_room_modal");
     const gameWrap = document.querySelector(".game_wrap");
     const imgNumber = 7;
+    const audioBtn = document.querySelector(".audio_btn");
+    const audio = document.querySelector(".audio");
+
+    //사운드 버튼
+    soundOn();
+    function soundOn() {
+        audioBtn.addEventListener("click", function () {
+            this.classList.toggle("off");
+            if (audio.paused) {
+                audio.play();
+            }
+            else {
+                audio.pause();
+            }
+        });
+    }
+
 
     changeRoomBtn.addEventListener("click", function (ev) {
         ev.preventDefault();
@@ -777,6 +780,16 @@ function changeRoom() {
 
         setTimeout(function () {
             gameWrap.style.backgroundImage = `url('images/background/back${randomImg + 1}.jpg')`;
+            
+            // 만약 오디오 버튼이 켜져있다면 방 바뀔시 오디오 실행
+            if(audioBtn.classList.contains("off")){
+                // const roomAduio = new Audio();
+                audio.src = `audio/back${randomImg + 1}.mp3`;
+
+                audio.pause();
+                audio.currentTime = 0;
+                audio.play();
+            }
         }, 1340);
 
 
@@ -788,6 +801,8 @@ function changeRoom() {
             gameWrap.classList.remove("ani");
             gameWrap.classList.remove("point_none");
         }, 3000);
+
+        
     });
 }
 
@@ -1126,3 +1141,39 @@ async function useTicketAfterPurchase(productNum) {
     
 
 }
+
+
+
+
+// changeBgm();
+// function changeBgm(){
+//     const gameWrap = document.querySelector(".game_wrap");
+//     const backAudioBtn = document.querySelector(".menu_list .audio_btn");
+//     const changeBtn = document.getElementById("change_room_btn");
+    
+
+//     let backNum = ["back1", "back2", "back3", "back4", "back5", "back6", "back7", "back8",]
+    
+//     let gameWrapStyle = gameWrap.style.backgroundImage;
+    
+    
+//     changeBtn.addEventListener("click", function(){
+//         if(gameWrapStyle === "url('images/background/back1.jpg')"){
+//             console.log("a");
+//         }
+//         if(gameWrapStyle === "url('images/background/back2.jpg')"){
+//             console.log("a");
+//         }
+//         if(gameWrapStyle === "url('images/background/back3.jpg')"){
+//             console.log("a");
+//         }
+//         if(gameWrapStyle === "url('images/background/back4.jpg')"){
+//             console.log("a");
+//         }
+//         console.log(gameWrapStyle);
+//     });
+
+
+
+
+// }
