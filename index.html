@@ -11,28 +11,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
     <title>DIGTOC</title>
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/digtoc_style.css">
-    <link rel="stylesheet" href="css/game_style.css">
-    <link rel="stylesheet" href="css/chat_style.css">
-    <link rel="stylesheet" href="css/game_responsive.css" media="screen and (max-width: 1023px)">
-    <link rel="stylesheet" href="css/game_info.css">
+    <link rel="stylesheet" href="~/css/font.css">
+    <link rel="stylesheet" href="~/css/reset.css">
+    <link rel="stylesheet" href="~/css/digtoc_style.css">
+    <link rel="stylesheet" href="~/css/game_style.css">
+    <link rel="stylesheet" href="~/css/chat_style.css">
+    <link rel="stylesheet" href="~/css/game_responsive.css" media="screen and (max-width: 1023px)">
+    <link rel="stylesheet" href="~/css/game_info.css">
     <!-- <link rel="stylesheet" href="css/game_responsive_mobi.css" media="screen and (max-width: 768px)"> -->
-    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="~/css/animation.css">
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-    <script src="js/common.js" defer></script>
-    <script src="js/modal.js" defer></script>
-    <script src="js/chat_script.js" defer></script>
-    <script src="js/animation.js" defer></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="~/js/common.js" defer></script>
+    <script src="~/js/modal.js" defer></script>
+    <script src="~/js/chat_script.js" defer></script>
+    <script src="~/js/animation.js" defer></script>
     <script src="~/LockScreen/LockScreen.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-base64@3.6.1/base64.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@3.0.0-rc.5/dist/web3.min.js"></script>
     <script src="~/js/DigTocAPI.js"></script>
     <script src="~/js/metamask.js"></script>
+    <script src="~/js/Login.js"></script>
+
 </head>
 <body>
     <div id="wrap">
@@ -40,7 +42,7 @@
             <div class="headerIn">
                 <h1 class="logo">
                     <a href="#">
-                        <img src="images/logo.png" alt="digtoc">
+                        <img src="~/images/logo.png" alt="digtoc">
                     </a>
                 </h1>
                 <nav class="gnb">
@@ -86,40 +88,40 @@
                             <div class="login_ch_list">
                                 <ul>
                                     <li>
-                                        <img src="images/character/trade_character1_profile.png" alt="">
+                                        <img src="~/images/character/trade_character1_profile.png" alt="">
                                     </li>
                                     <li>
-                                        <img src="images/character/trade_character2_profile.png" alt="">
+                                        <img src="~/images/character/trade_character2_profile.png" alt="">
                                     </li>
                                     <li>
-                                        <img src="images/character/trade_character3_profile.png" alt="">
+                                        <img src="~/images/character/trade_character3_profile.png" alt="">
                                     </li>
                                     <li>
-                                        <img src="images/character/trade_character4_profile.png" alt="">
+                                        <img src="~/images/character/trade_character4_profile.png" alt="">
                                     </li>
                                     <li>
-                                        <img src="images/character/trade_character5_profile.png" alt="">
+                                        <img src="~/images/character/trade_character5_profile.png" alt="">
                                     </li>
                                     <li>
-                                        <img src="images/character/trade_character6_profile.png" alt="">
+                                        <img src="~/images/character/trade_character6_profile.png" alt="">
                                     </li>
                                     <li>
-                                        <img src="images/character/trade_character7_profile.png" alt="">
+                                        <img src="~/images/character/trade_character7_profile.png" alt="">
                                     </li>
                                     <li>
-                                        <img src="images/character/trade_character8_profile.png" alt="">
+                                        <img src="~/images/character/trade_character8_profile.png" alt="">
                                     </li>
                                     <li>
-                                        <img src="images/character/trade_character9_profile.png" alt="">
+                                        <img src="~/images/character/trade_character9_profile.png" alt="">
                                     </li>
                                     <li>
-                                        <img src="images/character/trade_character10_profile.png" alt="">
+                                        <img src="~/images/character/trade_character10_profile.png" alt="">
                                     </li>
                                     <li>
-                                        <img src="images/character/trade_character11_profile.png" alt="">
+                                        <img src="~/images/character/trade_character11_profile.png" alt="">
                                     </li>
                                     <li>
-                                        <img src="images/character/trade_character12_profile.png" alt="">
+                                        <img src="~/images/character/trade_character12_profile.png" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -161,13 +163,13 @@
                     <!-- 캐릭터 선택창 끝 -->
 
 
-                    <div class="game_wrap">
+                    <div class="game_wrap" style="background-image: url('../../images/background/back1.jpg');">
                         <div class="game_header">
                             <div class="game_headerIn">
                                 <div class="play_time_wrap">
                                     <p class="marker">
-                                        <img class="vip_gold" src="images/ui/vipgold.svg" alt="">
-                                        <img class="vip_silver" src="images/ui/vipsilver.svg" alt="">
+                                        <img class="vip_gold" src="~/images/ui/vipgold.svg" alt="">
+                                        <img class="vip_silver" src="~/images/ui/vipsilver.svg" alt="">
                                     </p>
                                     <div class="play_wrap">
                                         <div class="play_time">
@@ -194,7 +196,7 @@
                         <div class="game_container">
                             <div class="now_item">
                                 <div class="remaining_amount">
-                                    <img class="pick" src="images/item/pick_common.png" alt="">
+                                    <img class="pick" src="~/images/item/pick_common.png" alt="">
                                     <div class="item_info">
                                         <p class="item_level">Lv.1 Pick</p>
                                         <p class="item_rank">
@@ -212,10 +214,10 @@
                                 </div>
                             </div><!-- 아이템 남은 양 -->
                             <div class="stone_item item1">
-                                <img src="images/background/digtoc_gui.png" alt="">
+                                <img src="~/images/background/digtoc_gui.png" alt="">
                             </div><!-- 광맥 이미지1 -->
                             <div class="stone_item item2">
-                                <img src="images/background/digtoc_gui.png" alt="">
+                                <img src="~/images/background/digtoc_gui.png" alt="">
                             </div><!-- 광맥 이미지2 -->
                             <div class="boost_200">
                                 <span class="boost_icon"></span>
@@ -241,7 +243,7 @@
                                     </li><!-- 랭킹 -->
                                     <li>
                                         <button class="audio_btn"></button>
-                                        <audio class="audio" src="audio/back1.mp3" autoplay></audio>
+                                        <audio class="audio" src="~/audio/back1.mp3"></audio>
                                     </li><!-- 오디오 -->
                                 </ul>
                             </div><!-- 메뉴 버튼 리스트-->
@@ -250,10 +252,10 @@
                                     <ul>
                                         <li>
                                             <p class="ch_img">
-                                                <img src="images/character/character1_profile.png" alt="">
+                                                <img src="~/images/character/character1_profile.png" alt="">
                                             </p>
                                             <p class="ch_item">
-                                                <img src="images/item/pick_legend.png" alt="">
+                                                <img src="~/images/item/pick_legend.png" alt="">
                                             </p>
                                             <div class="percent_wrap">
                                                 <p class="gem_gauge">
@@ -270,10 +272,10 @@
                                         </li>
                                         <li>
                                             <p class="ch_img">
-                                                <img src="images/character/character2_profile.png" alt="">
+                                                <img src="~/images/character/character2_profile.png" alt="">
                                             </p>
                                             <p class="ch_item">
-                                                <img src="images/item/pick_legend.png" alt="">
+                                                <img src="~/images/item/pick_legend.png" alt="">
                                             </p>
                                             <div class="percent_wrap">
                                                 <p class="gem_gauge">
@@ -290,10 +292,10 @@
                                         </li>
                                         <li>
                                             <p class="ch_img">
-                                                <img src="images/character/character3_profile.png" alt="">
+                                                <img src="~/images/character/character3_profile.png" alt="">
                                             </p>
                                             <p class="ch_item">
-                                                <img src="images/item/pick_common.png" alt="">
+                                                <img src="~/images/item/pick_common.png" alt="">
                                             </p>
                                             <div class="percent_wrap">
                                                 <p class="gem_gauge">
@@ -310,10 +312,10 @@
                                         </li>
                                         <li>
                                             <p class="ch_img">
-                                                <img src="images/character/character4_profile.png" alt="">
+                                                <img src="~/images/character/character4_profile.png" alt="">
                                             </p>
                                             <p class="ch_item">
-                                                <img src="images/item/pick_rare.png" alt="">
+                                                <img src="~/images/item/pick_rare.png" alt="">
                                             </p>
                                             <div class="percent_wrap">
                                                 <p class="gem_gauge">
@@ -330,10 +332,10 @@
                                         </li>
                                         <li>
                                             <p class="ch_img">
-                                                <img src="images/character/character5_profile.png" alt="">
+                                                <img src="~/images/character/character5_profile.png" alt="">
                                             </p>
                                             <p class="ch_item">
-                                                <img src="images/item/pick_rare.png" alt="">
+                                                <img src="~/images/item/pick_rare.png" alt="">
                                             </p>
                                             <div class="percent_wrap">
                                                 <p class="gem_gauge">
@@ -350,10 +352,10 @@
                                         </li>
                                         <li>
                                             <p class="ch_img">
-                                                <img src="images/character/character6_profile.png" alt="">
+                                                <img src="~/images/character/character6_profile.png" alt="">
                                             </p>
                                             <p class="ch_item">
-                                                <img src="images/item/pick_common.png" alt="">
+                                                <img src="~/images/item/pick_common.png" alt="">
                                             </p>
                                             <div class="percent_wrap">
                                                 <p class="gem_gauge">
@@ -370,7 +372,7 @@
                                         </li>
                                     </ul>
                                     <div class="user_item_info">
-                                        <img class="pick" src="images/item/pick_legend.png" alt="">
+                                        <img class="pick" src="~/images/item/pick_legend.png" alt="">
                                         <div class="item_info">
                                             <p class="item_level">Lv.1 Pick</p>
                                             <p class="item_rank">
@@ -390,30 +392,55 @@
                             </div><!-- 컨테이너 랭킹 -->
                             <div class="ch_wrap">
                                 <div class="ch ch1">
-                                    <img class="on" src="images/character/character7_stand.png" alt="">
-                                    <img src="images/character/character7_motion2.png" alt="">
-                                    <audio class="hit_audio" src="audio/mouse-click.mp3"></audio>
+                                    <img class="on" src="~/images/character/character7_stand.png" alt="">
+                                    <img src="~/images/character/character7_motion2.png" alt="">
+                                    <audio class="hit_audio" src="~/audio/mouse-click.mp3"></audio>
                                     <span class="user_text">Hello, Everyone~</span>
                                 </div>
                                 <div class="ch ch2">
-                                    <img class="on" src="images/character/character1_stand.png" alt="">
+                                    <img class="on" src="~/images/character/character1_stand.png" alt="">
                                     <span class="user_text">Hello, Everyone~</span>
+                                    <div class="menu_wrap"></div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
                                 </div>
                                 <div class="ch ch3">
-                                    <img class="on" src="images/character/character6_stand.png" alt="">
+                                    <img class="on" src="~/images/character/character6_stand.png" alt="">
                                     <span class="user_text">Hello, Everyone~</span>
+                                    <div class="menu_wrap"></div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
                                 </div>
                                 <div class="ch ch4">
-                                    <img class="on" src="images/character/character2_stand.png" alt="">
+                                    <img class="on" src="~/images/character/character2_stand.png" alt="">
                                     <span class="user_text">Hello, Everyone~</span>
+                                    <div class="menu_wrap"></div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
                                 </div>
                                 <div class="ch ch5">
-                                    <img class="on" src="images/character/character4_stand.png" alt="">
+                                    <img class="on" src="~/images/character/character4_stand.png" alt="">
                                     <span class="user_text">Hello, Everyone~</span>
+                                    <div class="menu_wrap"></div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
                                 </div>
                                 <div class="ch ch6">
-                                    <img class="on" src="images/character/character8_stand.png" alt="">
+                                    <img class="on" src="~/images/character/character8_stand.png" alt="">
                                     <span class="user_text">Hello, Everyone~</span>
+                                    <div class="menu_wrap"></div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
                                 </div>
                             </div><!-- 캐릭터 -->
                         </div><!-- 게임 컨테이너 -->
@@ -433,7 +460,7 @@
                                         <span>EQUIP</span>
                                     </p>
                                     <div class="preview_item">
-                                        <img src="images/item/pick_common.png" alt="">
+                                        <img src="~/images/item/pick_common.png" alt="">
                                     </div>
                                     <p class="item_level">
                                         Lv.1 Pick
@@ -465,12 +492,6 @@
                                         <div class="item_tab_btn">
                                             <ul>
                                                 <li class="on">
-                                                    <button>All</button>
-                                                </li>
-                                                <li>
-                                                    <button>Item</button>
-                                                </li>
-                                                <li>
                                                     <button>Mining Tool</button>
                                                 </li>
                                                 <li class="upgrade_tab_btn">Upgrade</li>
@@ -480,7 +501,7 @@
                                             <ul>
                                                 <!-- <li>
                                                     <div class="item_wrap">
-                                                        <img src="images/item/pick_common.png">
+                                                        <img src="~/images/item/pick_common.png">
                                                         <p class="item_level">+7</p>
                                                         <p class="item_lock"></p>
                                                         <div class="item_info">
@@ -512,7 +533,7 @@
                                 <div class="complete_inner">
                                     <p class="complete_title">Upgrade Complete!</p>
                                     <p class="complete_item">
-                                        <img src="images/item/pick_common.png" alt="">
+                                        <img src="~/images/item/pick_common.png" alt="">
                                     </p>
                                     <p class="item_name">
                                         Pick
@@ -553,7 +574,7 @@
                                         <ul>
                                             <li class="vip_silver_wrap">
                                                 <div class="vip_silver">
-                                                    <img src="images/ui/vipsilver.svg" alt="">
+                                                    <img src="~/images/ui/vipsilver.svg" alt="">
                                                     7 days every day<br>
                                                     Permanent Booster 10%<br>
                                                     Auto click 1 hour 1 piece<br>
@@ -565,7 +586,7 @@
                                             </li>
                                             <li class="vip_gold_wrap">
                                                 <div class="vip_gold">
-                                                    <img src="images/ui/vipgold.svg" alt="">
+                                                    <img src="~/images/ui/vipgold.svg" alt="">
                                                     7 days every day<br>
                                                     Always Boost 30%<br>
                                                     Auto click 1 hour 5 photos<br>
@@ -585,7 +606,7 @@
                                             <ul>
                                                 <li class="shop_item_buy">
                                                     <div class="item">
-                                                        <img src="images/item/booster_10m.png" alt="">
+                                                        <img src="~/images/item/booster_10m.png" alt="">
                                                         Mining 100% UP / 10M
                                                     </div>
                                                     <p class="price_wrap">
@@ -594,7 +615,7 @@
                                                 </li>
                                                 <li class="shop_item_buy">
                                                     <div class="item">
-                                                        <img src="images/item/booster_1h.png" alt="">
+                                                        <img src="~/images/item/booster_1h.png" alt="">
                                                         Mining 200% UP / 1H
                                                     </div>
                                                     <p class="price_wrap">
@@ -610,7 +631,7 @@
                                             <ul>
                                                 <li class="shop_item_buy">
                                                     <div class="item">
-                                                        <img src="images/item/auto_click_10m.png" alt="">
+                                                        <img src="~/images/item/auto_click_10m.png" alt="">
                                                         Auto Click / 10M
                                                     </div>
                                                     <p class="price_wrap">
@@ -619,7 +640,7 @@
                                                 </li>
                                                 <li class="shop_item_buy">
                                                     <div class="item">
-                                                        <img src="images/item/auto_click_1h.png" alt="">
+                                                        <img src="~/images/item/auto_click_1h.png" alt="">
                                                         Auto Click / 1H
                                                     </div>
                                                     <p class="price_wrap">
@@ -633,7 +654,7 @@
                                         <ul>
                                             <li>
                                                 <div class="box_wrap">
-                                                    <img src="images/ui/premium_box.png" alt="">
+                                                    <img src="~/images/ui/premium_box.png" alt="">
                                                     <p class="box_title">Premium Box</p>
                                                     <span class="box_info">
                                                         (Rare 80%, Legend 20%)
@@ -645,7 +666,7 @@
                                             </li>
                                             <li>
                                                 <div class="box_wrap">
-                                                    <img src="images/ui/vip_box.png" alt="">
+                                                    <img src="~/images/ui/vip_box.png" alt="">
                                                     <p class="box_title">VIP Box</p>
                                                     <span class="box_info">
                                                         (Normal 80%, Rare 20%)
@@ -827,7 +848,6 @@
                                 </div>
                             </div>
                         </div><!-- another_room_modal -->
-
                         <!-- 트레이드 모달 시작 -->
                         <div class="trade_modal">
                             <div class="trade_header">
@@ -840,7 +860,7 @@
                                 <div class="my_trade_wrap">
                                     <div class="trade_ch my_ch">
                                         <p class="trade_ch_img">
-                                            <img src="images/character/trade_character6_profile.png" alt="">
+                                            <img src="~/images/character/trade_character6_profile.png" alt="">
                                             <span class="confirm_area">Confirm</span>
                                         </p>
                                         <span class="my_name">Player 5</span>
@@ -854,7 +874,7 @@
                                         </div>
                                         <div class="trade_inner_item">
                                             <p class="trade_item">
-                                                <img src="images/item/pick_legend.png" alt="">
+                                                <img src="~/images/item/pick_legend.png" alt="">
                                                 <button class="item_close_btn"></button>
                                             </p>
                                             <p class="item_level">Lv.1 Pick</p>
@@ -877,7 +897,6 @@
                                         <input type="number" class="gem_price" value="0.00">
                                     </div>
                                 </div><!-- my_trade_wrap -->
-
                                 <!-- 트레이드 채팅창 -->
                                 <div class="trade_chat_wrap">
                                     <div class="trade_chat_inner">
@@ -894,7 +913,7 @@
                                             </div>
                                             <div class="user_message my_msg">
                                                 <p class="user_ch">
-                                                    <img src="images/character/character6_profile.png" alt="">
+                                                    <img src="~/images/character/character6_profile.png" alt="">
                                                 </p>
                                                 <div class="text_box">
                                                     <p class="user_text_message">I have 5 level 4 pickaxes. how many would you like to buy?</p>
@@ -903,7 +922,7 @@
                                             </div>
                                             <div class="user_message">
                                                 <p class="user_ch user3">
-                                                    <img src="images/character/character1_profile.png" alt="">
+                                                    <img src="~/images/character/character1_profile.png" alt="">
                                                 </p>
                                                 <div class="text_box">
                                                     <p class="user_text_message">Is it possible to trade 3 pieces for 25 gems each??</p>
@@ -912,7 +931,7 @@
                                             </div>
                                             <div class="user_message my_msg">
                                                 <p class="user_ch">
-                                                    <img src="images/character/character6_profile.png" alt="">
+                                                    <img src="~/images/character/character6_profile.png" alt="">
                                                 </p>
                                                 <div class="text_box">
                                                     <p class="user_text_message">ok</p>
@@ -953,7 +972,7 @@
                                 <div class="user_trade_wrap">
                                     <div class="trade_ch user_ch">
                                         <p class="trade_ch_img">
-                                            <img src="images/character/trade_character1_profile.png" alt="">
+                                            <img src="~/images/character/trade_character1_profile.png" alt="">
                                             <span class="confirm_area">Confirm</span>
                                         </p>
                                         <span class="user_name">Player 3</span>
@@ -967,7 +986,7 @@
                                         </div>
                                         <div class="trade_inner_item">
                                             <p class="trade_item">
-                                                <img src="images/item/pick_legend.png" alt="">
+                                                <img src="~/images/item/pick_legend.png" alt="">
                                             </p>
                                             <p class="item_level">Lv.1 Pick</p>
                                             <p class="item_rank">
@@ -1004,7 +1023,7 @@
                                     <div class="left_layer">
                                         <div class="item_info_wrap">
                                             <div class="preview_item">
-                                                <img src="images/item/pick_common.png" alt="">
+                                                <img src="~/images/item/pick_common.png" alt="">
                                             </div>
                                             <p class="item_level trade">
                                                 Lv.1 Pick
@@ -1031,7 +1050,6 @@
                             </div>
                         </div>
                         <!-- 트레이드 모달 끝 -->
-
                         <!-- 컨테이너 메인 모달 끝 -->
                         <!-- 샵 아이템 모달 시작-->
                         <div class="shop_item_buy_modal boost100 alert_modal">
@@ -1041,7 +1059,7 @@
                                         <span class="mining100 on">Mining 100% UP / 10M</span>
                                     </p>
                                     <p class="img_wrap">
-                                        <img class="mining100 on" src="images/item/booster_10m.png" alt="">
+                                        <img class="mining100 on" src="~/images/item/booster_10m.png" alt="">
                                     </p>
                                     <p class="ques">
                                         How many would you like to purchase?
@@ -1068,7 +1086,7 @@
                                         <span class="mining200">Mining 200% UP / 1H</span>
                                     </p>
                                     <p class="img_wrap">
-                                        <img class="mining200" src="images/item/booster_1h.png" alt="">
+                                        <img class="mining200" src="~/images/item/booster_1h.png" alt="">
                                     </p>
                                     <p class="ques">
                                         How many would you like to purchase?
@@ -1095,7 +1113,7 @@
                                         <span class="auto10m">Auto Click / 10M</span>
                                     </p>
                                     <p class="img_wrap">
-                                        <img class="auto10m" src="images/item/auto_click_10m.png" alt="">
+                                        <img class="auto10m" src="~/images/item/auto_click_10m.png" alt="">
                                     </p>
                                     <p class="ques">
                                         How many would you like to purchase?
@@ -1123,7 +1141,7 @@
                                     </p>
                                     <p class="img_wrap">
                                         >
-                                        <img class="auto1h" src="images/item/auto_click_1h.png" alt="">
+                                        <img class="auto1h" src="~/images/item/auto_click_1h.png" alt="">
                                     </p>
                                     <p class="ques">
                                         How many would you like to purchase?
@@ -1144,7 +1162,6 @@
                             </div>
                         </div><!-- shop_item_buy_modal -->
                         <!-- 샵 아이템 모달 끝 -->
-
                         <!-- 샵 내부 마이닝 툴 모달 시작 -->
                         <div class="premiumitem_modal alert_modal">
                             <div class="premiumitem_wrap on">
@@ -1154,7 +1171,7 @@
                                         you want to buy it?
                                     </p>
                                     <p class="img_wrap">
-                                        <img src="images/ui/premium_box.png" alt="">
+                                        <img src="~/images/ui/premium_box.png" alt="">
                                     </p>
                                     <p class="price_wrap">
                                         <span class="premium_price">1000</span>
@@ -1174,7 +1191,7 @@
                                         you want to buy it?
                                     </p>
                                     <p class="img_wrap">
-                                        <img src="images/ui/vip_box.png" alt="">
+                                        <img src="~/images/ui/vip_box.png" alt="">
                                     </p>
                                     <p class="price_wrap">
                                         <span class="vipbox_price">800</span>
@@ -1205,7 +1222,6 @@
                             </div>
                         </div><!-- vip_open_modal -->
                         <!-- 샵 내부 마이닝 툴 모달 끝 -->
-
                         <!-- 경고창 모달 시작 -->
                         <div class="trade_alert_modal alert_modal">
                             <div class="trade_alert_wrap">
@@ -1413,7 +1429,6 @@
                                 </div>
                             </div>
                         </div><!-- shop_use_modal -->
-
                         <!-- 실패시 공통 모달 -->
                         <div class="fail_modal alert_modal">
                             <div class="fail_wrap jello-horizontal">
@@ -1480,7 +1495,7 @@
                             <div class="message_inner">
                                 <div class="user_message">
                                     <p class="user_ch">
-                                        <img src="images/character/character5_profile.png" alt="">
+                                        <img src="~/images/character/character5_profile.png" alt="">
                                     </p>
                                     <div class="user_name_wrap">
                                         <span class="user_name">Player 1</span>
@@ -1496,7 +1511,7 @@
                                 </div>
                                 <div class="user_message my_msg">
                                     <p class="user_ch">
-                                        <img src="images/character/character6_profile.png" alt="">
+                                        <img src="~/images/character/character6_profile.png" alt="">
                                     </p>
                                     <div class="text_box">
                                         <p class="user_text_message">Hi~</p>
@@ -1509,7 +1524,7 @@
                                 </div>
                                 <div class="user_message">
                                     <p class="user_ch">
-                                        <img src="images/character/character5_profile.png" alt="">
+                                        <img src="~/images/character/character5_profile.png" alt="">
                                     </p>
                                     <div class="user_name_wrap">
                                         <span class="user_name">Player 1</span>
@@ -1525,7 +1540,7 @@
                                 </div>
                                 <div class="user_message my_msg">
                                     <p class="user_ch">
-                                        <img src="images/character/character6_profile.png" alt="">
+                                        <img src="~/images/character/character6_profile.png" alt="">
                                     </p>
                                     <div class="text_box">
                                         <p class="user_text_message">Buy boost items from the shop and click the long wait as fast as fast as possible! XD</p>
@@ -1536,9 +1551,19 @@
                                         <button class="trade_btn">Trade</button>
                                     </div>
                                 </div>
+                                <div class="system_msg_wrap">
+                                    <p>
+                                        &lt; System &gt;
+                                        <span class="system_msg">Player 3 hello~ world</span>
+                                    </p>
+                                    <p>
+                                        &lt; System &gt;
+                                        <span class="system_msg">Player 2 hello~ world</span>
+                                    </p>
+                                </div>
                                 <div class="user_message user2">
                                     <p class="user_ch">
-                                        <img src="images/character/character3_profile.png" alt="">
+                                        <img src="~/images/character/character3_profile.png" alt="">
                                     </p>
                                     <div class="user_name_wrap">
                                         <span class="user_name">Player 2</span>
@@ -1554,7 +1579,7 @@
                                 </div>
                                 <div class="user_message user3 whisper">
                                     <p class="user_ch">
-                                        <img src="images/character/character1_profile.png" alt="">
+                                        <img src="~/images/character/character1_profile.png" alt="">
                                     </p>
                                     <div class="user_name_wrap">
                                         <span class="user_name">Player 5</span>
@@ -1571,7 +1596,7 @@
                                 </div>
                                 <div class="user_message my_msg">
                                     <p class="user_ch">
-                                        <img src="images/character/character6_profile.png" alt="">
+                                        <img src="~/images/character/character6_profile.png" alt="">
                                     </p>
                                     <div class="text_box">
                                         <p class="user_text_message">I need to rest now</p>
@@ -1584,7 +1609,7 @@
                                 </div>
                                 <div class="user_message my_msg whisper">
                                     <p class="user_ch">
-                                        <img src="images/character/character6_profile.png" alt="">
+                                        <img src="~/images/character/character6_profile.png" alt="">
                                     </p>
                                     <div class="user_name_wrap">
                                         <span class="whisper_color">Whisper To</span>
@@ -1601,7 +1626,7 @@
                                 </div>
                                 <div class="user_message my_msg whisper">
                                     <p class="user_ch">
-                                        <img src="images/character/character6_profile.png" alt="">
+                                        <img src="~/images/character/character6_profile.png" alt="">
                                     </p>
                                     <div class="user_name_wrap">
                                         <span class="whisper_color">Whisper To</span>
@@ -1618,7 +1643,7 @@
                                 </div>
                                 <div class="user_message user3 whisper">
                                     <p class="user_ch">
-                                        <img src="images/character/character1_profile.png" alt="">
+                                        <img src="~/images/character/character1_profile.png" alt="">
                                     </p>
                                     <div class="user_name_wrap">
                                         <span class="user_name">Player 5</span>
@@ -1661,7 +1686,7 @@
                 <div class="mint_wrap">
                     <div class="item_area">
                         <p class="mint_item">
-                            <img src="images/item/pick_legend.png" alt="">
+                            <img src="~/images/item/pick_legend.png" alt="">
                         </p>
                         <p class="item_level">Lv.1 Pick</p>
                         <p class="item_rank">
@@ -1723,7 +1748,7 @@
                     </div>
                     <div class="item_area">
                         <p class="mint_item">
-                            <img src="images/item/pick_legend.png" alt="">
+                            <img src="~/images/item/pick_legend.png" alt="">
                         </p>
                         <div class="item_info">
                             <p class="item_level">Lv.1 Pick</p>
@@ -1759,34 +1784,34 @@
 
 
     </div><!-- wrap -->
-        <script>
+    <script>
 
         // 타격 시 오디오
-        
-            const myAudio = new Audio();
-            myAudio.src = "audio/click_sound.mp3";
+
+        const myAudio = new Audio();
+        myAudio.src = "../../audio/click_sound.mp3";
 
 
-            const itemss = document.querySelectorAll(".stone_item");
-            const hitAudio = document.querySelector(".hit_audio");
-            itemss.forEach(e => {
-                e.addEventListener("mousedown", function(){
-                    myAudio.play();
-                });
-                e.addEventListener("mouseup", function(){
-                    myAudio.currentTime = 0;
-                });
-
-                e.addEventListener("touchstart", function(){
-                    myAudio.play();
-                });
-                e.addEventListener("touchend", function(){
-                    myAudio.currentTime = 0;
-                });
-
+        const itemss = document.querySelectorAll(".stone_item");
+        const hitAudio = document.querySelector(".hit_audio");
+        itemss.forEach(e => {
+            e.addEventListener("mousedown", function () {
+                myAudio.play();
             });
-        
-        
+            e.addEventListener("mouseup", function () {
+                myAudio.currentTime = 0;
+            });
+
+            e.addEventListener("touchstart", function () {
+                myAudio.play();
+            });
+            e.addEventListener("touchend", function () {
+                myAudio.currentTime = 0;
+            });
+
+        });
+
+
 
     </script>
 </body>

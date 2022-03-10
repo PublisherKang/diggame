@@ -767,3 +767,13 @@ cancelBtn.click(function () {
 
 
 
+$(".menu_wrap").click(function(){
+    $(this).parents(".ch").siblings().find(".user_menu").removeClass("on");
+    $(this).siblings(".user_menu").addClass("on");
+});
+
+$('.ch .user_menu button').click(function(){
+    $(this).parent(".user_menu").removeClass("on");
+});
+
+

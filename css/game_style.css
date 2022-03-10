@@ -62,7 +62,7 @@ input:focus{outline: none;}
 .game_headerIn .marker .vip_gold{display: none;}
 .game_headerIn .marker .vip_silver{display: none;}
 
-.play_time_wrap{position: absolute; top: 50%; left: 30px; transform: translateY(-50%); -webkit-transform: translateY(-50%); line-height: 1.5; text-shadow: 2px 2px 3px #000; display: flex; justify-content: space-between; flex-wrap: wrap; width: 146px; align-items: center;}
+.play_time_wrap{position: absolute; top: 50%; left: 30px; transform: translateY(-50%); -webkit-transform: translateY(-50%); line-height: 1.5; text-shadow: 2px 2px 3px #000; display: flex; justify-content: space-between; flex-wrap: wrap; width: 200px; align-items: center;}
 .play_time{color: #fff;}
 .play_time_rank{color: #fff;}
 .up_icon{padding: 0 4px; background: url(../images/ui/playtiime_rankup_icon.png) no-repeat center center / contain; margin-left: 4px;}
@@ -1077,3 +1077,12 @@ input:focus{outline: none;}
 .trade_item_list ul li > div .price{display: block; text-align: right; background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 14px auto; color: #fff; width: 100%; font-size: 10px; margin: 0 auto; padding: 3px 0;}
 
 .trade_inven_wrap .select_btn{width: 170px; text-align: center; background: url(../images/ui/btn_img1.png) no-repeat 0 0 / cover; display: block; padding: 13px 0; font-size: 16px; margin: 10px auto 0;}
+
+
+
+/* 캐릭터 클릭 메뉴 */
+.ch .menu_wrap{width: 80px; height: 80px; background: transparent; position: absolute; top: 28px; left: 30px; pointer-events: initial; cursor: pointer;}
+.ch .user_menu{top: 50px; left: 38px; z-index: 5; pointer-events: initial;
+    cursor: pointer; display: none;}
+
+.ch .user_menu.on{display: flex;}
