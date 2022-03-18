@@ -213,7 +213,7 @@ h2{
       font-size: 14px; line-height: 1.6;
       margin-bottom: 20px;
 
-      &:last-child{margin-bottom: 63px;}
+      &:last-child{margin-bottom: 78px;}
     }
   }
 }
@@ -260,7 +260,7 @@ h2{
           padding: 10px 12px 10px 0;
           color: #222;
           font-size: 24px;
-          background: rgba(255,255,255, .6);
+          background: rgba(255,255,255, .4);
           font-family: $h2-font-bold;
         }
       }
@@ -717,6 +717,7 @@ h2{
 
     .inner_text{
       padding-left: 4.03645vw;
+      margin-bottom: 10vw;
       
       p{
         font-size: 2.60416vw;
@@ -1036,7 +1037,6 @@ h2{
     visibility: hidden;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .8);
     position: fixed;
     z-index: 50;
     // top: 80px;
@@ -1045,7 +1045,8 @@ h2{
   .overlay{
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
+    background: rgba(0, 0, 0, .8);
   }
   
   .side_inner{
@@ -1083,6 +1084,7 @@ h2{
         text-align: center;
         font-size: 3.515625vmin;
         line-height: 13.411458vmin;
+        color: #fff;
       }
 
       &:nth-of-type(1) a{
@@ -1138,7 +1140,7 @@ h2{
   }
 
   h2{
-    font-size: 38px;
+    font-size: 5.9375vw;
     color: #fff;
     text-align: center;
   }
@@ -1200,7 +1202,7 @@ h2{
     padding: 5.78125vw 0 0 0;
     
     h3{
-      margin-bottom: 6.25vw;
+      margin-bottom: 4.25vw;
       padding-left: 4.84375vw;
     }
 

@@ -46,8 +46,8 @@
   });
 
   closeSide.addEventListener("click", (ev) => {
-    mobileSlideMenuBg.style.transform = "translateX(-100%)";
     mobileSlideMenu.style.visibility = "hidden";
+    mobileSlideMenuBg.style.transform = "translateX(-100%)";
     document.querySelector("body").classList.remove("stop-scroll");
   });
 
