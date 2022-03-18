@@ -541,7 +541,7 @@ h2{
 
   #header{height: 80px;
     
-    .start_btn{display: block;width: 255px;height: 169px;position: absolute;top: 80px;right: 0;z-index: 5;/* transform: translateX(100%); */}
+    .start_btn{display: block;width: 255px;height: 169px;position: absolute;top: 80px;right: 0;z-index: 5; transform: translateX(100%); transition: .5s;}
   }
 
 
@@ -1026,42 +1026,63 @@ h2{
 
 
   // =============================== 사이드 메뉴
+  .stop-scroll{
+    height: 100%;
+    overflow: hidden;
+  }
+  
   .mobi_side{
-    display: block;  
+    display: block;
+    visibility: hidden;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, .8);
     position: fixed;
     z-index: 50;
     // top: 80px;
+    transition: 0.5s;
   }
-
+  .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  
   .side_inner{
-    width: 56.380208vw;
-    height: 100vh;
-    background: url(../images/common/side_menu_back.png) no-repeat 0 0 / contain;
-    padding-top: 6.510416vw;
+    width: 56.380208vmin;
+    height: 100%;
+    overflow-y: scroll;
+    transition: 0.5s;
+    transform: translateX(-100%);
+    position: relative;
+    z-index: 10;
+  }
+  .side_bg{
+    width: 56.380208vmin;
+    background: url(../images/common/side_menu_back.png) no-repeat 0 0/56.380208vmin auto;
+    padding-top: 6.510416vmin;
+    padding-bottom: 22vmin;
   }
 
   .side_gnb{
-    width: 42.96875vw;
-    margin: 0 auto 8.984375vw;
+    width: 42.96875vmin;
+    margin: 0 auto 8.984375vmin;
 
     ul{
       display: flex;
       flex-direction: column;
-      gap: 1.953125vw;
+      gap: 1.953125vmin;
     }
 
     li{
-      background: url(../images/common/side_menu_blank1_mobile.png) no-repeat 0 0 / contain;
+      background: url(../images/common/side_menu_blank1_mobile.png) no-repeat 0 0 / 100%;
 
       a{
         display: block;
         width: 100%;
         text-align: center;
-        font-size: 3.515625vw;
-        line-height: 13.411458vw;
+        font-size: 3.515625vmin;
+        line-height: 13.411458vmin;
       }
 
       &:nth-of-type(1) a{
@@ -1071,7 +1092,7 @@ h2{
   }
 
   .side_sns{
-    width: 42.96875vw;
+    width: 42.96875vmin;
     margin: 0 auto;
 
     ul{
@@ -1079,15 +1100,15 @@ h2{
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 4.427083vw;
+      gap: 4.427083vmin;
       align-items: center;
       background: url(../images/common/side_menu_blank2_mobile.png) no-repeat 0 0 / contain;
-      padding: 3.90625vw;
+      padding: 3.90625vmin;
 
       li{
 
-        width: 7.03125vw;
-        height: 7.03125vw;
+        width: 7.03125vmin;
+        height: 7.03125vmin;
         
       }
     }
@@ -1102,8 +1123,8 @@ h2{
     
     .start_btn{
       display: block;
-      width: 39.84375vw;
-      height: 26.40625vw;
+      width: 28.84375vmin;
+      height: 19.40625vmin;
       position: absolute;
       top: 80px;
       transform: translateX(100%);
