@@ -1,74 +1,85 @@
 @charset "utf-8";
 
-.chat_wrap{width: 300px; height: 700px; box-shadow: 6px 6px 10px #000; position: relative; border-radius: 20px; font-family: "NotoSans-Medium"; letter-spacing: 0;}
+.chat_wrap { width: 300px; height: 700px; box-shadow: 6px 6px 10px #000; position: relative; border-radius: 20px; font-family: "NotoSans-Medium"; letter-spacing: 0; }
 
-.chat_wrap_in{position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px; overflow: hidden;}
+.chat_wrap_in { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px; overflow: hidden; }
 
-.room_number{background: #08081f; width: 100%; height: 56px; color: #fff; text-shadow: 0 0 2px #86640f , 0 0 4px #ff0 ; text-align: center; font-size: 16px; line-height: 56px; position: relative;}
+.room_number { background: #08081f; width: 100%; height: 56px; color: #fff; text-shadow: 0 0 2px #86640f, 0 0 4px #ff0; text-align: center; font-size: 16px; line-height: 56px; position: relative; }
 
-.room_number button{width: 30px; height: 30px; position: absolute; top: 50%; right: 2.4vw; transform: translateY(-50%); -webkit-transform: translateY(-50%); display: none;}
+.room_number button { width: 30px; height: 30px; position: absolute; top: 50%; right: 2.4vw; transform: translateY(-50%); -webkit-transform: translateY(-50%); display: none; }
 
-.chat_inner{padding: 50px 14px 20px; background: #1f1f33; overflow-y: scroll; height: 570px; width: 318px;}
+.chat_inner { padding: 50px 14px 20px; background: #1f1f33; overflow-y: scroll; height: 570px; width: 318px; }
 
 /* 유저 메세지 박스 */
-.user_message{margin-bottom: 30px; display: flex; align-items: flex-start; position: relative; padding-top: 20px;}
+.user_message { margin-bottom: 30px; display: flex; align-items: flex-start; position: relative; padding-top: 20px; }
 
 
-.user_message .user_ch{width: 50px; height: 50px; border-radius: 50%; overflow: hidden; background: #0040b0; box-shadow: 2px 2px 10px #000; margin-right: 10px; cursor: pointer;}
-.user_message .user_ch img{width: 50px; height: auto;}
+.user_message .user_ch { width: 50px; height: 50px; border-radius: 50%; overflow: hidden; background: #0040b0; box-shadow: 2px 2px 10px #000; margin-right: 10px; cursor: pointer; }
+.user_message .user_ch img { width: 50px; height: auto; }
 
-.user_message .user_name_wrap{color: #fff; font-size: 14px; position: absolute; top: 0; left: 60px;}
-
-
-.user_message .user_name_wrap .whisper_color{color: #a3fd4d;}
-
-.text_box{font-size: 14px; max-width: 188px; overflow-wrap: break-word; display: block; border-radius: 8px; background: #9abdd8; padding: 12px 12px; position: relative;}
+.user_message .user_name_wrap { color: #fff; font-size: 14px; position: absolute; top: 0; left: 60px; }
 
 
-.text_box .user_text_message{line-height: 1.2;}
+.user_message .user_name_wrap .whisper_color { color: #a3fd4d; }
 
-.text_box .send_time{color: #ccc; font-size: 10px; position: absolute; bottom: -18px; left: 0;}
+.text_box { font-size: 14px; max-width: 188px; overflow-wrap: break-word; display: block; border-radius: 8px; background: #9abdd8; padding: 12px 12px; position: relative; }
 
-.user_menu{position: absolute; top: 76px; left: -4px; display: flex; flex-direction: column; gap: 6px; background: rgba(0, 0, 0, .7); display: none;}
-.user_menu button{width: 70px; color: #fff; text-align: center; font-size: 10px; padding: 8px 0; border: 1px solid #fff; cursor: pointer; z-index: 10; background: rgba(0, 0, 0, .7);}
 
-.user_menu.on{display: flex;}
+.text_box .user_text_message { line-height: 1.2; }
 
-.user_message.user2 .user_ch{background: #8cdb25;}
-.user_message.user3 .user_ch{background: #ffff00;}
+.send_time { color: #ccc; font-size: 10px; position: absolute; bottom: -18px; left: 62px; }
+
+.user_menu { position: absolute; top: 30px; left: 60px; display: flex; flex-direction: column; gap: 6px; background: rgba(0, 0, 0, .7); display: none; }
+.user_menu button { width: 70px; color: #fff; text-align: center; font-size: 10px; padding: 8px 0; border: 1px solid #fff; cursor: pointer; z-index: 10; background: rgba(0, 0, 0, .7); }
+
+.user_menu.on { display: flex; }
+
+.user_message.user2 .user_ch { background: #8cdb25; }
+.user_message.user3 .user_ch { background: #ffff00; }
 
 
 /* 나의 메세지 */
-.user_message.my_msg{display: flex; flex-direction: row-reverse;}
-.user_message.my_msg .user_ch{background: #f7931e; margin-left: 10px;}
-.user_message.my_msg .user_ch img{width: 50px; height: auto; transform: scaleX(-1); -webkit-transform: scaleX(-1);}
+.user_message.my_msg { display: flex; flex-direction: row-reverse; }
+.user_message.my_msg .user_ch { background: #f7931e; margin-left: 10px; }
+.user_message.my_msg .user_ch img { width: 50px; height: auto; transform: scaleX(-1); -webkit-transform: scaleX(-1); }
 
-.user_message.my_msg .text_box{background: #ffe78d;}
-.user_message.my_msg .text_box .send_time{right: 0; left: auto;}
+.user_message.my_msg .text_box { background: #ffe78d; }
+.user_message.my_msg .send_time { right: 72px; left: auto; }
 
-.user_message.my_msg .user_menu{right: 0px; left: auto;}
-.user_message.my_msg .user_name_wrap{right: 68px; left: auto;}
+.user_message.my_msg .user_menu { right: 70px; left: auto; }
+.user_message.my_msg .user_name_wrap { right: 68px; left: auto; }
 
 
 /* 메세지 입력 영역 */
-.message_wrap{width: 100%; height: 74px; background: #1f1f33; display: flex; justify-content: space-between; padding: 0 20px; align-items: center; border-top: 1px solid #ccc;}
+.message_wrap { width: 100%; height: 74px; background: #1f1f33; display: flex; justify-content: space-between; padding: 0 20px; align-items: center; border-top: 1px solid #ccc; }
 
-.emoticon_btn{width: 43px; height: 43px;}
+.emoticon_btn { width: 43px; height: 43px; }
 
-.emoticon_btn button{width: 43px; height: 43px; border-radius: 10px; background: #b5a4ff url(../images/imoticon/imoticon57.png) no-repeat center center/ 34px auto; box-shadow: 0 0 4px 2px #6f659d inset; cursor: pointer;}
+.emoticon_btn button { width: 43px; height: 43px; border-radius: 10px; background: #b5a4ff url(../images/imoticon/imoticon57.png) no-repeat center center/ 34px auto; box-shadow: 0 0 4px 2px #6f659d inset; cursor: pointer; }
 
-.message_enter{position: relative;}
-.message_enter input{width: 210px; padding: 12px 46px 12px 8px; border: none; border-radius: 6px; box-sizing: border-box; background: #fff;}
-.message_enter .submit{width: 30px; height: 30px; border-radius: 50%; background: #405ea4 url(../images/ui/send_message_icon.svg) no-repeat 8px center / 20px auto; position: absolute; top: 50%; right: 10px; transform: translateY(-50%); -webkit-transform: translateY(-50%);}
+.message_enter { position: relative; }
+.message_enter input { width: 210px; padding: 12px 46px 12px 8px; border: none; border-radius: 6px; box-sizing: border-box; background: #fff; }
+.message_enter .submit { width: 30px; height: 30px; border-radius: 50%; background: #405ea4 url(../images/ui/send_message_icon.svg) no-repeat 8px center / 20px auto; position: absolute; top: 50%; right: 10px; transform: translateY(-50%); -webkit-transform: translateY(-50%); }
 
-.emoticon_wrap{width: 260px; height: 78px; background: rgba(0, 0, 0, .5); border-radius: 10px; position: absolute; bottom: 78px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); overflow: hidden; display: none;}
+.emoticon_wrap { width: 260px; height: 78px; background: rgba(0, 0, 0, .5); border-radius: 10px; position: absolute; bottom: 78px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); overflow: hidden; display: none; }
 
-.emoticon_wrap ul{overflow-y: scroll; width: 278px; height: 78px; padding: 10px; display: flex; flex-wrap: wrap;}
+.emoticon_wrap ul { overflow-y: scroll; width: 278px; height: 78px; padding: 10px; display: flex; flex-wrap: wrap; }
 
-.emoticon_wrap ul li{width: 40px; height: 40px;}
-.emoticon_wrap ul li button{display: block;}
+.emoticon_wrap ul li { width: 40px; height: 40px; }
+.emoticon_wrap ul li button { display: block; }
 
 
 /* 시스템 메세지 */
-.chat_wrap .system_msg_wrap{color: #ff0; line-height: 1.5; padding: 8px 0;}
+.chat_wrap .system_msg_wrap { color: #ff0; line-height: 1.5; padding: 8px 0; }
 
+
+
+/* 채팅안에 이모티콘 추가 */
+.text_emoti { display: block; width: 60px; height: 60px; margin-bottom: 6px; }
+
+/* 나의메세지 이모티콘 우측배치 */
+.user_message.my_msg .text_wrap { display: flex; flex-direction: column; align-items: flex-end; }
+
+/* 트레이드창 나의 메세지 반대로 전환 */
+.trade_chat_wrap .text_wrap { display: flex; flex-direction: column; align-items: flex-end; }
+.trade_chat_wrap .user_message.my_msg .text_wrap { align-items: flex-start; }

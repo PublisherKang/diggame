@@ -4,481 +4,481 @@
 
 
 /* ========== header ========== */
-#header{border-bottom: 1px solid #2f3950; margin-bottom: 2.932551vw;}
+#header { border-bottom: 1px solid #2f3950; margin-bottom: 2.932551vw; }
 
-.headerIn{ width: 100%; height: 10.8875855vw; padding: 0 1.955034vw;}
+.headerIn { width: 100%; height: 10.8875855vw; padding: 0 1.955034vw; }
 
-.logo{width: 21.842619vw; height: 2.541544vw; padding-top: 2.1vw;}
+.logo { width: 21.842619vw; height: 2.541544vw; padding-top: 2.1vw; }
 
-.gnb{width: 15.640273vw; right: 30%; display: none;}
+.gnb { width: 15.640273vw; right: 30%; display: none; }
 
-.gnb ul li a{font-size: 1.368523vw;}
+.gnb ul li a { font-size: 1.368523vw; }
 
-.login_wrap{right: 1.955034vw;}
-.login_wrap ul{width: 30.752688vw;}
-.login_wrap ul li{width: 14.0830889vw; height: 7.128054vw; border-radius: 3.128054vw;}
+.login_wrap { right: 1.955034vw; }
+.login_wrap ul { width: 30.752688vw; }
+.login_wrap ul li { width: 14.0830889vw; height: 7.128054vw; border-radius: 3.128054vw; }
 
-.login_wrap ul li a{line-height: 6.932551vw; font-size: 2vw;}
+.login_wrap ul li a { line-height: 6.932551vw; font-size: 2vw; }
 
 /* ========== container ========== */
-#container{padding: 0 1.955034vw;}
+#container { padding: 0 1.955034vw; }
 
-.cont1{width: 100%; padding-bottom: 9.7751710vw; display: flex; flex-wrap: wrap;}
+.cont1 { width: 100%; padding-bottom: 9.7751710vw; display: flex; flex-wrap: wrap; }
 
-/* 로그인 팝업창 */
-.game_login{border-radius: 2.857142vw;}
+/* �α��� �˾�â */
+.game_login { border-radius: 2.857142vw; }
 
-.ch_welcom_title{font-size: 5.714285vw; margin: 10.57142vw auto 7.714285vw;}
+.ch_welcom_title { font-size: 5.714285vw; margin: 0 auto 7.714285vw; padding-top: 10.57142vw;}
 
-.game_login_inner{width: 100%; height: 60.571428vw; padding: 0 3.428571vw;}
+.game_login_inner { width: 100%; height: 60.571428vw; padding: 0 3.428571vw; }
 
-.game_login_inner .name_wrap{width: 49.571428vw; padding: 11.428571vw 0 7.1428571vw;}
-.game_login_inner .name_wrap label[for="ch_name"]{font-size: 2.857142vw;}
+.game_login_inner .name_wrap { width: 49.571428vw; padding: 11.428571vw 0 7.1428571vw; }
+.game_login_inner .name_wrap label[for="ch_name"] { font-size: 2.857142vw; }
 
-.game_login_inner .name_wrap input{width: 32.571428vw; padding: 1.4vw 1.428571vw; border-radius: 10px; font-size: 3vw;}
+.game_login_inner .name_wrap input { width: 32.571428vw; padding: 1.4vw 1.428571vw; border-radius: 10px; font-size: 3vw; }
 
-.login_ch_list{padding: 0 3.714285vw;}
-.login_ch_list ul{height: 26.571428vw;}
+.login_ch_list { padding: 0 3.714285vw; }
+.login_ch_list ul { height: 26.571428vw; }
 
-.login_ch_list ul li{width: 12.28571vw; height: 12.28571vw;}
+.login_ch_list ul li { width: 12.28571vw; height: 12.28571vw; }
 
-.login_create_btn{width: 26.571428vw; height: 7.142857vw; bottom: 5.714285vw; font-size: 2.571428vw;}
+.login_create_btn { width: 26.571428vw; height: 7.142857vw; bottom: -8vw; font-size: 2.571428vw; }
 
 /* ======================== gmae wrap ======================== */
 
-.game_parent{width: 100%; height: 100%;}
+.game_parent { width: 100%; height: 100%; }
 
-.game_wrap{width: 100%; height: 100%; background: url(../images/background/back1.jpg) no-repeat 0 0 / 100% 100%; border-radius: 2.8571428vw; box-shadow: 6px 6px 1.4285714vw #000; isolation: isolate;}
+.game_wrap { width: 100%; height: 100%; background: url(../images/background/back1.jpg) no-repeat 0 0 / 100% 100%; border-radius: 2.8571428vw; box-shadow: 6px 6px 1.4285714vw #000; isolation: isolate; }
 
-.game_header{width: 100%; height: 9.7142857vw;}
+.game_header { width: 100%; height: 9.7142857vw; }
 
-.game_headerIn{width: 100%; padding: 0 2.857142vw; height: 9.7142857vw;}
+.game_headerIn { width: 100%; padding: 0 2.857142vw; height: 9.7142857vw; }
 
-.game_headerIn .marker{width: 5.714285vw; height: 6.428571vw}
+.game_headerIn .marker { width: 5.714285vw; height: 6.428571vw }
 
 
-.play_time_wrap{left: 2vw; width: 28.771428vw;}
-.play_time{font-size: 2vw;}
-.play_time_rank{font-size: 2vw;}
+.play_time_wrap { left: 2vw; width: 28.771428vw; }
+.play_time { font-size: 2vw; }
+.play_time_rank { font-size: 2vw; }
 
-.up_icon{padding: 0 4px; margin-left: 4px;}
+.up_icon { padding: 0 4px; margin-left: 4px; }
 
-.click_speed_wrap{right: 12.285714vw; font-size: 2vw;}
-.click_speed_wrap #clicks{padding: 1.428571vw 0 1.428571vw 3.714285vw; background: url(../images/ui/click_speed_icon.svg) no-repeat 0 4px / 2.857142vw auto; font-size: 2vw;}
+.click_speed_wrap { right: 12.285714vw; font-size: 2vw; }
+.click_speed_wrap #clicks { padding: 1.428571vw 0 1.428571vw 3.714285vw; background: url(../images/ui/click_speed_icon.svg) no-repeat 0 4px / 2.857142vw auto; font-size: 2vw; }
 
-.point_wrap{font-size: 2vw;}
+.point_wrap { font-size: 2vw; }
 
 .point_wrap #point_score,
 .point_wrap #inven_point_score,
-.point_wrap #shop_point_score{padding: 1.142857vw 0 1.142857vw 3.42857vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 2.857142vw auto;}
+.point_wrap #shop_point_score { padding: 1.142857vw 0 1.142857vw 3.42857vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 2.857142vw auto; }
 
 
-.game_headerIn .rank_btn{top: 50%; right: 3vw;}
-.game_headerIn .rank_btn button{width: 7vw; height: 7vw; background: url(../images/ui/room_ranking_icon1.png) no-repeat center center / 7vw auto;}
+.game_headerIn .rank_btn { top: 50%; right: 3vw; }
+.game_headerIn .rank_btn button { width: 7vw; height: 7vw; background: url(../images/ui/room_ranking_icon1.png) no-repeat center center / 7vw auto; }
 
 
 
 
 /* container */
-.game_container{width: 100%; height: 90.28571vw;}
+.game_container { width: 100%; height: 90.28571vw; }
 
 
 
-/* 아이템 소모량 */
-.now_item{width: 34.571428vw; height: 15.28571vw; border-radius: 1.142857vw; bottom: 4.28571vw; left: 2.857142vw;}
-.remaining_amount{width: 88%; height: 100%;}
-.remaining_amount .pick{width: 10.285714vw;}
+/* ������ �Ҹ� */
+.now_item { width: 34.571428vw; height: 15.28571vw; border-radius: 1.142857vw; bottom: 4.28571vw; left: 2.857142vw; }
+.remaining_amount { width: 88%; height: 100%; }
+.remaining_amount .pick { width: 10.285714vw; }
 
-.remaining_amount .item_info{width: 18vw;}
-.remaining_amount .item_info .item_level{font-size: 2.4vw;}
+.remaining_amount .item_info { width: 18vw; }
+.remaining_amount .item_info .item_level { font-size: 2.4vw; }
 
-.remaining_amount .item_info .item_rank{margin-bottom: 1vw; font-size: 2.4vw;}
+.remaining_amount .item_info .item_rank { margin-bottom: 1vw; font-size: 2.4vw; }
 
-.remaining_amount .item_info .durability{background: url(../images/ui/durability_icon2.png) no-repeat 1.428571vw center/ 2vw auto; font-size: 2vw;}
-.remaining_amount .item_info .price{background: url(../images/ui/mining_icon2.png) no-repeat 1.428571vw center/ 2vw auto; font-size: 2vw;}
-
-
-/* 돌 이미지 위치 */
-.stone_item{width: 37.142857vw;}
+.remaining_amount .item_info .durability { background: url(../images/ui/durability_icon2.png) no-repeat 1.428571vw center/ 2vw auto; font-size: 2vw; }
+.remaining_amount .item_info .price { background: url(../images/ui/mining_icon2.png) no-repeat 1.428571vw center/ 2vw auto; font-size: 2vw; }
 
 
-.stone_item.item1{top: 27.142857vw; left: 21.428571vw;}
-.stone_item.item2{top: 42vw; left: 55.714285vw;}
+/* �� �̹��� ��ġ */
+.stone_item { width: 37.142857vw; }
 
-/* 돌 클릭시 숫자 애니메이션 */
-.ani_num{top: -10vw; left: 5.714285vw; background: url(../images/ui/ani_gem.png) no-repeat 0 center / 1.428571vw auto; padding: 0 0 0 2vw;}
+
+.stone_item.item1 { top: 27.142857vw; left: 21.428571vw; }
+.stone_item.item2 { top: 42vw; left: 55.714285vw; }
+
+/* �� Ŭ���� ���� �ִϸ��̼� */
+.ani_num { top: -10vw; left: 5.714285vw; background: url(../images/ui/ani_gem.png) no-repeat 0 center / 1.428571vw auto; padding: 0 0 0 2vw; }
 
 @keyframes numAni {
-    0%{top: 0px;}
-    100%{top: -4.285714vw; opacity: 0;}
+0% { top: 0px; }
+100% { top: -4.285714vw; opacity: 0; }
 }
 
-.boost_200{width: 34.28571vw; top: 2.857142vw; left: 11.428571vw;}
-.boost_icon{width: 7.1428571vw; height: 7.1428571vw; background: url(../images/ui/booster_icon.png) no-repeat 0 0 / 7.1428571vw auto; left: -8vw;}
+.boost_200 { width: 34.28571vw; top: 2.857142vw; left: 11.428571vw; }
+.boost_icon { width: 7.1428571vw; height: 7.1428571vw; background: url(../images/ui/booster_icon.png) no-repeat 0 0 / 7.1428571vw auto; left: -8vw; }
 
-.gauge_wrap{width: 34.28571vw; height: 5.714285vw; border-radius: 1.142857vw;}
+.gauge_wrap { width: 34.28571vw; height: 5.714285vw; border-radius: 1.142857vw; }
 
-.gauge_wrap .gauge{width: 0; height: 4.571428vw;}
+.gauge_wrap .gauge { width: 0; height: 4.571428vw; }
 
-.gauge_wrap .percent{font-size: 2.285714vw; left: 2.857142vw;}
+.gauge_wrap .percent { font-size: 2.285714vw; left: 2.857142vw; }
 
-.gauge_wrap .boost_timer{font-size: 2.285714vw; left: 18.571428vw;}
+.gauge_wrap .boost_timer { font-size: 2.285714vw; left: 18.571428vw; }
 
 
-@keyframes gauge_down{
-    100%{width: 0;}
-    0%{width: 32.85714vw;}
+@keyframes gauge_down {
+100% { width: 0; }
+0% { width: 32.85714vw; }
 }
 
-/* 메뉴 버튼 */
-.menu_list{}
-.menu_list li{width: 7.1428571vw; height: 7.1428571vw; left: 2.857142vw;}
+/* �޴� ��ư */
+.menu_list { }
+.menu_list li { width: 7.1428571vw; height: 7.1428571vw; left: 2.857142vw; }
 
-.menu_list li:nth-of-type(1){top: 21.428571vw;}
-.menu_list li:nth-of-type(2){top: 30vw;}
-.menu_list li:nth-of-type(3){top: 38.5714285vw;}
-.menu_list li:nth-of-type(4){top: 47.142857vw;}
-.menu_list li:nth-of-type(5){top: 55.714285vw;}
+.menu_list li:nth-of-type(1) { top: 21.428571vw; }
+.menu_list li:nth-of-type(2) { top: 30vw; }
+.menu_list li:nth-of-type(3) { top: 38.5714285vw; }
+.menu_list li:nth-of-type(4) { top: 47.142857vw; }
+.menu_list li:nth-of-type(5) { top: 55.714285vw; }
 
-.menu_list li button{width: 7.1428571vw; height: 7.1428571vw;}
+.menu_list li button { width: 7.1428571vw; height: 7.1428571vw; }
 
-/* 랭킹 wrap */
-.cont_ranking{width: 34.571428vw; border-radius: 1.428571vw; top: 1vw; right: 1vw; border: 1px solid #fff;}
-.ranking_inner{padding: 1.142857vw 1.428571vw;}
-
-
-.ranking_inner ul li{width: 100%; height: 4.285714vw; padding: 2px 0;}
-
-.ranking_inner ul li .ch_img{width: 4.214285vw; height: 4.214285vw;}
-
-.ranking_inner ul li .ch_item{width: 4.214285vw; height: 4.214285vw;}
-
-.ranking_inner ul li .percent_wrap{width: 12.857142vw; height: 3.714285vw;}
-.ranking_inner ul li .percent_wrap p{padding-left: 2vw;}
-
-.ranking_inner ul li .percent_wrap .gem_gauge{width: 8.571428vw; height: 1.714285vw;}
-.ranking_inner ul li .percent_wrap .click_gauge{width: 8.571428vw; height: 1.714285vw;}
-
-.ranking_inner ul li .percent_wrap .gem_gauge span{height: 1.428571vw;}
-.ranking_inner ul li .percent_wrap .click_gauge span{height: 1.428571vw;}
-
-.ranking_inner ul li .user_score{width: 6.857142vw; height: 3.714285vw;font-size: 1.5vw;}
+/* ��ŷ wrap */
+.cont_ranking { width: 34.571428vw; border-radius: 1.428571vw; top: 1vw; right: 1vw; border: 1px solid #fff; }
+.ranking_inner { padding: 1.142857vw 1.428571vw; }
 
 
-/* 랭킹 유저 아이템 정보 */
-.user_item_info{width: 20.428571vw; top: 1.714285vw; left: 11.428571vw; border-radius: 1.428571vw; padding: 1.71428vw 0;}
-.user_item_info .pick{width: 7.142857vw; margin: 0 auto 2.28571vw;}
+.ranking_inner ul li { width: 100%; height: 4.285714vw; padding: 2px 0; }
 
-.user_item_info .item_rank{margin-bottom: 2vw;}
+.ranking_inner ul li .ch_img { width: 4.214285vw; height: 4.214285vw; }
 
-.user_item_info .item_level{font-size: 2.4vw;}
-.user_item_info .item_rank{font-size: 2.4vw;}
+.ranking_inner ul li .ch_item { width: 4.214285vw; height: 4.214285vw; }
 
-.user_item_info .durability{background: url(../images/ui/durability_icon2.png) no-repeat 0 center / 2vw auto; padding-left: 2.57142vw; font-size: 2vw;}
-.user_item_info .price{background: url(../images/ui/mining_icon2.png) no-repeat 0 center / 2vw auto; display: inline-block; padding-left: 2.57142vw; font-size: 2vw;}
+.ranking_inner ul li .percent_wrap { width: 12.857142vw; height: 3.714285vw; }
+.ranking_inner ul li .percent_wrap p { padding-left: 2vw; }
 
+.ranking_inner ul li .percent_wrap .gem_gauge { width: 8.571428vw; height: 1.714285vw; }
+.ranking_inner ul li .percent_wrap .click_gauge { width: 8.571428vw; height: 1.714285vw; }
 
-/* === 캐릭터 === */
-.ch{width: 24.571428vw; top: 35.714285vw; left: 44.285714vw;}
-.ch img{height: 20.428571vw;}
+.ranking_inner ul li .percent_wrap .gem_gauge span { height: 1.428571vw; }
+.ranking_inner ul li .percent_wrap .click_gauge span { height: 1.428571vw; }
 
-/* 캐릭터 위치 */
-.ch.ch2{top: 38vw; left: 13vw;}
-.ch.ch3{top: 44vw; left: 23vw;}
-.ch.ch4{top: 54vw; left: 45vw;}
-.ch.ch5{top: 62vw; left: 58vw;}
-.ch.ch6{top: 54vw; left: 74vw;}
+.ranking_inner ul li .user_score { width: 6.857142vw; height: 3.714285vw; font-size: 1.5vw; }
 
 
-.ch_wrap .user_text{bottom: 0.857142vw; left: 5.142857vw; border-radius: 10px; color: #fff; padding: 1.142857vw 1.7142857vw; max-width: 17.14285vw; font-size: 2.4vw;}
+/* ��ŷ ���� ������ ���� */
+.user_item_info { width: 20.428571vw; top: 1.714285vw; left: 11.428571vw; border-radius: 1.428571vw; padding: 1.71428vw 0; }
+.user_item_info .pick { width: 7.142857vw; margin: 0 auto 2.28571vw; }
 
-.ch_wrap .user_text::after{left: 1.71428vw; border-top: 1.714285vw solid rgba(0, 0, 0, .7);    border-right: 1.42857vw solid transparent; border-left: 1.42857vw solid transparent; transform: translateY(100%); -webkit-transform: translateY(100%); }
+.user_item_info .item_rank { margin-bottom: 2vw; }
+
+.user_item_info .item_level { font-size: 2.4vw; }
+.user_item_info .item_rank { font-size: 2.4vw; }
+
+.user_item_info .durability { background: url(../images/ui/durability_icon2.png) no-repeat 0 center / 2vw auto; padding-left: 2.57142vw; font-size: 2vw; }
+.user_item_info .price { background: url(../images/ui/mining_icon2.png) no-repeat 0 center / 2vw auto; display: inline-block; padding-left: 2.57142vw; font-size: 2vw; }
 
 
-/* =========== 컨테이너 끝 ============ */
+/* === ĳ���� === */
+.ch { width: 24.571428vw; top: 35.714285vw; left: 44.285714vw; }
+.ch img { height: 20.428571vw; }
+
+/* ĳ���� ��ġ */
+.ch.ch2 { top: 38vw; left: 13vw; }
+.ch.ch3 { top: 44vw; left: 23vw; }
+.ch.ch4 { top: 54vw; left: 45vw; }
+.ch.ch5 { top: 62vw; left: 58vw; }
+.ch.ch6 { top: 54vw; left: 74vw; }
+
+
+.ch_wrap .user_text { bottom: 0.857142vw; left: 5.142857vw; border-radius: 10px; color: #fff; padding: 1.142857vw 1.7142857vw; max-width: 17.14285vw; font-size: 2.4vw; }
+
+.ch_wrap .user_text::after { left: 1.71428vw; border-top: 1.714285vw solid rgba(0, 0, 0, .7); border-right: 1.42857vw solid transparent; border-left: 1.42857vw solid transparent; transform: translateY(100%); -webkit-transform: translateY(100%); }
+
+
+/* =========== �����̳� �� ============ */
 
 
 
-/* ================ 팝업 ================ */
-/* 인벤토리 팝업 */
-.inven_header{height: 9.7142857vw;}
+/* ================ �˾� ================ */
+/* �κ��丮 �˾� */
+.inven_header { height: 9.7142857vw; }
 
-.inven_header .back_btn{left: 2.857142vw; font-size: 2.285714vw; background: url(../images/ui/back_icon2.png) no-repeat 0 center / 2.857142vw auto; padding: 1.714285vw 0 1.714285vw 4vw;}
+.inven_header .back_btn { left: 2.857142vw; font-size: 2.285714vw; background: url(../images/ui/back_icon2.png) no-repeat 0 center / 2.857142vw auto; padding: 1.714285vw 0 1.714285vw 4vw; }
 
-.inven_header .inven_name{font-size: 4.285714vw;}
-.inven_header .point_wrap{right: 4.285714vw; left: auto;}
+.inven_header .inven_name { font-size: 4.285714vw; }
+.inven_header .point_wrap { right: 4.285714vw; left: auto; }
 
 /* inner */
-.inven_container{padding: 4.285714vw 3.285714vw 5.714285vw;}
-/* 업그레이드 wrap */
-.upgrade_wrap{width: 28.571428vw; border-radius: 2.857142vw; background: #222; box-shadow: 4px 4px 1.428571vw #000; padding: 0 0 2.142857vw; height: 81vw;}
+.inven_container { padding: 4.285714vw 3.285714vw 5.714285vw; }
+/* ���׷��̵� wrap */
+.upgrade_wrap { width: 28.571428vw; border-radius: 2.857142vw; background: #222; box-shadow: 4px 4px 1.428571vw #000; padding: 0 0 2.142857vw; height: 81vw; }
 
-.upgrade_wrap .equip{padding-top: 2.285714vw; font-size: 2.285714vw; margin-bottom: 4.1428571vw;}
-.upgrade_wrap .equip i{left: -2.4vw; width: 1.2vw; height: 1.2vw;}
+.upgrade_wrap .equip { padding-top: 2.285714vw; font-size: 2.285714vw; margin-bottom: 4.1428571vw; }
+.upgrade_wrap .equip i { left: -2.4vw; width: 1.2vw; height: 1.2vw; }
 
-.upgrade_wrap .preview_item{width: 20vw; height: 20vw; margin: 0 auto 2.857142vw; border-radius: 3.1428571vw;}
+.upgrade_wrap .preview_item { width: 20vw; height: 20vw; margin: 0 auto 2.857142vw; border-radius: 3.1428571vw; }
 
-.upgrade_wrap .item_level{font-size: 2.285714vw; margin-bottom: 1.142857vw;}
+.upgrade_wrap .item_level { font-size: 2.285714vw; margin-bottom: 1.142857vw; }
 
-.upgrade_wrap .item_rank span{font-size: 2vw;}
+.upgrade_wrap .item_rank span { font-size: 2vw; }
 
-.upgrade_wrap .item_rank{margin-bottom: 2.857142vw;}
-
-
-.upgrade_wrap .durability{margin-bottom: 6px; font-size: 2vw;}
-
-.upgrade_wrap .durability span:nth-of-type(1){background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 2vw auto; padding-left: 3vw;}
-
-.upgrade_wrap .durability .up_num{background: url(../images/ui/inven_up_icon.png) no-repeat right center / 1.428571vw auto; padding-right: 1.71428vw;}
-
-.upgrade_wrap .price{margin-bottom: 2.7vw; font-size: 2vw;}
-
-.upgrade_wrap .price span:nth-of-type(1){background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 2vw auto; padding-left: 3vw;}
-
-.upgrade_wrap .price .up_num{background: url(../images/ui/inven_up_icon.png) no-repeat right center / 1.428571vw auto; padding-right: 1.71428vw;}
-
-.upgrade_wrap .btn_wrap button{width: 20vw; margin-bottom: 1.428571vw;  padding: 1.428571vw 0; font-size: 2vw;}
+.upgrade_wrap .item_rank { margin-bottom: 2.857142vw; }
 
 
-/* 아이템 리스트 */
-.item_list_wrap{width: 58vw; border-radius: 2.857142vw; box-shadow: 4px 4px 1.428571vw #000; padding: 7.1428571vw 1.428571vw 1.428571vw;}
+.upgrade_wrap .durability { margin-bottom: 6px; font-size: 2vw; }
 
-.item_tab_btn{top: 4px; left: 2vw;}
-.item_tab_btn ul{width: 38vw;}
-.item_tab_btn ul li{font-size: 2.142857vw;}
-.item_tab_btn ul li button{padding: 2vw 1.428571vw;}
+.upgrade_wrap .durability span:nth-of-type(1) { background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 2vw auto; padding-left: 3vw; }
 
-.item_list_wrap .item_list{width: 55.142857vw; height: 50.857142vw; border-radius: 2vw;}
-.item_list_wrap .item_list ul{width: 57.5vw; height: 50.857142vw; padding: 1.428571vw 2.857142vw 1.428571vw 2.285714vw;}
+.upgrade_wrap .durability .up_num { background: url(../images/ui/inven_up_icon.png) no-repeat right center / 1.428571vw auto; padding-right: 1.71428vw; }
 
-.item_list_wrap .item_list ul li{width: 16.85714vw; height: 16.85714vw; padding: 1.142857vw;}
+.upgrade_wrap .price { margin-bottom: 2.7vw; font-size: 2vw; }
 
-.upgrade_target{background: url(../images/ui/upgrade_check_icon.png) no-repeat center center/ 5vw auto;}
+.upgrade_wrap .price span:nth-of-type(1) { background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 2vw auto; padding-left: 3vw; }
 
-.item_list_wrap .item_list ul li .new_item_text{width: 4.571428vw; height: 4.571428vw; line-height: 4.571428vw; font-size: 1.6vw;}
+.upgrade_wrap .price .up_num { background: url(../images/ui/inven_up_icon.png) no-repeat right center / 1.428571vw auto; padding-right: 1.71428vw; }
+
+.upgrade_wrap .btn_wrap button { width: 20vw; margin-bottom: 1.428571vw; padding: 1.428571vw 0; font-size: 2vw; }
 
 
-/* 아이템 리스트 하단 샵넘어가는 버튼 wrap */
-.next_minting{width: 58vw; height: 18.57142vw; border-radius: 2.857142vw; box-shadow: 4px 4px 1.428571vw #000; padding: 2.857142vw;}
+/* ������ ����Ʈ */
+.item_list_wrap { width: 58vw; border-radius: 2.857142vw; box-shadow: 4px 4px 1.428571vw #000; padding: 7.1428571vw 1.428571vw 1.428571vw; }
 
-.next_inner span{font-size: 4.285714vw; padding: 1.142857vw 0 1.142857vw 16.2vw; background: url(../images/ui/premium_box.png) no-repeat 0 center / 14.28571vw auto;}
+.item_tab_btn { top: 4px; left: 2vw; }
+.item_tab_btn ul { width: 38vw; }
+.item_tab_btn ul li { font-size: 2.142857vw; }
+.item_tab_btn ul li button { padding: 2vw 1.428571vw; }
 
-.next_inner button{width: 5.714285vw; height: 6.142857vw; background: url(../images/ui/btn_img5.png) no-repeat 0 0 /contain;}
+.item_list_wrap .item_list { width: 55.142857vw; height: 50.857142vw; border-radius: 2vw; }
+.item_list_wrap .item_list ul { width: 57.5vw; height: 50.857142vw; padding: 1.428571vw 2.857142vw 1.428571vw 2.285714vw; }
 
-/* 업그레이드 완료시 */
-.complete_inner .complete_title{font-size: 3.714285vw; margin-bottom: 5.714285vw;}
+.item_list_wrap .item_list ul li { width: 16.85714vw; height: 16.85714vw; padding: 1.142857vw; }
 
-.complete_inner .complete_item{width: 14.28571vw; margin-bottom: 2.857142vw;}
+.upgrade_target { background: url(../images/ui/upgrade_check_icon.png) no-repeat center center/ 5vw auto; }
 
-.complete_inner .item_name{font-size: 3.42857vw; margin-bottom: 5.714285vw;}
-.complete_inner .item_name .item_rank{font-size: 2.857142vw; margin-top: 1.428571vw;}
+.item_list_wrap .item_list ul li .new_item_text { width: 4.571428vw; height: 4.571428vw; line-height: 4.571428vw; font-size: 1.6vw; }
 
-.complete_inner .item_level{font-size: 3.42857vw;}
 
-/* repair 영역 */
+/* ������ ����Ʈ �ϴ� ���Ѿ�� ��ư wrap */
+.next_minting { width: 58vw; height: 18.57142vw; border-radius: 2.857142vw; box-shadow: 4px 4px 1.428571vw #000; padding: 2.857142vw; }
+
+.next_inner span { font-size: 4.285714vw; padding: 1.142857vw 0 1.142857vw 16.2vw; background: url(../images/ui/premium_box.png) no-repeat 0 center / 14.28571vw auto; }
+
+.next_inner button { width: 5.714285vw; height: 6.142857vw; background: url(../images/ui/btn_img5.png) no-repeat 0 0 /contain; }
+
+/* ���׷��̵� �Ϸ�� */
+.complete_inner .complete_title { font-size: 3.714285vw; margin-bottom: 5.714285vw; }
+
+.complete_inner .complete_item { width: 14.28571vw; margin-bottom: 2.857142vw; }
+
+.complete_inner .item_name { font-size: 3.42857vw; margin-bottom: 5.714285vw; }
+.complete_inner .item_name .item_rank { font-size: 2.857142vw; margin-top: 1.428571vw; }
+
+.complete_inner .item_level { font-size: 3.42857vw; }
+
+/* repair ���� */
 .repair_wrap,
-.shop_use_wrap{width: 57.142857vw; border-radius: 2.857142vw; padding: 2.857142vw;}
+.shop_use_wrap { width: 57.142857vw; border-radius: 2.857142vw; padding: 2.857142vw; }
 
 
 .repair_inner .repair_ques,
-.use_inner .use_ques{font-size: 2.285714vw; margin-bottom: 4.285714vw;}
+.use_inner .use_ques { font-size: 2.285714vw; margin-bottom: 4.285714vw; }
 
-.repair_inner .price_wrap{font-size: 3.42857vw; margin-bottom: 4.285714vw;}
+.repair_inner .price_wrap { font-size: 3.42857vw; margin-bottom: 4.285714vw; }
 
-.repair_inner .price_wrap .price{padding: 1.428571vw 0 1.428571vw 6.57142vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 5.714285vw auto;}
+.repair_inner .price_wrap .price { padding: 1.428571vw 0 1.428571vw 6.57142vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 5.714285vw auto; }
 
 .repair_inner .button_wrap button,
-.use_inner .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
+.use_inner .button_wrap button { width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw; }
 
 
-/* 샵 팝업 */
-.shop_modal{padding: 0 1.428571vw;}
+/* �� �˾� */
+.shop_modal { padding: 0 1.428571vw; }
 
-.shop_header{height: 9.7142857vw;}
+.shop_header { height: 9.7142857vw; }
 
-.shop_header .back_btn{left: 1.428571vw; font-size: 2.285714vw; background: url(../images/ui/back_icon.png) no-repeat 0 center / 2.857142vw auto; padding: 1.714285vw 0 1.714285vw 4vw;}
+.shop_header .back_btn { left: 1.428571vw; font-size: 2.285714vw; background: url(../images/ui/back_icon.png) no-repeat 0 center / 2.857142vw auto; padding: 1.714285vw 0 1.714285vw 4vw; }
 
-.shop_header .point_wrap{right: 4.285714vw;}
+.shop_header .point_wrap { right: 4.285714vw; }
 
-.shop_header .shop_name{font-size: 4.285714vw;}
+.shop_header .shop_name { font-size: 4.285714vw; }
 
 
-.shop_container{padding: 5.714285vw 2.857142vw;}
-.shop_container .shop_menu_btn{margin-bottom: 4.285714vw;}
+.shop_container { padding: 5.714285vw 2.857142vw; }
+.shop_container .shop_menu_btn { margin-bottom: 4.285714vw; }
 
-.shop_container .shop_menu_btn ul li{width: 28.857142vw;}
-.shop_container .shop_menu_btn ul li button{padding: 2.57142857vw 0; font-size: 2.285714vw;}
+.shop_container .shop_menu_btn ul li { width: 28.857142vw; }
+.shop_container .shop_menu_btn ul li button { padding: 2.57142857vw 0; font-size: 2.285714vw; }
 
 /* content_wrap */
-.content_wrap{width: 100%;}
+.content_wrap { width: 100%; }
 
 
 /* package_content */
-.content_wrap .package_content{width: 100%;}
+.content_wrap .package_content { width: 100%; }
 
-.package_content ul li{width: 42.714285vw; height: 64.285714vw; background-size: 39.142857vw auto; box-shadow: 3px 3px 2vw #222; border-radius: 4.571428vw;}
+.package_content ul li { width: 42.714285vw; height: 64.285714vw; background-size: 39.142857vw auto; box-shadow: 3px 3px 2vw #222; border-radius: 4.571428vw; }
 
-.package_content ul li > div{ padding: 7.1428571vw 1.428571vw 0; font-size: 1.857142vw; margin-bottom: 1.285714vw; }
+.package_content ul li > div { padding: 7.1428571vw 1.428571vw 0; font-size: 1.857142vw; margin-bottom: 1.285714vw; }
 
-.package_content ul li > div img{width: 20vw; margin: 0 auto 4.8571428vw;}
+.package_content ul li > div img { width: 20vw; margin: 0 auto 4.8571428vw; }
 
 
 
-.package_content ul li p{width: 25.714285vw; padding: 2.857142vw; border-radius: 1.428571vw; box-shadow: 4px 4px 2.57142857vw #222;}
+.package_content ul li p { width: 25.714285vw; padding: 2.857142vw; border-radius: 1.428571vw; box-shadow: 4px 4px 2.57142857vw #222; }
 
-.package_content ul li .price{font-size: 3.42857vw; padding: 1.428571vw 0 1.428571vw 6.57142vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 5.714285vw auto;}
+.package_content ul li .price { font-size: 3.42857vw; padding: 1.428571vw 0 1.428571vw 6.57142vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 5.714285vw auto; }
 
 /* item_content */
-.item_content{width: 100%}
+.item_content { width: 100% }
 
-/* item_content 공통값 */
-.booster_list, .auto_list{padding: 2.857142vw; border-radius: 3.42857vw; box-shadow: 4px 4px 1.428571vw #000; margin-bottom: 2.857142vw;}
+/* item_content ���밪 */
+.booster_list, .auto_list { padding: 2.857142vw; border-radius: 3.42857vw; box-shadow: 4px 4px 1.428571vw #000; margin-bottom: 2.857142vw; }
 
-.booster_list .list_title, .auto_list .list_title{font-size: 3.714285vw; color: #fff; width: 25.714285vw; padding-top: 18.57142vw; background-repeat: no-repeat; background-position: center 2vw; background-size: 14.28571vw auto;}
+.booster_list .list_title, .auto_list .list_title { font-size: 3.714285vw; color: #fff; width: 25.714285vw; padding-top: 18.57142vw; background-repeat: no-repeat; background-position: center 2vw; background-size: 14.28571vw auto; }
 
-.booster_list ul, .auto_list ul{width: 57.714285vw;}
-.booster_list ul li, .auto_list ul li{width: 27.4vw; border-radius: 2.857142vw; box-shadow: 4px 4px 1.428571vw #000;}
+.booster_list ul, .auto_list ul { width: 57.714285vw; }
+.booster_list ul li, .auto_list ul li { width: 27.4vw; border-radius: 2.857142vw; box-shadow: 4px 4px 1.428571vw #000; }
 
-.booster_list ul li .item, .auto_list ul li .item{padding: 1.428571vw 0 2.428571vw; font-size: 1.8vw;}
-.booster_list ul li .item img, .auto_list ul li .item img{width: 14.28571vw;}
+.booster_list ul li .item, .auto_list ul li .item { padding: 1.428571vw 0 2.428571vw; font-size: 1.8vw; }
+.booster_list ul li .item img, .auto_list ul li .item img { width: 14.28571vw; }
 
-.booster_list ul li .price_wrap, .auto_list ul li .price_wrap{padding: 1.714285vw 0;}
+.booster_list ul li .price_wrap, .auto_list ul li .price_wrap { padding: 1.714285vw 0; }
 
-.booster_list ul li .price_wrap .price, .auto_list ul li .price_wrap .price{font-size: 2.285714vw; padding: 4px 0 4px 3.42857vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 2.857142vw auto;}
+.booster_list ul li .price_wrap .price, .auto_list ul li .price_wrap .price { font-size: 2.285714vw; padding: 4px 0 4px 3.42857vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 2.857142vw auto; }
 
 
-/* auto list 개별 값 */
-.auto_list .list_title{background-image: url(../images/ui/auto_click_icon.png); background-size: 13.43vw auto;}
+/* auto list ���� �� */
+.auto_list .list_title { background-image: url(../images/ui/auto_click_icon.png); background-size: 13.43vw auto; }
 
 /*  tool content  */
-.tool_content{width: 100%;}
-.tool_content ul{margin-bottom: 4.285714vw;}
+.tool_content { width: 100%; }
+.tool_content ul { margin-bottom: 4.285714vw; }
 
-.tool_content ul li{width: 42.85714vw;}
+.tool_content ul li { width: 42.85714vw; }
 
-.tool_content .box_wrap{border-radius: 4.285714vw; padding: 2.285714vw 0 3.42857vw 0; margin-bottom: 3.42857vw; box-shadow: 4px 4px 2.57142857vw #000;}
-.tool_content .box_wrap img{width: 20vw; margin: 0 auto 2vw;}
-.tool_content .box_wrap .box_title{font-size: 3.1428571vw; margin-bottom: 1.428571vw;}
+.tool_content .box_wrap { border-radius: 4.285714vw; padding: 2.285714vw 0 3.42857vw 0; margin-bottom: 3.42857vw; box-shadow: 4px 4px 2.57142857vw #000; }
+.tool_content .box_wrap img { width: 20vw; margin: 0 auto 2vw; }
+.tool_content .box_wrap .box_title { font-size: 3.1428571vw; margin-bottom: 1.428571vw; }
 
-.tool_content .box_wrap .box_info{font-size: 2.285714vw;}
+.tool_content .box_wrap .box_info { font-size: 2.285714vw; }
 
-.tool_content .price_wrap{width: 22.857142vw; padding: 2.57142857vw; border-radius: 1.428571vw; margin-top: 2.857142vw;}
-.tool_content .price{font-size: 2.285714vw; padding: 1.428571vw 0 1.428571vw 3.714285vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 3.1428571vw auto;}
+.tool_content .price_wrap { width: 22.857142vw; padding: 2.57142857vw; border-radius: 1.428571vw; margin-top: 2.857142vw; }
+.tool_content .price { font-size: 2.285714vw; padding: 1.428571vw 0 1.428571vw 3.714285vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 3.1428571vw auto; }
 
 
 /* opensea go */
-.go_opensea{border-radius: 2.857142vw; box-shadow: 4px 4px 2.57142857vw #000;}
+.go_opensea { border-radius: 2.857142vw; box-shadow: 4px 4px 2.57142857vw #000; }
 
-.go_opensea .speack_icon{width: 14.28571vw; height: 21.428571vw; background: url(../images/ui/notice_icon.png) no-repeat 0 0 / 12.28571vw auto; top: -2.5714285vw; left: 2.285714vw;}
+.go_opensea .speack_icon { width: 14.28571vw; height: 21.428571vw; background: url(../images/ui/notice_icon.png) no-repeat 0 0 / 12.28571vw auto; top: -2.5714285vw; left: 2.285714vw; }
 
-.go_opensea .text{padding: 4vw 0 3.42857vw 16.5vw; font-size: 2vw;}
+.go_opensea .text { padding: 4vw 0 3.42857vw 16.5vw; font-size: 2vw; }
 
-.go_opensea .opensea_btn{width: 20vw; height: 11.428571vw; font-size: 2.285714vw; background: url(../images/ui/btn_img4.png) no-repeat 0 0 /contain; right: 1vw;}
+.go_opensea .opensea_btn { width: 20vw; height: 11.428571vw; font-size: 2.285714vw; background: url(../images/ui/btn_img4.png) no-repeat 0 0 /contain; right: 1vw; }
 
 
-/* 랭킹 팝업 */
+/* ��ŷ �˾� */
 
-.ranking_modal .ranking_wrap{width: 51.428571vw; height: 68.571428vw; border-radius: 2.857142vw; box-shadow: 4px 4px 2.57142857vw #000; padding: 3.1428571vw 2.57142857vw 2.857142vw;}
+.ranking_modal .ranking_wrap { width: 51.428571vw; height: 68.571428vw; border-radius: 2.857142vw; box-shadow: 4px 4px 2.57142857vw #000; padding: 3.1428571vw 2.57142857vw 2.857142vw; }
 
-.ranking_modal .ranking_pop_close{top: 1.714285vw; right: 1.714285vw; width: 5.714285vw; height: 5.714285vw;}
+.ranking_modal .ranking_pop_close { top: 1.714285vw; right: 1.714285vw; width: 5.714285vw; height: 5.714285vw; }
 .ranking_modal .ranking_pop_close::after,
-.ranking_modal .ranking_pop_close::before{width: 3.42857vw; height: 2px;}
+.ranking_modal .ranking_pop_close::before { width: 3.42857vw; height: 2px; }
 
 
-.ranking_pop_inner .rank_pop_title{padding: 0 0 3.1428571vw 0;}
+.ranking_pop_inner .rank_pop_title { padding: 0 0 3.1428571vw 0; }
 
-.ranking_pop_inner .rank_pop_title span{background: url(../images/ui/trophy_icon.png) no-repeat 0 center / 5.428571vw auto; padding: 1.428571vw 0 1.428571vw 6.57142vw; font-size: 2.5714285vw;}
+.ranking_pop_inner .rank_pop_title span { background: url(../images/ui/trophy_icon.png) no-repeat 0 center / 5.428571vw auto; padding: 1.428571vw 0 1.428571vw 6.57142vw; font-size: 2.5714285vw; }
 
-.ranking_pop_inner .rank_tab_btn{margin-bottom: 1.428571vw;}
+.ranking_pop_inner .rank_tab_btn { margin-bottom: 1.428571vw; }
 
-.ranking_pop_inner .rank_tab_btn li button{width: 22.571428vw; padding: 1.714285vw 0; border-radius: 1.428571vw; font-size: 2vw;}
+.ranking_pop_inner .rank_tab_btn li button { width: 22.571428vw; padding: 1.714285vw 0; border-radius: 1.428571vw; font-size: 2vw; }
 
 
 /* ranking_pop_list */
-.ranking_pop_list{border-radius: 2.857142vw; padding: 2vw 1.714285vw;}
+.ranking_pop_list { border-radius: 2.857142vw; padding: 2vw 1.714285vw; }
 
 /* playtime modal */
-.playtime_pop_list{border-radius: 2.857142vw; padding: 2vw 1.714285vw; position: absolute;}
+.playtime_pop_list { border-radius: 2.857142vw; padding: 2vw 1.714285vw; position: absolute; }
 
 /* ranking tab, playtime tab common */
 .ranking_pop_list .list_name p,
-.playtime_pop_list .list_name p{padding: 0 0 2vw 0;}
+.playtime_pop_list .list_name p { padding: 0 0 2vw 0; }
 
 .ranking_pop_list .rank_num,
-.playtime_pop_list .rank_num{width: 7.1428571vw; padding: 1.714285vw 0; font-size: 1vw;}
+.playtime_pop_list .rank_num { width: 7.1428571vw; padding: 1.714285vw 0; font-size: 1vw; }
 
 .ranking_pop_list .rank_list,
-.playtime_pop_list .time_list{height: 35.142857vw;}
+.playtime_pop_list .time_list { height: 35.142857vw; }
 .ranking_pop_list .rank_list ul li:nth-of-type(1) .rank_num,
-.playtime_pop_list .time_list ul li:nth-of-type(1) .rank_num{background: url(../images/ui/rank1.svg) no-repeat center center / 4.285714vw auto;}
+.playtime_pop_list .time_list ul li:nth-of-type(1) .rank_num { background: url(../images/ui/rank1.svg) no-repeat center center / 4.285714vw auto; }
 
 .ranking_pop_list .rank_list ul li:nth-of-type(2) .rank_num,
-.playtime_pop_list .time_list ul li:nth-of-type(2) .rank_num{background: url(../images/ui/rank2.svg) no-repeat center center / 4.285714vw auto;}
+.playtime_pop_list .time_list ul li:nth-of-type(2) .rank_num { background: url(../images/ui/rank2.svg) no-repeat center center / 4.285714vw auto; }
 
 .ranking_pop_list .rank_list ul li:nth-of-type(3) .rank_num,
-.playtime_pop_list .time_list ul li:nth-of-type(3) .rank_num{background: url(../images/ui/rank3.svg) no-repeat center center / 4.285714vw auto;}
+.playtime_pop_list .time_list ul li:nth-of-type(3) .rank_num { background: url(../images/ui/rank3.svg) no-repeat center center / 4.285714vw auto; }
 
-.ranking_pop_list .user_id{width: 17.142857vw; padding: 1.714285vw 0; font-size: 1.5vw;}
-.playtime_pop_list .user_id{width: 19.42857vw; padding: 1.714285vw 0; font-size: 1.5vw;}
+.ranking_pop_list .user_id { width: 17.142857vw; padding: 1.714285vw 0; font-size: 1.5vw; }
+.playtime_pop_list .user_id { width: 19.42857vw; padding: 1.714285vw 0; font-size: 1.5vw; }
 
-.ranking_pop_list .user_score{width: 15.714285vw; padding: 1.714285vw 0 1.714285vw 2.857142vw; background: url(../images/ui/ani_gem2.png) no-repeat 0 center / 1.714285vw auto; font-size: 1.5vw;}
+.ranking_pop_list .user_score { width: 15.714285vw; padding: 1.714285vw 0 1.714285vw 2.857142vw; background: url(../images/ui/ani_gem2.png) no-repeat 0 center / 1.714285vw auto; font-size: 1.5vw; }
 
-.playtime_pop_list .time_score{width: 11.428571vw; padding: 1.714285vw 0 1.714285vw 2.857142vw; background: url(../images/ui/rank_playtime_icon.png) no-repeat 0 center / 2vw auto; font-size: 1.5vw;}
+.playtime_pop_list .time_score { width: 11.428571vw; padding: 1.714285vw 0 1.714285vw 2.857142vw; background: url(../images/ui/rank_playtime_icon.png) no-repeat 0 center / 2vw auto; font-size: 1.5vw; }
 
 /* myrank */
 
-.point_wrap #rank_score{width: 15.714285vw; padding: 1.714285vw 0 1.714285vw 2.857142vw; background: url(../images/ui/ani_gem2.png) no-repeat 0 center / 1.714285vw auto;}
+.point_wrap #rank_score { width: 15.714285vw; padding: 1.714285vw 0 1.714285vw 2.857142vw; background: url(../images/ui/ani_gem2.png) no-repeat 0 center / 1.714285vw auto; }
 
-.point_wrap #time_score{width: 12.428571vw; padding: 1.714285vw 0 1.714285vw 2.857142vw; background: url(../images/ui/rank_playtime_icon.png) no-repeat 0 center / 2vw auto;}
+.point_wrap #time_score { width: 12.428571vw; padding: 1.714285vw 0 1.714285vw 2.857142vw; background: url(../images/ui/rank_playtime_icon.png) no-repeat 0 center / 2vw auto; }
 
 
 /* another room modal */
 .another_wrap,
 .trade_alert_wrap,
 .accept_wrap,
-.continue_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
+.continue_wrap { width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw; }
 
 .another_ques,
 .trade_ques,
 .accept_ques,
-.continue_ques{font-size: 2.57142857vw; margin-bottom: 5.714285vw;}
+.continue_ques { font-size: 2.57142857vw; margin-bottom: 5.714285vw; }
 
-.accept_ques{margin-bottom: 3.2vw;}
+.accept_ques { margin-bottom: 3.2vw; }
 
-.accept_ques .player_name{font-size: 4vw; margin-bottom: 2vw; display: block;}
+.accept_ques .player_name { font-size: 4vw; margin-bottom: 2vw; display: block; }
 
 .another_inner .button_wrap button,
 .trade_inner .button_wrap button,
 .accept_inner .button_wrap button,
-.continue_inner .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
+.continue_inner .button_wrap button { width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw; }
 
 /* immediately_repair_modal, mint_modal*/
 .immediately_wrap,
 .minting_wrap,
-.mint_lock_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
+.mint_lock_wrap { width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw; }
 
 .immediately_ques,
 .minting_ques,
-.mint_lock_ques{font-size: 2.57142857vw; margin-bottom: 4.285714vw;}
+.mint_lock_ques { font-size: 2.57142857vw; margin-bottom: 4.285714vw; }
 
 .immediately_ques span:nth-of-type(1),
-.minting_ques span:nth-of-type(1){margin-bottom: 1.714285vw;}
+.minting_ques span:nth-of-type(1) { margin-bottom: 1.714285vw; }
 .immediately_ques span:nth-of-type(2),
-.minting_ques span:nth-of-type(2){font-size: 2vw;}
+.minting_ques span:nth-of-type(2) { font-size: 2vw; }
 
 .immediately_inner .button_wrap button,
 .minting_inner .button_wrap button,
-.mint_lock_wrap .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
+.mint_lock_wrap .button_wrap button { width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw; }
 
 
-.package_buy_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
+.package_buy_wrap { width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw; }
 
-.package_buy_ques{font-size: 2.57142857vw; margin-bottom: 4.285714vw;}
+.package_buy_ques { font-size: 2.57142857vw; margin-bottom: 4.285714vw; }
 
-.package_buy_inner .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
+.package_buy_inner .button_wrap button { width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw; }
 
 /* fail modal, comp modal */
-.fail_wrap, 
+.fail_wrap,
 .comp_wrap,
 .premiumitem_wrap,
 .vipitem_wrap,
@@ -486,7 +486,7 @@
 .player_cancel_wrap,
 .player_trading_wrap,
 .success_wrap,
-.create_wrap{width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw;}
+.create_wrap { width: 60vw; border-radius: 2.857142vw; padding: 3.42857vw 3.714285vw; }
 
 .fail_wrap .fail_ques,
 .comp_wrap .comp_ques,
@@ -495,14 +495,14 @@
 .player_cancel_ques,
 .player_trading_ques,
 .success_ques,
-.create_ques{font-size: 3.42857vw; margin-bottom: 4.285714vw;}
+.create_ques { font-size: 3.42857vw; margin-bottom: 4.285714vw; }
 
 .fail_ques span,
 .waiting_ques span,
-.success_ques span{font-size: 2vw; display: block; margin-top: 1.7vw;}
+.success_ques span { font-size: 2vw; display: block; margin-top: 1.7vw; }
 .fail_ques span:nth-of-type(1),
 .waiting_ques span:nth-of-type(1),
-.success_ques span:nth-of-type(1){font-size: 4vw;}
+.success_ques span:nth-of-type(1) { font-size: 4vw; }
 
 
 .fail_wrap .button_wrap button,
@@ -513,61 +513,61 @@
 .success_wrap .button_wrap button,
 .player_cancel_wrap .button_wrap button,
 .player_trading_wrap .button_wrap button,
-.create_wrap .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
+.create_wrap .button_wrap button { width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw; }
 
-.comp_ques span:nth-of-type(2){font-size: 2vw; margin-top: 1.142857vw;}
+.comp_ques span:nth-of-type(2) { font-size: 2vw; margin-top: 1.142857vw; }
 
 /* shop_item_buy_modal */
-.shop_item_wrap{border-radius: 2.285714vw; padding: 4.285714vw 2.285714vw 2.857142vw;}
-.shop_item_wrap .pop_title{margin-bottom: 1.714285vw;}
-.shop_item_wrap .pop_title span{font-size: 2.57142857vw;}
+.shop_item_wrap { border-radius: 2.285714vw; padding: 4.285714vw 2.285714vw 2.857142vw; }
+.shop_item_wrap .pop_title { margin-bottom: 1.714285vw; }
+.shop_item_wrap .pop_title span { font-size: 2.57142857vw; }
 
-.shop_item_wrap .img_wrap{width: 12.85714vw; margin: 0 auto 1.428571vw;}
+.shop_item_wrap .img_wrap { width: 12.85714vw; margin: 0 auto 1.428571vw; }
 
-.shop_item_wrap .ques{font-size: 2vw; margin-bottom: 3.42857vw;}
+.shop_item_wrap .ques { font-size: 2vw; margin-bottom: 3.42857vw; }
 
-.shop_item_wrap .quantity_wrap{width: 14.28571vw; margin: 0 auto 4.285714vw; font-size: 2.857142vw;}
+.shop_item_wrap .quantity_wrap { width: 14.28571vw; margin: 0 auto 4.285714vw; font-size: 2.857142vw; }
 
-.shop_item_wrap .quantity_wrap button{width: 2.857142vw; height: 2.857142vw; background-size: 2.857142vw 2.857142vw;}
+.shop_item_wrap .quantity_wrap button { width: 2.857142vw; height: 2.857142vw; background-size: 2.857142vw 2.857142vw; }
 
-.shop_item_wrap .price_wrap{margin-bottom: 4.285714vw; font-size: 2.57142857vw;}
-.shop_item_wrap .price_wrap .price{padding: 1.428571vw 0 1.428571vw 3.714285vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 3.1428571vw auto;}
+.shop_item_wrap .price_wrap { margin-bottom: 4.285714vw; font-size: 2.57142857vw; }
+.shop_item_wrap .price_wrap .price { padding: 1.428571vw 0 1.428571vw 3.714285vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 3.1428571vw auto; }
 
-.shop_item_wrap .button_wrap{width: 52vw; justify-content: space-between;}
-.shop_item_wrap .button_wrap button{width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw;}
+.shop_item_wrap .button_wrap { width: 52vw; justify-content: space-between; }
+.shop_item_wrap .button_wrap button { width: 24.285714vw; padding: 1.857142vw 0; font-size: 2.285714vw; }
 
 
 /* .shop_boxitem_modal{visibility: visible;} */
 .premiumitem_modal .boxitem_ques,
-.vipitem_modal .boxitem_ques{margin-bottom: 1.428571vw;}
+.vipitem_modal .boxitem_ques { margin-bottom: 1.428571vw; }
 
 .premiumitem_modal .img_wrap,
-.vipitem_modal .img_wrap{width: 20vw;}
+.vipitem_modal .img_wrap { width: 20vw; }
 
 .premiumitem_modal .price_wrap,
-.vipitem_modal .price_wrap{ margin-bottom: 1.428571vw;}
+.vipitem_modal .price_wrap { margin-bottom: 1.428571vw; }
 
 .premiumitem_modal .price_wrap span,
-.vipitem_modal .price_wrap span{font-size: 2.285714vw; padding: 1.142857vw 0 1.142857vw 3.42857vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 2.857142vw auto;}
+.vipitem_modal .price_wrap span { font-size: 2.285714vw; padding: 1.142857vw 0 1.142857vw 3.42857vw; background: url(../images/ui/gem_icon.svg) no-repeat 0 center / 2.857142vw auto; }
 
 
 /* ======================================================================== */
-/* 랜덤 아이템 박스 팝업 */
-.pre_open_modal, .vip_open_modal{background: rgba(0, 0, 0, .8) url(../images/ui/shop_premium_box_open.png) no-repeat center center / 26vw auto;}
+/* ���� ������ �ڽ� �˾� */
+.pre_open_modal, .vip_open_modal { background: rgba(0, 0, 0, .8) url(../images/ui/shop_premium_box_open.png) no-repeat center center / 26vw auto; }
 
-.vip_open_modal{background: rgba(0, 0, 0, .8) url(../images/ui/shop_vip_box_open.png) no-repeat center center / 26vw auto;}
+.vip_open_modal { background: rgba(0, 0, 0, .8) url(../images/ui/shop_vip_box_open.png) no-repeat center center / 26vw auto; }
 
-.pre_open_wrap ul, .vip_open_modal ul{width: 66vw; height: 24vw}
+.pre_open_wrap ul, .vip_open_modal ul { width: 66vw; height: 24vw }
 
-.pre_open_wrap ul li, .vip_open_modal ul li{width: 10vw; margin-right: 4vw;}
+.pre_open_wrap ul li, .vip_open_modal ul li { width: 10vw; margin-right: 4vw; }
 
-.pre_open_wrap .open_text, .vip_open_modal .open_text{width: 90vw;  font-size: 3.4vw; bottom: 10vw;}
-
-
+.pre_open_wrap .open_text, .vip_open_modal .open_text { width: 90vw; font-size: 3.4vw; bottom: 10vw; }
 
 
 
-/* ======================== 위 반응형 수정 필요 ========================= */
+
+
+/* ======================== �� ������ ���� �ʿ� ========================= */
 
 
 
@@ -575,145 +575,145 @@
 
 /* ========================= chat wrap ========================= */
 
-.chat_wrap{width: 100%; height: 55.258064vw;  box-shadow: 6px 6px 0.9775171vw #000; margin-top: 4vw; border-radius: 1.955034vw;}
+.chat_wrap { width: 100%; height: 55.258064vw; box-shadow: 6px 6px 0.9775171vw #000; margin-top: 4vw; border-radius: 1.955034vw; }
 
-.chat_wrap_in{position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 1.955034vw; overflow: hidden;}
-
-
-.room_number{height: 11.474095vw; text-shadow: 0 0 2px #86640f , 0 0 4px #ff0; font-size: 2.564027vw; line-height: 11.474095vw;}
-
-.room_number .chat_open{display: block; background: url(../images/ui/mobile_chat_big.png) no-repeat center center/ contain;}
-.room_number .chat_close{display: block; background: url(../images/ui/mobile_chat_small.png) no-repeat center center/ contain; display: none;}
-
-.chat_inner{padding: 1.8875855vw 1.368523vw 1.955034vw; height: 29.55034vw; width: 100%;}
-
-/* 유저 메세지 박스 */
-.user_message{margin-bottom: 4.932551vw; padding-top: 4.4vw;}
+.chat_wrap_in { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 1.955034vw; overflow: hidden; }
 
 
-.user_message .user_ch{width: 8.8875855vw; height: 8.8875855vw; box-shadow: 2px 2px 0.9775171vw #000; margin-right: 2.9775171vw;}
-.user_message .user_ch img{width: 8.8875855vw;}
+.room_number { height: 11.474095vw; text-shadow: 0 0 2px #86640f, 0 0 4px #ff0; font-size: 2.564027vw; line-height: 11.474095vw; }
 
-.user_message .user_name_wrap{ font-size: 2.368523vw; top: 0; left: 12vw;}
+.room_number .chat_open { display: block; background: url(../images/ui/mobile_chat_big.png) no-repeat center center/ contain; }
+.room_number .chat_close { display: block; background: url(../images/ui/mobile_chat_small.png) no-repeat center center/ contain; display: none; }
 
-.text_box{font-size: 1.368523vw; max-width: 50.527859vw; padding: 1.173020vw 2.173020vw; }
+.chat_inner { padding: 1.8875855vw 1.368523vw 1.955034vw; height: 29.55034vw; width: 100%; }
 
-.user_menu{top: 13.85714vw;}
-.user_menu button{width: 12vw; font-size: 2vw; padding: 2vw 0;}
-
-.text_box .user_text_message{font-size: 3vw;}
-
-.text_box .send_time{ font-size: 1.9775171vw; bottom: -3.7595307vw;}
-
-/* 나의 메세지 */
-.user_message.my_msg{padding-top: 2vw;}
-.user_message.my_msg .user_ch{margin-left: 2.9775171vw;}
-.user_message.my_msg .user_ch img{width: 8.8875855vw;}
-.user_message.my_msg .user_name_wrap{top: -2.3vw; right: 14.2vw; left: auto;}
-
-/* 메세지 입력 영역 */
-.message_wrap{height: 14.2336265vw; padding: 0 1.955034vw;}
-
-.emoticon_btn{width: 10.2033235vw; height: 10.2033235vw;}
-
-.emoticon_btn button{width: 10.2033235vw; height: 10.2033235vw; border-radius: 0.9775171vw; background: #b5a4ff url(../images/imoticon/imoticon57.png) no-repeat center center/ 8.323558vw auto;}
-
-.message_enter input{width: 80.527859vw; border-radius: 6px; padding: 3.414285vw 3.7142857vw 3.414285vw 1.142857vw;}
-.message_enter .submit{width: 6.932551vw; height: 6.932551vw; background: #405ea4 url(../images/ui/send_message_icon.svg) no-repeat 2.142857vw center / 3.759530vw auto; right: 0.5vw;}
-
-.emoticon_wrap{width: 64.516129vw; height: 14.6695992vw; border-radius: 0.9775171vw; bottom: 15.142857vw;}
-
-.emoticon_wrap ul{width: 64.516129vw; height: 14.6695992vw; padding: 0.9775171vw;}
-
-.emoticon_wrap ul li{width: 8.910068vw; height: 8.910068vw;}
-
-/* 시스템 메세지 */
-.chat_wrap .system_msg_wrap{color: #ff0; line-height: 1.5; padding: 8px 0; font-size: 2.6vw;}
+/* ���� �޼��� �ڽ� */
+.user_message { margin-bottom: 4.932551vw; padding-top: 4.4vw; }
 
 
-#footer{}
+.user_message .user_ch { width: 8.8875855vw; height: 8.8875855vw; box-shadow: 2px 2px 0.9775171vw #000; margin-right: 2.9775171vw; }
+.user_message .user_ch img { width: 8.8875855vw; }
+
+.user_message .user_name_wrap { font-size: 2.368523vw; top: 0; left: 12vw; }
+
+.text_box { font-size: 1.368523vw; max-width: 50.527859vw; padding: 1.173020vw 2.173020vw; }
+
+.user_menu { top: 3vw; left: 11.9vw; }
+.user_message.my_msg .user_menu { right: 14.9vw; }
+.user_menu button { width: 12vw; font-size: 2vw; padding: 2vw 0; }
+
+.text_box .user_text_message { font-size: 3vw; }
+
+.send_time { font-size: 1.9775171vw; bottom: -3.7595307vw; left: 11.857142vw; }
+
+/* ���� �޼��� */
+.user_message.my_msg { padding-top: 2vw; margin-bottom: 8vw; }
+.user_message.my_msg .user_ch { margin-left: 2.9775171vw; }
+.user_message.my_msg .user_ch img { width: 8.8875855vw; }
+.user_message.my_msg .user_name_wrap { top: -2.3vw; right: 14.2vw; left: auto; }
+.user_message.my_msg .send_time { right: 15vw; }
+
+/* �޼��� �Է� ���� */
+.message_wrap { height: 14.2336265vw; padding: 0 1.955034vw; }
+
+.emoticon_btn { width: 10.2033235vw; height: 10.2033235vw; }
+
+.emoticon_btn button { width: 10.2033235vw; height: 10.2033235vw; border-radius: 0.9775171vw; background: #b5a4ff url(../images/imoticon/imoticon57.png) no-repeat center center/ 8.323558vw auto; }
+
+.message_enter input { width: 80.527859vw; border-radius: 6px; padding: 3.414285vw 3.7142857vw 3.414285vw 1.142857vw; }
+.message_enter .submit { width: 6.932551vw; height: 6.932551vw; background: #405ea4 url(../images/ui/send_message_icon.svg) no-repeat 2.142857vw center / 3.759530vw auto; right: 0.5vw; }
+
+.emoticon_wrap { width: 64.516129vw; height: 14.6695992vw; border-radius: 0.9775171vw; bottom: 15.142857vw; }
+
+.emoticon_wrap ul { width: 64.516129vw; height: 14.6695992vw; padding: 0.9775171vw; }
+
+.emoticon_wrap ul li { width: 8.910068vw; height: 8.910068vw; }
+
+/* �ý��� �޼��� */
+.chat_wrap .system_msg_wrap { color: #ff0; line-height: 1.5; padding: 8px 0; font-size: 2.6vw; }
+
+
+#footer { }
 
 
 
 
 
-/* ======= 민팅 팝업 ======= */
+/* ======= ���� �˾� ======= */
 .mint_modal,
-.mint_success_modal{width: 82vw; height: 144vw; top: 6vw; border: 1px solid #ccc; padding: 0; padding-bottom: 14vw;}
+.mint_success_modal { width: 82vw; height: 144vw; top: 6vw; border: 1px solid #ccc; padding: 0; padding-bottom: 14vw; }
 
 .mint_modal .head_title,
-.mint_success_modal .head_title{padding: 10px 0 10px 10px;}
+.mint_success_modal .head_title { padding: 10px 0 10px 10px; }
 
 .mint_modal .mint_close_btn,
-.mint_success_modal .mint_close_btn{width: 30px; height: 30px; right: 10px;}
+.mint_success_modal .mint_close_btn { width: 30px; height: 30px; right: 10px; }
 
 .mint_modal .mint_close_btn::after,
 .mint_modal .mint_close_btn::before,
 .mint_success_modal .mint_close_btn::after,
-.mint_success_modal .mint_close_btn::before{width: 24px; height: 2px;}
+.mint_success_modal .mint_close_btn::before { width: 24px; height: 2px; }
 
-.mint_wrap{display: flex; flex-direction: column;}
+.mint_wrap { display: flex; flex-direction: column; }
 
-.mint_wrap .item_area{width: 100%; padding-bottom: 6vw;}
+.mint_wrap .item_area { width: 100%; padding-bottom: 6vw; }
 
-.mint_wrap .item_area .mint_item{width: 20vw; margin: 7vw auto 6vw;}
-.mint_wrap .item_area .item_level{font-size: 4.4vw; margin-bottom: 3vw;}
+.mint_wrap .item_area .mint_item { width: 20vw; margin: 7vw auto 6vw; }
+.mint_wrap .item_area .item_level { font-size: 4.4vw; margin-bottom: 3vw; }
 
-.mint_wrap .item_area .item_rank{font-size: 3.8vw; margin-bottom: 4vw;}
+.mint_wrap .item_area .item_rank { font-size: 3.8vw; margin-bottom: 4vw; }
 
-.mint_wrap .item_area .unit_price{font-size: 3.8vw; margin-bottom: 5vw;}
+.mint_wrap .item_area .unit_price { font-size: 3.8vw; margin-bottom: 5vw; }
 
-.mint_wrap .item_area .mint_btn{width: 36vw; height: 9.6vw; font-size: 3.8vw;}
+.mint_wrap .item_area .mint_btn { width: 36vw; height: 9.6vw; font-size: 3.8vw; }
 
-.mint_wrap .mint_explan{width: 100%}
+.mint_wrap .mint_explan { width: 100% }
 
-.mint_wrap .explan_inner{padding: 8vw 6vw;}
+.mint_wrap .explan_inner { padding: 8vw 6vw; }
 
-.mint_wrap .explan_inner .explan_title{font-size: 4.3vw; margin-bottom: 6vw;}
+.mint_wrap .explan_inner .explan_title { font-size: 4.3vw; margin-bottom: 6vw; }
 
-.mint_wrap .explan_inner > div{margin-bottom: 6vw;}
+.mint_wrap .explan_inner > div { margin-bottom: 6vw; }
 
-.mint_wrap .explan_inner .sub_title{font-size: 3.8vw; margin-bottom: 4vw;}
+.mint_wrap .explan_inner .sub_title { font-size: 3.8vw; margin-bottom: 4vw; }
 
-.mint_wrap .explan_inner .contents_text{font-size: 3.2vw}
+.mint_wrap .explan_inner .contents_text { font-size: 3.2vw }
 
-.mint_wrap .explan_inner .contents_text span{margin-bottom: 4vw;}
+.mint_wrap .explan_inner .contents_text span { margin-bottom: 4vw; }
 
 .mint_wrap .explan_inner .ontheweb_area .sub_title,
-.mint_wrap .explan_inner .onthemobile_area .sub_title{padding-bottom: 2.4vw;}
+.mint_wrap .explan_inner .onthemobile_area .sub_title { padding-bottom: 2.4vw; }
 
 
 
 /* mint success modal */
-.mint_success_wrap .inner_title{font-size: 4.6vw; margin-top: 8vw; margin-bottom: 4vw;}
+.mint_success_wrap .inner_title { font-size: 4.6vw; margin-top: 8vw; margin-bottom: 4vw; }
 
-.mint_success_wrap .item_area{width: 70vw; padding: 5vw; margin: 0 auto 6vw; border-radius: 14px; display: flex;}
+.mint_success_wrap .item_area { width: 70vw; padding: 5vw; margin: 0 auto 6vw; border-radius: 14px; display: flex; }
 
-.mint_success_wrap .item_area .mint_item{width: 16vw; margin-right: 4vw;}
+.mint_success_wrap .item_area .mint_item { width: 16vw; margin-right: 4vw; }
 
-.mint_success_wrap .item_area .item_info .item_level{font-size: 3.4vw; margin-bottom: 2vw;}
+.mint_success_wrap .item_area .item_info .item_level { font-size: 3.4vw; margin-bottom: 2vw; }
 
-.mint_success_wrap .item_area .item_info .item_rank{margin-bottom: 3vw;}
-.mint_success_wrap .item_area .item_info .item_rank span{font-size: 3vw;}
+.mint_success_wrap .item_area .item_info .item_rank { margin-bottom: 3vw; }
+.mint_success_wrap .item_area .item_info .item_rank span { font-size: 3vw; }
 
-.mint_success_wrap .item_area .item_info .unit_price{font-size: 3.4vw}
+.mint_success_wrap .item_area .item_info .unit_price { font-size: 3.4vw }
 
-.mint_success_wrap .mint_explan{padding: 0 6vw;}
-.mint_success_wrap .explan_inner{display: flex; justify-content: space-between; flex-direction: column;}
+.mint_success_wrap .mint_explan { padding: 0 6vw; }
+.mint_success_wrap .explan_inner { display: flex; justify-content: space-between; flex-direction: column; }
 
-.mint_success_wrap .explan_inner .sale_area{width: 100%; margin-bottom: 5vw; letter-spacing: 0.2px;}
-.mint_success_wrap .explan_inner .purchase_area{width: 100%;}
+.mint_success_wrap .explan_inner .sale_area { width: 100%; margin-bottom: 5vw; letter-spacing: 0.2px; }
+.mint_success_wrap .explan_inner .purchase_area { width: 100%; }
 
-.mint_success_wrap .explan_inner .sub_title{font-size: 4vw; margin-bottom: 3vw;}
+.mint_success_wrap .explan_inner .sub_title { font-size: 4vw; margin-bottom: 3vw; }
 
-.mint_success_wrap .explan_inner .contents_text{font-size: 3vw;}
+.mint_success_wrap .explan_inner .contents_text { font-size: 3vw; }
 
-.mint_success_wrap .explan_inner .purchase_area .contents_text{letter-spacing: 0;}
+.mint_success_wrap .explan_inner .purchase_area .contents_text { letter-spacing: 0; }
 
-.mint_success_wrap .back_game{width: 44vw; border-radius: 10px; line-height: 2.6; font-size: 3vw; bottom: 8vw; right: 6vw;}
-.mint_success_wrap .back_game span{padding: 2vw 6vw 2vw 0; background: url(../images/ui/right_arrow.svg) no-repeat right center/ 4vw auto;}
-
-
+.mint_success_wrap .back_game { width: 44vw; border-radius: 10px; line-height: 2.6; font-size: 3vw; bottom: 8vw; right: 6vw; }
+.mint_success_wrap .back_game span { padding: 2vw 6vw 2vw 0; background: url(../images/ui/right_arrow.svg) no-repeat right center/ 4vw auto; }
 
 
 
@@ -728,156 +728,163 @@
 
 
 
-/* ==================== 트레이드 영역 ==================== */
-
-.trade_header {height: 9.714285vw;}
-
-.trade_header .trade_name {font-size: 4.285714vw;}
-
-.trade_header .point_wrap {right: 4.285714vw;}
-
-/* 트레이드 컨테이너 */
-.trade_container{padding: 3.428571vw 3.428571vw 0 3.428571vw;}
-
-/* 트레이드 캐릭터 공통값 */
-.my_trade_wrap, .user_trade_wrap{width: 20vw;}
-
-.trade_ch{margin-bottom: 3.428571vw;}
-.trade_ch .trade_ch_img{width: 17.1428571vw; margin: 2vw auto 2.285714vw; box-shadow: 4px 4px 10px #000;}
-
-.trade_ch .trade_ch_img .confirm_area{border: 1px solid #ccff00; line-height: 7.5;}
-
-.trade_ch span{font-size: 2.285714vw;}
-
-.trade_item_wrap{width: 20vw; height: 31.428571vw; border-radius: 10px; box-shadow: inset 0 0 10px 6px #000; margin-bottom: 1.4285714vw;}
-
-.upload_wrap{padding-top: 21.428571vw; background: url(../images/ui/trade_upload_item_icon.png) no-repeat center 7.71428571vw / 10.571428vw auto;}
-.upload_wrap span{line-height: 1.5; font-size: 2vw;}
 
 
-.trade_inner_item{padding: 2.857142vw 0;}
+/* ==================== Ʈ���̵� ���� ==================== */
 
-.trade_item{width: 12.28571vw; margin: 0 auto 2vw;}
+.trade_header { height: 9.714285vw; }
 
-.trade_inner_item .item_close_btn{width: 4.2857142vw; height: 4.2857142vw; top: 1.142857vw;}
+.trade_header .trade_name { font-size: 4.285714vw; }
+
+.trade_header .point_wrap { right: 4.285714vw; }
+
+/* Ʈ���̵� �����̳� */
+.trade_container { padding: 3.428571vw 3.428571vw 0 3.428571vw; }
+
+/* Ʈ���̵� ĳ���� ���밪 */
+.my_trade_wrap, .user_trade_wrap { width: 20vw; }
+
+.trade_ch { margin-bottom: 3.428571vw; }
+.trade_ch .trade_ch_img { width: 17.1428571vw; margin: 2vw auto 2.285714vw; box-shadow: 4px 4px 10px #000; }
+
+.trade_ch .trade_ch_img .confirm_area { border: 1px solid #ccff00; line-height: 7.5; }
+
+.trade_ch span { font-size: 2.285714vw; }
+
+.trade_item_wrap { width: 20vw; height: 31.428571vw; border-radius: 10px; box-shadow: inset 0 0 10px 6px #000; margin-bottom: 1.4285714vw; }
+
+.upload_wrap { padding-top: 21.428571vw; background: url(../images/ui/trade_upload_item_icon.png) no-repeat center 7.71428571vw / 10.571428vw auto; }
+.upload_wrap span { line-height: 1.5; font-size: 2vw; }
+
+
+.trade_inner_item { padding: 2.857142vw 0; }
+
+.trade_item { width: 12.28571vw; margin: 0 auto 2vw; }
+
+.trade_inner_item .item_close_btn { width: 4.2857142vw; height: 4.2857142vw; top: 1.142857vw; }
 
 .trade_inner_item .item_close_btn::after,
-.trade_inner_item .item_close_btn::before{width: 2.857142vw; height: 1px;}
+.trade_inner_item .item_close_btn::before { width: 2.857142vw; height: 1px; }
 
-.trade_inner_item .item_level{font-size: 2vw; margin-bottom: 1.428571vw;}
-.trade_inner_item .item_rank{margin-bottom: 1.428571vw;}
+.trade_inner_item .item_level { font-size: 2vw; margin-bottom: 1.428571vw; }
+.trade_inner_item .item_rank { margin-bottom: 1.428571vw; }
 
-.trade_inner_item .durability{line-height: 1.5; font-size: 1.714285vw; background: url(../images/ui/durability_icon2.png) no-repeat 4vw center / 2.285714vw auto; padding-right: 2.857142vw;}
+.trade_inner_item .durability { line-height: 1.5; font-size: 1.714285vw; background: url(../images/ui/durability_icon2.png) no-repeat 4vw center / 2.285714vw auto; padding-right: 2.857142vw; }
 
-.trade_inner_item .price{line-height: 1.5; font-size: 1.714285vw; background: url(../images/ui/mining_icon2.png) no-repeat 4vw center / 2.285714vw auto; padding-right: 2.857142vw;}
-
-
-/* ==== 잠금 wrap ==== */
-.lock_wrap{width: 20vw; height: 31.428571vw; border-radius: 10px; background: #1a1a1a url(../images/ui/trade_lock.png) no-repeat center center / 8.571428vw auto;; box-shadow: inset 0 0 10px 6px #000;}
+.trade_inner_item .price { line-height: 1.5; font-size: 1.714285vw; background: url(../images/ui/mining_icon2.png) no-repeat 4vw center / 2.285714vw auto; padding-right: 2.857142vw; }
 
 
-.gem_price_wrap .gem_price{background: #1a1a1a url(../images/ui/gem_icon.png) no-repeat 2vw center / 3.428571vw auto; box-shadow: inset 0 0 10px 4px #000; width: 20vw; height: 5.714285vw; border-radius: 10px; padding: 0 2.2857142vw 0 5.7142857vw;}
+/* ==== ��� wrap ==== */
+.lock_wrap { width: 20vw; height: 31.428571vw; border-radius: 10px; background: #1a1a1a url(../images/ui/trade_lock.png) no-repeat center center / 8.571428vw auto;; box-shadow: inset 0 0 10px 6px #000; }
 
 
-/* 트레이드 인 채팅창 */
-.trade_chat_wrap{width: 46.571428vw; box-shadow: inset 0 0 10px 4px #000; border-radius: 10px;}
-
-.trade_chat_wrap .trade_chat_inner{padding: 3.428571vw 5vw 2.857142vw 2vw; height: 65.71428vw; width: 49.428571vw;}
-
-.trade_chat_inner .system_msg_wrap{margin-bottom: 2.857142vw; font-size: 2.3vw;}
-.trade_chat_inner .system_msg_wrap p{color: #ffff00; margin-bottom: 1.428571vw;}
-.trade_chat_inner .system_msg_wrap p span{line-height: 1.4;}
+.gem_price_wrap .gem_price { background: #1a1a1a url(../images/ui/gem_icon.png) no-repeat 2vw center / 3.428571vw auto; box-shadow: inset 0 0 10px 4px #000; width: 20vw; height: 5.714285vw; border-radius: 10px; padding: 0 2.2857142vw 0 5.7142857vw; }
 
 
-/* 내 캐릭터 */
-.trade_chat_inner .user_message.my_msg .user_ch{margin-right: 1.428571vw; margin-left: 0;}
+/* Ʈ���̵� �� ä��â */
+.trade_chat_wrap { width: 46.571428vw; box-shadow: inset 0 0 10px 4px #000; border-radius: 10px; }
 
-.trade_chat_inner .user_message .user_ch{margin-left: 1.428571vw;}
+.trade_chat_wrap .trade_chat_inner { padding: 3.428571vw 5vw 2.857142vw 2vw; height: 65.71428vw; width: 49.428571vw; }
 
-.trade_chat_wrap .text_box{max-width: 32.285714vw;}
+.trade_chat_inner .system_msg_wrap { margin-bottom: 2.857142vw; font-size: 2.3vw; }
+.trade_chat_inner .system_msg_wrap p { color: #ffff00; margin-bottom: 1.428571vw; }
+.trade_chat_inner .system_msg_wrap p span { line-height: 1.4; }
 
-.trade_chat_inner .user_message .user_name_wrap{right: 8.571428vw;}
-
-
-
-
-
-/* 트레이드 버튼 영역 */
-.trade_btn_wrap{width: 46.571428vw; margin: 2vw auto 0;}
-
-.trade_btn_wrap button{width: 21.714285vw; padding: 1.571428vw 0; font-size: 2.2857142vw;}
+.trade_chat_inner .user_message .send_time { right: 10.5vw; }
 
 
-/* 인벤토리 모달 수정 영역 */
-.lock_btn{width: 2.2857142vw; height: 3.428571vw; top: -4px; right: 5.4285714vw;}
+/* �� ĳ���� */
+.trade_chat_inner .user_message.my_msg .user_ch { margin-right: 1.428571vw; margin-left: 0; }
+
+.trade_chat_inner .user_message .user_ch { margin-left: 1.428571vw; }
+
+.trade_chat_wrap .text_box { max-width: 32.285714vw; }
+
+.trade_chat_inner .user_message .user_name_wrap { right: 8.571428vw; }
+
+.trade_chat_inner .user_message.my_msg .send_time { left: 10.5vw; }
 
 
-/* 인벤토리 아이템 수정 */
-.item_list ul li > div .item_level{width: 3.428571vw; height: 3.428571vw; line-height: 4vw; top: 1.428571vw; right: 1.428571vw; border-radius: 4px; font-size: 1.8vw;}
 
-.item_list ul li > div .item_lock{width: 2.571428vw; height: 2.571428vw; top: 5.7142857vw; right: 1.428571vw;}
 
-.item_list ul li > div .item_info{bottom: 1.428571vw; width: 76%;}
+/* Ʈ���̵� ��ư ���� */
+.trade_btn_wrap { width: 46.571428vw; margin: 2vw auto 0; }
 
-.item_list ul li > div .durability{background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 2vw auto; font-size: 1.428571vw; padding: 3px 0;}
+.trade_btn_wrap button { width: 21.714285vw; padding: 1.571428vw 0; font-size: 2.2857142vw; }
 
-.item_list ul li > div .price{background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 2vw auto; font-size: 1.428571vw; padding: 3px 0;}
 
-/* 트레이드 내부 인벤토리 */
+/* �κ��丮 ��� ���� ���� */
+.lock_btn { width: 2.2857142vw; height: 3.428571vw; top: -4px; right: 5.4285714vw; }
 
-.trade_inven_wrap{height: 68.571428vw; border-radius: 10px;}
 
-.trade_inven_wrap .title{font-size: 2.857142vw; padding: 2.285714vw 2vw;}
+/* �κ��丮 ������ ���� */
+.item_list ul li > div .item_level { width: 3.428571vw; height: 3.428571vw; line-height: 4vw; top: 1.428571vw; right: 1.428571vw; border-radius: 4px; font-size: 1.8vw; }
 
-.trade_inven_wrap .close_btn{width: 4.285714vw; height: 4.285714vw; top: 1.428571vw; right: 1.428571vw;}
+.item_list ul li > div .item_lock { width: 2.571428vw; height: 2.571428vw; top: 5.7142857vw; right: 1.428571vw; }
+
+.item_list ul li > div .item_info { bottom: 1.428571vw; width: 76%; }
+
+.item_list ul li > div .durability { background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 2vw auto; font-size: 1.428571vw; padding: 3px 0; }
+
+.item_list ul li > div .price { background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 2vw auto; font-size: 1.428571vw; padding: 3px 0; }
+
+/* Ʈ���̵� ���� �κ��丮 */
+
+.trade_inven_wrap { height: 68.571428vw; border-radius: 10px; }
+
+.trade_inven_wrap .title { font-size: 2.857142vw; padding: 2.285714vw 2vw; }
+
+.trade_inven_wrap .close_btn { width: 4.285714vw; height: 4.285714vw; top: 1.428571vw; right: 1.428571vw; }
 
 .trade_inven_wrap .close_btn::before,
-.trade_inven_wrap .close_btn::after{width: 2.857142vw; height: 2px;}
+.trade_inven_wrap .close_btn::after { width: 2.857142vw; height: 2px; }
 
-.trade_inven_inner{width: 96%; height: 50.857142vw; box-shadow: inset 0 0 10px 4px #000; border-radius: 10px;}
+.trade_inven_inner { width: 96%; height: 50.857142vw; box-shadow: inset 0 0 10px 4px #000; border-radius: 10px; }
 
-.trade_inven_inner .left_layer{width: calc(100% - 57.14285vw);}
+.trade_inven_inner .left_layer { width: calc(100% - 57.14285vw); }
 
-.trade_inven_inner .item_info_wrap{width: 38.85714vw; padding: 4.285714vw 0;}
+.trade_inven_inner .item_info_wrap { width: 38.85714vw; padding: 4.285714vw 0; }
 
-.trade_inven_inner .preview_item {width: 20vw; height: 20vw; margin: 0 auto 4vw;}
+.trade_inven_inner .preview_item { width: 20vw; height: 20vw; margin: 0 auto 4vw; }
 
-.trade_inven_inner .item_level.trade{font-size: 2.857142vw; margin-bottom: 1.142857vw;}
+.trade_inven_inner .item_level.trade { font-size: 2.857142vw; margin-bottom: 1.142857vw; }
 
-.trade_inven_inner .item_rank{margin-bottom: 2.857142vw;}
+.trade_inven_inner .item_rank { margin-bottom: 2.857142vw; }
 
-.trade_inven_inner .item_rank span{font-size: 2.285714vw;}
+.trade_inven_inner .item_rank span { font-size: 2.285714vw; }
 
-.trade_inven_inner .durability{width: 13.428571vw; font-size: 2vw; background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 2.571428vw auto; padding: 6px 0;}
+.trade_inven_inner .durability { width: 13.428571vw; font-size: 2vw; background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 2.571428vw auto; padding: 6px 0; }
 
-.trade_inven_inner .price{width: 13.428571vw; font-size: 2vw; background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 2.571428vw auto; padding: 6px 0;}
-
-
-.trade_inven_inner .trade_item_list{width: 57.14285vw; height: 50.857142vw;}
-.trade_inven_inner .trade_item_list ul{width: 60vw; height: 50.857142vw; padding: 1.428571vw 2.85714vw 1.428571vw 2.285714vw;}
-
-.trade_inven_inner .trade_item_list ul li{width: 17.142857vw; height: 17.142857vw; padding: 1.142857vw;}
-
-.trade_item_list ul li > div .item_level{width: 3.428571vw; height: 3.428571vw; line-height: 3.428571vw; top: 1.428571vw; right: 1.428571vw; border-radius: 4px; font-size: 1.8vw;}
-
-.trade_item_list ul li > div .item_lock{width: 2.571428vw; height: 2.571428vw; top: 5.714285vw; right: 1.428571vw;}
-
-.trade_item_list ul li > div .item_info{bottom: 1.428571vw; width: 76%;}
+.trade_inven_inner .price { width: 13.428571vw; font-size: 2vw; background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 2.571428vw auto; padding: 6px 0; }
 
 
-.trade_item_list ul li > div .durability{background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 2vw auto; font-size: 1.428571vw; padding: 3px 0;}
+.trade_inven_inner .trade_item_list { width: 57.14285vw; height: 50.857142vw; }
+.trade_inven_inner .trade_item_list ul { width: 60vw; height: 50.857142vw; padding: 1.428571vw 2.85714vw 1.428571vw 2.285714vw; }
 
-.trade_item_list ul li > div .price{background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 2vw auto; font-size: 1.428571vw; padding: 3px 0;}
+.trade_inven_inner .trade_item_list ul li { width: 17.142857vw; height: 17.142857vw; padding: 1.142857vw; }
 
-.trade_inven_wrap .select_btn{width: 24.285714vw; padding: 1.85714vw 0; font-size: 2.285714vw; margin: 1.428571vw auto 0;}
+.trade_item_list ul li > div .item_level { width: 3.428571vw; height: 3.428571vw; line-height: 3.428571vw; top: 1.428571vw; right: 1.428571vw; border-radius: 4px; font-size: 1.8vw; }
 
-/* 트레이드 이모티콘, 채팅 입력 */
-.trade_chat_wrap .trade_message_wrap{height: 10.57142vw; padding: 0 1.857142vw;}
-.trade_message_wrap .emoticon_btn{width: 8.2vw; height: 8.2vw;}
-.trade_message_wrap .emoticon_btn button{width: 8.2vw; height: 8.2vw;}
-.trade_chat_wrap .message_enter input{width: 32.86vw; padding: 2.41vw 3.714vw 2.41vw 1.14vw;}
+.trade_item_list ul li > div .item_lock { width: 2.571428vw; height: 2.571428vw; top: 5.714285vw; right: 1.428571vw; }
 
-.trade_chat_wrap .emoticon_wrap{width: 42.5vw; bottom: 11.14vw;}
-.trade_chat_wrap .emoticon_wrap ul{width: 42.5vw;}
-.trade_chat_wrap .emoticon_wrap ul li{width: 7.91vw; height: 7.91vw;}
+.trade_item_list ul li > div .item_info { bottom: 1.428571vw; width: 76%; }
 
+
+.trade_item_list ul li > div .durability { background: url(../images/ui/durability_icon2.png) no-repeat 0 center/ 2vw auto; font-size: 1.428571vw; padding: 3px 0; }
+
+.trade_item_list ul li > div .price { background: url(../images/ui/mining_icon2.png) no-repeat 0 center/ 2vw auto; font-size: 1.428571vw; padding: 3px 0; }
+
+.trade_inven_wrap .select_btn { width: 24.285714vw; padding: 1.85714vw 0; font-size: 2.285714vw; margin: 1.428571vw auto 0; }
+
+/* Ʈ���̵� �̸�Ƽ��, ä�� �Է� */
+.trade_chat_wrap .trade_message_wrap { height: 10.57142vw; padding: 0 1.857142vw; }
+.trade_message_wrap .emoticon_btn { width: 8.2vw; height: 8.2vw; }
+.trade_message_wrap .emoticon_btn button { width: 8.2vw; height: 8.2vw; }
+.trade_chat_wrap .message_enter input { width: 32.86vw; padding: 2.41vw 3.714vw 2.41vw 1.14vw; }
+
+.trade_chat_wrap .emoticon_wrap { width: 42.5vw; bottom: 11.14vw; }
+.trade_chat_wrap .emoticon_wrap ul { width: 42.5vw; }
+.trade_chat_wrap .emoticon_wrap ul li { width: 7.91vw; height: 7.91vw; }
+
+/* ä�þȿ� �̸�Ƽ�� �߰� */
+.text_emoti { display: block; width: 12.571428vw; height: 12.571428vw; margin-bottom: 6px; }
