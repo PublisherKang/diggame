@@ -1049,11 +1049,9 @@ h2{
   }
   
   .side_inner{
-    width: 56.380208vmin;
+    width: 100%;
     height: 100%;
     overflow-y: scroll;
-    transition: 0.5s;
-    transform: translateX(-100%);
     position: relative;
     z-index: 10;
   }
@@ -1062,6 +1060,8 @@ h2{
     background: url(../images/common/side_menu_back.png) no-repeat 0 0/56.380208vmin auto;
     padding-top: 6.510416vmin;
     padding-bottom: 22vmin;
+    transition: 0.5s;
+    transform: translateX(-100%);
   }
 
   .side_gnb{

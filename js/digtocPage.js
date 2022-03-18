@@ -32,7 +32,7 @@
 (function(){
   const mobileGnbBtn = document.querySelector(".menu_btn");
   const mobileSlideMenu = document.querySelector(".mobi_side");
-  const mobileSlideMenuInner = document.querySelector(".side_inner");
+  const mobileSlideMenuBg = document.querySelector(".side_bg");
   const closeSide = document.querySelector(".mobi_side .overlay");
   console.log(closeSide);
 
@@ -40,14 +40,14 @@
     ev.preventDefault();
     
     mobileSlideMenu.style.visibility = "visible";
-    mobileSlideMenuInner.style.transform = "translateX(0)";
+    mobileSlideMenuBg.style.transform = "translateX(0)";
 
     document.querySelector("body").classList.add("stop-scroll");
   });
 
   closeSide.addEventListener("click", (ev) => {
+    mobileSlideMenuBg.style.transform = "translateX(-100%)";
     mobileSlideMenu.style.visibility = "hidden";
-    mobileSlideMenuInner.style.transform = "translateX(-100%)";
     document.querySelector("body").classList.remove("stop-scroll");
   });
 

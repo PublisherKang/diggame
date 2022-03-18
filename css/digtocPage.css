@@ -970,13 +970,9 @@ h2 {
     position: absolute;
   }
   .side_inner {
-    width: 56.380208vmin;
+    width: 100%;
     height: 100%;
     overflow-y: scroll;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
     position: relative;
     z-index: 10;
   }
@@ -985,6 +981,10 @@ h2 {
     background: url(../images/common/side_menu_back.png) no-repeat 0 0/56.38021vmin auto;
     padding-top: 6.510416vmin;
     padding-bottom: 22vmin;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   .side_gnb {
     width: 42.96875vmin;
