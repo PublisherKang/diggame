@@ -35,7 +35,11 @@
 .game_login_inner .name_wrap { width: 49.571428vw; padding: 11.428571vw 0 7.1428571vw; }
 .game_login_inner .name_wrap label[for="ch_name"] { font-size: 2.857142vw; }
 
+<<<<<<< HEAD
 .game_login_inner .name_wrap input { width: 32.571428vw; padding: 1.4vw 1.428571vw; border-radius: 10px; font-size: 3vw; }
+=======
+.game_login_inner .name_wrap input{width: 32.571428vw; padding: 1.4vw 1.428571vw; border-radius: 10px; font-size: 3vw;}
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 .login_ch_list { padding: 0 3.714285vw; }
 .login_ch_list ul { height: 26.571428vw; }
@@ -243,10 +247,17 @@
 /* ������ ����Ʈ */
 .item_list_wrap { width: 58vw; border-radius: 2.857142vw; box-shadow: 4px 4px 1.428571vw #000; padding: 7.1428571vw 1.428571vw 1.428571vw; }
 
+<<<<<<< HEAD
 .item_tab_btn { top: 4px; left: 2vw; }
 .item_tab_btn ul { width: 38vw; }
 .item_tab_btn ul li { font-size: 2.142857vw; }
 .item_tab_btn ul li button { padding: 2vw 1.428571vw; }
+=======
+.item_tab_btn{top: 4px; left: 2vw;}
+.item_tab_btn ul{width: 38vw;}
+.item_tab_btn ul li{font-size: 2.142857vw;}
+.item_tab_btn ul li button{padding: 2vw 1.428571vw;}
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 .item_list_wrap .item_list { width: 55.142857vw; height: 50.857142vw; border-radius: 2vw; }
 .item_list_wrap .item_list ul { width: 57.5vw; height: 50.857142vw; padding: 1.428571vw 2.857142vw 1.428571vw 2.285714vw; }
@@ -632,8 +643,16 @@
 /* �ý��� �޼��� */
 .chat_wrap .system_msg_wrap { color: #ff0; line-height: 1.5; padding: 8px 0; font-size: 2.6vw; }
 
+<<<<<<< HEAD
 
 #footer { }
+=======
+/* 시스템 메세지 */
+.chat_wrap .system_msg_wrap{color: #ff0; line-height: 1.5; padding: 8px 0; font-size: 2.6vw;}
+
+
+#footer{}
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 
 

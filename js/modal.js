@@ -13,6 +13,7 @@ invenPopBtn.click(function (ev) {
     $(".ranking_modal").hide();
     $(".another_room_modal").css("display", "none");
 });
+<<<<<<< HEAD
 
 // 샵 팝업
 shopPopBtn.click(function (ev) {
@@ -59,6 +60,54 @@ $(".ch_item").click(function () {
 
     const btnAudio = new Audio();
     btnAudio.src = "/audio/mouse-click.mp3";
+=======
+
+// 샵 팝업
+shopPopBtn.click(function (ev) {
+    ev.preventDefault();
+    $(".shop_modal").css("visibility", "visible");
+    $(".package_content").css("visibility", "visible");
+    $(".ranking_modal").hide();
+    $(".shop_menu_btn li").eq(0).addClass("on")
+    $(".another_room_modal").css("display", "none");
+});
+
+// Back 버튼
+backBtn.click(function (ev) {
+    ev.preventDefault();
+    // 백 버튼 해당 부모 팝업 화면에서 사라짐
+    $(this).parent().parent().css("visibility", "hidden");
+
+    //샵 컨텐츠 내용 숨김
+    $(".content_wrap > div").css("visibility", "hidden");
+
+    //샵 버튼 클래스 원 위치
+    $(".shop_menu_btn li").removeClass("on");
+
+    $(".item_list ul li span").removeClass("target_img");
+
+    $(".equip span").html("EQUIP");
+});
+
+$(".game_headerIn .rank_btn").click(function () {
+    $(".cont_ranking").toggleClass("on");
+    $(".user_item_info").removeClass("on");
+    $(".gem_gauge span").toggleClass("on");
+    
+    const btnAudio = new Audio();
+    btnAudio.src = "audio/mouse-click.mp3";
+    btnAudio.play();
+    
+});
+
+//랭킹 팝업의 아이템 이미지 클릭시 유저 정보 나옴
+$(".ch_item").click(function () {
+    // $(this).parents(".ranking_inner ul").siblings().removeClass("on");
+    $(this).parents(".ranking_inner ul").siblings().toggleClass("on");
+
+    const btnAudio = new Audio();
+    btnAudio.src = "audio/mouse-click.mp3";
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
     btnAudio.play();
 });
 
@@ -109,6 +158,7 @@ if (targetListSpan.hasClass("equip_img") === true) {
 }
 
 //인벤토리 잠금 버튼
+<<<<<<< HEAD
 $(".lock_btn").click(async function () {
     let targetItemIdx = document.querySelector(".target_img").parentNode.querySelector(".itemIdx").value;
     let resultJson = null;
@@ -158,6 +208,41 @@ function listClickEvent(event) {
     } else {
         $(".lock_btn").removeClass("lockon");
     }
+=======
+$(".lock_btn").click(function () {
+    $(this).toggleClass("lockon");
+});
+
+
+invenItemList.on("click", listClickEvent);
+
+//인벤토리 아이템 클릭시 이벤트 함수
+function listClickEvent(event) {
+    let cloneThis = $(this).clone();
+    targetListSpan.removeClass("target_img");
+    $(this).find(targetListSpan).addClass("target_img");
+    previewItem.append(cloneThis);
+
+
+    //this 아이템 클릭시 해당 span 삭제 자식 요소 삭제
+    previewItem.children().first().remove();
+    previewItem.children().first().find("span").remove();
+
+
+    // =====================
+    const itemAttr = $(this).children().children("img").attr("src");
+
+
+    // console.log(itemAttr);
+
+
+    if (itemAttr === "images/item/pick_rare.png" || itemAttr === "images/item/pick_legend.png") {
+        $(".mint_item_btn").addClass("mint_btn_on");
+    } else {
+        $(".mint_item_btn").removeClass("mint_btn_on");
+    }
+
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
     // 아이템 클릭시 선택된 아이템 이름 변경
     miningItemCommon.forEach(e => {
@@ -223,6 +308,7 @@ function listClickEvent(event) {
 
     //소모성 아이템 이미지 클릭 시
 
+<<<<<<< HEAD
     //if (itemArray.includes(itemAttr) || autoItem.includes(itemAttr)) {
     //    $(".useitem_btn").addClass("on");
     //    $(".equip_btn").removeClass("on");
@@ -239,6 +325,24 @@ function listClickEvent(event) {
     //    $(".upgrade_wrap .durability").show();
     //    $(".upgrade_wrap .price").show();
     //}
+=======
+    if (itemArray.includes(itemAttr) || autoItem.includes(itemAttr)) {
+        $(".useitem_btn").addClass("on");
+        $(".equip_btn").removeClass("on");
+        $(".Upgrade").removeClass("on");
+        $(".mint_item_btn").removeClass("on");
+        $(".repair").removeClass("on");
+        $(".upgrade_wrap .durability").hide();
+        $(".upgrade_wrap .price").hide();
+    } else {
+        $(".useitem_btn").removeClass("on");
+        $(".Upgrade").addClass("on");
+        $(".mint_item_btn").addClass("on");
+        $(".repair").addClass("on");
+        $(".upgrade_wrap .durability").show();
+        $(".upgrade_wrap .price").show();
+    }
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 
     // console.log(itemAttr);
@@ -389,7 +493,11 @@ $(".upgrade_now").click(async function () {
     const targetSpan = document.querySelectorAll(".upgrade_target");
     let itemIdxArr = []
     for (let i = 0; i < targetSpan.length; i++) {
+<<<<<<< HEAD
         itemIdxArr.push(Number(targetSpan[i].parentNode.querySelector(".itemIdx").value));
+=======
+        itemIdxArr.push(Number(targetSpan[i].parentNode.querySelector("input[type=hidden]").value));
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
     }
 
     // 아이템 합성 모듈 연결
@@ -397,6 +505,7 @@ $(".upgrade_now").click(async function () {
     let resultItem = itemCombineJson.ResultItem;
 
     if ($(this).hasClass("upgradeon") === true) {
+<<<<<<< HEAD
         let itemImage = getItemImage(resultItem);
         $(".upgrade_complete .complete_item img").attr("src", itemImage);
         $(".upgrade_complete .item_name .item_rank").html(resultItem.Grade);
@@ -439,6 +548,33 @@ $(".upgrade_complete").click(async function () {
         }
 
     });
+=======
+        let itemImage = "";
+        switch (resultItem.Grade) {
+            case "Normal":
+                itemImage = "<img src=images/item/pick_common.png>"
+                break;
+            case "Rare":
+                itemImage = "<img src=images/item/pick_rare.png>"
+                break;
+            case "Legend":
+                itemImage = "<img src=images/item/pick_legend.png>"
+                break;
+        }
+        console.log(resultItem);
+        $(".upgrade_complete .complete_item").html(itemImage);
+        $(".upgrade_complete .item_name .item_rank").html(resultItem.Grade);
+        $(".upgrade_complete .item_level").html("<span>Lv." + resultItem.Level + "</span>-><span>Lv." + resultItem.Level + "</span>");
+
+        $(".upgrade_complete").show();
+    }
+});
+
+$(".upgrade_complete").click(function () {
+    $(this).hide();
+    $(".upgrade_now").removeClass("upgradeon");
+});
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
     // 아이템 리스트 리로드
     let itemListJson = await ItemList();
@@ -463,11 +599,15 @@ $(".upgrade_complete").click(async function () {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 // ***************************************************************
 // mint an item 버튼 클릭 했을때
 $(".mint_item_btn").click(function (event) {
     const bottonAttr = $(this);
+<<<<<<< HEAD
 
     if (bottonAttr.hasClass("mint_btn_on") === true) {
         $(".minting_ques_modal").css("display", "block")
@@ -549,6 +689,60 @@ $(".mint_btn").click(async function () {
 
 
 
+=======
+
+    if (bottonAttr.hasClass("mint_btn_on") === true) {
+        $(".minting_ques_modal").css("display", "block")
+
+
+    }
+
+});
+
+$(".mint_now").click(async function () {
+    $(this).parents('.alert_modal').css("display", "none");
+    $(".mint_modal").show();
+    $(".mint_explan").scrollTop(0);
+});
+
+
+$(".mint_explan").scroll(function () {
+
+    let scrollTop = $(this).scrollTop();
+
+    if (scrollTop > 490) {
+        $(".mint_wrap .item_area .mint_btn").addClass("on");
+    } else {
+        $(".mint_wrap .item_area .mint_btn").removeClass("on");
+    }
+});
+
+$(".mint_close_btn").click(function () {
+    $(this).parents('.mint_modal').hide();
+});
+
+
+// 민팅 완료뒤 back to game 버튼 클릭시
+$(".back_game").click(function () {
+    $(this).parents('.mint_success_modal').hide();
+    $(".inven_modal").css("visibility", "hidden");
+});
+
+$(".mint_close_btn.success").click(function () {
+    $(this).parents('.mint_success_modal').hide();
+});
+
+// NFT Mint 모듈 연결
+$(".mint_btn").click(async function () {
+    if (!$(this).hasClass("on")) {
+        return false;
+    }
+    let selectedItemIdx = document.querySelector(".target_img").parentNode.querySelector("input[type=hidden]").value;
+
+    let mintInfo = await NftMint(selectedItemIdx);
+
+    console.log(mintInfo);
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 });
 
 
@@ -832,11 +1026,19 @@ $(".trade_btn_wrap .cancel").click(function () {
 });
 
 
+<<<<<<< HEAD
 $(".menu_list ul li").click(function () {
     const btnAudio = new Audio();
     btnAudio.src = "/audio/mouse-click.mp3";
     btnAudio.play();
 
+=======
+$(".menu_list ul li").click(function(){
+    const btnAudio = new Audio();
+    btnAudio.src = "audio/mouse-click.mp3";
+    btnAudio.play();
+    
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 });
 
 
@@ -850,11 +1052,23 @@ cancelBtn.click(function () {
 
 
 
+<<<<<<< HEAD
 $(".menu_wrap").click(function () {
+=======
+$(".menu_wrap").click(function(){
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
     $(this).parents(".ch").siblings().find(".user_menu").removeClass("on");
     $(this).siblings(".user_menu").addClass("on");
 });
 
+<<<<<<< HEAD
 $('.ch .user_menu button').click(function () {
     $(this).parent(".user_menu").removeClass("on");
 });
+=======
+$('.ch .user_menu button').click(function(){
+    $(this).parent(".user_menu").removeClass("on");
+});
+
+
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21

@@ -124,6 +124,7 @@ function boostTimeOut() {
 
 
 packageBuy();
+<<<<<<< HEAD
 //function packageBuy() {
 //    //실버 버튼 구매
 //    const silverBuyBtn = document.getElementById("sliver_buy_btn");
@@ -152,12 +153,53 @@ packageBuy();
 //                // VIP 실버 구매 모듈 연결
 //                let purchaseJson = await Purchase(1);
 //                console.log(purchaseJson);
+=======
+function packageBuy() {
+    //실버 버튼 구매
+    const silverBuyBtn = document.getElementById("sliver_buy_btn");
+    const goldBuyBtn = document.getElementById("gold_buy_btn");
+    const silverPop = document.getElementById("silver_pop");
+    const goldPop = document.getElementById("gold_pop");
+    const vipSilverIcon = document.querySelector(".vip_silver");
+    const vipGoldIcon = document.querySelector(".vip_gold");
+    const marker = document.querySelector(".marker");
+    const completeModal = document.querySelector(".complete_buy_modal");
+    const completeConfirmBtn = document.querySelector(".complete_buy_modal .confirm");
+    const shopModal = document.querySelector(".shop_modal");
+    const packageContent = document.querySelector(".package_content");
+
+    let silverPrice = 5000;
+    let goldPrice = 8000;
+
+    silverBuyBtn.addEventListener("click", silverBuy);
+    goldBuyBtn.addEventListener("click", goldBuy);
+
+
+    async function silverBuy() {
+        //실버 버튼 구매 성공
+        if (score >= silverPrice) {
+            // VIP 실버 구매 모듈 연결
+            let purchaseJson = await Purchase(1);
+            console.log(purchaseJson);
+
+            silverPop.style.display = "none";
+            marker.style.display = "block";
+            vipSilverIcon.style.display = "block";
+            completeModal.style.display = "block";
+
+            score = Math.round((score - silverPrice) * 10000) / 10000;
+
+            for (let i = 0; i < gemScore.length; i++) {
+                gemScore[i].textContent = score;
+            }
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 //                silverPop.style.display = "none";
 //                marker.style.display = "block";
 //                vipSilverIcon.style.display = "block";
 //                completeModal.style.display = "block";
 
+<<<<<<< HEAD
 //                score = Math.round((score - silverPrice) * 10000) / 10000;
 
 //                for (let i = 0; i < gemScore.length; i++) {
@@ -222,28 +264,88 @@ packageBuy();
 //        packageContent.style.visibility = "hidden";
 //    }
 //}
+=======
+        }
+        //가격부족 구매 실패
+        else {
+            silverPop.style.display = "none";
+            failPop.style.display = "block";
+        }
+    }
+
+    async function goldBuy() {
+        //골드 버튼 구매 성공
+        if (score >= goldPrice) {
+            // VIP 골드 구매 모듈 연결
+            let purchaseJson = await Purchase(0);
+
+            goldPop.style.display = "none";
+            marker.style.display = "block";
+            vipGoldIcon.style.display = "block";
+            vipSilverIcon.style.display = "none";
+            completeModal.style.display = "block";
+
+            score = Math.round((score - goldPrice) * 10000) / 10000;
+
+            for (let i = 0; i < gemScore.length; i++) {
+                gemScore[i].textContent = score;
+            }
+
+            completeConfirmBtn.addEventListener("click", modalHidden);
+        }
+        //가격부족 구매 실패
+        else {
+            goldPop.style.display = "none";
+            failPop.style.display = "block";
+        }
+    }
+
+    function modalHidden() {
+        completeModal.style.display = "none";
+        shopModal.style.visibility = "hidden";
+        packageContent.style.visibility = "hidden";
+    }
+}
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 
 //수리 구매
 repairBuy();
+<<<<<<< HEAD
 //function repairBuy() {
 //    const rapairConfirmBtn = document.getElementById("repair_buy_confirm");
 //    const repairPop = document.querySelector(".repair_modal");
 //    const repairPrice = 25;
+=======
+function repairBuy() {
+    const rapairConfirmBtn = document.getElementById("repair_buy_confirm");
+    const repairPop = document.querySelector(".repair_modal");
+    const repairPrice = 25;
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 
 //    rapairConfirmBtn.addEventListener("click", repairConfirm);
 
+<<<<<<< HEAD
 
 //    async function repairConfirm() {
 //        let targetItemIdx = document.querySelector(".target_img").parentNode.querySelector(".itemIdx").value;
 //        let resultJson = await ItemRepair(targetItemIdx);
 //        console.log(resultJson);
+=======
+    function repairConfirm() {
+        //구매 성공 했을 때
+        if (score >= repairPrice) {
+            //여기에 수리 수치 정상화
+
+            repairPop.style.display = "none";
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 //        //구매 성공 했을 때
 //        if (resultJson.IsSuccess == 0) {
 //            let itemInfo = resultJson.ItemInfo;
 
+<<<<<<< HEAD
 //            //여기에 수리 수치 정상화
 
 //            repairPop.style.display = "none";
@@ -263,6 +365,20 @@ repairBuy();
 //        }
 //    }
 //}
+=======
+            for (let i = 0; i < gemScore.length; i++) {
+                gemScore[i].textContent = score;
+            }
+
+        }
+        //구매 실패 했을 때
+        else {
+            repairPop.style.display = "none";
+            repairFailPop.style.display = "block";
+        }
+    }
+}
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 
 //샵 구매 팝업 수량 버튼
@@ -657,6 +773,11 @@ function shopToolBoxModal() {
         }
     }
 
+<<<<<<< HEAD
+=======
+    //console.log(vipBoxPriceeNum);
+    // console.log(premiumBox.className);
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 }
 
 
@@ -676,10 +797,28 @@ function openPreBox(itemList) {
     console.log(itemList);
 
     for (let i = 0; i < 10; i++) {
+<<<<<<< HEAD
         let itemImage = getItemImage(itemList[i]);
 
         setTimeout(function () {
             preItemsUl.insertAdjacentHTML("beforeend", "<li><img src='" + itemImage + "'/></li>");
+=======
+        let itemImage = "";
+        switch (itemList[i].Grade) {
+            case "Normal":
+                itemImage = "<img src=images/item/pick_common.png>"
+                break;
+            case "Rare":
+                itemImage = "<img src=images/item/pick_rare.png>"
+                break;
+            case "Legend":
+                itemImage = "<img src=images/item/pick_legend.png>"
+                break;
+        }
+
+        setTimeout(function () {
+            preItemsUl.insertAdjacentHTML("beforeend", "<li>" + itemImage + "</li>");
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
         }, 300 * i)
     }
     setTimeout(function () {
@@ -693,10 +832,28 @@ function openVipBox(itemList) {
     console.log(itemList);
 
     for (let i = 0; i < itemList.length; i++) {
+<<<<<<< HEAD
         let itemImage = getItemImage(itemList[i]);
 
         setTimeout(function () {
             vipItemsUl.insertAdjacentHTML("beforeend", "<li><img src='" + itemImage + "'/></li>");
+=======
+        let itemImage = "";
+        switch (itemList[i].Grade) {
+            case "Normal":
+                itemImage = "<img src=images/item/pick_common.png>"
+                break;
+            case "Rare":
+                itemImage = "<img src=images/item/pick_rare.png>"
+                break;
+            case "Legend":
+                itemImage = "<img src=images/item/pick_legend.png>"
+                break;
+        }
+
+        setTimeout(function () {
+            vipItemsUl.insertAdjacentHTML("beforeend", "<li>" + itemImage + "</li>");
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
         }, 300 * i)
     }
 
@@ -780,12 +937,21 @@ function changeRoom() {
         anotherRoomPop.style.display = "none";
 
         setTimeout(function () {
+<<<<<<< HEAD
             gameWrap.style.backgroundImage = `url('/images/background/back${randomImg + 1}.jpg')`;
 
             // 만약 오디오 버튼이 켜져있다면 방 바뀔시 오디오 실행
             if (audioBtn.classList.contains("off")) {
                 // const roomAduio = new Audio();
                 audio.src = `/audio/back${randomImg + 1}.mp3`;
+=======
+            gameWrap.style.backgroundImage = `url('images/background/back${randomImg + 1}.jpg')`;
+            
+            // 만약 오디오 버튼이 켜져있다면 방 바뀔시 오디오 실행
+            if(audioBtn.classList.contains("off")){
+                // const roomAduio = new Audio();
+                audio.src = `audio/back${randomImg + 1}.mp3`;
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
                 audio.pause();
                 audio.currentTime = 0;
@@ -803,11 +969,16 @@ function changeRoom() {
             gameWrap.classList.remove("point_none");
         }, 3000);
 
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
     });
 }
 
 
+<<<<<<< HEAD
 //// =======================================================
 //// 인벤토리 아이템 추가
 //async function invenItemAdd() {
@@ -885,15 +1056,191 @@ function changeRoom() {
 
 //    // itemListDiv.append(itemListDivInDiv);
 //    // itemListDivInDiv.classList.add("item_info");
+=======
+// =======================================================
+// 인벤토리 아이템 추가
+async function invenItemAdd() {
+    const invenItemUl = document.querySelector(".item_list_wrap .item_list ul");
+    const tradeInvenItemUl = document.querySelector(".trade_item_list ul");
+
+    let itemListJson = await ItemList();
+    let invenMineItemList = itemListJson.ItemList.tbItem;
+
+    let autoItemList = [
+        {
+            itemImg: "images/item/auto_click_10m.png",
+        },
+        {
+            itemImg: "images/item/auto_click_1h.png",
+        },
+    ]
+
+    let boostItemList = [
+        {
+            itemImg: "images/item/booster_10m.png",
+        },
+        {
+            itemImg: "images/item/booster_1h.png",
+        },
+    ]
+
+
+    for (let i = 0; i < invenMineItemList.length; i++) {
+        let itemImage = "";
+        switch (invenMineItemList[i].Grade) {
+            case "Normal":
+                if (invenMineItemList[i].CurrentDurability != 1) {
+                    itemImage = "images/item/pick_common.png";
+                } else {
+                    itemImage = "images/item/pick_common2.png";
+                }
+                break;
+            case "Rare":
+                if (invenMineItemList[i].CurrentDurability != 1) {
+                    itemImage = "images/item/pick_rare.png";
+                } else {
+                    itemImage = "images/item/pick_rare2.png";
+                }
+                break;
+            case "Legend":
+                if (invenMineItemList[i].CurrentDurability != 1) {
+                    itemImage = "images/item/pick_legend.png";
+                } else {
+                    itemImage = "images/item/pick_legend2.png";
+                }
+                break;
+        }
+        // TODO: 아이템 채굴량 데이터 필요
+        invenItemUl.insertAdjacentHTML("beforeend", "<li><div>" + "<input type=\"hidden\" value=\"" +
+            invenMineItemList[i].Item_Idx + "\"/>" + "<img src='" +
+            itemImage + "'/><p class=\"item_level\">" + "+" +
+            invenMineItemList[i].Level + "</p>" + "<div class=\"item_info\">" + "<p class=\"durability\">" + "<span class=\"now_durability\">" +
+            invenMineItemList[i].CurrentDurability + "</span>" + "<span class=\"max_durability\">" + "/ " +
+            invenMineItemList[i].MaxDurability + "</span>" + "</p>" + "<p class=\"price\"><span class=\"mining_gem\">" +
+            "0.01" + "</span></p>" + "</div>" + "</div>" + "<span></span></li>");
+    };
+
+    for (let j = 0; j < autoItemList.length; j++) {
+        invenItemUl.insertAdjacentHTML("beforeend", "<li><div>" + "<img src='" + autoItemList[j].itemImg + "'/>" + "</div><span></span></li>")
+    }
+
+    for (let k = 0; k < boostItemList.length; k++) {
+        invenItemUl.insertAdjacentHTML("beforeend", "<li><div>" + "<img src='" + boostItemList[k].itemImg + "'/>" + "</div><span></span></li>")
+    }
+
+
+
+    // 트레이드 인벤토리 ================
+    for (let i = 0; i < invenMineItemList.length; i++) {
+        // TODO: 아이템 이미지 중복제거 필요
+        let itemImage = "";
+        switch (invenMineItemList[i].Grade) {
+            case "Normal":
+                if (invenMineItemList[i].CurrentDurability != 1) {
+                    itemImage = "images/item/pick_common.png";
+                } else {
+                    itemImage = "images/item/pick_common2.png";
+                }
+                break;
+            case "Rare":
+                if (invenMineItemList[i].CurrentDurability != 1) {
+                    itemImage = "images/item/pick_rare.png";
+                } else {
+                    itemImage = "images/item/pick_rare2.png";
+                }
+                break;
+            case "Legend":
+                if (invenMineItemList[i].CurrentDurability != 1) {
+                    itemImage = "images/item/pick_legend.png";
+                } else {
+                    itemImage = "images/item/pick_legend2.png";
+                }
+                break;
+        }
+        tradeInvenItemUl.insertAdjacentHTML("beforeend", "<li><div>" + "<input type=\"hidden\" value=\"" +
+            invenMineItemList[i].Item_Idx + "\"/>" + "<img src='" +
+            itemImage + "'/><p class=\"item_level\">" + "+" +
+            invenMineItemList[i].Level + "</p>" + "<div class=\"item_info\">" + "<p class=\"durability\">" + "<span class=\"now_durability\">" +
+            invenMineItemList[i].CurrentDurability + "</span>" + "<span class=\"max_durability\">" + "/ " +
+            invenMineItemList[i].MaxDurability + "</span>" + "</p>" + "<p class=\"price\"><span class=\"mining_gem\">" +
+            "0.01" + "</span></p>" + "</div>" + "</div>" + "<span></span></li>");
+    };
+
+    const InvenItemLi = document.querySelectorAll(".item_list_wrap .item_list ul li");
+
+    // 아이템 리스트 추가 후 이벤트 재추가 
+    invenItemList = $(".inven_modal .item_list ul li");
+    targetListSpan = $(".inven_modal .item_list ul li > span");
+    targetListImg = $(".inven_modal .item_list ul li img");
+    previewItem = $("inven_modal .preview_item");
+
+    invenItemList.on("click", listClickEvent);
+
+    tradeInvenItemList = $(".trade_item_list ul li");
+    tradeTargetListSpan = $(".trade_item_list ul li > span");
+
+    tradeInvenItemList.click(function () {
+        tradeTargetListSpan.removeClass("target_img");
+        $(this).find(tradeTargetListSpan).addClass("target_img");
+    });
+
+    InvenItemLi[2].insertAdjacentHTML("beforeend", "<i class=\"new_item_text\">New</i>")
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 
 //    // itemLiDivDiv.forEach(e => {
 //    //     e.classList.add("item_info");
 //    // });
 
+<<<<<<< HEAD
 //    // invenItemInfoDurability.forEach(e => {
 
 //    // });
+=======
+    // const itemListLi = document.createElement("li");
+    // const itemListDiv = document.createElement("div");
+    // const itemListDivInDiv = document.createElement("div");
+    // const itemListImg = document.createElement("img");
+    // const itemListP = document.createElement("p");
+    // const itemListP2 = document.createElement("p");
+    // const itemListSpan = document.createElement("span");
+
+    // const itemLiDiv = document.querySelectorAll(".item_list ul li .item_wrap");
+    // const itemLiDivDiv = document.querySelectorAll(".item_list ul li > div > div");
+
+    // const invenItemInfoDurability = document.querySelectorAll("durability");
+
+    // // li추가
+    // invenItemUl.append(itemListLi);
+
+    // //div 추가
+    // itemListDiv.classList.add("item_wrap");
+    // itemListLi.append(itemListDiv);
+
+    // //img 추가
+    // itemListDiv.append(itemListImg);
+    // itemListImg.setAttribute("src", invenImgList[0]);
+
+    // // p추가
+    // itemListDiv.append(itemListP);
+    // itemListP.classList.add("item_level");
+    // itemListP.textContent = "+" + itemLevel.lv1;
+
+    // itemListDiv.append(itemListP2);
+    // itemListP2.classList.add("item_lock");
+
+    // itemListDiv.append(itemListDivInDiv);
+    // itemListDivInDiv.classList.add("item_info");
+
+
+    // itemLiDivDiv.forEach(e => {
+    //     e.classList.add("item_info");
+    // });
+
+    // invenItemInfoDurability.forEach(e => {
+
+    // });
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 
 
@@ -915,6 +1262,63 @@ function changeRoom() {
 
 
 
+
+<<<<<<< HEAD
+=======
+//캐릭터 선택창 이벤트
+createCharactor();
+function createCharactor() {
+    const createCharactorList = document.querySelectorAll(".login_ch_list ul li");
+    const loginWrap = document.querySelector(".game_login");
+    const createBtn = document.querySelector(".login_create_btn");
+    const chNameInput = document.getElementById("ch_name");
+    const chNameInputValue = chNameInput.value;
+    const aleatModal = document.querySelector(".create_symbol_modal");
+    const symbolModalBtn = document.querySelector(".create_symbol_modal .cancel")
+
+
+
+    createCharactorList.forEach(ev => {
+        ev.addEventListener("click", listAddClassOn);
+    });
+
+    function listAddClassOn(e) {
+        for (let i = 0; i < createCharactorList.length; i++) {
+            createCharactorList[i].classList.remove("on");
+        }
+        e.currentTarget.classList.add("on");
+
+        createCharactorList.forEach(e => {
+            if (e.classList.contains("on") && this.value !== "") {
+                createBtn.classList.add("on");
+            }
+        });
+    }
+
+
+    createBtn.addEventListener("click", function () {
+        if (this.classList.contains("on")) {
+            //on 활성화 되었을때
+            if (chNameInputValue.length === null) {
+                aleatModal.style.visibility = "visible";
+
+                symbolModalBtn.addEventListener("click", function () {
+                    chNameInput.focus();
+                    chNameInput.value = "";
+                });
+            } else {
+                loginWrap.style.display = "none";
+            }
+        } else {
+            chNameInput.focus();
+            //on 활성화 되지 않았을때
+        }
+    });
+
+
+
+}
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 
 
@@ -992,10 +1396,20 @@ $(".signUp_btn").click(function (e) {
     location.href = "/DigToc/SignUp"
 });
 
+<<<<<<< HEAD
+=======
+async function useTicketAfterPurchase(productNum) {
+    let ticketJson = await UseTicket(productNum);
+    console.log(ticketJson);
+    
+
+}
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 
 
 
+<<<<<<< HEAD
 
     // changeBgm();
     // function changeBgm(){
@@ -1024,8 +1438,41 @@ $(".signUp_btn").click(function (e) {
     //         }
     //         console.log(gameWrapStyle);
     //     });
+=======
+// changeBgm();
+// function changeBgm(){
+//     const gameWrap = document.querySelector(".game_wrap");
+//     const backAudioBtn = document.querySelector(".menu_list .audio_btn");
+//     const changeBtn = document.getElementById("change_room_btn");
+    
+
+//     let backNum = ["back1", "back2", "back3", "back4", "back5", "back6", "back7", "back8",]
+    
+//     let gameWrapStyle = gameWrap.style.backgroundImage;
+    
+    
+//     changeBtn.addEventListener("click", function(){
+//         if(gameWrapStyle === "url('images/background/back1.jpg')"){
+//             console.log("a");
+//         }
+//         if(gameWrapStyle === "url('images/background/back2.jpg')"){
+//             console.log("a");
+//         }
+//         if(gameWrapStyle === "url('images/background/back3.jpg')"){
+//             console.log("a");
+//         }
+//         if(gameWrapStyle === "url('images/background/back4.jpg')"){
+//             console.log("a");
+//         }
+//         console.log(gameWrapStyle);
+//     });
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 
 
 
+<<<<<<< HEAD
     // }
+=======
+// }
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21

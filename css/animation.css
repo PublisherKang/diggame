@@ -7,6 +7,7 @@
 
 
 
+<<<<<<< HEAD
 .upgrade_complete{}
 
 .upgrade_complete{} .complete_title{opacity: 0; transition: animation .8s; animation: title .8s ease-in forwards;}
@@ -50,6 +51,17 @@
   0%{transform: translateY(30%);}
   100%{opacity: 1; transform: translateY(0);}
 }
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 
 
@@ -129,6 +141,7 @@
               transform: translate(-50%, -50%) scale3d(1, 1, 1);
     }
   }
+<<<<<<< HEAD
   
 
   @-webkit-keyframes rotate-diagonal-1 {
@@ -165,4 +178,6 @@
   }
 
 
+=======
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
   

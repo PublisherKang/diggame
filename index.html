@@ -1,6 +1,13 @@
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -305,5 +312,1814 @@
       </div><!-- footerIn -->
     </div><!-- #footer -->
   </div><!-- #wrap -->
+=======
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title>DIGTOC</title>
+    <link rel="stylesheet" href="~/css/font.css">
+    <link rel="stylesheet" href="~/css/reset.css">
+    <link rel="stylesheet" href="~/css/digtoc_style.css">
+    <link rel="stylesheet" href="~/css/game_style.css">
+    <link rel="stylesheet" href="~/css/chat_style.css">
+    <link rel="stylesheet" href="~/css/game_responsive.css" media="screen and (max-width: 1023px)">
+    <link rel="stylesheet" href="~/css/game_info.css">
+    <!-- <link rel="stylesheet" href="css/game_responsive_mobi.css" media="screen and (max-width: 768px)"> -->
+    <link rel="stylesheet" href="~/css/animation.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src="~/js/common.js" defer></script>
+    <script src="~/js/modal.js" defer></script>
+    <script src="~/js/chat_script.js" defer></script>
+    <script src="~/js/animation.js" defer></script>
+    <script src="~/LockScreen/LockScreen.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-base64@3.6.1/base64.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@3.0.0-rc.5/dist/web3.min.js"></script>
+    <script src="~/js/DigTocAPI.js"></script>
+    <script src="~/js/metamask.js"></script>
+    <script src="~/js/Login.js"></script>
+
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="headerIn">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="~/images/logo.png" alt="digtoc">
+                    </a>
+                </h1>
+                <nav class="gnb">
+                    <ul>
+                        <li>
+                            <a href="#">Info</a>
+                        </li>
+                        <li>
+                            <a href="#">Store</a>
+                        </li>
+                        <li>
+                            <a href="#">Support</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="login_wrap">
+                    <ul>
+                        <li>
+                            <a class="login_btn" href="#">
+                                Log in
+                            </a>
+                        </li>
+                        <li>
+                            <a class="signUp_btn" href="#">
+                                Sign Up
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- headerIn -->
+        </header><!-- header -->
+        <div id="container">
+            <div class="cont1">
+                <div class="game_parent">
+                    <!-- 캐릭터 선택창 시작 -->
+                    <div class="game_login">
+                        <p class="ch_welcom_title">Welcome to DIGTOC!</p>
+                        <div class="game_login_inner">
+                            <div class="name_wrap">
+                                <label for="ch_name">Nickname</label>
+                                <input type="text" id="ch_name" maxlength="20" autocomplete="off" />
+                            </div>
+                            <div class="login_ch_list">
+                                <ul>
+                                    <li>
+                                        <img src="~/images/character/trade_character1_profile.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="~/images/character/trade_character2_profile.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="~/images/character/trade_character3_profile.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="~/images/character/trade_character4_profile.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="~/images/character/trade_character5_profile.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="~/images/character/trade_character6_profile.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="~/images/character/trade_character7_profile.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="~/images/character/trade_character8_profile.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="~/images/character/trade_character9_profile.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="~/images/character/trade_character10_profile.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="~/images/character/trade_character11_profile.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="~/images/character/trade_character12_profile.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <button type="button" class="login_create_btn">Create</button>
+                        </div>
+                        <!-- 캐릭터 선택창 모달 -->
+                        <div class="create_symbol_modal alert_modal">
+                            <div class="create_wrap">
+                                <div class="create_inner">
+                                    <p class="create_ques">
+                                        <span>
+                                            Please omit<br>
+                                            the special symbols (!&#64;#$)<br>
+                                            and blank spaces.
+                                        </span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="cancel">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- create_symbol_modal -->
+                        <div class="create_exists_modal alert_modal">
+                            <div class="create_wrap">
+                                <div class="create_inner">
+                                    <p class="create_ques">
+                                        <span>
+                                            The Nickname that<br>
+                                            already exists.
+                                        </span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="cancel">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- create_exists_modal -->
+                    </div>
+                    <!-- 캐릭터 선택창 끝 -->
+
+
+                    <div class="game_wrap" style="background-image: url('../../images/background/back1.jpg');">
+                        <div class="game_header">
+                            <div class="game_headerIn">
+                                <div class="play_time_wrap">
+                                    <p class="marker">
+                                        <img class="vip_gold" src="~/images/ui/vipgold.svg" alt="">
+                                        <img class="vip_silver" src="~/images/ui/vipsilver.svg" alt="">
+                                    </p>
+                                    <div class="play_wrap">
+                                        <div class="play_time">
+                                            Time: <span class="timer">00:00:00</span>
+                                        </div>
+                                        <div class="play_time_rank">
+                                            Ranking: <span class="rank_num">0</span> <i class="up_icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="click_speed_wrap">
+                                    <p>
+                                        <span id="clicks"></span> / s
+                                    </p>
+                                </div>
+                                <div class="point_wrap">
+                                    <span id="point_score" class="gem_score"></span> GEM
+                                </div>
+                                <div class="rank_btn">
+                                    <button></button>
+                                </div>
+                            </div>
+                        </div><!-- game_header -->
+                        <div class="game_container">
+                            <div class="now_item">
+                                <div class="remaining_amount">
+                                    <img class="pick" src="~/images/item/pick_common.png" alt="">
+                                    <div class="item_info">
+                                        <p class="item_level">Lv.1 Pick</p>
+                                        <p class="item_rank">
+                                            <span class="item_common on">Common</span>
+                                            <span class="item_rare">Rare</span>
+                                            <span class="item_legend">Legend</span>
+                                        </p>
+                                        <p class="durability">
+                                            <span>25</span> / <span>190</span>
+                                        </p>
+                                        <p class="price">
+                                            <span>1.60</span> Gem
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!-- 아이템 남은 양 -->
+                            <div class="stone_item item1">
+                                <img src="~/images/background/digtoc_gui.png" alt="">
+                            </div><!-- 광맥 이미지1 -->
+                            <div class="stone_item item2">
+                                <img src="~/images/background/digtoc_gui.png" alt="">
+                            </div><!-- 광맥 이미지2 -->
+                            <div class="boost_200">
+                                <span class="boost_icon"></span>
+                                <div class="gauge_wrap">
+                                    <p class="gauge"></p>
+                                    <span class="percent">200%</span>
+                                    <span class="boost_timer">00:00:00</span>
+                                </div>
+                            </div><!-- 부스트 영역 -->
+                            <div class="menu_list">
+                                <ul>
+                                    <li>
+                                        <button class="ch_change_btn"></button>
+                                    </li><!-- 채널변경 -->
+                                    <li>
+                                        <button class="inventory_btn"></button>
+                                    </li><!-- 인벤토리 -->
+                                    <li>
+                                        <button class="shop_btn"></button>
+                                    </li><!-- 상점 -->
+                                    <li>
+                                        <button class="rank_btn"></button>
+                                    </li><!-- 랭킹 -->
+                                    <li>
+                                        <button class="audio_btn"></button>
+                                        <audio class="audio" src="~/audio/back1.mp3"></audio>
+                                    </li><!-- 오디오 -->
+                                </ul>
+                            </div><!-- 메뉴 버튼 리스트-->
+                            <div class="cont_ranking">
+                                <div class="ranking_inner">
+                                    <ul>
+                                        <li>
+                                            <p class="ch_img">
+                                                <img src="~/images/character/character1_profile.png" alt="">
+                                            </p>
+                                            <p class="ch_item">
+                                                <img src="~/images/item/pick_legend.png" alt="">
+                                            </p>
+                                            <div class="percent_wrap">
+                                                <p class="gem_gauge">
+                                                    <span></span>
+                                                </p>
+                                                <p class="click_gauge">
+                                                    <span></span>
+                                                </p>
+                                            </div>
+                                            <div class="user_score">
+                                                <p class="gem_user_score">9,999,99</p>
+                                                <p class="click_score">4.5</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="ch_img">
+                                                <img src="~/images/character/character2_profile.png" alt="">
+                                            </p>
+                                            <p class="ch_item">
+                                                <img src="~/images/item/pick_legend.png" alt="">
+                                            </p>
+                                            <div class="percent_wrap">
+                                                <p class="gem_gauge">
+                                                    <span></span>
+                                                </p>
+                                                <p class="click_gauge">
+                                                    <span></span>
+                                                </p>
+                                            </div>
+                                            <div class="user_score">
+                                                <p class="gem_user_score">8,888,88</p>
+                                                <p class="click_score">6.5</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="ch_img">
+                                                <img src="~/images/character/character3_profile.png" alt="">
+                                            </p>
+                                            <p class="ch_item">
+                                                <img src="~/images/item/pick_common.png" alt="">
+                                            </p>
+                                            <div class="percent_wrap">
+                                                <p class="gem_gauge">
+                                                    <span></span>
+                                                </p>
+                                                <p class="click_gauge">
+                                                    <span></span>
+                                                </p>
+                                            </div>
+                                            <div class="user_score">
+                                                <p class="gem_user_score">7,777,77</p>
+                                                <p class="click_score">2.5</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="ch_img">
+                                                <img src="~/images/character/character4_profile.png" alt="">
+                                            </p>
+                                            <p class="ch_item">
+                                                <img src="~/images/item/pick_rare.png" alt="">
+                                            </p>
+                                            <div class="percent_wrap">
+                                                <p class="gem_gauge">
+                                                    <span></span>
+                                                </p>
+                                                <p class="click_gauge">
+                                                    <span></span>
+                                                </p>
+                                            </div>
+                                            <div class="user_score">
+                                                <p class="gem_user_score">6,666,66</p>
+                                                <p class="click_score">6.8</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="ch_img">
+                                                <img src="~/images/character/character5_profile.png" alt="">
+                                            </p>
+                                            <p class="ch_item">
+                                                <img src="~/images/item/pick_rare.png" alt="">
+                                            </p>
+                                            <div class="percent_wrap">
+                                                <p class="gem_gauge">
+                                                    <span></span>
+                                                </p>
+                                                <p class="click_gauge">
+                                                    <span></span>
+                                                </p>
+                                            </div>
+                                            <div class="user_score">
+                                                <p class="gem_user_score">55,55</p>
+                                                <p class="click_score">8.5</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="ch_img">
+                                                <img src="~/images/character/character6_profile.png" alt="">
+                                            </p>
+                                            <p class="ch_item">
+                                                <img src="~/images/item/pick_common.png" alt="">
+                                            </p>
+                                            <div class="percent_wrap">
+                                                <p class="gem_gauge">
+                                                    <span></span>
+                                                </p>
+                                                <p class="click_gauge">
+                                                    <span></span>
+                                                </p>
+                                            </div>
+                                            <div class="user_score">
+                                                <p class="gem_user_score">44,44</p>
+                                                <p class="click_score">2.2</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="user_item_info">
+                                        <img class="pick" src="~/images/item/pick_legend.png" alt="">
+                                        <div class="item_info">
+                                            <p class="item_level">Lv.1 Pick</p>
+                                            <p class="item_rank">
+                                                <span class="item_common">Common</span>
+                                                <span class="item_rare">Rare</span>
+                                                <span class="item_legend on">Legend</span>
+                                            </p>
+                                            <p class="durability">
+                                                <span>25</span> / <span>190</span>
+                                            </p>
+                                            <p class="price">
+                                                <span>1.60</span> Gem
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- 컨테이너 랭킹 -->
+                            <div class="ch_wrap">
+                                <div class="ch ch1">
+                                    <img class="on" src="~/images/character/character7_stand.png" alt="">
+                                    <img src="~/images/character/character7_motion2.png" alt="">
+                                    <audio class="hit_audio" src="~/audio/mouse-click.mp3"></audio>
+                                    <span class="user_text">Hello, Everyone~</span>
+                                </div>
+                                <div class="ch ch2">
+                                    <img class="on" src="~/images/character/character1_stand.png" alt="">
+                                    <span class="user_text">Hello, Everyone~</span>
+                                    <div class="menu_wrap"></div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                                <div class="ch ch3">
+                                    <img class="on" src="~/images/character/character6_stand.png" alt="">
+                                    <span class="user_text">Hello, Everyone~</span>
+                                    <div class="menu_wrap"></div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                                <div class="ch ch4">
+                                    <img class="on" src="~/images/character/character2_stand.png" alt="">
+                                    <span class="user_text">Hello, Everyone~</span>
+                                    <div class="menu_wrap"></div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                                <div class="ch ch5">
+                                    <img class="on" src="~/images/character/character4_stand.png" alt="">
+                                    <span class="user_text">Hello, Everyone~</span>
+                                    <div class="menu_wrap"></div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                                <div class="ch ch6">
+                                    <img class="on" src="~/images/character/character8_stand.png" alt="">
+                                    <span class="user_text">Hello, Everyone~</span>
+                                    <div class="menu_wrap"></div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                            </div><!-- 캐릭터 -->
+                        </div><!-- 게임 컨테이너 -->
+                        <!-- ====== 모달 시작 ====== -->
+                        <!-- 컨테이너 메인 모달 -->
+                        <div class="inven_modal">
+                            <div class="inven_header">
+                                <button class="back_btn">Back to Game</button>
+                                <p class="inven_name">INVENTORY</p>
+                                <div class="point_wrap">
+                                    <span id="inven_point_score" class="gem_score">0.00</span> GEM
+                                </div>
+                            </div>
+                            <div class="inven_container">
+                                <div class="upgrade_wrap">
+                                    <p class="equip">
+                                        <span>EQUIP</span>
+                                    </p>
+                                    <div class="preview_item">
+                                        <img src="~/images/item/pick_common.png" alt="">
+                                    </div>
+                                    <p class="item_level">
+                                        Lv.1 Pick
+                                        <span class="lock_btn"></span>
+                                    </p>
+                                    <p class="item_rank">
+                                        <span class="item_common on">Common</span>
+                                        <span class="item_rare">Rare</span>
+                                        <span class="item_legend">Legend</span>
+                                    </p>
+                                    <p class="durability">
+                                        <span>25</span> / <span>190</span> <span class="up_num">(<i>0.00</i>)</span>
+                                    </p>
+                                    <p class="price">
+                                        <span>0.01</span> Gem <span class="up_num">(<i>0.00</i>)</span>
+                                    </p>
+                                    <div class="btn_wrap">
+                                        <button type="button" class="useitem_btn">Use</button>
+                                        <button type="button" class="equip_btn">Equip</button>
+                                        <button type="button" class="repair on">Repair</button>
+                                        <button type="button" class="Upgrade on">Upgrade</button>
+                                        <button type="button" class="mint_item_btn on">Mint an Item</button>
+                                        <button type="button" class="upgrade_now">Upgrade Now</button>
+                                        <button type="button" class="up_cancel">Cancel</button>
+                                    </div>
+                                </div>
+                                <div class="flex_right">
+                                    <div class="item_list_wrap">
+                                        <div class="item_tab_btn">
+                                            <ul>
+                                                <li class="on">
+                                                    <button>Mining Tool</button>
+                                                </li>
+                                                <li class="upgrade_tab_btn">Upgrade</li>
+                                            </ul>
+                                        </div>
+                                        <div class="item_list">
+                                            <ul>
+                                                <!-- <li>
+                                                    <div class="item_wrap">
+                                                        <img src="~/images/item/pick_common.png">
+                                                        <p class="item_level">+7</p>
+                                                        <p class="item_lock"></p>
+                                                        <div class="item_info">
+                                                            <p class="durability">
+                                                                <span class="now_durability">240</span> / <span class="max_durability">240</span>
+                                                            </p>
+                                                            <p class="price">
+                                                                <span class="mining_gem">1.60</span> Gem
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <span class="equip_img target_img"></span>
+                                                </li> -->
+                                            </ul><!-- 인벤토리 아이템 리스트 -->
+                                        </div>
+                                    </div>
+                                    <div class="next_minting">
+                                        <div class="next_inner">
+                                            <span>
+                                                Let's get<br>
+                                                Mining Tools
+                                            </span>
+                                            <button type="button" class="go_tools"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- inven_inner -->
+                            <div class="upgrade_complete">
+                                <div class="complete_inner">
+                                    <p class="complete_title">Upgrade Complete!</p>
+                                    <p class="complete_item">
+                                        <img src="~/images/item/pick_common.png" alt="">
+                                    </p>
+                                    <p class="item_name">
+                                        Pick
+                                        <span class="item_rank">Common</span>
+                                    </p>
+                                    <p class="item_level">
+                                        <span>Lv.1</span>
+                                        ->
+                                        <span>Lv.2</span>
+                                    </p>
+                                </div>
+                            </div><!-- upgrade_complete -->
+                        </div><!-- inven modal -->
+                        <div class="shop_modal">
+                            <div class="shop_header">
+                                <button class="back_btn">Back to Game</button>
+                                <p class="shop_name">SHOP</p>
+                                <div class="point_wrap">
+                                    <span id="shop_point_score" class="gem_score">0.00</span> GEM
+                                </div>
+                            </div>
+                            <div class="shop_container">
+                                <div class="shop_menu_btn">
+                                    <ul>
+                                        <li class="on">
+                                            <button type="button">PACKAGE</button>
+                                        </li>
+                                        <li>
+                                            <button type="button">ITEM</button>
+                                        </li>
+                                        <li>
+                                            <button type="button">MINING TOOL</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content_wrap">
+                                    <div class="package_content">
+                                        <ul>
+                                            <li class="vip_silver_wrap">
+                                                <div class="vip_silver">
+                                                    <img src="~/images/ui/vipsilver.svg" alt="">
+                                                    7 days every day<br>
+                                                    Permanent Booster 10%<br>
+                                                    Auto click 1 hour 1 piece<br>
+                                                    2ea 200% 1 hour boosters
+                                                </div>
+                                                <p>
+                                                    <span class="price">5,000</span>
+                                                </p>
+                                            </li>
+                                            <li class="vip_gold_wrap">
+                                                <div class="vip_gold">
+                                                    <img src="~/images/ui/vipgold.svg" alt="">
+                                                    7 days every day<br>
+                                                    Always Boost 30%<br>
+                                                    Auto click 1 hour 5 photos<br>
+                                                    5ea 200% 1 hour boosters
+                                                </div>
+                                                <p>
+                                                    <span class="price">8,000</span>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div><!-- package_content -->
+                                    <div class="item_content">
+                                        <div class="booster_list">
+                                            <div class="list_title">
+                                                Booster
+                                            </div>
+                                            <ul>
+                                                <li class="shop_item_buy">
+                                                    <div class="item">
+                                                        <img src="~/images/item/booster_10m.png" alt="">
+                                                        Mining 100% UP / 10M
+                                                    </div>
+                                                    <p class="price_wrap">
+                                                        <span class="price">200</span>
+                                                    </p>
+                                                </li>
+                                                <li class="shop_item_buy">
+                                                    <div class="item">
+                                                        <img src="~/images/item/booster_1h.png" alt="">
+                                                        Mining 200% UP / 1H
+                                                    </div>
+                                                    <p class="price_wrap">
+                                                        <span class="price">200</span>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="auto_list">
+                                            <div class="list_title">
+                                                Auto Click
+                                            </div>
+                                            <ul>
+                                                <li class="shop_item_buy">
+                                                    <div class="item">
+                                                        <img src="~/images/item/auto_click_10m.png" alt="">
+                                                        Auto Click / 10M
+                                                    </div>
+                                                    <p class="price_wrap">
+                                                        <span class="price">200</span>
+                                                    </p>
+                                                </li>
+                                                <li class="shop_item_buy">
+                                                    <div class="item">
+                                                        <img src="~/images/item/auto_click_1h.png" alt="">
+                                                        Auto Click / 1H
+                                                    </div>
+                                                    <p class="price_wrap">
+                                                        <span class="price">200</span>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- item_content -->
+                                    <div class="tool_content">
+                                        <ul>
+                                            <li>
+                                                <div class="box_wrap">
+                                                    <img src="~/images/ui/premium_box.png" alt="">
+                                                    <p class="box_title">Premium Box</p>
+                                                    <span class="box_info">
+                                                        (Rare 80%, Legend 20%)
+                                                    </span>
+                                                    <div class="price_wrap">
+                                                        <span class="price">1,000</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="box_wrap">
+                                                    <img src="~/images/ui/vip_box.png" alt="">
+                                                    <p class="box_title">VIP Box</p>
+                                                    <span class="box_info">
+                                                        (Normal 80%, Rare 20%)
+                                                    </span>
+                                                    <div class="price_wrap">
+                                                        <span class="price">800</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="go_opensea">
+                                            <span class="speack_icon"></span>
+                                            <p class="text">
+                                                Didn't find the item you want?<br>
+                                                Buy your favorite items from <strong>OpenSea!</strong>
+                                            </p>
+                                            <button type="button" class="opensea_btn">
+                                                Buy to<br>
+                                                OpenSea.io
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div><!-- content_wrap -->
+                            </div>
+                        </div><!-- shop modal -->
+                        <div class="ranking_modal">
+                            <div class="ranking_wrap">
+                                <button type="button" class="ranking_pop_close"></button>
+                                <div class="ranking_pop_inner">
+                                    <p class="rank_pop_title">
+                                        <span>Global Ranking</span>
+                                    </p>
+                                    <ul class="rank_tab_btn">
+                                        <li class="on">
+                                            <button type="button">Total Mining</button>
+                                        </li>
+                                        <li>
+                                            <button type="button">Total Play Time</button>
+                                        </li>
+                                    </ul>
+                                    <div class="list_wrap">
+                                        <div class="ranking_pop_list on">
+                                            <div class="list_name">
+                                                <p>ID</p>
+                                                <p>Total Mining</p>
+                                            </div>
+                                            <div class="rank_list">
+                                                <ul>
+                                                    <li>
+                                                        <span class="rank_num">1</span>
+                                                        <p class="user_id">Mining King</p>
+                                                        <p class="user_score">99,999,99</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="rank_num">2</span>
+                                                        <p class="user_id">Mining Master</p>
+                                                        <p class="user_score">88,888,88</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="rank_num">3</span>
+                                                        <p class="user_id">Insane Clicker</p>
+                                                        <p class="user_score">77,777,77</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="rank_num">4</span>
+                                                        <p class="user_id">Player 4</p>
+                                                        <p class="user_score">66,666,66</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="rank_num">5</span>
+                                                        <p class="user_id">Player 5</p>
+                                                        <p class="user_score">55,555,55</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="rank_num">6</span>
+                                                        <p class="user_id">Player 6</p>
+                                                        <p class="user_score">44,444,44</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="rank_num">7</span>
+                                                        <p class="user_id">Player 7</p>
+                                                        <p class="user_score">33,333,33</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="my_rank">
+                                                <span class="rank_num">95</span>
+                                                <p class="user_id">Player ID</p>
+                                                <p class="point_wrap">
+                                                    <span id="rank_score" class="gem_score">0.00</span>
+                                                </p>
+                                            </div>
+                                        </div><!-- ranking_pop -->
+                                        <div class="playtime_pop_list">
+                                            <div class="list_name">
+                                                <p>ID</p>
+                                                <p>Play Time</p>
+                                            </div>
+                                            <div class="time_list">
+                                                <ul>
+                                                    <li>
+                                                        <span class="rank_num">1</span>
+                                                        <p class="user_id">Mining King</p>
+                                                        <p class="time_score">10:20:59</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="rank_num">2</span>
+                                                        <p class="user_id">Mining Master</p>
+                                                        <p class="time_score">09:14:44</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="rank_num">3</span>
+                                                        <p class="user_id">Insane Clicker</p>
+                                                        <p class="time_score">09:11:32</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="rank_num">4</span>
+                                                        <p class="user_id">Player 4</p>
+                                                        <p class="time_score">08:21:22</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="rank_num">5</span>
+                                                        <p class="user_id">Player 5</p>
+                                                        <p class="time_score">08:10:43</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="rank_num">6</span>
+                                                        <p class="user_id">Player 6</p>
+                                                        <p class="time_score">07:32:12</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="rank_num">7</span>
+                                                        <p class="user_id">Player 7</p>
+                                                        <p class="time_score">06:21:54</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="my_rank">
+                                                <span class="rank_num">95</span>
+                                                <p class="user_id">Player ID</p>
+                                                <p class="point_wrap">
+                                                    <span id="time_score">04.32:13</span>
+                                                </p>
+                                            </div>
+                                        </div><!-- playtime_pop -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- ranking_modal -->
+                        <div class="repair_modal alert_modal">
+                            <div class="repair_wrap">
+                                <div class="repair_inner">
+                                    <p class="repair_ques">
+                                        Repair costs are consumed.<br>
+                                        Are you sure you want to fix it?
+                                    </p>
+                                    <p class="price_wrap">
+                                        <span class="price">25</span>
+                                        GEM
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="confirm" id="repair_buy_confirm">Confirm</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- repair_modal -->
+                        <div class="another_room_modal alert_modal">
+                            <div class="another_wrap">
+                                <div class="another_inner">
+                                    <p class="another_ques">
+                                        Do you want to move to<br>
+                                        another mining room?
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="confirm" id="change_room_btn">Confirm</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- another_room_modal -->
+                        <!-- 트레이드 모달 시작 -->
+                        <div class="trade_modal">
+                            <div class="trade_header">
+                                <p class="trade_name">Trade</p>
+                                <div class="point_wrap">
+                                    <span id="trade_point_score" class="gem_score">0.00</span> GEM
+                                </div>
+                            </div>
+                            <div class="trade_container">
+                                <div class="my_trade_wrap">
+                                    <div class="trade_ch my_ch">
+                                        <p class="trade_ch_img">
+                                            <img src="~/images/character/trade_character6_profile.png" alt="">
+                                            <span class="confirm_area">Confirm</span>
+                                        </p>
+                                        <span class="my_name">Player 5</span>
+                                    </div>
+                                    <div class="trade_item_wrap">
+                                        <div class="upload_wrap">
+                                            <span>
+                                                Upload<br>
+                                                Mining Tools
+                                            </span>
+                                        </div>
+                                        <div class="trade_inner_item">
+                                            <p class="trade_item">
+                                                <img src="~/images/item/pick_legend.png" alt="">
+                                                <button class="item_close_btn"></button>
+                                            </p>
+                                            <p class="item_level">Lv.1 Pick</p>
+                                            <p class="item_rank">
+                                                <span class="item_common">Common</span>
+                                                <span class="item_rare">Rare</span>
+                                                <span class="item_legend on">Legend</span>
+                                            </p>
+                                            <p class="durability">
+                                                <span>240</span> / <span>240</span>
+                                            </p>
+                                            <p class="price">
+                                                <span>1.60</span> Gem
+                                            </p>
+                                        </div>
+                                        <!-- 아이템 잠금 영역 -->
+                                        <div class="lock_wrap"></div>
+                                    </div>
+                                    <div class="gem_price_wrap">
+                                        <input type="number" class="gem_price" value="0.00">
+                                    </div>
+                                </div><!-- my_trade_wrap -->
+                                <!-- 트레이드 채팅창 -->
+                                <div class="trade_chat_wrap">
+                                    <div class="trade_chat_inner">
+                                        <div class="message_inner">
+                                            <div class="system_msg_wrap">
+                                                <p>
+                                                    &lt; System &gt;
+                                                    <span class="system_msg">Player 3 joined the trading room.</span>
+                                                </p>
+                                                <p>
+                                                    &lt; System &gt;
+                                                    <span class="system_msg">Player 2 joined the trading room.</span>
+                                                </p>
+                                            </div>
+                                            <div class="user_message my_msg">
+                                                <p class="user_ch">
+                                                    <img src="~/images/character/character6_profile.png" alt="">
+                                                </p>
+                                                <div class="text_box">
+                                                    <p class="user_text_message">I have 5 level 4 pickaxes. how many would you like to buy?</p>
+                                                    <span class="send_time">01:18</span>
+                                                </div>
+                                            </div>
+                                            <div class="user_message">
+                                                <p class="user_ch user3">
+                                                    <img src="~/images/character/character1_profile.png" alt="">
+                                                </p>
+                                                <div class="text_box">
+                                                    <p class="user_text_message">Is it possible to trade 3 pieces for 25 gems each??</p>
+                                                    <span class="send_time">01:18</span>
+                                                </div>
+                                            </div>
+                                            <div class="user_message my_msg">
+                                                <p class="user_ch">
+                                                    <img src="~/images/character/character6_profile.png" alt="">
+                                                </p>
+                                                <div class="text_box">
+                                                    <p class="user_text_message">ok</p>
+                                                    <span class="send_time">01:18</span>
+                                                </div>
+                                            </div>
+                                            <div class="system_msg_wrap color_green">
+                                                <p>
+                                                    &lt; System &gt;
+                                                    <span class="system_msg">Level 5. Traded Pock(Legendary) for 25.00 Gems. [01:21]</span>
+                                                </p>
+                                                <p>
+                                                    &lt; System &gt;
+                                                    <span class="system_msg">Level 5. Traded Pock(Legendary) for 25.00 Gems. [01:21]</span>
+                                                </p>
+                                                <p>
+                                                    &lt; System &gt;
+                                                    <span class="system_msg">Level 5. Traded Pock(Legendary) for 25.00 Gems. [01:21]</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div><!-- chat_inner -->
+                                    <div class="trade_message_wrap">
+                                        <div class="emoticon_btn">
+                                            <button type="button"></button>
+                                        </div>
+                                        <div class="message_enter">
+                                            <form>
+                                                <input id="trade_send" type="text" placeholder="Send your messages" autocomplete="off" maxlength="60">
+                                                <button type="button" class="submit"></button>
+                                            </form>
+                                        </div>
+                                        <div class="emoticon_wrap">
+                                            <ul></ul>
+                                        </div>
+                                    </div>
+                                </div><!-- trade_chat_wrap -->
+                                <div class="user_trade_wrap">
+                                    <div class="trade_ch user_ch">
+                                        <p class="trade_ch_img">
+                                            <img src="~/images/character/trade_character1_profile.png" alt="">
+                                            <span class="confirm_area">Confirm</span>
+                                        </p>
+                                        <span class="user_name">Player 3</span>
+                                    </div>
+                                    <div class="trade_item_wrap">
+                                        <div class="upload_wrap">
+                                            <span>
+                                                Upload<br>
+                                                Mining Tools
+                                            </span>
+                                        </div>
+                                        <div class="trade_inner_item">
+                                            <p class="trade_item">
+                                                <img src="~/images/item/pick_legend.png" alt="">
+                                            </p>
+                                            <p class="item_level">Lv.1 Pick</p>
+                                            <p class="item_rank">
+                                                <span class="item_common">Common</span>
+                                                <span class="item_rare">Rare</span>
+                                                <span class="item_legend on">Legend</span>
+                                            </p>
+                                            <p class="durability">
+                                                <span>240</span> / <span>240</span>
+                                            </p>
+                                            <p class="price">
+                                                <span>1.60</span> Gem
+                                            </p>
+                                        </div>
+                                        <!-- 아이템 잠금 영역 -->
+                                        <div class="lock_wrap"></div>
+                                    </div>
+                                    <div class="gem_price_wrap">
+                                        <input type="number" class="gem_price" value="0.00">
+                                    </div>
+                                </div><!-- user_trade_wrap -->
+                                <div class="confirm_select_none"></div>
+                            </div><!-- trade_container -->
+                            <div class="trade_btn_wrap">
+                                <button class="confirm">Confirm</button>
+                                <button class="unconfirm">Unconfirm</button>
+                                <button class="cancel">Close</button>
+                            </div>
+                            <!-- 트레이드 인벤토리 시작 -->
+                            <div class="trade_inven_wrap">
+                                <p class="title">My Inventory</p>
+                                <button class="close_btn"></button>
+                                <div class="trade_inven_inner">
+                                    <div class="left_layer">
+                                        <div class="item_info_wrap">
+                                            <div class="preview_item">
+                                                <img src="~/images/item/pick_common.png" alt="">
+                                            </div>
+                                            <p class="item_level trade">
+                                                Lv.1 Pick
+                                                <!-- <span class="lock_btn"></span> -->
+                                            </p>
+                                            <p class="item_rank">
+                                                <span class="item_common on">Common</span>
+                                                <span class="item_rare">Rare</span>
+                                                <span class="item_legend">Legend</span>
+                                            </p>
+                                            <p class="durability">
+                                                <span>25</span> / <span>190</span>
+                                            </p>
+                                            <p class="price">
+                                                <span>0.01</span> Gem
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="trade_item_list">
+                                        <ul></ul>
+                                    </div>
+                                </div>
+                                <button class="select_btn">Select</button>
+                            </div>
+                        </div>
+                        <!-- 트레이드 모달 끝 -->
+                        <!-- 컨테이너 메인 모달 끝 -->
+                        <!-- 샵 아이템 모달 시작-->
+                        <div class="shop_item_buy_modal boost100 alert_modal">
+                            <div class="shop_item_wrap">
+                                <div class="shop_pop_inner">
+                                    <p class="pop_title">
+                                        <span class="mining100 on">Mining 100% UP / 10M</span>
+                                    </p>
+                                    <p class="img_wrap">
+                                        <img class="mining100 on" src="~/images/item/booster_10m.png" alt="">
+                                    </p>
+                                    <p class="ques">
+                                        How many would you like to purchase?
+                                    </p>
+                                    <p class="quantity_wrap">
+                                        <button type="button" class="left_btn"></button>
+                                        <span class="quantity">1</span>
+                                        <button type="button" class="right_btn"></button>
+                                    </p>
+                                    <p class="price_wrap">
+                                        <span class="price">200</span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="buy_btn" id="boost100_buy_btn">Buy</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- shop_item_buy_modal -->
+                        <div class="shop_item_buy_modal boost200 alert_modal">
+                            <div class="shop_item_wrap">
+                                <div class="shop_pop_inner">
+                                    <p class="pop_title">
+                                        <span class="mining200">Mining 200% UP / 1H</span>
+                                    </p>
+                                    <p class="img_wrap">
+                                        <img class="mining200" src="~/images/item/booster_1h.png" alt="">
+                                    </p>
+                                    <p class="ques">
+                                        How many would you like to purchase?
+                                    </p>
+                                    <p class="quantity_wrap">
+                                        <button type="button" class="left_btn"></button>
+                                        <span class="quantity">1</span>
+                                        <button type="button" class="right_btn"></button>
+                                    </p>
+                                    <p class="price_wrap">
+                                        <span class="price">200</span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="buy_btn" id="boost200_buy_btn">Buy</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- shop_item_buy_modal -->
+                        <div class="shop_item_buy_modal auto10m alert_modal">
+                            <div class="shop_item_wrap">
+                                <div class="shop_pop_inner">
+                                    <p class="pop_title">
+                                        <span class="auto10m">Auto Click / 10M</span>
+                                    </p>
+                                    <p class="img_wrap">
+                                        <img class="auto10m" src="~/images/item/auto_click_10m.png" alt="">
+                                    </p>
+                                    <p class="ques">
+                                        How many would you like to purchase?
+                                    </p>
+                                    <p class="quantity_wrap">
+                                        <button type="button" class="left_btn"></button>
+                                        <span class="quantity">1</span>
+                                        <button type="button" class="right_btn"></button>
+                                    </p>
+                                    <p class="price_wrap">
+                                        <span class="price">200</span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="buy_btn" id="auto10m_buy_btn">Buy</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- shop_item_buy_modal -->
+                        <div class="shop_item_buy_modal auto1h alert_modal">
+                            <div class="shop_item_wrap">
+                                <div class="shop_pop_inner">
+                                    <p class="pop_title">
+                                        <span class="auto1h">Auto Click / 1H</span>
+                                    </p>
+                                    <p class="img_wrap">
+                                        >
+                                        <img class="auto1h" src="~/images/item/auto_click_1h.png" alt="">
+                                    </p>
+                                    <p class="ques">
+                                        How many would you like to purchase?
+                                    </p>
+                                    <p class="quantity_wrap">
+                                        <button type="button" class="left_btn"></button>
+                                        <span class="quantity">1</span>
+                                        <button type="button" class="right_btn"></button>
+                                    </p>
+                                    <p class="price_wrap">
+                                        <span class="price">200</span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="buy_btn" id="auto1h_buy_btn">Buy</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- shop_item_buy_modal -->
+                        <!-- 샵 아이템 모달 끝 -->
+                        <!-- 샵 내부 마이닝 툴 모달 시작 -->
+                        <div class="premiumitem_modal alert_modal">
+                            <div class="premiumitem_wrap on">
+                                <div class="boxitem_inner">
+                                    <p class="boxitem_ques">
+                                        Are you sure<br>
+                                        you want to buy it?
+                                    </p>
+                                    <p class="img_wrap">
+                                        <img src="~/images/ui/premium_box.png" alt="">
+                                    </p>
+                                    <p class="price_wrap">
+                                        <span class="premium_price">1000</span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="pre_buy_btn">Buy</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vipitem_modal alert_modal">
+                            <div class="vipitem_wrap">
+                                <div class="boxitem_inner">
+                                    <p class="boxitem_ques">
+                                        Are you sure<br>
+                                        you want to buy it?
+                                    </p>
+                                    <p class="img_wrap">
+                                        <img src="~/images/ui/vip_box.png" alt="">
+                                    </p>
+                                    <p class="price_wrap">
+                                        <span class="vipbox_price">800</span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="vip_buy_btn">Buy</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 샵 내부 마이닝 툴 모달 끝 -->
+
+                        <div class="pre_open_modal">
+                            <div class="pre_open_wrap">
+                                <ul></ul><!-- 샵 프리미엄 랜덤 아이템 리스트 추가영역 -->
+                                <p class="open_text">
+                                    An item has been placed in your inventory.
+                                </p>
+                            </div>
+                        </div><!-- pre_open_modal -->
+                        <div class="vip_open_modal">
+                            <div class="vip_open_wrap">
+                                <ul></ul><!-- 샵 VIP 랜덤 아이템 리스트 추가영역 -->
+                                <p class="open_text">
+                                    An item has been placed in your inventory.
+                                </p>
+                            </div>
+                        </div><!-- vip_open_modal -->
+                        <!-- 샵 내부 마이닝 툴 모달 끝 -->
+                        <!-- 경고창 모달 시작 -->
+                        <div class="trade_alert_modal alert_modal">
+                            <div class="trade_alert_wrap">
+                                <div class="trade_inner">
+                                    <p class="trade_ques">
+                                        Would you like to request<br>
+                                        an trade from this player?
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="confirm">Confirm</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- trade_alert_modal -->
+                        <div class="trade_continue_modal alert_modal">
+                            <div class="continue_wrap">
+                                <div class="continue_inner">
+                                    <p class="continue_ques">
+                                        Would you like<br>
+                                        to continue trading?
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="trade" id="change_room_btn">Trade</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- trade_continue_modal -->
+                        <div class="accept_modal alert_modal">
+                            <div class="accept_wrap">
+                                <div class="accept_inner">
+                                    <p class="accept_ques">
+                                        <span class="player_name">Player 3</span>
+                                        <span>
+                                            Has applied for this trade.<br>
+                                            will you accept?
+                                        </span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="accept">Accept</button>
+                                        <button type="button" class="cancel">No</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- accept_modal -->
+                        <div class="waiting_modal alert_modal">
+                            <div class="waiting_wrap">
+                                <div class="waiting_inner">
+                                    <p class="waiting_ques">
+                                        <span>Waiting...</span>
+                                        <span>Waiting for a response from the player.</span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- waiting_modal -->
+                        <div class="success_modal alert_modal">
+                            <div class="success_wrap">
+                                <div class="success_inner">
+                                    <p class="success_ques">
+                                        <span>Success!</span>
+                                        <span>The trade has been completed.</span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="cancel">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- success_modal -->
+                        <div class="immediately_repair_modal alert_modal">
+                            <div class="immediately_wrap">
+                                <div class="immediately_inner">
+                                    <p class="immediately_ques">
+                                        <span>The mining toll is damaged!</span>
+                                        <span>Mining is reduced by 10%</span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="repair_now">Repair Now</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- immediately_repair_modal -->
+                        <!-- 인벤토리 모달 -->
+                        <div class="repair_fail_modal alert_modal">
+                            <div class="fail_wrap horizontal">
+                                <div class="fail_inner">
+                                    <p class="fail_ques">
+                                        Not repaired!
+                                        <span>Please try again after repairing the item.</span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- repair_fail_modal -->
+                        <div class="minting_ques_modal alert_modal">
+                            <div class="minting_wrap">
+                                <div class="minting_inner">
+                                    <p class="minting_ques">
+                                        <span>
+                                            Are you sure you<br>
+                                            want to mint this item?
+                                        </span>
+                                        <span>This will lead to an external pop-up window.</span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="mint_now">Mint</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- minting_ques_modal -->
+                        <div class="mint_lock_ques_modal alert_modal">
+                            <div class="mint_lock_wrap">
+                                <div class="mint_lock_inner">
+                                    <p class="mint_lock_ques">
+                                        <span>
+                                            This item is locked.<br>
+                                            Unlock and proceed?
+                                        </span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="confirm">Confirm</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- mint_lock_ques_modal -->
+                        <!-- 인벤토리 모달 끝 -->
+                        <div class="silver_buy_modal alert_modal" id="silver_pop">
+                            <div class="package_buy_wrap">
+                                <div class="package_buy_inner">
+                                    <p class="package_buy_ques">
+                                        Are you sure<br>
+                                        you want to but it? Silver
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="buy_btn" id="sliver_buy_btn">Buy</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- silver_buy_modal -->
+                        <div class="gold_buy_modal alert_modal" id="gold_pop">
+                            <div class="package_buy_wrap">
+                                <div class="package_buy_inner">
+                                    <p class="package_buy_ques">
+                                        Are you sure<br>
+                                        you want to but it? Gold
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="buy_btn" id="gold_buy_btn">Buy</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- gold_buy_modal -->
+                        <div class="complete_buy_modal">
+                            <div class="comp_wrap">
+                                <div class="comp_inner">
+                                    <p class="comp_ques">
+                                        <span>Your purchase is complete!</span>
+                                        <span>A package effect has been applied.</span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="confirm">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- complete_buy_modal -->
+
+                        <div class="shop_complete_modal alert_modal">
+                            <div class="comp_wrap">
+                                <div class="comp_inner">
+                                    <p class="comp_ques">
+                                        <span>Your purchase is complete!</span>
+                                        <span>
+                                            An item has been placed in your inventory.<br>
+                                            Are you using it right now?
+                                        </span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="use_now">Use Now</button>
+                                        <button type="button" class="cancel">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- shop_complete_modal -->
+                        <div class="shop_use_modal alert_modal">
+                            <div class="shop_use_wrap">
+                                <div class="use_inner">
+                                    <p class="use_ques">
+                                        Are you sure<br>
+                                        you want to use this item?
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="confirm" id="use_buy_confirm">Confirm</button>
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- shop_use_modal -->
+                        <!-- 실패시 공통 모달 -->
+                        <div class="fail_modal alert_modal">
+                            <div class="fail_wrap jello-horizontal">
+                                <div class="fail_inner">
+                                    <p class="fail_ques">
+                                        Out of Resources!
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- fail_modal -->
+                        <div class="repair_moneyfail_modal alert_modal">
+                            <div class="fail_wrap jello-horizontal">
+                                <div class="fail_inner">
+                                    <p class="fail_ques">
+                                        <span>Repair Failed!</span>
+                                        <span>Out of Resources!</span>
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- repair_moneyfail_modal -->
+                        <div class="player_cancel_modal alert_modal">
+                            <div class="player_cancel_wrap">
+                                <div class="player_cancel_inner">
+                                    <p class="player_cancel_ques">
+                                        A player's trade<br>
+                                        request has been cancelled.
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="cancel">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- player_cancel_modal -->
+                        <div class="player_trading alert_modal">
+                            <div class="player_trading_wrap">
+                                <div class="player_trading_inner">
+                                    <p class="player_trading_ques">
+                                        This player is trading!<br>
+                                        Please try again later.
+                                    </p>
+                                    <div class="button_wrap">
+                                        <button type="button" class="cancel">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- player_trading_modal -->
+                    </div>
+                </div>
+                <!-- 채팅 영역 -->
+                <div class="chat_wrap">
+                    <div class="chat_wrap_in">
+                        <div class="room_number">
+                            <p><span>000000</span> Chatting Room</p>
+                            <button type="button" class="chat_open"></button>
+                            <button type="button" class="chat_close"></button>
+                        </div>
+                        <div class="chat_inner">
+                            <div class="message_inner">
+                                <div class="user_message">
+                                    <p class="user_ch">
+                                        <img src="~/images/character/character5_profile.png" alt="">
+                                    </p>
+                                    <div class="user_name_wrap">
+                                        <span class="user_name">Player 1</span>
+                                    </div>
+                                    <div class="text_box">
+                                        <p class="user_text_message">Hello, Everyone~</p>
+                                        <span class="send_time">01:18</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                                <div class="user_message my_msg">
+                                    <p class="user_ch">
+                                        <img src="~/images/character/character6_profile.png" alt="">
+                                    </p>
+                                    <div class="text_box">
+                                        <p class="user_text_message">Hi~</p>
+                                        <span class="send_time">01:18</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                                <div class="user_message">
+                                    <p class="user_ch">
+                                        <img src="~/images/character/character5_profile.png" alt="">
+                                    </p>
+                                    <div class="user_name_wrap">
+                                        <span class="user_name">Player 1</span>
+                                    </div>
+                                    <div class="text_box">
+                                        <p class="user_text_message">I'm new to this game, how can I collect resources quickly? Any tips?</p>
+                                        <span class="send_time">01:18</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                                <div class="user_message my_msg">
+                                    <p class="user_ch">
+                                        <img src="~/images/character/character6_profile.png" alt="">
+                                    </p>
+                                    <div class="text_box">
+                                        <p class="user_text_message">Buy boost items from the shop and click the long wait as fast as fast as possible! XD</p>
+                                        <span class="send_time">01:18</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                                <div class="system_msg_wrap">
+                                    <p>
+                                        &lt; System &gt;
+                                        <span class="system_msg">Player 3 hello~ world</span>
+                                    </p>
+                                    <p>
+                                        &lt; System &gt;
+                                        <span class="system_msg">Player 2 hello~ world</span>
+                                    </p>
+                                </div>
+                                <div class="user_message user2">
+                                    <p class="user_ch">
+                                        <img src="~/images/character/character3_profile.png" alt="">
+                                    </p>
+                                    <div class="user_name_wrap">
+                                        <span class="user_name">Player 2</span>
+                                    </div>
+                                    <div class="text_box">
+                                        <p class="user_text_message">Then, collect resources to buy pickaxes and upgrade them.</p>
+                                        <span class="send_time">01:19</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                                <div class="user_message user3 whisper">
+                                    <p class="user_ch">
+                                        <img src="~/images/character/character1_profile.png" alt="">
+                                    </p>
+                                    <div class="user_name_wrap">
+                                        <span class="user_name">Player 5</span>
+                                        <span class="whisper_color">Whisper</span>
+                                    </div>
+                                    <div class="text_box">
+                                        <p class="user_text_message">Hi, do you have a pickaxe of level 5 or higher of legend rank??</p>
+                                        <span class="send_time">01:19</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                                <div class="user_message my_msg">
+                                    <p class="user_ch">
+                                        <img src="~/images/character/character6_profile.png" alt="">
+                                    </p>
+                                    <div class="text_box">
+                                        <p class="user_text_message">I need to rest now</p>
+                                        <span class="send_time">01:20</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                                <div class="user_message my_msg whisper">
+                                    <p class="user_ch">
+                                        <img src="~/images/character/character6_profile.png" alt="">
+                                    </p>
+                                    <div class="user_name_wrap">
+                                        <span class="whisper_color">Whisper To</span>
+                                        <span class="user_name">Player 5</span>
+                                    </div>
+                                    <div class="text_box">
+                                        <p class="user_text_message">Yes</p>
+                                        <span class="send_time">01:20</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                                <div class="user_message my_msg whisper">
+                                    <p class="user_ch">
+                                        <img src="~/images/character/character6_profile.png" alt="">
+                                    </p>
+                                    <div class="user_name_wrap">
+                                        <span class="whisper_color">Whisper To</span>
+                                        <span class="user_name">Player 5</span>
+                                    </div>
+                                    <div class="text_box">
+                                        <p class="user_text_message">I'll trade you</p>
+                                        <span class="send_time">01:20</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                                <div class="user_message user3 whisper">
+                                    <p class="user_ch">
+                                        <img src="~/images/character/character1_profile.png" alt="">
+                                    </p>
+                                    <div class="user_name_wrap">
+                                        <span class="user_name">Player 5</span>
+                                        <span class="whisper_color">Whisper</span>
+                                    </div>
+                                    <div class="text_box">
+                                        <p class="user_text_message">ok</p>
+                                        <span class="send_time">01:20</span>
+                                    </div>
+                                    <div class="user_menu">
+                                        <button class="whisper_btn">Whisper</button>
+                                        <button class="trade_btn">Trade</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- chat_inner -->
+                        <div class="message_wrap">
+                            <div class="emoticon_btn">
+                                <button type="button"></button>
+                            </div>
+                            <div class="message_enter">
+                                <form>
+                                    <input id="send" type="text" placeholder="Send your messages" autocomplete="off" maxlength="60">
+                                    <button type="button" class="submit"></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="emoticon_wrap">
+                            <ul></ul>
+                        </div>
+                    </div>
+                </div><!-- chat_wrap -->
+            </div>
+            <!-- mint modal 시작 -->
+            <div class="mint_modal">
+                <p class="head_title">
+                    DIGTOC - Mint an Item
+                    <button class="mint_close_btn"></button>
+                </p>
+                <div class="mint_wrap">
+                    <div class="item_area">
+                        <p class="mint_item">
+                            <img src="~/images/item/pick_legend.png" alt="">
+                        </p>
+                        <p class="item_level">Lv.1 Pick</p>
+                        <p class="item_rank">
+                            <span class="item_common">Common</span>
+                            <span class="item_rare">Rare</span>
+                            <span class="item_legend on">Legend</span>
+                        </p>
+                        <p class="unit_price">
+                            Unit Price : <span>0.01</span> <span>ETH</span>
+                        </p>
+                        <button class="mint_btn">Mint Now</button>
+                    </div>
+                    <div class="mint_explan">
+                        <div class="explan_inner">
+                            <p class="explan_title">DIGTOC Item Minting Guide</p>
+                            <div class="sale_area">
+                                <p class="sub_title">[Sale]</p>
+                                <p class="contents_text">Equipment minted with NFT can be sold on exchanges such as OpenSea.io. Even after converting to NFT, you can use the equipment as long as you have it. If you hand over the equipment to someone else, the equipment is automatically released and automatically replaced with the most efficient equipment you have.</p>
+                            </div>
+                            <div class="purchase_area">
+                                <p class="sub_title">[Purchase]</p>
+                                <p class="contents_text">
+                                    Purchased equipment is immediately reflected and added to Inventory when you log in to the site through MetaMask.
+                                </p>
+                            </div>
+                            <div class="ontheweb_area">
+                                <p class="sub_title">On the web</p>
+                                <p class="contents_text">
+                                    <span>1. At the time of purchase, DIGTOC are randomly selected and randomly distributed.</span>
+                                    <span>2. The total purchase amount is changed according to the quantity requested, and exchange or refund is not possible after purchase.</span>
+                                    <span>3. Purchases are made only with MetaMask, and cannot be purchased with other wallets.</span>
+                                    <span>4. EtherBucks payments may be delayed depending on the Ethereum network speed. (about 1 hour)</span>
+                                </p>
+                            </div>
+                            <div class="onthemobile_area">
+                                <p class="sub_title">On the mobile</p>
+                                <p class="contents_text">
+                                    <span>1. Open Metamask App on Mobile</span>
+                                    <span>2. Click on the top left menu button</span>
+                                    <span>3. Select Browser</span>
+                                    <span>4. Click the top and input DIGTOC url (https://digtoc.io)</span>
+                                    <span>5. On the Digtoc site, click on mint now.</span>
+                                    <span>6. Sign Metamask</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- mint modal -->
+            <!-- 민팅 완료 모달 시작 -->
+            <div class="mint_success_modal">
+                <p class="head_title">
+                    DIGTOC - Mint an Item
+                    <button class="mint_close_btn success"></button>
+                </p>
+                <div class="mint_success_wrap">
+                    <div class="inner_title">
+                        Minting was successful!
+                    </div>
+                    <div class="item_area">
+                        <p class="mint_item">
+                            <img src="~/images/item/pick_legend.png" alt="">
+                        </p>
+                        <div class="item_info">
+                            <p class="item_level">Lv.1 Pick</p>
+                            <p class="item_rank">
+                                <span class="item_common">Common</span>
+                                <span class="item_rare">Rare</span>
+                                <span class="item_legend on">Legend</span>
+                            </p>
+                            <p class="unit_price">
+                                Unit Price : <span>0.01</span> <span>ETH</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mint_explan">
+                        <div class="explan_inner">
+                            <div class="sale_area">
+                                <p class="sub_title">[Sale]</p>
+                                <p class="contents_text">Equipment minted with NFT can be sold on exchanges such as OpenSea.io. Even after converting to NFT, you can use the equipment as long as you have it. If you hand over the equipment to someone else, the equipment is automatically released and automatically replaced with the most efficient equipment you have.</p>
+                            </div>
+                            <div class="purchase_area">
+                                <p class="sub_title">[Purchase]</p>
+                                <p class="contents_text">
+                                    Purchased equipment is immediately reflected and added to Inventory when you log in to the site through MetaMask.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="back_game"><span>Back to game</span></button>
+                </div>
+            </div><!-- mint_success_modal -->
+        </div><!-- container -->
+        <footer id="footer"></footer><!-- footer -->
+
+
+    </div><!-- wrap -->
+    <script>
+
+        // 타격 시 오디오
+
+        const myAudio = new Audio();
+        myAudio.src = "../../audio/click_sound.mp3";
+
+
+        const itemss = document.querySelectorAll(".stone_item");
+        const hitAudio = document.querySelector(".hit_audio");
+        itemss.forEach(e => {
+            e.addEventListener("mousedown", function () {
+                myAudio.play();
+            });
+            e.addEventListener("mouseup", function () {
+                myAudio.currentTime = 0;
+            });
+
+            e.addEventListener("touchstart", function () {
+                myAudio.play();
+            });
+            e.addEventListener("touchend", function () {
+                myAudio.currentTime = 0;
+            });
+
+        });
+
+
+
+    </script>
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 </body>
 </html>

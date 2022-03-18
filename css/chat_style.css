@@ -73,9 +73,14 @@
 .chat_wrap .system_msg_wrap { color: #ff0; line-height: 1.5; padding: 8px 0; }
 
 
+<<<<<<< HEAD
 
 /* 채팅안에 이모티콘 추가 */
 .text_emoti { display: block; width: 60px; height: 60px; margin-bottom: 6px; }
+=======
+/* 시스템 메세지 */
+.chat_wrap .system_msg_wrap{color: #ff0; line-height: 1.5; padding: 8px 0;}
+>>>>>>> 097f5199959ca74ca5d52dbee6fe1b1203735d21
 
 /* 나의메세지 이모티콘 우측배치 */
 .user_message.my_msg .text_wrap { display: flex; flex-direction: column; align-items: flex-end; }
